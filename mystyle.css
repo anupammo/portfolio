@@ -349,7 +349,7 @@
   
   section#expertise {
     background-color: #000;
-    background-image: url(../../cntnt/img/anupam-monadl-web-developer.jpg);
+    background-image: url(cntnt/img/anupam-monadl-web-developer.jpg);
     background-size: cover;
     background-attachment: fixed;
     margin-bottom: 0;
@@ -560,7 +560,7 @@
   }
   
   header.contact-header {
-    background-image: url(../../cntnt/img/anupam-monadl-web-developer.jpg);
+    background-image: url(cntnt/img/anupam-monadl-web-developer.jpg);
     background-size: cover;
     background-position: center;
   }
@@ -755,7 +755,7 @@
   }
   
   section#pingme {
-    background-image: url(../cntnt/anupam-mondal-ping-me-bg.jpg);
+    background-image: url(cntnt/anupam-mondal-ping-me-bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
   }
