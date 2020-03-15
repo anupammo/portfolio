@@ -1,0 +1,798 @@
+/* anupammondal.css */
+.bg-anime {
+    background: linear-gradient(244deg,#5a69e8,#a232d5,#1fcc90);
+    background-size: 600% 600%;
+    -webkit-animation: bganime 59s ease infinite;
+    -moz-animation: bganime 59s ease infinite;
+    -o-animation: bganime 59s ease infinite;
+    animation: bganime 59s ease infinite;
+  }
+  
+  @-webkit-keyframes bganime {
+    0% {
+      background-position: 0% 34%;
+    }
+  
+    50% {
+      background-position: 100% 67%;
+    }
+  
+    100% {
+      background-position: 0% 34%;
+    }
+  }
+  
+  @-moz-keyframes bganime {
+    0% {
+      background-position: 0% 34%;
+    }
+  
+    50% {
+      background-position: 100% 67%;
+    }
+  
+    100% {
+      background-position: 0% 34%;
+    }
+  }
+  
+  @-o-keyframes bganime {
+    0% {
+      background-position: 0% 34%;
+    }
+  
+    50% {
+      background-position: 100% 67%;
+    }
+  
+    100% {
+      background-position: 0% 34%;
+    }
+  }
+  
+  @keyframes bganime {
+    0% {
+      background-position: 0% 34%;
+    }
+  
+    50% {
+      background-position: 100% 67%;
+    }
+  
+    100% {
+      background-position: 0% 34%;
+    }
+  }
+  
+  .navbar {
+    position: relative;
+    min-height: 40px;
+    margin-bottom: 0;
+    border: 1px solid transparent;
+  }
+  
+  .navbar-default {
+    background-image: none;
+    color: #fff;
+    background-color: #000;
+    border-radius: 0;
+  }
+  
+  .navbar-default .navbar-toggle:focus,.navbar-default .navbar-toggle:hover {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  
+  .navbar-default .navbar-toggle {
+    border: none;
+  }
+  
+  .navbar-default .navbar-collapse,.navbar-default .navbar-form {
+    border-color: #000;
+  }
+  
+  .navbar-default .navbar-nav>li>a {
+    color: #FFF;
+    font-family: 'Cairo',sans-serif;
+  }
+  
+  .navbar-default .navbar-nav>li>a:focus,.navbar-default .navbar-nav>li>a:hover {
+    color: #b5b5b5;
+    background-color: transparent;
+  }
+  
+  .navbar-brand img {
+    display: inline-block;
+    width: 50px;
+    height: auto;
+    margin-top: -14px;
+    border-radius: 50%;
+  }
+  
+  .navbar-default .navbar-brand {
+    color: #fff;
+  }
+  
+  .navbar-default .navbar-brand:focus,.navbar-default .navbar-brand:hover {
+    color: #fff;
+    background-color: transparent;
+  }
+  
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+  }
+  
+  a.mail-btn,a.call-btn {
+    text-decoration: none;
+    margin: 5px 0px;
+    font-size: 15px;
+    color: #1900da;
+    text-transform: uppercase;
+  }
+  
+  div#carousel-example-generic {
+    background-color: #3573d8;
+    background-image: url(../../cntnt/img/anupam-mondal-header-image.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  @media only screen and (max-width:425px) {
+    div#carousel-example-generic .carousel-inner {
+      height: 220px;
+    }
+  }
+  
+  @media only screen and (min-width:426px) {
+    div#carousel-example-generic .carousel-inner {
+      height: 180px;
+    }
+  }
+  
+  @media only screen and (max-width:425px) {
+    div#carousel-testimoni .carousel-inner {
+      height: 320px;
+    }
+  }
+  
+  @media only screen and (min-width:375px) {
+    div#carousel-testimoni .carousel-inner {
+      height: 300px;
+    }
+  }
+  
+  @media only screen and (min-width:426px) {
+    div#carousel-testimoni .carousel-inner {
+      height: 280px;
+    }
+  }
+  
+  @media only screen and (min-width:768px) {
+    div#carousel-testimoni .carousel-inner {
+      height: 240px;
+    }
+  }
+  
+  #carousel-testimoni .item {
+    height: 300px;
+  }
+  
+  .item {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  
+  .item h4.text-justify {
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+  
+  .carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 0;
+  }
+  
+  .icon-prev:before {
+    content: "\f0d9";
+  }
+  
+  .icon-next:before {
+    content: "\f0da";
+  }
+  
+  .carousel-indicators {
+    bottom: 0;
+  }
+  
+  #carousel-testimoni .carousel-control.left {
+    background-image: none;
+  }
+  
+  #carousel-testimoni .carousel-control.right {
+    background-image: none;
+  }
+  
+  .font-blue {
+    color: #0971f2;
+  }
+  
+  h1.font-blue {
+    text-shadow: 1px 2px #dedede;
+  }
+  
+  h2.page-header {
+    font-weight: 900!important;
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    border-bottom: dashed #fff 1px;
+  }
+  
+  h2.page-header.font-blue {
+    border-bottom: dashed #0971f2 1px;
+  }
+  
+  section:hover h2.page-header {
+    border-bottom-style: solid;
+  }
+  
+  label {
+    font-size: 18px;
+    font-family: 'Cairo',sans-serif;
+    font-weight: 500;
+    color: #000;
+  }
+  
+  address a {
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Cairo',sans-serif;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  address a:hover {
+    text-decoration: none;
+    color: #0971f2;
+  }
+  
+  .card-blk {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    padding: 30px 0px;
+    padding-bottom: 20px;
+  }
+  
+  img.card-blk {
+    width: 280px;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  i.fa {
+    color: #0971f2;
+  }
+  
+  h1, h2 {
+    font-family: 'Cairo',sans-serif;
+    font-weight: 500;
+    font-size: 38px;
+  }
+  
+  .txt-white {
+    color: #fff!important;
+  }
+  
+  .h2-skills {
+    font-size: 48px;
+    margin-top: 0;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    border: #0971f2 1px dotted;
+    border-radius: 3px;
+    background-color: #403f3f;
+  }
+  
+  h1.h2-skills span {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    float: left;
+    display: block;
+    width: 100%;
+  }
+  
+  .skill:hover .h2-skills {
+    background-color: #FFF;
+    border-color: #fff;
+    border-style: solid;
+  }
+  
+  .skill:hover .h2-skills span {
+    color: #000;
+  }
+  
+  section {
+    margin-top: 0px;
+    padding-top: 60px;
+    margin-bottom: 0px;
+    padding-bottom: 60px;
+  }
+  
+  section#testimoni {
+    margin-top: 0;
+  }
+  
+  img.img-testimoni {
+    /* float: left; */
+    display: inline-block;
+    height: 90px!important;
+    width: auto;
+    border-radius: 3px;
+    border: solid 1px #fff;
+    padding: 3px;
+    margin-right: 40px;
+  }
+  
+  p.person {
+    font-family: 'Amaranth',sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+  
+  p.quote {
+    font-family: 'Farsan',cursive;
+    font-size: 22px;
+  }
+  
+  section#expertise {
+    background-color: #000;
+    background-image: url(../../cntnt/img/anupam-monadl-web-developer.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    margin-bottom: 0;
+  }
+  
+  .skillbg {
+    background: linear-gradient(269deg,#1b5e20,#01579b,#673ab7,#1b5e20);
+    background-size: 800% 800%;
+    -webkit-animation: skillbg 14s ease infinite;
+    -moz-animation: skillbg 14s ease infinite;
+    -o-animation: skillbg 14s ease infinite;
+    animation: skillbg 14s ease infinite;
+  }
+  
+  @-webkit-keyframes skillbg {
+    0% {
+      background-position: 0% 50%;
+    }
+  
+    50% {
+      background-position: 100% 51%;
+    }
+  
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  @-moz-keyframes skillbg {
+    0% {
+      background-position: 0% 50%;
+    }
+  
+    50% {
+      background-position: 100% 51%;
+    }
+  
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  @-o-keyframes skillbg {
+    0% {
+      background-position: 0% 50%;
+    }
+  
+    50% {
+      background-position: 100% 51%;
+    }
+  
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  @keyframes skillbg {
+    0% {
+      background-position: 0% 50%;
+    }
+  
+    50% {
+      background-position: 100% 51%;
+    }
+  
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  .about-blk {
+    box-shadow: #b6b6b6 6px 8px 8px;
+    margin: 20px auto;
+    max-width: 395px;
+  }
+  
+  .border-bottom {
+    border-bottom: #000 solid 5px;
+    margin-bottom: 20px;
+  }
+  
+  .border-top1 {
+    border-top: #1A237E solid 1px;
+  }
+  
+  .border-top2 {
+    border-top: #DD2C00 solid 1px;
+  }
+  
+  .border-top3 {
+    border-top: #1B5E20 solid 1px;
+  }
+  
+  figure {
+    overflow: hidden;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #0971f2;
+  }
+  
+  .p-about {
+    background-color: #0971f2;
+    padding: 15px;
+    position: relative;
+    color: #fff;
+    width: 100%;
+    margin-bottom: 0;
+    font-family: 'Cairo',sans-serif;
+  }
+  
+  .skill:hover {
+    cursor: pointer;
+  }
+  
+  a.img-client img {
+    padding: 15px 25px;
+    filter: grayscale(100);
+    border: #fff solid 1px;
+  }
+  
+  a.img-client:hover img {
+    padding: 15px 25px;
+    filter: grayscale(0);
+    border: #0971f2 dotted 1px;
+    border-radius: 5px;
+  }
+  
+  footer h4 {
+    color: #fff;
+    font-weight: 100;
+    font-family: 'Cairo',sans-serif;
+  }
+  
+  footer {
+    background: #0971f2;
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+  
+  footer i.fa {
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #fff;
+  }
+  
+  .modal-dialog {
+    width: 342px!important;
+    margin: 30px auto;
+  }
+  
+  .modal-body {
+    position: relative;
+    padding: 0px!important;
+  }
+  
+  .slider-bg1 {
+    background: #000;
+    background: -webkit-linear-gradient(to bottom,#0f9b0f,#000000);
+    background: linear-gradient(to bottom,#0f9b0f,#000000);
+  }
+  
+  .slider-bg2 {
+    background: #0575E6;
+    background: -webkit-linear-gradient(to bottom,#021B79,#0575E6);
+    background: linear-gradient(to bottom,#021B79,#0575E6);
+  }
+  
+  .slider-bg3 {
+    background: #e52d27;
+    background: -webkit-linear-gradient(to right,#b31217,#e52d27);
+    background: linear-gradient(to right,#b31217,#e52d27);
+  }
+  
+  .slider-bg11 {
+    background-color: #F44336;
+  }
+  
+  .slider-bg22 {
+    background-color: #1B5E20;
+  }
+  
+  .slider-bg33 {
+    background-color: #3F51B5;
+  }
+  
+  .p-portfolio {
+    background-color: #ffffff;
+    padding: 15px;
+    position: relative;
+    color: #000000;
+    width: 100%;
+    margin-bottom: 0;
+    font-family: 'Cairo',sans-serif;
+  }
+  
+  .p-portfolio span.span-green, .p-portfolio span.span-green i {
+    color: #0db313;
+  }
+  
+  .p-portfolio span, .p-portfolio span i {
+    color: #000000;
+  }
+  
+  .p-portfolio span i.fa.fa-info {
+    border: #2f2f2f solid 2px;
+    border-radius: 50%;
+    padding: 1px 5px;
+  }
+  
+  header.contact-header {
+    background-image: url(../../cntnt/img/anupam-monadl-web-developer.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  header.contact-header h1 {
+    margin-top: 20px;
+    margin-bottom: 80px;
+  }
+  
+  header img {
+    width: 140px;
+    height: auto;
+    margin: 80px auto 0;
+    display: block;
+    border-radius: 50%;
+    border: 1px dashed #ffffff;
+    padding: 2px;
+  }
+  
+  .cntct-blk p {
+    color: #0971f2;
+    font-size: 18px;
+    font-family: Cairo,sans-serif;
+  }
+  
+  .blk-cntct,.blk-loc,.blk-social {
+    background-size: cover;
+    transition: background-color .5s ease-in-out;
+  }
+  
+  .blk-cntct,.blk-loc,.blk-social,.cntct-blk,.cntct-blk h3 i,.cntct-blk hr,.cntct-blk i,.cntct-blk p {
+    transition: background-color .5s ease-in-out;
+  }
+  
+  .cntct-blk a,.cntct-blk a:hover,.cntct-blk i,.cntct-blk p,.cntct-blk:hover a,.cntct-blk:hover i,.txt-fff {
+    color: #fff;
+  }
+  
+  .cntct-blk {
+    border: 1px solid #0971f2;
+    border-radius: 3px;
+    margin: 5px;
+    padding-bottom: 20px;
+  }
+  
+  .blk-loc {
+    background-image: url(../../cntnt/img/cntct/anupam-mondal-address.jpg);
+  }
+  
+  .blk-cntct {
+    background-image: url(../../cntnt/img/cntct/anupam-mondal-contact.jpg);
+  }
+  
+  .blk-social {
+    background-image: url(../../cntnt/img/cntct/anupam-mondal-contact-social.jpg);
+  }
+  
+  .cntct-blk address {
+    margin-bottom: 0;
+  }
+  
+  .cntct-blk h3 i {
+    width: 20%;
+  }
+  
+  .cntct-blk hr {
+    width: 60%;
+    border-top: #fff solid 1px;
+  }
+  
+  .cntct-blk h3 i {
+    color: #fff;
+    background-color: #a0a0a0;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-radius: 3px;
+    border: 1px solid #0971f2;
+  }
+  
+  .cntct-blk p {
+    font-size: 18px;
+    font-family: monospace;
+  }
+  
+  .cntct-blk a {
+    text-decoration: none;
+  }
+  
+  .cntct-blk:hover {
+    background-color: #0971f2!important;
+    background-image: none;
+    cursor: pointer;
+  }
+  
+  .cntct-blk:hover hr {
+    border-top: #fff solid 1px;
+  }
+  
+  .cntct-blk:hover p {
+    color: #fff!important;
+  }
+  
+  .btn-submit {
+    font-size: 14px;
+    color: #0971f2;
+  }
+  
+  .hireme-freelancer {
+    margin: 30px 20px;
+    border: 1px solid #27b3fe;
+    border-radius: 3px;
+    background-color: #27b3fe;
+    color: #fff;
+  }
+  
+  .hireme-upwork {
+    margin: 30px 20px;
+    border: 1px solid #6fda44;
+    border-radius: 3px;
+    background-color: #6fda44;
+    color: #fff;
+  }
+  
+  .hireme-panel img {
+    background-color: #fff;
+  }
+  
+  .hireme-body {
+    padding: 15px 10px;
+    font-family: Cairo,sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+  }
+  
+  .hireme-freelancer div.hireme-body {
+    color: #fff;
+  }
+  
+  .hireme-upwork div.hireme-body {
+    color: #4c4b4c;
+  }
+  
+  .hireme-panel a {
+    text-decoration: none;
+  }
+  
+  .p-portfolio a {
+    color: #000;
+  }
+  
+  .p-portfolio a:hover {
+    text-decoration: none;
+  }
+  
+  p.p-portfolio.portfolio-url {
+    font-size: 17px;
+    border: 1px solid #7b7b7b;
+    border-radius: 3px;
+    width: fit-content;
+    margin: 10px auto;
+    padding: 3px 8px;
+  }
+  
+  code {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #0971f2;
+    background-color: #f1f1f1;
+    border-radius: 4px;
+  }
+  
+  h2>span {
+    color: #fff;
+    font-size: 15px;
+    display: block;
+  }
+  
+  .form-horizontal .form-group {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  
+  /* .form-control {
+    height: 45px;
+  } */
+  
+  div.pingme-blk {
+    border-radius: 5px;
+    border: 1px inset #fff;
+    padding: 3px;
+    background-color: rgba(9,102,242,.06274509803921569);
+  }
+  
+  section#pingme {
+    background-image: url(../cntnt/anupam-mondal-ping-me-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  td {
+    color: #0971f2;
+    font-weight: 700;
+    font-family: Cairo,sans-serif;
+    padding-bottom: 10px;
+  }
+  
+  input[name=os2],select[name=os0],select[name=os1] {
+    padding: 5px;
+    margin: 0 auto;
+    width: 100%;
+    color: #000;
+    font-weight: 400;
+    font-family: Cairo,sans-serif;
+  }
+  
+  form[target=paypal] table {
+    width: 100%;
+  }
+  
+  select[name=os0],select[name=os1] {
+    border: 1px solid #0971f2;
+    border-radius: 3px;
+  }
+  
+  input[name=os2] {
+    border: 1px solid #0971f2;
+    border-radius: 3px;
+    height: 40px;
+  }
+  
+  @media (min-width:768px) and (max-width:991px) {
+    .p-about {
+      min-height: 200px;
+    }
+  }
