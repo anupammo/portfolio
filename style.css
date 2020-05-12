@@ -68,7 +68,7 @@ figcaption span:nth-child(3) {
     border-radius: 0px; 
 }
 .card-square-nobg, .card-square-nobg .card-header, .card-square-nobg .card-footer{
-    cursor: progress;
+    /* cursor: progress; */
     border: none;
     background: none;
     border-radius: 0px; 
@@ -91,9 +91,9 @@ figcaption span:nth-child(3) {
     background-color: #00000080 !important;
     color: #fff;
 }
-.card-square-nobg  p {
+/* .card-square-nobg  p {
     height: 120px;
-}
+} */
 canvas {
     vertical-align: middle;
     position: absolute;
