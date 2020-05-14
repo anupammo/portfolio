@@ -1,16 +1,16 @@
 #bg-gradient-primary {
-    background: rgb(0,123,255);
-    background: -moz-linear-gradient(0deg, rgba(0,123,255,1) 50%, rgba(255,255,255,0.4990371148459384) 50%);
-    background: -webkit-linear-gradient(0deg, rgba(0,123,255,1) 50%, rgba(255,255,255,0.4990371148459384) 50%);
-    background: linear-gradient(0deg, rgba(0,123,255,1) 50%, rgba(255,255,255,0.4990371148459384) 50%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#007bff",endColorstr="#ffffff",GradientType=1);
+    background: rgb(255,255,255);
+    background: -moz-linear-gradient(3deg, rgba(255,255,255,0.4990371148459384) 50%, rgba(108,117,125,1) 51%);
+    background: -webkit-linear-gradient(3deg, rgba(255,255,255,0.4990371148459384) 50%, rgba(108,117,125,1) 51%);
+    background: linear-gradient(3deg, rgba(255,255,255,0.4990371148459384) 50%, rgba(108,117,125,1) 51%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#6c757d",GradientType=1);
 }
 #header-bg {
-    background: rgb(0,123,255);
-    background: -moz-linear-gradient(180deg, rgba(0,123,255,1) 5%, rgba(255,255,255,0.4990371148459384) 15%);
-    background: -webkit-linear-gradient(180deg, rgba(0,123,255,1) 5%, rgba(255,255,255,0.4990371148459384) 15%);
-    background: linear-gradient(180deg, rgba(0,123,255,1) 5%, rgba(255,255,255,0.4990371148459384) 15%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#007bff",endColorstr="#ffffff",GradientType=1);
+    background: rgb(255,255,255);
+    background: -moz-linear-gradient(3deg, rgba(255,255,255,0.4990371148459384) 84%, rgba(0,123,255,1) 85%);
+    background: -webkit-linear-gradient(3deg, rgba(255,255,255,0.4990371148459384) 84%, rgba(0,123,255,1) 85%);
+    background: linear-gradient(3deg, rgba(255,255,255,0.4990371148459384) 84%, rgba(0,123,255,1) 85%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#007bff",GradientType=1);
 }
 .bg-overlay {
     background-color: #00000080;
@@ -118,3 +118,9 @@ canvas {
 .btn.focus, .btn:focus {
     box-shadow: none !important;
 }
+.text-outline {
+    color: black;
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+  }
