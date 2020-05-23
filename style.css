@@ -125,6 +125,7 @@ canvas {
     z-index: -2;
 }
 #about-header-bg {
+    background-color: #cfd0c8;
     background-image: url('https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=940');
     background-position: center;
     background-size: cover
