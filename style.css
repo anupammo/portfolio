@@ -146,4 +146,8 @@ canvas {
   }
 .border-left {
     border-left-style: dashed !important;
-    }
+    } 
+.bg-round {
+    background: rgb(9,9,121);
+    background: radial-gradient(circle, rgba(9,9,121,1) 50%, rgba(255,255,255,1) 51%);
+}
