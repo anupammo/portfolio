@@ -97,7 +97,7 @@ figcaption span:nth-child(3) {
 .card-square-nobg img {
     height: 100px;
 }
-.card-square:hover {
+/* .card-square:hover {
     background-image: url('https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=360');
     background-size: cover;
 }
@@ -109,7 +109,7 @@ figcaption span:nth-child(3) {
 .card-square:hover .card-body {
     background-color: #00000080 !important;
     color: #fff;
-}
+} */
 /* .card-square-nobg  p {
     height: 120px;
 } */
