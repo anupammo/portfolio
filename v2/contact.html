@@ -15,6 +15,10 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="style.css" defer> -->
     <style>
+        .stretched-link {
+            text-decoration: none;
+        }
+
         .anime-bg {
             background-image: url(./portfolio-v2/anime-bg.svg);
             background-position: center;
@@ -106,12 +110,17 @@
     <section class="wave-bg">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-12">
+                <div class="col-lg-8 col-md-6 col-12">
                     <h1 class="h2 my-4">Contact Anupam Mondal</h1>
                 </div>
-                <div class="col-md-6 col-12">
-                    <img class="bg-white img-fluid rounded shadow d-block mx-auto my-5 py-3" src="./portfolio-v2/clients-pixelmap.jpg"
-                        alt="">
+                <div class="col-lg-4 col-md-6 col-12">
+
+                    <div class="card shadow d-block mx-auto" style="width: 320px;">
+                        <img class="img-fluid rounded p-2" src="image/contact/google-preview.webp" alt="" width="320"
+                            height="453">
+                    </div>
+                    <!-- <img class="bg-white img-fluid rounded shadow d-block mx-auto my-5 py-3"
+                        src="image/contact/clients-pixelmap.jpg" alt="" width="500" height="278"> -->
                 </div>
             </div>
         </div>
@@ -120,25 +129,25 @@
         <div class="container pt-5">
             <div class="row">
                 <div class="col-12 col-md-4">
-                    <div class="card my-5 border-light shadow">
-                        <a href="https://www.freelancer.in/u/anupammondal" class="card-link" target="_blank">
-                            <div class="card-body">
+                    <div class="card my-4 border-light shadow">
+                        <div class="card-body">
+                            <a href="https://www.freelancer.in/u/anupammondal" class="stretched-link" target="_blank">
                                 <h3 class="text-center text-primary">
                                     <strong>freelancer</strong>
                                 </h3>
-                                <hr class="border-primary mx-auto" style="width: 0%;">
-                                <p class="lead text-center">
-                                    <span class="badge bg-primary text-white">5.0</span>
-                                    <span class="text-primary">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
-                                    <br>
-                                    <span class="text-primary">Rated preferred freelancer</span>
-                                </p>
-                            </div>
-                        </a>
+                            </a>
+                            <hr class="border-primary mx-auto" style="width: 0%;">
+                            <p class="lead text-center">
+                                <span class="badge bg-primary text-white">5.0</span>
+                                <span class="text-primary">&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+                                <br>
+                                <span class="text-primary">Rated preferred freelancer</span>
+                            </p>
+                        </div>
                     </div>
-                    <div class="card my-5 border-dark shadow">
-                        <a href="https://github.com/anupammo" class="card-link" target="_blank">
-                            <div class="card-body bg-dark">
+                    <div class="card my-4 border-dark shadow">
+                        <div class="card-body bg-dark">
+                            <a href="https://github.com/anupammo" class="stretched-link" target="_blank">
                                 <h3 class="text-center text-white">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                                         class="bi bi-github" viewBox="0 0 16 16">
@@ -147,19 +156,40 @@
                                     </svg>
                                     <strong>GitHub</strong>
                                 </h3>
-                                <hr class="bg-white mx-auto" style="width: 0%;">
-                                <p class="lead text-center text-white">
-                                    100+ Public projects <br>
-                                    HTML, PHP, JavaScript, SQL
-                                </p>
-                            </div>
-                        </a>
+                            </a>
+                            <hr class="bg-white mx-auto" style="width: 0%;">
+                            <p class="lead text-center text-white">
+                                100+ Public projects <br>
+                                HTML, PHP, JavaScript, SQL
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-4">
-                    <div class="card my-5 border-light shadow">
-                        <a href="https://www.linkedin.com/in/anupammondal" class="card-link" target="_blank">
-                            <div class="card-body">
+                    <div class="card shadow border-0 my-4">
+                        <div class="card-body">
+                            <img class="img-fluid py-1" src="image/contact/anupam-clients-review-facebook-2.webp" alt=""
+                                width="320" height="152">
+                        </div>
+                    </div>
+                    <div class="card shadow border-0 my-4">
+                        <div class="card-body">
+                            <img class="img-fluid py-1" src="image/contact/anupam-clients-review-facebook-3.webp" alt=""
+                                width="320" height="125">
+                        </div>
+                    </div>
+                    <!-- <div class=" card border-0 shadow">
+                        <img class="img-fluid rounded" src="./portfolio-v2/google-preview-3.webp" alt="">
+                    </div> -->
+                    <!-- <div class="card shadow d-block mx-auto" style="width: 320px;">
+                        <img class="img-fluid rounded p-2" src="image/contact/google-preview.webp" alt="" width="320"
+                            height="453">
+                    </div> -->
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card my-4 border-light shadow">
+                        <div class="card-body">
+                            <a href="https://www.linkedin.com/in/anupammondal" class="stretched-link" target="_blank">
                                 <h3 class="text-center text-primary">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                                         class="bi bi-linkedin" viewBox="0 0 16 16">
@@ -168,17 +198,17 @@
                                     </svg>
                                     <strong>Linkedin</strong>
                                 </h3>
-                                <hr class="border-primary mx-auto" style="width: 0%;">
-                                <p class="lead text-center text-primary">
-                                    15 years experience as <br>
-                                    Trainer / Developer / Freelancer
-                                </p>
-                            </div>
-                        </a>
+                            </a>
+                            <hr class="border-primary mx-auto" style="width: 0%;">
+                            <p class="lead text-center text-primary">
+                                15 years experience as <br>
+                                Trainer / Developer / Freelancer
+                            </p>
+                        </div>
                     </div>
-                    <div class="card my-5 border-primary shadow">
-                        <a href="https://www.facebook.com/anupammondal.in" class="card-link" target="_blank">
-                            <div class="card-body bg-primary">
+                    <div class="card my-4 border-primary shadow">
+                        <div class="card-body bg-primary">
+                            <a href="https://www.facebook.com/anupammondal.in" class="stretched-link" target="_blank">
                                 <h3 class="text-center text-white">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                                         class="bi bi-facebook" viewBox="0 0 16 16">
@@ -187,27 +217,15 @@
                                     </svg>
                                     <strong>facebook</strong>
                                 </h3>
-                                <hr class="border-white mx-auto" style="width: 0%;">
-                                <p class="lead text-center text-white">
-                                    <span class="badge bg-light text-primary">5.0</span>
-                                    <span class="text-light">&#9733; &#9733; &#9733; &#9733; &#9733;</span><br>
-                                    Page Ratings & Reviews
-                                </p>
-                            </div>
-                        </a>
+                            </a>
+                            <hr class="border-white mx-auto" style="width: 0%;">
+                            <p class="lead text-center text-white">
+                                <span class="badge bg-light text-primary">5.0</span>
+                                <span class="text-light">&#9733; &#9733; &#9733; &#9733; &#9733;</span><br>
+                                Page Ratings & Reviews
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="col-12 col-md-4">
-                    <!-- <div class="card shadow border-0 mt-3 mb-4">
-                        <img class="img-fluid py-1" src="./portfolio-v2/facebook-preview-3.png" alt="">
-                    </div>
-                    <div class="card shadow border-0 my-3">
-                        <img class="img-fluid py-1" src="./portfolio-v2/facebook-preview-2.png" alt="">
-                    </div>
-                    <div class="card border-0 shadow">
-                        <img class="img-fluid rounded" src="./portfolio-v2/google-preview-3.webp" alt="">
-                    </div> -->
-                    <img class="img-fluid rounded" src="./portfolio-v2/google-preview1.png" alt="">
                 </div>
             </div>
         </div>
@@ -299,7 +317,7 @@
                 </div>
                 <div class="col-lg-6 col-12">
                     <img class="img-fluid d-block mx-auto my-4 py-2 rounded bg-white shadow"
-                        src="./portfolio-v2/clients-pixelmap.jpg" alt="">
+                        src="image/contact/clients-pixelmap.jpg" alt="" width="500" height="278">
                     <!-- <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/shell.js"></script> -->
                     <script>
                         // hbspt.forms.create({
