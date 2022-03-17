@@ -47,24 +47,15 @@
             background-repeat: no-repeat;
         }
 
-        .wave-1 {
-            background-image: url(./portfolio-v2/wave-1.svg);
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-
-        .wave-2 {
-            background-image: url(./portfolio-v2/wave-2.svg);
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-
         .wave-bg {
             background-image: url(./portfolio-v2/wave-4.svg);
             background-size: cover;
             background-position: center;
+        }
+
+        .next-wave-bg {
+            background: rgb(100, 65, 165);
+            background: linear-gradient(180deg, rgba(100, 65, 165, 1) 50%, rgba(255, 255, 255, 0) 50%);
         }
 
         footer {
@@ -75,81 +66,20 @@
             text-align: justify;
         }
 
-        .whatsapp-bg {
-            background-color: #57b53f;
-        }
-
-        .skype-bg {
-            background-color: #00aff0;
-        }
-
-        .messanger-bg {
-            background-color: #0078ff;
-        }
-
         #above-footer {
             background-color: #f1f3f4;
         }
     </style>
     <title>Portfolio of Preferred Freelancer Anupam Mondal, Full Stack Developer</title>
+    <link rel="canonical" href="https://anupammondal.in/v2/portfolio.html">
 </head>
 
 <body>
     <header>
-        <!-- <div class="container">
-            <nav class="navbar navbar-expand-md navbar-light">
-                <a class="navbar-brand text-uppercase" href="./">
-                    <strong>
-                        Anupam Mondal
-                    </strong>
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="./">Home</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="aboutme">About</a>
-                        </li>
-                        <li class="nav-item active dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Services
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="web-design.html">Website Design</a>
-                                <a class="dropdown-item" href="web-development.html">Website Development</a>
-                                <a class="dropdown-item" href="web-app-development.html">Web Apllication Development</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="website-management.html">Website Management</a>
-                                <a class="dropdown-item" href="website-optimization.html">Website Page Load
-                                    Performance</a>
-                                <a class="dropdown-item" href="seo.html">Search Engine Optimisation</a>
-                            </div>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="portfolio">Portfolio</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="contact">Contact</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" href="faq.html">FAQ</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div> -->
         <nav class="lead navbar navbar-expand-sm navbar-light">
             <div class="container">
                 <a class="navbar-brand" href="./">
-                    <img src="favicon-32x32.png" class="rounded-circle" alt="">
+                    <img src="favicon-32x32.png" class="rounded-circle" width="32" height="32" loading="lazy" alt="">
                     <span class="ps-2">Anupam Mondal</span>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -180,13 +110,13 @@
                     <h1 class="h2 my-5">Portfolio of Anupam Mondal</h1>
                 </div>
                 <div class="col-sm-6 col-12">
-                    <img width="300" class="bg-light rounded-circle shadow d-block mx-auto my-5" loading="lazy"
-                        src="image/portfolio/anupam-mondal-portfolio.webp" alt="" width="300" height="300">
+                    <img class="bg-light rounded-circle shadow d-block mx-auto my-5" alt=""
+                        src="image/portfolio/anupam-mondal-portfolio.webp" width="300" height="300">
                 </div>
             </div>
         </div>
     </section>
-    <section class="py-5">
+    <section class="py-5 wave-bg">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -222,8 +152,8 @@
                         <img src="https://images.pexels.com/photos/4359794/pexels-photo-4359794.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
                             class="card-img-top" alt="single page website anupam mondal" loading="lazy">
                         <div class="card-body">
-                            <a href="https://anupammo.github.io/keepyourclientshappy1/" class="stretched-link" rel="nofollow"
-                                target="_blank">
+                            <a href="https://anupammo.github.io/keepyourclientshappy1/" class="stretched-link"
+                                rel="nofollow" target="_blank">
                                 <h5 class="card-title text-dark text-center">KeepYourClientsHappy</h5>
                             </a>
                             <p class="lead text-dark text-justify fs-6">Single page website for Branding, Collecting
@@ -268,13 +198,11 @@
             </div>
         </div>
     </section>
-    <section class="py-4">
+    <section class="py-4 next-wave-bg">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2 class="text-center mb-2 pb-5">
-                        Some Web Applications
-                    </h2>
+                    <h2 class="text-center text-white mb-2 pb-5">Some Web Applications</h2>
                 </div>
             </div>
             <div class="row">
