@@ -41,7 +41,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="./contact-us.html">Contact</a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <!-- <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             Blog
@@ -51,7 +51,7 @@
                             <li><a class="dropdown-item" href="./services/web-development.html">Article 2</a></li>
                             <li><a class="dropdown-item" href="./services/website-seo.html">Article 3</a></li>
                         </ul>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
@@ -120,6 +120,63 @@
                         prioritized for boosting visibility once your site goes live. In today's era of digital
                         marketing, SEO stands as the most effective strategy for promoting services and
                         products, ensuring your business thrives in the online realm.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5" id="hoverElement">
+        <div class="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h2 class="lead text-center fs-4 my-5">Numbers that Matter</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-xs-6">
+                        <div class="card border-0">
+                            <div class="card-body">
+                                <p class="lead text-center py-4">
+                                    <span class="display-1" id="counter1">0</span>
+                                    <br>
+                                    <span class="fs-2">Projects </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-6">
+                        <div class="card border-0">
+                            <div class="card-body">
+                                <p class="lead text-center py-4">
+                                    <span class="display-1" id="counter2">0</span>
+                                    <br>
+                                    <span class="fs-2">Countries </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-6">
+                        <div class="card border-0">
+                            <div class="card-body">
+                                <p class="lead text-center py-4">
+                                    <span class="display-1" id="counter3">0</span>
+                                    <br>
+                                    <span class="fs-2">Months </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-xs-6">
+                        <div class="card border-0">
+                            <div class="card-body">
+                                <p class="lead text-center py-4">
+                                    <span class="display-1" id="counter4">0</span>
+                                    <br>
+                                    <span class="fs-2">Clients </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -362,6 +419,53 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script>
+        function animateNumber(elementId, targetNumber, duration) {
+            const element = document.getElementById(elementId);
+            let startNumber = 0;
+            const increment = targetNumber / (duration / 10);  // increment value for each interval (10ms)
+            let currentNumber = startNumber;
+
+            const interval = setInterval(() => {
+                currentNumber += increment;
+                if (currentNumber >= targetNumber) {
+                    currentNumber = targetNumber;
+                    clearInterval(interval);
+                }
+                element.textContent = Math.floor(currentNumber);
+            }, 20);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+            setTimeout(() => {
+                animateNumber('counter1', 160, 5000);
+                animateNumber('counter2', 24, 5000);
+                animateNumber('counter3', 96, 5000);
+                animateNumber('counter4', 80, 5000);
+            }, 1000);
+        });
+    </script>
+    
+    <!-- 
+        Nigeria 
+        Australia 
+        Saudi Arabia 
+        Israel 
+        Lithuania 
+        United States
+        Canada
+        Peru
+        Puerto Rico
+        Malaysia 
+        Slovakia 
+        Mauritius 
+        South Africa
+        Austria
+        Ireland
+        United Kingdom
+ -->
+
 </body>
 
 </html>
