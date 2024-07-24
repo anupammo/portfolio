@@ -10,15 +10,34 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
+        .parallax {
+            background-image: url("https://images.pexels.com/photos/8159115/pexels-photo-8159115.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+            /* min-height: 500px; */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .bg-opacity {
+            background-color: #ffffffaa;
+        }
+
+        .img-flip {
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+        }
+
+        a.a-style {
+            text-decoration: none;
+        }
+
         #porfile-bg {
             display: flex;
             flex-direction: column;
             background-repeat: no-repeat;
             background-position: bottom;
             background-image: url(./image/homepage/Stacked_blob.svg);
-            /* background-image: url(./image/homepage/split_background.svg); */
-            /* margin: 15vh auto; */
-            /* width: fit-content; */
         }
 
         #porfile-bg img {
@@ -34,16 +53,6 @@
             filter: contrast(0) sepia(100%) hue-rotate(204deg) saturate(2000%) brightness(100%);
             opacity: 1;
         }
-
-        /* #porfile-bg {
-            animation: mymove 5s infinite;
-        }
-
-        @keyframes mymove {
-            50% {
-                transform: rotate(180deg);
-            }
-        } */
 
         h1,
         h2,
@@ -120,9 +129,19 @@
                             <li><a class="dropdown-item" href="./services/website-seo.html">Website SEO</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./about-us.html">About</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            About
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./about-us.html">About</a></li>
+                            <li><a class="dropdown-item" href="./portfolio.html">Portfolio</a></li>
+                        </ul>
                     </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="./about-us.html">About</a>
+                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="./contact-us.html">Contact</a>
                     </li>
@@ -145,7 +164,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h1 class="lead fs-2 py-5">Boost Your Business with Expert Web Design, Development, and SEO Services
+                    <h1 class="lead fs-2 my-5">Boost Your Business with Expert Web Design, Development, & SEO Services
                         by Anupam Mondal</h1>
                 </div>
             </div>
@@ -158,23 +177,20 @@
                         elevate your business among clients. Let's delve into how I can transform your online presence
                         for success.</p>
                     <nav class="nav my-5">
-                        <a class="text-uppercase btn btn btn-outline-dark me-2 mb-2 px-4 py-2"
+                        <a class="text-uppercase btn btn-outline-dark me-2 mb-2 px-4 py-2"
                             href="portfolio">Portfolio</a>
-                        <!-- <a class="text-uppercase btn btn btn-outline-dark me-2 mb-2 px-4 py-2"
-                            href="portfolio">Testimonial</a>
-                        <a class="text-uppercase btn btn btn-outline-dark me-2 mb-2 px-4 py-2" href="portfolio">Team
-                            Anupam</a> -->
-                        <a class="text-uppercase btn btn btn-outline-dark me-2 mb-2 px-4 py-2" href="about-us">About
+                        <a class="text-uppercase btn btn-outline-dark me-2 mb-2 px-4 py-2" href="about-us">About
                             Us</a>
                     </nav>
                 </div>
                 <div class="col-lg-4 col-12">
-                    <div class="h-100" id="porfile-bg">
-                        <!-- <div class="bg-warning"></div> -->
+                    <!-- <img src="./image/profile/anupam-mondal-developer.png" class="img-fluid img-flip" alt=""> -->
+                    <img src="./image/profile/anupam-mondal-freelancer.png" class="img-fluid" alt="">
+                    <!-- <div class="h-100" id="porfile-bg">
                         <img src="image/homepage/anupam-mondal-website-seo-web-design-development.webp"
                             class="d-block mx-auto" alt="Anupam Mondal for Web Design | Development | SEO Servives"
                             title="Anupam Mondal for Web Design | Development | SEO Servives">
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -192,8 +208,7 @@
                         design, I create websites that resonate with your audience. Embracing responsive design,
                         your site will seamlessly adapt to any device, ensuring swift loading times that swiftly
                         introduce your business and its offerings to potential customers.</p>
-                    <a class="text-uppercase btn btn btn-outline-dark me-2 px-4 py-2 mb-5"
-                        href="services/web-design">Web
+                    <a class="text-uppercase btn btn-outline-dark me-2 px-4 py-2 mb-5" href="services/web-design">Web
                         Design Services</a>
                 </div>
                 <div class="col-lg-6 col-12 p-4 bg-light border rounded">
@@ -206,7 +221,7 @@
                         Brand. I specialize in developing websites that not only showcase your products but also
                         facilitate outreach to audiences across smartphones and desktops. With progressive web apps,
                         your business remains accessible even when users are offline.</p>
-                    <a class="text-uppercase btn btn btn-outline-dark me-2 px-4 py-2 mb-5"
+                    <a class="text-uppercase btn btn-outline-dark me-2 px-4 py-2 mb-5"
                         href="services/web-development">Web Development Services</a>
                 </div>
                 <div class="col-lg-6 col-12 p-4 bg-light border rounded">
@@ -225,7 +240,7 @@
                 <div class="col-lg-6 col-12 p-4">
                     <h2 class="lead fs-3 my-5">
                         <span>Digital Marketing : </span>
-                        <span class="d-block fs-5 pt-2">Grow with Organic Traffics and Leads</span>
+                        <span class="d-block fs-5 pt-2">Grow with Organic Traffics & Leads</span>
                     </h2>
                     <p class="lead fs-6 my-5">Think of SEO as the essential wheels for your digital presence.
                         Search Engine Optimization (SEO) is a pivotal aspect of website design and development,
@@ -297,14 +312,15 @@
             </div>
         </div>
     </section>
-    <section class="my-5" id="clients">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div id="carouselExampleRide" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                        <div class="carousel-inner py-4">
-                            <div class="carousel-item active">
-                                <ul class="nav justify-content-center">
+    <section class="parallax" id="clients">
+        <div class="bg-opacity py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div id="carouselExampleRide" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                            <div class="carousel-inner py-4">
+                                <div class="carousel-item active">
+                                    <!-- <ul class="nav justify-content-center">
                                     <li class="nav-item display-3 px-4">🇺🇸</li>
                                     <li class="nav-item display-3 px-4">🇨🇦</li>
                                     <li class="nav-item display-3 px-4">🇬🇧</li>
@@ -313,10 +329,36 @@
                                     <li class="nav-item display-3 px-4">🇳🇬</li>
                                     <li class="nav-item display-3 px-4">🇮🇪</li>
                                     <li class="nav-item display-3 px-4">🇸🇦</li>
-                                </ul>
-                            </div>
-                            <div class="carousel-item">
-                                <ul class="nav justify-content-center">
+                                </ul> -->
+                                    <ul class="nav justify-content-center">
+                                        <li class="nav-item display-3 px-4">
+                                            <img src="./res/icons/countries/australia.png" alt="">
+                                        </li>
+                                        <li class="nav-item display-3 px-4">
+                                            <img src="./res/icons/countries/austria.png" alt="">
+                                        </li>
+                                        <li class="nav-item display-3 px-4">
+                                            <img src="./res/icons/countries/canada.png" alt="">
+                                        </li>
+                                        <li class="nav-item display-3 px-4">
+                                            <img src="./res/icons/countries/ireland.png" alt="">
+                                        </li>
+                                        <li class="nav-item display-3 px-4">
+                                            <img src="./res/icons/countries/israel.png" alt="">
+                                        </li>
+                                        <li class="nav-item display-3 px-4">
+                                            <img src="./res/icons/countries/lithuania.png" alt="">
+                                        </li>
+                                        <li class="nav-item display-3 px-4">
+                                            <img src="./res/icons/countries/malaysia.png" alt="">
+                                        </li>
+                                        <li class="nav-item display-3 px-4">
+                                            <img src="./res/icons/countries/mauritius.png" alt="">
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="carousel-item">
+                                    <!-- <ul class="nav justify-content-center">
                                     <li class="nav-item display-3 px-4">🇱🇹</li>
                                     <li class="nav-item display-3 px-4">🇵🇪</li>
                                     <li class="nav-item display-3 px-4">🇵🇷</li>
@@ -325,7 +367,34 @@
                                     <li class="nav-item display-3 px-4">🇿🇦</li>
                                     <li class="nav-item display-3 px-4">🇦🇹</li>
                                     <li class="nav-item display-3 px-4">🇬🇧</li>
-                                </ul>
+                                </ul> -->
+                                    <ul class="nav justify-content-center">
+                                        <li class="nav-item display-3 px-4">
+                                            <img src="./res/icons/countries/nigeria.png" alt="">
+                                        </li>
+                                        <li class="nav-item display-3 px-4">
+                                            <img src="./res/icons/countries/peru.png" alt="">
+                                        </li>
+                                        <li class="nav-item display-3 px-4">
+                                            <img src="./res/icons/countries/puerto-rico.png" alt="">
+                                        </li>
+                                        <li class="nav-item display-3 px-4">
+                                            <img src="./res/icons/countries/saudi-arabia.png" alt="">
+                                        </li>
+                                        <li class="nav-item display-3 px-4">
+                                            <img src="./res/icons/countries/slovakia.png" alt="">
+                                        </li>
+                                        <li class="nav-item display-3 px-4">
+                                            <img src="./res/icons/countries/south-africa.png" alt="">
+                                        </li>
+                                        <li class="nav-item display-3 px-4">
+                                            <img src="./res/icons/countries/united-kingdom.png" alt="">
+                                        </li>
+                                        <li class="nav-item display-3 px-4">
+                                            <img src="./res/icons/countries/united-states-of-america.png" alt="">
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -350,13 +419,13 @@
                             approached with dedication, aiming to deliver outstanding results that exceed expectations.
                         </p>
                         <nav class="nav">
-                            <a class="text-uppercase btn btn btn-outline-dark me-2 mb-2 px-4 py-2"
+                            <a class="text-uppercase btn btn-outline-dark me-2 mb-2 px-4 py-2"
                                 href="portfolio">Portfolio</a>
-                            <!-- <a class="text-uppercase btn btn btn-outline-dark me-2 mb-2 px-4 py-2"
+                            <!-- <a class="text-uppercase btn btn-outline-dark me-2 mb-2 px-4 py-2"
                                 href="portfolio">Testimonial</a>
-                            <a class="text-uppercase btn btn btn-outline-dark me-2 mb-2 px-4 py-2" href="portfolio">Team
+                            <a class="text-uppercase btn btn-outline-dark me-2 mb-2 px-4 py-2" href="portfolio">Team
                                 Anupam</a> -->
-                            <a class="text-uppercase btn btn btn-outline-dark me-2 mb-2 px-4 py-2" href="about-us">About
+                            <a class="text-uppercase btn btn-outline-dark me-2 mb-2 px-4 py-2" href="about-us">About
                                 Us</a>
                         </nav>
                     </div>
@@ -441,17 +510,18 @@
                             exceptional together!
                         </p>
                         <nav class="nav">
-                            <a class="btn btn btn-outline-dark me-2" href="#">
-                                <i class="bi bi-whatsapp h5"></i>
+                            <a class="text-uppercase btn btn-outline-dark me-2 px-3" href="portfolio">Portfolio</a>
+                            <a class="btn btn-outline-dark me-2" href="#">
+                                <i class="bi bi-whatsapp"></i>
                             </a>
-                            <a class="btn btn btn-outline-dark me-2" href="#">
-                                <i class="bi bi-skype h5"></i>
+                            <a class="btn btn-outline-dark me-2" href="#">
+                                <i class="bi bi-skype"></i>
                             </a>
-                            <a class="btn btn btn-outline-dark me-2" href="#">
-                                <i class="bi bi-messenger h5"></i>
+                            <a class="btn btn-outline-dark me-2" href="#">
+                                <i class="bi bi-messenger"></i>
                             </a>
-                            <a class="btn btn btn-outline-dark me-2" href="#">
-                                <i class="bi bi-telephone-inbound-fill h5"></i>
+                            <a class="btn btn-outline-dark me-2" href="#">
+                                <i class="bi bi-telephone-inbound-fill"></i>
                             </a>
                         </nav>
                     </div>
@@ -472,22 +542,22 @@
                         <div class="card shadow my-3">
                             <div class="card-body px-4 py-5">
                                 <nav class="nav">
-                                    <a style="text-decoration: none;"
+                                    <a class="a-style" target="_blank"
                                         href="https://udyamregistration.gov.in/verifyudyambarcode.aspx?verifyudrn=5EJ2WVW9T64RK3BduWrfjw==">
                                         <figure class="figure d-block mb-0">
-                                            <img src="image/res/MSME_S.png" class="figure-img my-2 mx-3" width="60"
-                                                height="60" alt="MSME | Micro, Small and Medium Enterprises"
+                                            <img src="image/res/MSME_S.png" class="figure-img my-2 mx-3" width="75"
+                                                height="75" alt="MSME | Micro, Small and Medium Enterprises"
                                                 title="Ministry of Micro, Small and Medium Enterprises">
                                         </figure>
                                     </a>
-                                    <a style="text-decoration: none;" href="">
+                                    <!-- <a style="text-decoration: none;" href="">
                                         <span class="display-4 px-2"> 🇮🇳</span>
-                                    </a>
+                                    </a> -->
                                 </nav>
-                                <figcaption class="figure-caption lead">MSME Registered Business</figcaption>
+                                <figcaption class="figure-caption lead">MSME Registered</figcaption>
                                 <hr class="w-50 my-3">
                                 <address class="lead fs-6 mb-0">
-                                    <strong>Anupam Mondal</strong> <br />
+                                    <strong class="fs-5">Anupam Mondal</strong> <br />
                                     Metiari, Sonarpur <br />
                                     South 24 Parganas <br />
                                     West Bengal, 743330
@@ -579,7 +649,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-6 col-6">
+                            <div class="col-lg-4 col-6">
                                 <ul class="nav flex-column lead fs-6 mt-5">
                                     <li class="nav-item">
                                         <a class="nav-link py-1" href="./">Home page</a>
@@ -595,7 +665,25 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="col-lg-6 col-6">
+                            <div class="col-lg-4 col-6">
+                                <ul class="nav flex-column lead fs-6 mt-5">
+                                    <li class="nav-item">
+                                        <p class="fw-bold mb-0 ms-3 py-1">Services</p>
+                                        <!-- <a class="nav-link py-1" href="./">Home page</a> -->
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link py-1" href="./services/web-design.html">Web Design</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link py-1" href="./services/web-development.html">Web
+                                            Development</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link py-1" href="./services/website-seo.html">Website SEO</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4 col-6">
                                 <ul class="nav flex-column lead fs-6 mt-5">
                                     <li class="nav-item lead fs-6">
                                         <a class="nav-link py-1" target="_blank"
@@ -647,7 +735,7 @@
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <p class="lead fs-6 my-4 px-3">2022 © Anupam Mondal</p>
+                                <p class="lead my-4 px-3">2022 © Anupam Mondal</p>
                             </div>
                         </div>
                     </div>
