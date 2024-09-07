@@ -16,7 +16,8 @@
     <meta property="og:title" content="Anupam Mondal for website, SEO, web design, development" />
     <meta property="og:description"
         content="Anupam Mondal for website, SEO, web design, development. Boost Your Business with Expert Web Design, Development, & SEO Services by Anupam Mondal. " />
-    <meta property="og:image" content="https://anupammondal.in/image/screenshots/15-th-aug-independence-day-of-india.png" />
+    <meta property="og:image"
+        content="https://anupammondal.in/image/screenshots/15-th-aug-independence-day-of-india.png" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
@@ -24,7 +25,8 @@
     <meta property="twitter:title" content="Anupam Mondal for website, SEO, web design, development" />
     <meta property="twitter:description"
         content="Anupam Mondal for website, SEO, web design, development. Boost Your Business with Expert Web Design, Development, & SEO Services by Anupam Mondal. " />
-    <meta property="twitter:image" content="https://anupammondal.in/image/screenshots/15-th-aug-independence-day-of-india.png" />
+    <meta property="twitter:image"
+        content="https://anupammondal.in/image/screenshots/15-th-aug-independence-day-of-india.png" />
     <link rel="canonical" href="https://anupammondal.in">
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
 
@@ -40,14 +42,6 @@
             background-repeat: no-repeat;
             background-size: contain;
         }
-
-        /* .parallax {
-            background-image: url('./image/extra/15august/circuit-board.svg');
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: contain;
-        } */
 
         .parallax {
             background-color: #ffffff;
@@ -144,6 +138,14 @@
         .link-anupam a {
             color: #6441A5 !important;
         }
+
+        .text-color {
+            color: #6441A5;
+        }
+
+        .bg-color {
+            background-color: #6441A5;
+        }
     </style>
 </head>
 
@@ -233,22 +235,24 @@
             </div>
         </div>
     </header>
-    <section class="aug15">
+    <!-- parallax promotion -->
+    <!-- <section class="aug15">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="my-5 py-5"></div>
                     <div class="my-5 py-5"></div>
                 </div>
-                <!-- <div class="col-md-6 col-12"></div>
+                <div class="col-md-6 col-12"></div>
                 <div class="col-md-6 col-12 px-0">
                     <img class="img-fluid d-block mx-auto card"
                         src="./image/extra/15august/15th-august-independence-day-of-india.webp"
                         alt="15th August | Har Ghar Tiranga | Independence Day of India">
-                </div> -->
+                </div>
             </div>
         </div>
-    </section>
+    </section> -->
+    <!-- parallax promotion -->
     <section class="my-4 py-5" id="services">
         <div class="container">
             <div class="row">
@@ -321,7 +325,20 @@
                             <div class="card shadow border-0 my-3">
                                 <div class="card-body">
                                     <p class="lead text-center py-4">
-                                        <span class="display-1" id="counter1">0</span>
+                                        <span class="text-color display-5" id="counter1">1000</span>
+                                        <span class="fs-1">+</span>
+                                        <br>
+                                        <span class="text-uppercase fs-4">Websites </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-xs-6">
+                            <div class="card shadow border-0 my-3">
+                                <div class="card-body">
+                                    <p class="lead text-center py-4">
+                                        <span class="text-color display-5" id="counter2">150</span>
+                                        <span class="fs-1">+</span>
                                         <br>
                                         <span class="text-uppercase fs-4">Projects </span>
                                     </p>
@@ -332,31 +349,22 @@
                             <div class="card shadow border-0 my-3">
                                 <div class="card-body">
                                     <p class="lead text-center py-4">
-                                        <span class="display-1" id="counter2">0</span>
-                                        <br>
-                                        <span class="text-uppercase fs-4">Countries </span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-xs-6">
-                            <div class="card shadow border-0 my-3">
-                                <div class="card-body">
-                                    <p class="lead text-center py-4">
-                                        <span class="display-1" id="counter3">0</span>
-                                        <br>
-                                        <span class="text-uppercase fs-4">Tech / Skills </span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-xs-6">
-                            <div class="card shadow border-0 my-3">
-                                <div class="card-body">
-                                    <p class="lead text-center py-4">
-                                        <span class="display-1" id="counter4">0</span>
+                                        <span class="text-color display-5" id="counter3">80</span>
+                                        <span class="fs-1">+</span>
                                         <br>
                                         <span class="text-uppercase fs-4">Clients </span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-xs-6">
+                            <div class="card shadow border-0 my-3">
+                                <div class="card-body">
+                                    <p class="lead text-center py-4">
+                                        <span class="text-color display-5" id="counter4">16</span>
+                                        <span class="fs-1">+</span>
+                                        <br>
+                                        <span class="text-uppercase fs-4">Countries </span>
                                     </p>
                                 </div>
                             </div>
@@ -820,10 +828,10 @@
         document.addEventListener('DOMContentLoaded', () => {
 
             setTimeout(() => {
-                animateNumber('counter1', 160, 5000);
-                animateNumber('counter2', 16, 5000);
-                animateNumber('counter3', 32, 5000);
-                animateNumber('counter4', 80, 5000);
+                animateNumber('counter1', 1000, 5000);
+                animateNumber('counter2', 150, 5000);
+                animateNumber('counter3', 80, 5000);
+                animateNumber('counter4', 16, 5000);
             }, 1000);
         });
     </script>
