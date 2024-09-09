@@ -155,6 +155,54 @@
         .card-review {
             width: 320px;
         }
+
+        /* marquee */
+        .marquee {
+            /* box-shadow: 0 1px 3px rgba(0, 0, 0, .1); */
+            border: 1px solid rgba(0, 0, 0, .15);
+            /* background-color: #ffffff; */
+            overflow: hidden;
+            position: relative;
+            height: 50px;
+            width: 100%;
+            /* Full width of its parent */
+            white-space: nowrap;
+        }
+
+        .marquee p {
+            position: absolute;
+            width: auto;
+            height: 100%;
+            margin: 0;
+            line-height: 50px;
+            text-align: center;
+            /* Start off the right edge */
+            transform: translateX(100%);
+            /* Animate to the left */
+            animation: scroll-left 20s linear infinite;
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-200%);
+            }
+        }
+
+        @keyframes scroll-right {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        /* marquee */
     </style>
 </head>
 
@@ -244,6 +292,17 @@
             </div>
         </div>
     </header>
+    <!-- <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="marquee">
+                        <p>Scrolling Text Marquee - A Simple CSS Demonstration</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
     <!-- parallax promotion -->
     <!-- <section class="aug15">
         <div class="container">
@@ -660,10 +719,6 @@
                         <nav class="nav">
                             <a class="text-uppercase btn btn-outline-dark me-2 mb-2 px-4 py-2"
                                 href="portfolio">Portfolio</a>
-                            <!-- <a class="text-uppercase btn btn-outline-dark me-2 mb-2 px-4 py-2"
-                                href="portfolio">Testimonial</a>
-                            <a class="text-uppercase btn btn-outline-dark me-2 mb-2 px-4 py-2" href="portfolio">Team
-                                Anupam</a> -->
                             <a class="text-uppercase btn btn-outline-dark me-2 mb-2 px-4 py-2" href="about-us">About
                                 Us</a>
                         </nav>
@@ -672,41 +727,45 @@
             </div>
         </div>
     </section>
-    <section class="parallax" id="reviews">
+    <section class="parallax" id="clients">
         <div class="bg-opacity">
             <div class="container py-5">
                 <div class="row">
                     <div class="col-lg-3 col-md-4 col-12">
-                        <img src="https://anupammo.github.io/portfolio2020/capstone-trading-systems.jpg"
-                            class="card img-fluid my-2" alt="">
+                        <img src="image/brands/august-beauty-lab.jpg" class="card img-fluid my-2" alt="">
                     </div>
                     <div class="col-lg-3 col-md-4 col-12">
-                        <img src="https://anupammo.github.io/portfolio2020/india-arrival.jpg"
-                            class="card img-fluid my-2" alt="">
+                        <img src="image/brands/dubai-visas.jpg" class="card img-fluid my-2" alt="">
                     </div>
                     <div class="col-lg-3 col-md-4 col-12">
-                        <img src="https://anupammo.github.io/portfolio2020/gracianna-winery.jpg"
-                            class="card img-fluid my-2" alt="">
+                        <img src="image/brands/capstone-trading-systems.jpg" class="card img-fluid my-2" alt="">
                     </div>
                     <div class="col-lg-3 col-md-4 col-12">
-                        <img src="https://anupammo.github.io/portfolio2020/1300-the-vet.jpg"
-                            class="card img-fluid my-2" alt="">
+                        <img src="image/brands/gracianna-winery.jpg" class="card img-fluid my-2" alt="">
                     </div>
                     <div class="col-lg-3 col-md-4 col-12">
-                        <img src="https://anupammo.github.io/portfolio2020/radiobillboards.jpg"
-                            class="card img-fluid my-2" alt="">
+                        <img src="image/brands/br-oil-tools.jpg" class="card img-fluid my-2" alt="">
                     </div>
                     <div class="col-lg-3 col-md-4 col-12">
-                        <img src="https://anupammo.github.io/portfolio2020/ritehorn.jpg"
-                            class="card img-fluid my-2" alt="">
+                        <img src="image/brands/cpa-australia.jpg" class="card img-fluid my-2" alt="">
                     </div>
                     <div class="col-lg-3 col-md-4 col-12">
-                        <img src="https://anupammo.github.io/portfolio2020/adiant-welfare.jpg"
-                            class="card img-fluid my-2" alt="">
+                        <img src="image/brands/gc-technologies.jpg" class="card img-fluid my-2" alt="">
                     </div>
                     <div class="col-lg-3 col-md-4 col-12">
-                        <img src="https://anupammo.github.io/portfolio2020/the-flooring-company.jpg"
-                            class="card img-fluid my-2" alt="">
+                        <img src="image/brands/global-alliance.jpg" class="card img-fluid my-2" alt="">
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-12">
+                        <img src="image/about/1300-the-vet.webp" class="card img-fluid my-2" alt="">
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-12">
+                        <img src="image/brands/cpa-australia.jpg" class="card img-fluid my-2" alt="">
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-12">
+                        <img src="image/brands/gc-technologies.jpg" class="card img-fluid my-2" alt="">
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-12">
+                        <img src="image/brands/global-alliance.jpg" class="card img-fluid my-2" alt="">
                     </div>
                 </div>
             </div>
