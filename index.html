@@ -117,24 +117,29 @@
     </script>
     <script type="application/ld+json">
         {
-            "@context": "https://schema.org",
+            "@context": "https://schema.org/",
             "@type": "Review",
-            "reviewBody": "This guy is excellent! Great experience. Job done within 24 hours.",
+            "itemReviewed": {
+                "@type": "Person",
+                "image": "https://anupammondal.in/image/profile/anupam-mondal-freelancer.webp",
+                "name": "Anupam Mondal",
+                "jobTitle": "Web Design, Development & SEO Specialist",
+                "url": "https://anupammondal.in/"
+            },
+            "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": 5
+            },
             "author": {
                 "@type": "Person",
                 "name": "Azizi Jazmi"
             },
-            "reviewRating": {
-                "@type": "Rating",
-                "ratingValue": "5",
-                "bestRating": "5"
-            },
-            "itemReviewed": {
-                "@type": "Person",
-                "name": "Anupam Mondal"
+            "publisher": {
+                "@type": "Organization",
+                "name": "Google"
             }
         }
-    </script>                                                                                                    
+    </script>                                                                                                       
     <!-- JSON-LD markup -->
     <!-- Primary Meta Tags -->
     <title>Anupam Mondal for website, SEO, web design, development</title>
