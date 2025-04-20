@@ -498,91 +498,16 @@
                             </div>
                             </div>
                         </div>
-                        <!-- <div class="accordion accordion-flush" id="accordionFaq" itemscope itemtype="https://schema.org/FAQPage">
-                            <div class="accordion-item bg-transparent" 
-                                itemprop="mainEntity" itemtype="https://schema.org/Question">
-                                <h3 class="accordion-header" itemprop="name">
-                                    <button class="accordion-button shadow-none bg-transparent fs-5 px-0" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false"
-                                        aria-controls="collapseOne">What is content marketing?</button>
-                                </h3>
-                                <div id="collapseOne" class="accordion-collapse collapse"
-                                    data-bs-parent="#accordionFaq">
-                                    <div class="accordion-body fs-6 px-0" 
-                                    itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                        <p class="fs-6" itemprop="text">Content marketing is a strategic approach to creating and distributing valuable, relevant, and consistent content to attract and retain a clearly defined audience, ultimately driving profitable customer action.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item bg-transparent" 
-                                itemprop="mainEntity" itemtype="https://schema.org/Question">
-                                <h3 class="accordion-header" itemprop="name">
-                                    <button class="accordion-button shadow-none bg-transparent fs-5 px-0" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
-                                        aria-controls="collapseTwo">Why is content marketing important for startups?</button>
-                                </h3>
-                                <div id="collapseTwo" class="accordion-collapse collapse"
-                                    data-bs-parent="#accordionFaq">
-                                    <div class="accordion-body fs-6 px-0" 
-                                    itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                        <p class="fs-6" itemprop="text">Content marketing helps startups build brand awareness, establish authority, engage with their audience, and drive traffic to their website, which can lead to increased conversions and business growth.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item bg-transparent" 
-                                itemprop="mainEntity" itemtype="https://schema.org/Question">
-                                <h3 class="accordion-header" itemprop="name">
-                                    <button class="accordion-button shadow-none bg-transparent fs-5 px-0" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
-                                        aria-controls="collapseThree">How can I create a content calendar?</button>
-                                </h3>
-                                <div id="collapseThree" class="accordion-collapse collapse"
-                                    data-bs-parent="#accordionFaq">
-                                    <div class="accordion-body fs-6 px-0" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                        <p class="fs-6" itemprop="text">To create a content calendar, list out all the content topics you plan to cover, assign publishing dates, and track deadlines. Use tools like Google Calendar, Trello, or Excel to organize and manage your content schedule.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item bg-transparent" 
-                                itemprop="mainEntity" itemtype="https://schema.org/Question">
-                                <h3 class="accordion-header" itemprop="name">
-                                    <button class="accordion-button shadow-none bg-transparent fs-5 px-0" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
-                                        aria-controls="collapseFour">What are some effective content formats for startups?</button>
-                                </h3>
-                                <div id="collapseFour" class="accordion-collapse collapse"
-                                    data-bs-parent="#accordionFaq">
-                                    <div class="accordion-body fs-6 px-0" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                        <p class="fs-6" itemprop="text">Effective content formats for startups include blog posts, videos, infographics, podcasts, social media updates, and case studies. Using a mix of these formats can help you reach a wider audience and keep your content engaging.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item bg-transparent" 
-                                itemprop="mainEntity" itemtype="https://schema.org/Question">
-                                <h3 class="accordion-header" itemprop="name">
-                                    <button class="accordion-button shadow-none bg-transparent fs-5 px-0" type="button"
-                                        data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false"
-                                        aria-controls="collapseFive">How can I measure the success of my content marketing efforts?</button>
-                                </h3>
-                                <div id="collapseFive" class="accordion-collapse collapse"
-                                    data-bs-parent="#accordionFaq">
-                                    <div class="accordion-body fs-6 px-0" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                        <p class="fs-6" itemprop="text">Measure the success of your content marketing efforts by tracking key metrics such as website traffic, engagement rates, social media shares, conversion rates, and ROI. Use tools like Google Analytics, social media insights, and content marketing platforms.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
             </div>
         </section>
     </article>
-    
     <section>
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2>FAQs</h2>                   
+                    <div id="social-share-container"></div>
                 </div>
             </div>
         </div>
@@ -764,8 +689,13 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Social Sharing Widget -->
+    <script src="../js-tools/socialShareWidget.js"></script>
+    <script>
+        new SocialShareWidget("social-share-container");
+    </script>      
+    <!-- Social Sharing Widget -->
 </body>
 
 </html>

@@ -17,30 +17,30 @@ class SocialShareWidget {
         {
           name: "Facebook",
           url: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(this.pageUrl)}`,
-          icon: "📘", // Replace with an SVG or image for better visuals
+          icon: "<i class='bi bi-facebook'></i>", // Replace with an SVG or image for better visuals
         },
         {
           name: "Twitter",
           url: `https://twitter.com/intent/tweet?url=${encodeURIComponent(this.pageUrl)}`,
-          icon: "🐦",
+          icon: "<i class='bi bi-twitter-x'></i>",
         },
         {
           name: "LinkedIn",
           url: `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(this.pageUrl)}`,
-          icon: "💼",
+          icon: "<i class='bi bi-linkedin'></i>",
         },
         {
           name: "WhatsApp",
           url: `https://api.whatsapp.com/send?text=${encodeURIComponent(this.pageUrl)}`,
-          icon: "📱",
+          icon: "<i class='bi bi-whatsapp'></i>",
         },
       ];
   
       container.innerHTML = socialPlatforms
         .map(
           (platform) => `
-          <a href="${platform.url}" target="_blank" class="social-share-button" style="text-decoration: none; margin: 5px;">
-            <span style="font-size: 24px;">${platform.icon}</span>
+          <a href="${platform.url}" target="_blank" class="btn btn-outline-dark rounded-pill social-share-button px-4">
+            <span>${platform.icon}</span>
             ${platform.name}
           </a>
         `
@@ -53,20 +53,20 @@ class SocialShareWidget {
     addStyling(container) {
       const buttons = container.querySelectorAll(".social-share-button");
       buttons.forEach((button) => {
-        button.style.padding = "10px";
-        button.style.border = "1px solid #ddd";
-        button.style.borderRadius = "5px";
-        button.style.display = "inline-block";
-        button.style.textAlign = "center";
-        button.style.transition = "background-color 0.3s";
-        button.style.cursor = "pointer";
+        // button.style.padding = "10px";
+        // button.style.border = "1px solid #ddd";
+        // button.style.borderRadius = "5px";
+        // button.style.display = "inline-block";
+        // button.style.textAlign = "center";
+        // button.style.transition = "background-color 0.3s";
+        // button.style.cursor = "pointer";
   
         button.addEventListener("mouseover", () => {
-          button.style.backgroundColor = "#f0f0f0";
+          // button.style.backgroundColor = "#f0f0f0";
         });
   
         button.addEventListener("mouseout", () => {
-          button.style.backgroundColor = "#fff";
+          // button.style.backgroundColor = "#fff";
         });
       });
     }
