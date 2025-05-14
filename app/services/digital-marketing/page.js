@@ -1,7 +1,7 @@
 import Image from "next/image";
 import CallCTA from "../../components/CallCTA";
 import Counters from "../../components/Counters";
-import Subscriptions from "@/app/components/Subscriptions";
+import Subscriptions from "../../components/Subscriptions";
 
 export default function DigitalMarketing() {
     return (
@@ -48,183 +48,127 @@ export default function DigitalMarketing() {
                             </nav>
                         </div>
                         <div className="col-md-4 col-12">
-                            <Image src="/image/digital-marketing/digital-marketing.svg" className="img-fluid py-4"
+                            <Image src="/image/svg/digital-marketing.svg" className="img-fluid py-4"
                                 alt="Digital Marketing Services" width={356} height={356} />
                         </div>
                     </div>
                 </div>
             </header>
-            <Subscriptions />
-            <section className="bg-anupam parallax">
-                <div className="gradient-bottom-bg pt-5">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-lg-4 col-md-6 col-12">
-                                <div className="card my-3 p-3">
-                                    <div className="card-body p-0" id="time-bg">
-                                        <h2 className="text-uppercase h3 my-5">Opening hours</h2>
-                                        <table className="table table-borderless mb-5">
-                                            <tbody className="lead fw-bold fs-6">
-                                                <tr>
-                                                    <td>Monday - Friday</td>
-                                                    <td>12pm - 8pm</td>
-                                                </tr>
-                                                <tr className="text-danger">
-                                                    <td>Saturday - Sunday</td>
-                                                    <td>Closed</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-4 col-md-6 col-12">
-                                <div className="card my-3 p-3">
-                                    <div className="card-body p-0" id="reach-bg">
-                                        <h2 className="text-uppercase h3 my-5">Reach </h2>
-                                        <div className="mb-5">
-                                            <a className="nav-link d-block mb-3" href="mailto:a09051985@gmail.com"><strong>📬
-                                                    a09051985@gmail.com</strong></a>
-                                            <a className="nav-link d-block mb-3" href="tel:+919474460058">📞 <strong>+91 (947)
-                                                    446-0058</strong></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-4 col-md-6 col-12">
-                                <div className="card my-3 p-3">
-                                    <div className="card-body p-0" id="visit-bg">
-                                        <h2 className="text-uppercase h3 my-5">Visit </h2>
-                                        <address className="lead pb-5">
-                                            Protapnagar, Metiari, <br />West Bengal, 743330
-                                        </address>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <section className="bg-light" id="services">
+                <div className="gradient-bottom-bg">
                     <div className="container">
                         <div className="row">
                             <div className="col-12">
-                                <CallCTA />
+                                <h2 className="h3 my-5">Our Services</h2>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </section>
-            <section id="services">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-12">
-                            <h2 className="h3 my-5">Our Services</h2>
-                        </div>
-                    </div>
-                    <div className="row">
-                        <div className="col-md-6 col-12">
-                            <div className="card my-3">
-                                <div className="row g-0">
-                                    <div className="col-md-3">
-                                        <Image src="/image/digital-marketing/search-engine-optimization-seo.svg"
-                                            className="img-fluid rounded-start my-4" alt="Search Engine Optimization (SEO)" width={136} height={136} />
-                                    </div>
-                                    <div className="col-md-9">
-                                        <div className="card-body">
-                                            <h4 className="h5">Search Engine Optimization (SEO)</h4>
-                                            <p className="fs-6 mb-0">Achieve higher rankings on search engines and attract
-                                                organic traffic with our comprehensive SEO services. We conduct thorough keyword
-                                                research, optimize on-page elements, and build high-quality backlinks to ensure
-                                                your website stands out.</p>
+                        <div className="row">
+                            <div className="col-md-6 col-12">
+                                <div className="card my-3">
+                                    <div className="row g-0">
+                                        <div className="col-md-3">
+                                            <img src="../image/svg/search-engine-optimization-seo.svg"
+                                                className="img-fluid rounded-start my-4" alt="Search Engine Optimization (SEO)" />
+                                        </div>
+                                        <div className="col-md-9">
+                                            <div className="card-body">
+                                                <h4 className="h5">Search Engine Optimization (SEO)</h4>
+                                                <p className="fs-6 mb-0">Achieve higher rankings on search engines and attract
+                                                    organic traffic with our comprehensive SEO services. We conduct thorough keyword
+                                                    research, optimize on-page elements, and build high-quality backlinks to ensure
+                                                    your website stands out.</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="col-md-6 col-12">
-                            <div className="card my-3">
-                                <div className="row g-0">
-                                    <div className="col-md-3">
-                                        <Image src="/image/digital-marketing/social-media-marketing.svg"
-                                            className="img-fluid rounded-start my-4" alt="Social Media Marketing" width={136} height={136} />
-                                    </div>
-                                    <div className="col-md-9">
-                                        <div className="card-body">
-                                            <h4 className="h5">Social Media Marketing</h4>
-                                            <p className="fs-6 mb-0">Engage with your audience on platforms like Facebook,
-                                                Instagram, and LinkedIn. Our social media strategies are designed to increase
-                                                brand awareness, foster community engagement, and drive traffic to your website.
-                                            </p>
+                            <div className="col-md-6 col-12">
+                                <div className="card my-3">
+                                    <div className="row g-0">
+                                        <div className="col-md-3">
+                                            <img src="../image/svg/social-media-marketing.svg"
+                                                className="img-fluid rounded-start my-4" alt="Social Media Marketing" />
+                                        </div>
+                                        <div className="col-md-9">
+                                            <div className="card-body">
+                                                <h4 className="h5">Social Media Marketing</h4>
+                                                <p className="fs-6 mb-0">Engage with your audience on platforms like Facebook,
+                                                    Instagram, and LinkedIn. Our social media strategies are designed to increase
+                                                    brand awareness, foster community engagement, and drive traffic to your website.
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="col-md-6 col-12">
-                            <div className="card my-3">
-                                <div className="row g-0">
-                                    <div className="col-md-3">
-                                        <Image src="/image/digital-marketing/content-marketing.svg"
-                                            className="img-fluid rounded-start mt-3" alt="Content Marketing" width={136} height={136} />
-                                    </div>
-                                    <div className="col-md-9">
-                                        <div className="card-body">
-                                            <h4 className="h5">Content Marketing</h4>
-                                            <p className="fs-6 mb-0">Create valuable and relevant content that resonates with
-                                                your audience. From blog posts to infographics, we craft content that not only
-                                                informs but also converts.</p>
+                            <div className="col-md-6 col-12">
+                                <div className="card my-3">
+                                    <div className="row g-0">
+                                        <div className="col-md-3">
+                                            <img src="../image/svg/content-marketing.svg"
+                                                className="img-fluid rounded-start mt-3" alt="Content Marketing" />
+                                        </div>
+                                        <div className="col-md-9">
+                                            <div className="card-body">
+                                                <h4 className="h5">Content Marketing</h4>
+                                                <p className="fs-6 mb-0">Create valuable and relevant content that resonates with
+                                                    your audience. From blog posts to infographics, we craft content that not only
+                                                    informs but also converts.</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="col-md-6 col-12">
-                            <div className="card my-3">
-                                <div className="row g-0">
-                                    <div className="col-md-3">
-                                        <Image src="/image/digital-marketing/email-marketing.svg"
-                                            className="img-fluid rounded-start my-2" alt="Email Marketing" width={136} height={136} />
-                                    </div>
-                                    <div className="col-md-9">
-                                        <div className="card-body">
-                                            <h4 className="h5">Email Marketing</h4>
-                                            <p className="fs-6 mb-0">Nurture leads and build lasting relationships with
-                                                personalized email campaigns. We design, write, and manage email marketing
-                                                strategies that keep your audience engaged and informed.</p>
+                            <div className="col-md-6 col-12">
+                                <div className="card my-3">
+                                    <div className="row g-0">
+                                        <div className="col-md-3">
+                                            <img src="../image/svg/email-marketing.svg"
+                                                className="img-fluid rounded-start my-2" alt="Email Marketing" />
+                                        </div>
+                                        <div className="col-md-9">
+                                            <div className="card-body">
+                                                <h4 className="h5">Email Marketing</h4>
+                                                <p className="fs-6 mb-0">Nurture leads and build lasting relationships with
+                                                    personalized email campaigns. We design, write, and manage email marketing
+                                                    strategies that keep your audience engaged and informed.</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="col-md-6 col-12">
-                            <div className="card my-3">
-                                <div className="row g-0">
-                                    <div className="col-md-3">
-                                        <Image src="/image/digital-marketing/web-design-development.svg"
-                                            className="img-fluid rounded-start my-2" alt="Web Design and Development" width={136} height={136} />
-                                    </div>
-                                    <div className="col-md-9">
-                                        <div className="card-body">
-                                            <h4 className="h5">Web Design & Development</h4>
-                                            <p className="fs-6 mb-0">Your website is the cornerstone of your online presence.
-                                                We design and develop responsive, user-friendly websites that are optimized for
-                                                both search engines and user experience.</p>
+                            <div className="col-md-6 col-12">
+                                <div className="card my-3">
+                                    <div className="row g-0">
+                                        <div className="col-md-3">
+                                            <img src="../image/svg/web-design-development.svg"
+                                                className="img-fluid rounded-start my-2" alt="Web Design and Development" />
+                                        </div>
+                                        <div className="col-md-9">
+                                            <div className="card-body">
+                                                <h4 className="h5">Web Design & Development</h4>
+                                                <p className="fs-6 mb-0">Your website is the cornerstone of your online presence.
+                                                    We design and develop responsive, user-friendly websites that are optimized for
+                                                    both search engines and user experience.</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="col-md-6 col-12">
-                            <div className="card my-3">
-                                <div className="row g-0">
-                                    <div className="col-md-3">
-                                        <Image src="/image/digital-marketing/pay-per-click-ppc-advertising.svg"
-                                            className="img-fluid rounded-start my-2" alt="Pay-Per-Click (PPC) Advertising" width={136} height={136} />
-                                    </div>
-                                    <div className="col-md-9">
-                                        <div className="card-body">
-                                            <h4 className="h5">Pay-Per-Click (PPC) Advertising</h4>
-                                            <p className="fs-6 mb-0">Maximize your ROI with targeted PPC campaigns. We create
-                                                and manage ads on platforms like Google Ads to reach your ideal audience and
-                                                drive immediate results.</p>
+                            <div className="col-md-6 col-12">
+                                <div className="card my-3">
+                                    <div className="row g-0">
+                                        <div className="col-md-3">
+                                            <img src="../image/svg/pay-per-click-ppc-advertising.svg"
+                                                className="img-fluid rounded-start my-2" alt="Pay-Per-Click (PPC) Advertising" />
+                                        </div>
+                                        <div className="col-md-9">
+                                            <div className="card-body">
+                                                <h4 className="h5">Pay-Per-Click (PPC) Advertising</h4>
+                                                <p className="fs-6 mb-0">Maximize your ROI with targeted PPC campaigns. We create
+                                                    and manage ads on platforms like Google Ads to reach your ideal audience and
+                                                    drive immediate results.</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -233,6 +177,7 @@ export default function DigitalMarketing() {
                     </div>
                 </div>
             </section>
+            <Subscriptions />
             <Counters />
             <section className="bg-light pb-5" id="why">
                 <div className="container">
@@ -246,7 +191,7 @@ export default function DigitalMarketing() {
                             <div className="card my-3">
                                 <div className="row g-0">
                                     <div className="col-md-3">
-                                        <Image src="/image/digital-marketing/Achievement-bro.svg"
+                                        <Image src="/image/svg/achievement.svg"
                                             className="img-fluid rounded-start" alt="Digital Marketing Services" width={136} height={136} />
                                     </div>
                                     <div className="col-md-9">
@@ -263,7 +208,7 @@ export default function DigitalMarketing() {
                             <div className="card my-3">
                                 <div className="row g-0">
                                     <div className="col-md-3">
-                                        <Image src="/image/digital-marketing/customized-strategies.svg"
+                                        <Image src="/image/svg/customized-strategies.svg"
                                             className="img-fluid rounded-start" alt="Customized Strategies" width={136} height={136} />
                                     </div>
                                     <div className="col-md-9">
@@ -280,7 +225,7 @@ export default function DigitalMarketing() {
                             <div className="card my-3">
                                 <div className="row g-0">
                                     <div className="col-md-3">
-                                        <Image src="/image/digital-marketing/expert-team.svg" className="img-fluid rounded-start"
+                                        <Image src="/image/svg/expert-team.svg" className="img-fluid rounded-start"
                                             alt="Expert Team" width={136} height={136} />
                                     </div>
                                     <div className="col-md-9">
@@ -297,7 +242,7 @@ export default function DigitalMarketing() {
                             <div className="card my-3">
                                 <div className="row g-0">
                                     <div className="col-md-3">
-                                        <Image src="/image/digital-marketing/transparent-reporting.svg"
+                                        <Image src="/image/svg/transparent-reporting.svg"
                                             className="img-fluid rounded-start" alt="Customized Strategies" width={136} height={136} />
                                     </div>
                                     <div className="col-md-9">

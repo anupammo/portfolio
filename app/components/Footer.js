@@ -1,7 +1,7 @@
 "use client"; // Required for interactive components in Next.js App Router
 
 import Link from "next/link";
-import Image from 'next/image'
+import Image from 'next/image';
 
 export default function Footer() {
     return (
@@ -13,16 +13,16 @@ export default function Footer() {
                             <div className="col-lg-3 col-12">
                                 <div className="card shadow my-3">
                                     <div className="card-body px-4 py-5">
-                                        <nav className="nav">
+                                        <nav className="nav justify-content-center">
                                             <Link className="a-style" target="_blank" href="https://udyamregistration.gov.in/verifyudyambarcode.aspx?verifyudrn=5EJ2WVW9T64RK3BduWrfjw==">
                                                 <figure className="figure d-block mb-0">
-                                                    <Image src="/image/res/MSME_S.png" className="figure-img my-2" width="75" height="75" alt="MSME | Micro, Small and Medium Enterprises" title="Ministry of Micro, Small and Medium Enterprises" />
+                                                    <Image src="/image/common/MSME_S.png" className="figure-img my-2" width="75" height="75" alt="MSME | Micro, Small and Medium Enterprises" title="Ministry of Micro, Small and Medium Enterprises" />
                                                 </figure>
                                             </Link>
                                         </nav>
-                                        <figcaption className="figure-caption lead">MSME Registered</figcaption>
-                                        <hr className="w-50 my-3" />
-                                        <address className="lead fs-6 mb-0">
+                                        <figcaption className="figure-caption text-center lead">MSME Registered</figcaption>
+                                        <hr className="d-block mx-auto my-3 w-50" />
+                                        <address className="text-center lead fs-6 mb-0">
                                             <strong className="fs-5">Anupam Mondal</strong> <br />
                                             Metiari, Sonarpur <br />
                                             South 24 Parganas <br />
@@ -105,34 +105,33 @@ export default function Footer() {
                                     <div className="col-lg-4 col-6">
                                         <ul className="nav flex-column lead fs-6 mt-5">
                                             <li className="nav-item">
-                                                <Link className="nav-link py-1" href="./">Home page</Link>
+                                                <Link className="nav-link py-1" href="../">Home page</Link>
                                             </li>
                                             <li className="nav-item">
-                                                <Link className="nav-link py-1" href="./about-us">About page</Link>
+                                                <Link className="nav-link py-1" href="../about-us">About page</Link>
                                             </li>
                                             <li className="nav-item">
-                                                <Link className="nav-link py-1" href="./portfolio">Portfolio page</Link>
+                                                <Link className="nav-link py-1" href="../portfolio">Portfolio page</Link>
                                             </li>
                                             <li className="nav-item">
-                                                <Link className="nav-link py-1" href="./contact">Contact page</Link>
+                                                <Link className="nav-link py-1" href="../contact">Contact page</Link>
                                             </li>
                                         </ul>
                                     </div>
                                     <div className="col-lg-4 col-6">
                                         <ul className="nav flex-column lead fs-6 mt-5">
                                             <li className="nav-item">
-                                                <Link className="nav-link py-1" href="./services/digital-marketing">Digital
+                                                <Link className="nav-link py-1" href="../services/digital-marketing">Digital
                                                     Marketing</Link>
                                             </li>
                                             <li className="nav-item">
-                                                <Link className="nav-link py-1" href="./services/web-design">Web Design</Link>
+                                                <Link className="nav-link py-1" href="../services/web-design">Web Design</Link>
                                             </li>
                                             <li className="nav-item">
-                                                <Link className="nav-link py-1" href="./services/web-development">Web
-                                                    Development</Link>
+                                                <Link className="nav-link py-1" href="../services/web-development">Web Development</Link>
                                             </li>
                                             <li className="nav-item">
-                                                <Link className="nav-link py-1" href="./services/website-seo">Website SEO</Link>
+                                                <Link className="nav-link py-1" href="../services/website-seo">Website SEO</Link>
                                             </li>
                                         </ul>
                                     </div>

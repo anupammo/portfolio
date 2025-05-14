@@ -37,7 +37,7 @@ export default function FlagsSlide() {
                         <li className="nav-item px-2">
                           <figure className="figure card shadow p-3">
                             <Image
-                              src="/res/icons/countries/australia.png"
+                              src="/image/icons/countries/australia.png"
                               alt="Clients of Anupam from Australia"
                               title="Australia"
                               width={64}
@@ -52,7 +52,7 @@ export default function FlagsSlide() {
                         <li className="nav-item px-2">
                           <figure className="figure card shadow p-3">
                             <Image
-                              src="/res/icons/countries/austria.png"
+                              src="/image/icons/countries/austria.png"
                               alt="Clients of Anupam from Austria"
                               title="Austria"
                               width={64}
@@ -67,7 +67,7 @@ export default function FlagsSlide() {
                         <li className="nav-item px-2">
                           <figure className="figure card shadow p-3">
                             <Image
-                              src="/res/icons/countries/canada.png"
+                              src="/image/icons/countries/canada.png"
                               alt="Clients of Anupam from Canada"
                               title="Canada"
                               width={64}
@@ -82,7 +82,7 @@ export default function FlagsSlide() {
                         <li className="nav-item px-2">
                           <figure className="figure card shadow p-3">
                             <Image
-                              src="/res/icons/countries/ireland.png"
+                              src="/image/icons/countries/ireland.png"
                               alt="Clients of Anupam from Ireland"
                               title="Ireland"
                               width={64}
@@ -97,7 +97,7 @@ export default function FlagsSlide() {
                         <li className="nav-item px-2">
                           <figure className="figure card shadow p-3">
                             <Image
-                              src="/res/icons/countries/israel.png"
+                              src="/image/icons/countries/israel.png"
                               alt="Clients of Anupam from Israel"
                               title="Israel"
                               width={64}
@@ -112,7 +112,7 @@ export default function FlagsSlide() {
                         <li className="nav-item px-2">
                           <figure className="figure card shadow p-3">
                             <Image
-                              src="/res/icons/countries/lithuania.png"
+                              src="/image/icons/countries/lithuania.png"
                               alt="Clients of Anupam from Lithuania"
                               title="Lithuania"
                               width={64}
@@ -127,7 +127,7 @@ export default function FlagsSlide() {
                         <li className="nav-item px-2">
                           <figure className="figure card shadow p-3">
                             <Image
-                              src="/res/icons/countries/malaysia.png"
+                              src="/image/icons/countries/malaysia.png"
                               alt="Clients of Anupam from Malaysia"
                               title="Malaysia"
                               width={64}
@@ -142,7 +142,7 @@ export default function FlagsSlide() {
                         <li className="nav-item px-2">
                           <figure className="figure card shadow p-3">
                             <Image
-                              src="/res/icons/countries/mauritius.png"
+                              src="/image/icons/countries/mauritius.png"
                               alt="Clients of Anupam from Mauritius"
                               title="Mauritius"
                               width={64}
@@ -161,7 +161,7 @@ export default function FlagsSlide() {
                         <li className="nav-item px-2">
                           <figure className="figure card shadow p-3">
                             <Image
-                              src="/res/icons/countries/nigeria.png"
+                              src="/image/icons/countries/nigeria.png"
                               alt="Clients of Anupam from Nigeria"
                               title="Nigeria"
                               width={64}
@@ -176,7 +176,7 @@ export default function FlagsSlide() {
                         <li className="nav-item px-2">
                           <figure className="figure card shadow p-3">
                             <Image
-                              src="/res/icons/countries/peru.png"
+                              src="/image/icons/countries/peru.png"
                               alt="Clients of Anupam from Peru"
                               title="Peru"
                               width={64}
@@ -191,7 +191,7 @@ export default function FlagsSlide() {
                         <li className="nav-item px-2">
                           <figure className="figure card shadow p-3">
                             <Image
-                              src="/res/icons/countries/puerto-rico.png"
+                              src="/image/icons/countries/puerto-rico.png"
                               alt="Clients of Anupam from Puerto Rico"
                               title="Puerto Rico"
                               width={64}
@@ -206,7 +206,7 @@ export default function FlagsSlide() {
                         <li className="nav-item px-2">
                           <figure className="figure card shadow p-3">
                             <Image
-                              src="/res/icons/countries/saudi-arabia.png"
+                              src="/image/icons/countries/saudi-arabia.png"
                               alt="Clients of Anupam from Saudi Arabia"
                               title="Saudi Arabia"
                               width={64}
@@ -221,7 +221,7 @@ export default function FlagsSlide() {
                         <li className="nav-item px-2">
                           <figure className="figure card shadow p-3">
                             <Image
-                              src="/res/icons/countries/slovakia.png"
+                              src="/image/icons/countries/slovakia.png"
                               alt="Clients of Anupam from Slovakia"
                               title="Slovakia"
                               width={64}
@@ -236,7 +236,7 @@ export default function FlagsSlide() {
                         <li className="nav-item px-2">
                           <figure className="figure card shadow p-3">
                             <Image
-                              src="/res/icons/countries/south-africa.png"
+                              src="/image/icons/countries/south-africa.png"
                               alt="Clients of Anupam from South Africa"
                               title="South Africa"
                               width={64}
@@ -251,7 +251,7 @@ export default function FlagsSlide() {
                         <li className="nav-item px-2">
                           <figure className="figure card shadow p-3">
                             <Image
-                              src="/res/icons/countries/united-kingdom.png"
+                              src="/image/icons/countries/united-kingdom.png"
                               alt="Clients of Anupam from United Kingdom"
                               title="United Kingdom"
                               width={64}
@@ -266,7 +266,7 @@ export default function FlagsSlide() {
                         <li className="nav-item px-2">
                           <figure className="figure card shadow p-3">
                             <Image
-                              src="/res/icons/countries/united-states-of-america.png"
+                              src="/image/icons/countries/united-states-of-america.png"
                               alt="Clients of Anupam from United States"
                               title="United States"
                               width={64}

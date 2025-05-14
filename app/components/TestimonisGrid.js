@@ -1,7 +1,7 @@
 "use client"; // Required for interactive components in Next.js App Router
 
 import Link from "next/link";
-import Image from 'next/image'
+import Image from 'next/image';
 
 export default function TestimonisGrid() {
     return (
@@ -12,7 +12,7 @@ export default function TestimonisGrid() {
                         <div className="col-lg-4 col-md-6 col-12">
                             <div className="card rounded-0 my-3 p-4">
                                 <div className="card-body">
-                                    <Image src="/image/about/gracianna-winery.webp" width={150} height={50} loading="lazy"
+                                    <Image src="/image/brands/gracianna-winery.webp" width={150} height={50} loading="lazy"
                                         alt="Client of Anupam Mondal, Gracianna Winery - USA" />
                                     <figure>
                                         <blockquote className="blockquote">
@@ -30,7 +30,7 @@ export default function TestimonisGrid() {
                         <div className="col-lg-4 col-md-6 col-12">
                             <div className="card rounded-0 my-3 p-4">
                                 <div className="card-body">
-                                    <Image src="/image/about/1300-the-vet.webp" width={150} height={50} loading="lazy"
+                                    <Image src="/image/brands/1300-the-vet.webp" width={150} height={50} loading="lazy"
                                         alt="Client of Anupam Mondal, 1300 the vet - Australia" />
                                     <figure>
                                         <blockquote className="blockquote">
@@ -48,7 +48,7 @@ export default function TestimonisGrid() {
                         <div className="col-lg-4 col-md-6 col-12">
                             <div className="card rounded-0 my-3 p-4">
                                 <div className="card-body">
-                                    <Image src="/image/about/the-flooring-company.webp" width={66} height={50} loading="lazy"
+                                    <Image src="/image/brands/the-flooring-company.webp" width={66} height={50} loading="lazy"
                                         alt="Client of Anupam Mondal, the flooring company - USA" />
                                     <figure>
                                         <blockquote className="blockquote">
@@ -66,7 +66,7 @@ export default function TestimonisGrid() {
                         <div className="col-lg-4 col-md-6 col-12">
                             <div className="card rounded-0 my-3 p-4">
                                 <div className="card-body">
-                                    <Image src="/image/about/sailing-dreams.webp" width={65} height={50} loading="lazy"
+                                    <Image src="/image/brands/sailing-dreams.webp" width={65} height={50} loading="lazy"
                                         alt="Client of Anupam Mondal, Sailing Dreams- Peru" />
                                     <figure>
                                         <blockquote className="blockquote">
@@ -83,7 +83,7 @@ export default function TestimonisGrid() {
                         <div className="col-lg-4 col-md-6 col-12">
                             <div className="card rounded-0 my-3 p-4">
                                 <div className="card-body">
-                                    <Image src="/image/about/august-beauty-lab.webp" width={62} height={50} loading="lazy"
+                                    <Image src="/image/brands/august-beauty-lab.webp" width={62} height={50} loading="lazy"
                                         alt="Client of Anupam Mondal, August Beauty Lab - Lithuania" />
                                     <figure>
                                         <blockquote className="blockquote">
@@ -102,4 +102,4 @@ export default function TestimonisGrid() {
             </section>
         </>
     );
-  }  
+}  

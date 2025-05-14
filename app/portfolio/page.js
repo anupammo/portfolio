@@ -22,7 +22,7 @@ export default function Portfolio() {
                         </nav>
                     </div>
                     <div className="col-md-4 col-12">
-                        <Image src="/image/portfolio/Portfolio-bro.svg" className="img-fluid" alt="Anupam Mondal's Web Design | Development Portfolio" width={356} height={356} />
+                        <Image src="/image/svg/portfolio.svg" className="img-fluid" alt="Anupam Mondal's Web Design | Development Portfolio" width={356} height={356} />
                     </div>
                 </div>
             </div>
@@ -102,7 +102,7 @@ export default function Portfolio() {
             <div className="container">
                 <div className="row">
                     <div className="col-md-5 col-12">
-                        <Image src="/image/portfolio/Portfolio-rafiki.svg" className="img-fluid"
+                        <Image src="/image/svg/portfolio.svg" className="img-fluid"
                             alt="Expertise in Technological Innovation" width={451} height={451} />
                     </div>
                     <div className="col-md-7 col-12">
@@ -211,7 +211,7 @@ export default function Portfolio() {
                             your business flourish and outshine competitors.</p>
                     </div>
                     <div className="col-md-5 col-12">
-                        <Image src="/image/portfolio/Resume-amico.svg" className="img-fluid"
+                        <Image src="/image/svg/resume.svg" className="img-fluid"
                             alt="Free, Useful Web Applications Portfolio" width={451} height={451} />
                     </div>
                 </div>
@@ -293,7 +293,7 @@ export default function Portfolio() {
             <div className="container">
                 <div className="row">
                     <div className="col-md-5 col-12">
-                        <Image src="/image/portfolio/Portfolio-cuate.svg" className="img-fluid"
+                        <Image src="/image/svg/portfolios.svg" className="img-fluid"
                             alt="Experienced Full-Stack Developer" width={451} height={451} />
                     </div>
                     <div className="col-md-7 col-12">

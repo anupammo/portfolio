@@ -301,7 +301,7 @@ export default function Home() {
                 <div className="card bg-light border-white border-5">
                   <div className="silhouette">
                     <Image
-                      src="/image/homepage/Online world-bro.svg"
+                      src="/image/svg/online-world.svg"
                       className="img-fluid"
                       width="451"
                       height="451"

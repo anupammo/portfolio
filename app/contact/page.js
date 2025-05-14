@@ -23,7 +23,7 @@ export default function Contact() {
                     </div>
                     <div className="col-lg-2 col-md-6 col-12"></div>
                     <div className="col-lg-4 col-md-6 col-12">
-                        <Image src="/image/contact/Contact us-amico.svg" className="img-fluid py-5" alt="Anupam Mondal - Website Design | Development | SEO" width={356} height={356} />
+                        <Image src="/image/svg/contact-us.svg" className="img-fluid py-5" alt="Anupam Mondal - Website Design | Development | SEO" width={356} height={356} />
                     </div>
                 </div>
                 </div>
@@ -130,7 +130,7 @@ export default function Contact() {
                             <div className="card shadow border-0 rounded-0 mb-3">
                                 <div className="card-body">
                                     <Image className="img-fluid d-block mx-auto py-1"
-                                        src="/image/contact/anupam-clients-review-facebook-2.webp"
+                                        src="/image/reviews/anupam-clients-review-facebook-2.webp"
                                         alt="USA client review on facebook for Anupam Mondal" width="320" height="152"
                                         loading="lazy" />
                                 </div>
@@ -138,7 +138,7 @@ export default function Contact() {
                             <div className="card shadow border-0 rounded-0 mb-3">
                                 <div className="card-body">
                                     <Image className="img-fluid d-block mx-auto py-1"
-                                        src="/image/contact/anupam-clients-review-facebook-3.webp"
+                                        src="/image/reviews/anupam-clients-review-facebook-3.webp"
                                         alt="client review on facebook for Anupam Mondal" width="320" height="125"
                                         loading="lazy" />
                                 </div>
@@ -194,7 +194,7 @@ export default function Contact() {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-4 col-md-6 col-12">
-                            <Image src="/image/contact/Mobile Marketing-bro.svg" className="img-fluid py-5"
+                            <Image src="/image/svg/mobile-marketing.svg" className="img-fluid py-5"
                                 alt="Website Design with SEO Focus" width={356} height={356} />
                         </div>
                         <div className="col-lg-2 col-md-6 col-12"></div>
@@ -238,7 +238,7 @@ export default function Contact() {
                         </div>
                         <div className="col-lg-2 col-md-6 col-12"></div>
                         <div className="col-lg-4 col-md-6 col-12">
-                            <Image src="/image/contact/Mobile Marketing-amico.svg" className="img-fluid my-5 py-5"
+                            <Image src="/image/svg/mobile-marketing.svg" className="img-fluid my-5 py-5"
                                 alt="Website for Niche Businesses" width={356} height={356} />
                         </div>
                     </div>
@@ -248,7 +248,7 @@ export default function Contact() {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-4 col-md-6 col-12">
-                            <Image src="/image/contact/Navigation-amico.svg" className="img-fluid py-5"
+                            <Image src="/image/svg/navigation.svg" className="img-fluid py-5"
                                 alt="Experienced Full-Stack Developer" width={356} height={356} />
                         </div>
                         <div className="col-lg-2 col-md-6 col-12"></div>

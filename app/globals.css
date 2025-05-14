@@ -42,7 +42,7 @@ a.a-style {
   flex-direction: column;
   background-repeat: no-repeat;
   background-position: bottom;
-  background-image: url(../public/image/homepage/Stacked_blob.svg);
+  background-image: url(../public/image/common/stacked-blob.svg);
 }
 
 #porfile-bg img {

@@ -48,7 +48,7 @@ export default function WebDesign() {
                             </nav>
                         </div>
                         <div className="col-md-4 col-12">
-                            <img src="../image/web-design/Content structure-amico.svg" className="img-fluid"
+                            <img src="../image/svg/content-structure.svg" className="img-fluid"
                                 alt="Web design services" />
                         </div>
                     </div>
@@ -197,7 +197,7 @@ export default function WebDesign() {
                             <div className="card my-3">
                                 <div className="row g-0">
                                     <div className="col-md-3">
-                                        <img src="../image/web-design/client-centric-approach.svg"
+                                        <img src="../image/svg/client-centric-approach.svg"
                                             className="img-fluid rounded-start mt-4" alt="Expert Team" />
                                     </div>
                                     <div className="col-md-9">
@@ -215,7 +215,7 @@ export default function WebDesign() {
                             <div className="card my-3">
                                 <div className="row g-0">
                                     <div className="col-md-3">
-                                        <img src="../image/seo/transparent-reporting.svg" className="img-fluid rounded-start mt-4"
+                                        <img src="../image/svg/transparent-reporting.svg" className="img-fluid rounded-start mt-4"
                                             alt="Customized Strategies" />
                                     </div>
                                     <div className="col-md-9">
@@ -234,7 +234,7 @@ export default function WebDesign() {
                             <div className="card my-3">
                                 <div className="row g-0">
                                     <div className="col-md-3">
-                                        <img src="../image/seo/customized-strategies.svg" className="img-fluid rounded-start mt-4"
+                                        <img src="../image/svg/customized-strategies.svg" className="img-fluid rounded-start mt-4"
                                             alt="Customized Strategies" />
                                     </div>
                                     <div className="col-md-9">
@@ -252,7 +252,7 @@ export default function WebDesign() {
                             <div className="card my-3">
                                 <div className="row g-0">
                                     <div className="col-md-3">
-                                        <img src="../image/web-design/responsive-mobile-friendly.svg"
+                                        <img src="../image/svg/responsive-mobile-friendly.svg"
                                             className="img-fluid rounded-start mt-3" alt="Customized Strategies" />
                                     </div>
                                     <div className="col-md-9">
@@ -271,7 +271,7 @@ export default function WebDesign() {
                             <div className="card my-3">
                                 <div className="row g-0">
                                     <div className="col-md-3">
-                                        <img src="../image/web-design/seo-integration.svg" className="img-fluid rounded-start mt-3"
+                                        <img src="../image/svg/seo-integration.svg" className="img-fluid rounded-start mt-3"
                                             alt="Expert Team" />
                                     </div>
                                     <div className="col-md-9">
@@ -289,7 +289,7 @@ export default function WebDesign() {
                             <div className="card my-3">
                                 <div className="row g-0">
                                     <div className="col-md-3">
-                                        <img src="../image/web-design/experienced-team.svg" className="img-fluid rounded-start mt-3"
+                                        <img src="../image/svg/experienced-team.svg" className="img-fluid rounded-start mt-3"
                                             alt="Expert Team" />
                                     </div>
                                     <div className="col-md-9">
@@ -307,7 +307,7 @@ export default function WebDesign() {
                             <div className="card my-3">
                                 <div className="row g-0">
                                     <div className="col-md-3">
-                                        <img src="../image/seo/comprehensive-services.svg" className="img-fluid rounded-start"
+                                        <img src="../image/svg/comprehensive-services.svg" className="img-fluid rounded-start"
                                             alt="Customized Strategies" />
                                     </div>
                                     <div className="col-md-9">

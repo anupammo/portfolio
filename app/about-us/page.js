@@ -34,7 +34,7 @@ export default function About() {
                     </div>
                     <div className="col-md-1 col-12"></div>
                     <div className="col-md-5 col-12">
-                        <Image src="image/about/About us page-cuate.svg" className="img-fluid py-5" alt="Anupam Mondal: Expert Freelancer, Web Designer | Developer" height={301} width={451} />
+                        <Image src="image/svg/about-us-page.svg" className="img-fluid py-5" alt="Anupam Mondal: Expert Freelancer, Web Designer | Developer" height={301} width={451} />
                     </div>
                 </div>
             </div>
@@ -79,7 +79,7 @@ export default function About() {
                 </div>
                 <div className="row">
                     <div className="col-md-4 col-12">
-                        <Image src="/image/about/Static assets-amico.svg" className="img-fluid py-5" alt="Anupam Mondal's Journey" width={356} height={356} />
+                        <Image src="/image/svg/front-end-development.svg" className="img-fluid py-5" alt="Anupam Mondal's Journey" width={356} height={356} />
                     </div>
                     <div className="col-md-2 col-12"></div>
                     <div className="col-md-6 col-12">
@@ -130,7 +130,7 @@ export default function About() {
                     </div>
                     <div className="col-md-2 col-12"></div>
                     <div className="col-md-4 col-12">
-                        <Image src="/image/about/Programming-amico.svg" className="img-fluid py-5"
+                        <Image src="/image/svg/programming.svg" className="img-fluid py-5"
                             alt="Expertise as a Freelancer Web Designer | Developer" width={356} height={356} />
                     </div>
                 </div>
