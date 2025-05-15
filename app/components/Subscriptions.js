@@ -1,7 +1,6 @@
 "use client"; // Required for interactive components in Next.js App Router
 
-import Link from "next/link";
-import Image from 'next/image';
+import styles from './Subscriptions.module.css';
 
 export default function Subscriptions() {
     return (
@@ -15,7 +14,7 @@ export default function Subscriptions() {
                     </div>
                     <div className="row pb-5">
                         <div className="col-lg-3 col-md-6 col-12">
-                            <div className="card shadow mx-auto my-3 border-0" style={{width: "270px"}}>
+                            <div className={`card shadow mx-auto my-3 border-0 ${styles.subscriptionCard}`}>
                                 <div className="card-header bg-anupam">
                                     <h2 className="text-white h4 px-2 py-3">
                                         <span className="d-block">Web Design </span>
@@ -26,7 +25,7 @@ export default function Subscriptions() {
                                         <span className="h6">/hr.</span>
                                     </h2>
                                 </div>
-                                <div className="card-body">
+                                <div className={`card-body ${styles.subscriptionCardBody}`}>
                                     <ul className="list-group list-group-flush fs-6 mb-3">
                                         <li className="list-group-item border-0 p-1"><i className="bi bi-check2-circle txt-anupam h5 me-2"></i>Mockup design</li>
                                         <li className="list-group-item border-0 p-1"><i className="bi bi-check2-circle txt-anupam h5 me-2"></i>Responsive HTML</li>
@@ -36,13 +35,13 @@ export default function Subscriptions() {
                                     </ul>
                                 </div>
                                 <div className="card-footer bg-anupam">
-                                    <a className="text-white nav-link fs-5 px-3 py-1" href="../services/digital-marketing">₹ <span className="fw-bold fs-4">30,000
+                                    <a className="text-white nav-link fs-5 px-3 py-1" href="../services/web-design">₹ <span className="fw-bold fs-4">30,000
                                         </span>/mo.</a>
                                 </div>
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-6 col-12">
-                            <div className="card shadow mx-auto my-3 border-0" style={{width: "270px"}}>
+                            <div className={`card shadow mx-auto my-3 border-0 ${styles.subscriptionCard}`}>
                                 <div className="card-header bg-dark">
                                     <h2 className="text-white h4 px-2 py-3">
                                         <span className="d-block">Digital Marketing </span>
@@ -63,13 +62,13 @@ export default function Subscriptions() {
                                     </ul>
                                 </div>
                                 <div className="card-footer bg-dark">
-                                    <a className="text-white nav-link fs-5 px-3 py-1" href="../services/web-design">₹ <span className="fw-bold fs-4">25,000
+                                    <a className="text-white nav-link fs-5 px-3 py-1" href="../services/digital-marketing">₹ <span className="fw-bold fs-4">25,000
                                         </span>/mo.</a>
                                 </div>
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-6 col-12">
-                            <div className="card shadow mx-auto my-3 border-0" style={{width: "270px"}}>
+                            <div className={`card shadow mx-auto my-3 border-0 ${styles.subscriptionCard}`}>
                                 <div className="card-header bg-anupam">
                                     <h2 className="text-white h4 px-2 py-3">
                                         <span className="d-block">Web Development </span>
@@ -96,7 +95,7 @@ export default function Subscriptions() {
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-6 col-12">
-                            <div className="card shadow mx-auto my-3 border-0" style={{width: "270px"}}>
+                            <div className={`card shadow mx-auto my-3 border-0 ${styles.subscriptionCard}`}>
                                 <div className="card-header bg-anupam">
                                     <h2 className="text-white h4 px-2 py-3">
                                         <span className="d-block">Website SEO </span>

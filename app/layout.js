@@ -15,14 +15,6 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <head>
-        <title>My Next.js Site</title>
-        <meta
-          name="description"
-          content="A modern Next.js website with reusable components"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </head>
       <body>
         <Navbar />
         <main className="lead">{children}</main>

@@ -146,3 +146,7 @@ footer p {
     text-align: center;
     border-radius: 50%;
 }
+
+ul li.list-group-item {
+    background: none;
+}

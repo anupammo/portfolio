@@ -1,11 +1,29 @@
-"use client"; // Ensure this is a client component
-
+// "use client";
 // import { useEffect } from "react";
+// import Head from 'next/head';
 import Image from "next/image";
 import Counters from "./components/Counters";
 import FlagsSlide from "./components/FlagsSlide";
 import ClientSlider from "./components/ClientSlider";
 import Testimonis from "./components/Testimonis";
+
+export const metadata = {
+  title: "My Next.js Site", // Title of the entire site
+  description: "A modern Next.js website with reusable components",
+  alternates: {
+    canonical: "https://example.com/my-page", // Preferred URL for search engines
+  },
+  openGraph: {
+    title: "My Next.js Site",
+    description: "A modern website built with Next.js.",
+    url: "https://example.com",
+    images: ["https://example.com/preview.jpg"],
+  },
+  robots: {
+    index: true, // Allow indexing
+    follow: true, // Allow following links
+  },
+};
 
 export default function Home() {  
   return (
@@ -91,7 +109,7 @@ export default function Home() {
             <div className="col-lg-4 col-12">
               <div className="card shadow">
                 <Image
-                  src="/image/profile/anupam-mondal-freelancer.webp"
+                  src="/image/common/anupam-mondal-freelancer.webp"
                   width="354"
                   height="354"
                   className="img-fluid my-5"
