@@ -1,23 +1,23 @@
-"use client"; // Ensure this is a client component
-
+"use client";
 import { useEffect } from "react";
 import Image from "next/image";
 
 export default function ClientSlider() {
   useEffect(() => {
-    // Dynamically import Bootstrap JS only in the browser
-    import("bootstrap/dist/js/bootstrap.bundle.min.js")
-      .then((bootstrapModule) => {
-        const carouselElement = document.querySelector("#carouselExample");
-        if (carouselElement) {
-          new bootstrapModule.Carousel(carouselElement, {
-            interval: 3000, // Auto-slide every 3 seconds
-            ride: "carousel",
-          });
-        }
-      })
-      .catch((err) => console.error("Bootstrap JS failed to load", err));
-  }, []); // ✅ Runs only once when the component mounts
+    if (typeof window !== "undefined") {
+      import("bootstrap/dist/js/bootstrap.bundle.min.js")
+        .then((bootstrapModule) => {
+          const carouselElement = document.querySelector("#carouselExample");
+          if (carouselElement) {
+            new bootstrapModule.Carousel(carouselElement, {
+              interval: 3000, // Auto-slide every 3 seconds
+              ride: "carousel",
+            });
+          }
+        })
+        .catch((err) => console.error("Bootstrap JS failed to load", err));
+    }
+  }, []);
 
   return (
     <>

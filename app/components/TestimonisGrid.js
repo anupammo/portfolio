@@ -1,5 +1,3 @@
-"use client"; // Required for interactive components in Next.js App Router
-
 import Link from "next/link";
 import Image from 'next/image';
 
