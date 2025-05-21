@@ -7,18 +7,18 @@ import ClientSlider from "../components/ClientSlider";
 import TestimonisGrid from "../components/TestimonisGrid";
 
 export const metadata = {
-  title: "Anupam Mondal for website, SEO, web design, development",
+  title: "About freelancer, web designer, developer Anupam Mondal",
   description:
-    "Anupam Mondal for website, SEO, web design, development. Boost Your Business with Expert Web Design, Development, & SEO Services by Anupam Mondal.",
+    "Expert freelancer Anupam Mondal: Web designer & developer with 17+ years in IT. Offering top-notch SEO, UI/UX, and responsive designs. Proven success across various industries.",
   alternates: {
-    canonical: "https://anupammondal.in",
+    canonical: "https://anupammondal.in/about-us",
   },
   openGraph: {
-    title: "Anupam Mondal for website, SEO, web design, development",
+    title: "About freelancer, web designer, developer Anupam Mondal",
     description:
-      "Anupam Mondal for website, SEO, web design, development. Boost Your Business with Expert Web Design, Development, & SEO Services by Anupam Mondal.",
-    url: "https://anupammondal.in",
-    images: ["https://anupammondal.in/image/meta/homepage.png"],
+      "Expert freelancer Anupam Mondal: Web designer & developer with 17+ years in IT. Offering top-notch SEO, UI/UX, and responsive designs. Proven success across various industries.",
+    url: "https://anupammondal.in/about-us",
+    images: ["https://anupammondal.in/about-us/image/meta/homepage.png"],
   },
   robots: {
     index: true,
@@ -36,7 +36,7 @@ export default function About() {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://anupammondal.in/",
+        item: "https://anupammondal.in/about-us/",
       },
     ],
   };

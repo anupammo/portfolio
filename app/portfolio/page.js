@@ -3,7 +3,28 @@ import Image from "next/image";
 import Script from "next/script";
 import CallCTA from "../components/CallCTA";
 
+export const metadata = {
+  title: "Anupam Mondal's Web Design and Development Portfolio",
+  description:
+    "Anupam Mondal's Web Design and Development Portfolio showcases innovative projects specializing in Medical, Education, and B2B sectors, with SEO-optimized, responsive designs.",
+  alternates: {
+    canonical: "https://anupammondal.in/portfolio",
+  },
+  openGraph: {
+    title: "Anupam Mondal's Web Design and Development Portfolio",
+    description:
+      "Anupam Mondal's Web Design and Development Portfolio showcases innovative projects specializing in Medical, Education, and B2B sectors, with SEO-optimized, responsive designs.",
+    url: "https://anupammondal.in/portfolio",
+    images: ["https://anupammondal.in/image/meta/portfolio.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
 export default function Portfolio() {
+  
   const breadcrumbListData = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -11,8 +32,8 @@ export default function Portfolio() {
       {
         "@type": "ListItem",
         position: 1,
-        name: "Home",
-        item: "https://anupammondal.in/",
+        name: "Portfolio",
+        item: "https://anupammondal.in/portfolio",
       },
     ],
   };

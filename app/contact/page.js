@@ -4,18 +4,18 @@ import Script from "next/script";
 import CallCTA from "../components/CallCTA";
 
 export const metadata = {
-  title: "Anupam Mondal for website, SEO, web design, development",
+  title: "Contact us for Website Design, Development & SEO in Kolkata",
   description:
-    "Anupam Mondal for website, SEO, web design, development. Boost Your Business with Expert Web Design, Development, & SEO Services by Anupam Mondal.",
+    "Contact Anupam Mondal for top-notch website design, development, and SEO services in Kolkata. Enhance your online presence today!",
   alternates: {
-    canonical: "https://anupammondal.in",
+    canonical: "https://anupammondal.in/contact",
   },
   openGraph: {
-    title: "Anupam Mondal for website, SEO, web design, development",
+    title: "Contact us for Website Design, Development & SEO in Kolkata",
     description:
-      "Anupam Mondal for website, SEO, web design, development. Boost Your Business with Expert Web Design, Development, & SEO Services by Anupam Mondal.",
-    url: "https://anupammondal.in",
-    images: ["https://anupammondal.in/image/meta/homepage.png"],
+      "Contact Anupam Mondal for top-notch website design, development, and SEO services in Kolkata. Enhance your online presence today!",
+    url: "https://anupammondal.in/contact",
+    images: ["https://anupammondal.in/image/meta/contact.png"],
   },
   robots: {
     index: true,
@@ -24,6 +24,7 @@ export const metadata = {
 };
 
 export default function Contact() {
+  
   const breadcrumbListData = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -31,8 +32,8 @@ export default function Contact() {
       {
         "@type": "ListItem",
         position: 1,
-        name: "Home",
-        item: "https://anupammondal.in/",
+        name: "Contact",
+        item: "https://anupammondal.in/contact",
       },
     ],
   };
