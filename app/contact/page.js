@@ -506,7 +506,7 @@ export default function Contact() {
               <div className="col-12">
                 <div className="accordion accordion-flush" id="accordionFaq">
                   <div className="accordion-item">
-                    <h4 className="accordion-header">
+                    <h3 className="accordion-header">
                       <button
                         className="accordion-button shadow-none bg-white txt-anupam fs-5 px-0"
                         type="button"
@@ -517,7 +517,7 @@ export default function Contact() {
                       >
                         How can I get in touch with Anupam Mondal?
                       </button>
-                    </h4>
+                    </h3>
                     <div
                       id="collapseOne"
                       className="accordion-collapse collapse"
@@ -539,7 +539,7 @@ export default function Contact() {
                     </div>
                   </div>
                   <div className="accordion-item">
-                    <h4 className="accordion-header">
+                    <h3 className="accordion-header">
                       <button
                         className="accordion-button shadow-none bg-white txt-anupam fs-5 px-0"
                         type="button"
@@ -550,7 +550,7 @@ export default function Contact() {
                       >
                         What services does Anupam Mondal offer?
                       </button>
-                    </h4>
+                    </h3>
                     <div
                       id="collapseTwo"
                       className="accordion-collapse collapse"
@@ -567,7 +567,7 @@ export default function Contact() {
                     </div>
                   </div>
                   <div className="accordion-item">
-                    <h4 className="accordion-header">
+                    <h3 className="accordion-header">
                       <button
                         className="accordion-button shadow-none bg-white txt-anupam fs-5 px-0"
                         type="button"
@@ -578,7 +578,7 @@ export default function Contact() {
                       >
                         What is the turnaround time for a website project?
                       </button>
-                    </h4>
+                    </h3>
                     <div
                       id="collapseThree"
                       className="accordion-collapse collapse"
@@ -596,7 +596,7 @@ export default function Contact() {
                     </div>
                   </div>
                   <div className="accordion-item">
-                    <h4 className="accordion-header">
+                    <h3 className="accordion-header">
                       <button
                         className="accordion-button shadow-none bg-white txt-anupam fs-5 px-0"
                         type="button"
@@ -607,7 +607,7 @@ export default function Contact() {
                       >
                         What payment methods do you accept?
                       </button>
-                    </h4>
+                    </h3>
                     <div
                       id="collapseFour"
                       className="accordion-collapse collapse"
@@ -624,7 +624,7 @@ export default function Contact() {
                     </div>
                   </div>
                   <div className="accordion-item">
-                    <h4 className="accordion-header">
+                    <h3 className="accordion-header">
                       <button
                         className="accordion-button shadow-none bg-white txt-anupam fs-5 px-0"
                         type="button"
@@ -635,7 +635,7 @@ export default function Contact() {
                       >
                         Do you offer support after the website is live?
                       </button>
-                    </h4>
+                    </h3>
                     <div
                       id="collapseFive"
                       className="accordion-collapse collapse"

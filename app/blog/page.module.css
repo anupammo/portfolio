@@ -5,3 +5,13 @@
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
 }
+
+.blogBottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    min-height: 90px;
+    background: rgba(100, 65, 165, 0.8);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(10px);
+}

@@ -171,9 +171,9 @@ export default function Portfolio() {
               </div>
               <div className="col-lg-4 col-md-6 col-12">
                 <a
-                  href="https://nivesguru.in/"
-                  title="Nivesguru: Free Calculator Investment make easy for India"
-                  alt="Nivesguru: Free Calculator Investment make easy for India"
+                  href="https://wheelguru.in/"
+                  title="Wheelguru: Top Bike, Scooter Mileage, Price, Specification"
+                  alt="Wheelguru: Top Bike, Scooter Mileage, Price, Specification"
                   target="_blank"
                 >
                   <div className="card my-3">
@@ -327,7 +327,7 @@ export default function Portfolio() {
               </div>
               <div className="col-lg-4 col-md-6 col-12">
                 <a
-                  href="https://pstourism.in/about-us"
+                  href="https://www.h3learning.com/"
                   title="H3 Learning | Alternate High School Education in Pune"
                   alt="H3 Learning | Alternate High School Education in Pune"
                   target="_blank"
