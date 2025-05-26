@@ -1,8 +1,8 @@
 import Head from "next/head";
 import Script from "next/script";
 
-export default function designTrends() {
-  
+export default function webDesignTrends() {
+
   const breadcrumbListData = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",

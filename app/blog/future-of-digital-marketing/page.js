@@ -1,0 +1,431 @@
+import Head from "next/head";
+import Script from "next/script";
+
+export default function digitalBranding() {
+  
+  const breadcrumbListData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://anupammondal.in/",
+      },
+    ],
+  };
+
+  return (
+    <>
+      <Head>
+        <Script
+          id="breadcrumbList"
+          type="application/ld+json"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(breadcrumbListData),
+          }}
+        />
+      </Head>
+      <main>
+        <article>
+          <header id="start-reading">
+            <div className="container py-5">
+              <div className="row">
+                <div className="col-lg-8 col-md-6 col-12">
+                  <h1 className="my-5">
+                    10 Common SEO Mistakes and How to Avoid Them
+                  </h1>
+                  <nav aria-label="breadcrumb">
+                    <ol className="breadcrumb fs-6">
+                      <li className="breadcrumb-item">
+                        <a href="../">Home</a>
+                      </li>
+                      <li className="breadcrumb-item">
+                        <a href="../blog/">Blog</a>
+                      </li>
+                      <li
+                        className="breadcrumb-item active"
+                        aria-current="page"
+                      >
+                        <a
+                          href="../blog/10-common-seo-mistakes"
+                          title="Top Web Design Trends for 2024"
+                        >
+                          10 Common SEO Mistakes and How to Avoid Them
+                        </a>
+                      </li>
+                    </ol>
+                  </nav>
+                  <ul className="nav">
+                    <li className="nav-item">
+                      <p id="pub-date" className="lead fs-6 me-3">
+                        <strong className="txt-anupam">Published on:</strong>
+                        <time dateTime="2023-01-01">Nov 11, 2024</time>
+                      </p>
+                    </li>
+                    <li className="nav-item">
+                      <p id="mod-date" className="lead fs-6 me-3">
+                        <strong className="txt-anupam">Modified on:</strong>{" "}
+                        <time dateTime="2024-09-05">Apr 21, 2025</time>
+                      </p>
+                    </li>
+                    <li className="nav-item">
+                      <p id="mod-date" className="lead fs-6 me-3">
+                        <strong className="txt-anupam">Author Name:</strong>{" "}
+                        <a className="text-dark fw-bold" href="../about-us">
+                          Anupam Mondal
+                        </a>
+                      </p>
+                    </li>
+                  </ul>
+                  <p className="lead fs-6 mb-4">
+                    Search engine optimization (SEO) is crucial for improving
+                    your website's visibility and driving organic traffic.
+                    However, many businesses fall into common SEO traps that can
+                    hinder their performance. In this guide, we'll explore the
+                    top 10 SEO mistakes and how you can avoid them.
+                  </p>
+                </div>
+                <div className="col-lg-4 col-md-6 col-12">
+                  <div className="card border-start border-0 rounded-0 my-4">
+                    <div className="card-body">
+                      <h2 className="h4 my-4 px-3">Table of content</h2>
+                      <ul className="list-group lead fs-6">
+                        <li className="list-group-item bg-transparent border-0 py-1">
+                          <a href="#start-reading">
+                            Top Web Design Trends for 2024
+                          </a>
+                        </li>
+                        <li className="list-group-item bg-transparent border-0 py-1">
+                          <ul className="list-group lead fs-6 pe-2">
+                            <li className="list-group-item bg-transparent border-0 py-1">
+                              <a href="#keywords">
+                                Keyword Research | Mobile Optimization
+                              </a>
+                            </li>
+                            <li className="list-group-item bg-transparent border-0 py-1">
+                              <a href="#keywords">Overloading Keywords</a>
+                            </li>
+                            <li className="list-group-item bg-transparent border-0 py-1">
+                              <a href="#content">
+                                Duplicate Content | Poor Backlinks
+                              </a>
+                            </li>
+                            <li className="list-group-item bg-transparent border-0 py-1">
+                              <a href="#analytics">
+                                Meta Tags | Page Load | Analytics
+                              </a>
+                            </li>
+                            <li className="list-group-item bg-transparent border-0 py-1">
+                              <a href="#seo">Local SEO | Minimalist Design</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li className="list-group-item bg-transparent border-0 py-1">
+                          <a href="#faqs">FAQ : Frequently Asked Questions</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </header>
+          <section className="bg-light py-5" id="keywords">
+            <div className="container">
+              <div className="row">
+                <div className="col-lg-4 col-md-6 col-12">
+                  <div className="card bg-transparent border-0">
+                    <div className="card-body">
+                      <img
+                        className="img-fluid rounded-circle bg-white my-5"
+                        src="../image/blog/svg/10-common-seo-mistakes.png"
+                        alt="10 Common SEO Mistakes"
+                        title="10 Common SEO Mistakes"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-8 col-md-6 col-12">
+                  <h2 className="h3 my-3">1. Neglecting Keyword Research</h2>
+                  <p className="lead fs-6">
+                    One of the most fundamental aspects of SEO is keyword
+                    research. Neglecting this step can result in targeting the
+                    wrong keywords. Use tools like Google Keyword Planner and
+                    Ahrefs to identify high-value keywords and long-tail
+                    keywords relevant to your business.
+                  </p>
+
+                  <h2 className="h3 my-3">2. Ignoring Mobile Optimization</h2>
+                  <p className="lead fs-6">
+                    With more users accessing the web on mobile devices, having
+                    a mobile-friendly website is essential. Ensure your website
+                    is responsive and offers a seamless experience across all
+                    devices. Google's Mobile-Friendly Test can help you assess
+                    your site's mobile performance.
+                  </p>
+
+                  <h2 className="h3 my-3">3. Overloading with Keywords</h2>
+                  <p className="lead fs-6">
+                    Keyword stuffing can do more harm than good. Focus on
+                    creating quality content that naturally incorporates
+                    keywords. Aim for a keyword density of around 1-2% and
+                    prioritize user experience over keyword count.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section className="py-5" id="content">
+            <div className="container">
+              <div className="row">
+                <div className="col-12">
+                  <h2 className="h3 my-4">4. Duplicate Content</h2>
+                  <p className="lead fs-6">
+                    Duplicate content can confuse search engines and dilute your
+                    rankings. Use tools like Copyscape to identify and eliminate
+                    duplicate content. Ensure each page on your website offers
+                    unique and valuable information.
+                  </p>
+
+                  <h2 className="h3 my-4">5. Poor Quality Backlinks</h2>
+                  <p className="lead fs-6">
+                    Not all backlinks are created equal. Focus on acquiring
+                    high-quality, relevant backlinks from reputable sources.
+                    Avoid black-hat SEO tactics like buying links, as they can
+                    result in penalties from search engines.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section className="bg-light py-5" id="analytics">
+            <div className="container">
+              <div className="row">
+                <div className="col-lg-8 col-md-6 col-12">
+                  <h2 className="h3 my-3">6. Ignoring Meta Tags</h2>
+                  <p className="lead fs-6">
+                    Meta tags, including title tags and meta descriptions, play
+                    a crucial role in SEO. Ensure each page has unique and
+                    optimized meta tags that accurately describe the content and
+                    include relevant keywords.
+                  </p>
+
+                  <h2 className="h3 my-3">7. Slow Page Load Times</h2>
+                  <p className="lead fs-6">
+                    Page speed is a critical ranking factor. Use tools like
+                    Google PageSpeed Insights to identify and fix issues that
+                    are slowing down your website. Compress images, enable
+                    browser caching, and minimize HTTP requests to improve load
+                    times.
+                  </p>
+
+                  <h2 className="h3 my-3">8. Not Using Analytics</h2>
+                  <p className="lead fs-6">
+                    Without analytics, you're operating in the dark. Use tools
+                    like Google Analytics and Google Search Console to track
+                    your SEO performance and make data-driven decisions.
+                    Regularly review your analytics to identify areas for
+                    improvement.
+                  </p>
+                </div>
+                <div className="col-lg-4 col-md-6 col-12">
+                  <div className="card bg-transparent border-0">
+                    <div className="card-body">
+                      <img
+                        className="img-fluid rounded-circle my-5"
+                        src="../image/blog/10-common-seo-mistakes.png"
+                        alt="10 Common SEO Mistakes and How to Avoid"
+                        title="10 Common SEO Mistakes and How to Avoid"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section className="py-5" id="seo">
+            <div className="container">
+              <div className="row">
+                <div className="col-12">
+                  <h2 className="h3 my-4">
+                    9. Failing to Optimize for Local SEO
+                  </h2>
+                  <p className="lead fs-6">
+                    Local SEO is essential for businesses targeting a specific
+                    geographic area. Ensure your business is listed on Google My
+                    Business and other local directories. Optimize your website
+                    with local keywords and include your location in your
+                    content and meta tags.
+                  </p>
+
+                  <h2 className="h3 my-4">
+                    10. Not Updating Content Regularly
+                  </h2>
+                  <p className="lead fs-6">
+                    Search engines favor fresh content. Regularly update your
+                    website with new blog posts, articles, and other content.
+                    Ensure your existing content remains relevant by revisiting
+                    and updating it periodically.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section className="pb-5" id="faqs">
+            <div className="container">
+              <div className="row">
+                <div className="col-12">
+                  <h2 className="h3 my-5">
+                    <span className="d-block text-dark fw-bold display-4 mb-2">
+                      FAQ :{" "}
+                    </span>
+                    Frequently Asked Questions
+                  </h2>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-12">
+                  <div itemScope itemType="https://schema.org/FAQPage">
+                    <div
+                      itemScope
+                      itemProp="mainEntity"
+                      itemType="https://schema.org/Question"
+                    >
+                      <h3 className="lead fs-4" itemProp="name">
+                        What is keyword stuffing?
+                      </h3>
+                      <div
+                        itemScope
+                        itemProp="acceptedAnswer"
+                        itemType="https://schema.org/Answer"
+                      >
+                        <p
+                          className="lead border-secondary bg-light border-start border-5 fs-6 my-3 p-3"
+                          itemProp="text"
+                        >
+                          Keyword stuffing involves overloading a webpage with
+                          keywords in an attempt to manipulate search engine
+                          rankings. This practice can lead to penalties and a
+                          poor user experience.
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      itemScope
+                      itemProp="mainEntity"
+                      itemType="https://schema.org/Question"
+                    >
+                      <h3 className="lead fs-4" itemProp="name">
+                        How can I improve my website's load time?
+                      </h3>
+                      <div
+                        itemScope
+                        itemProp="acceptedAnswer"
+                        itemType="https://schema.org/Answer"
+                      >
+                        <p
+                          className="lead border-secondary bg-light border-start border-5 fs-6 my-3 p-3"
+                          itemProp="text"
+                        >
+                          Improve load time by compressing images, enabling
+                          browser caching, and minimizing HTTP requests. Tools
+                          like Google PageSpeed Insights can help identify areas
+                          for improvement.
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      itemScope
+                      itemProp="mainEntity"
+                      itemType="https://schema.org/Question"
+                    >
+                      <h3 className="lead fs-4" itemProp="name">
+                        Why is mobile optimization important?
+                      </h3>
+                      <div
+                        itemScope
+                        itemProp="acceptedAnswer"
+                        itemType="https://schema.org/Answer"
+                      >
+                        <p
+                          className="lead border-secondary bg-light border-start border-5 fs-6 my-3 p-3"
+                          itemProp="text"
+                        >
+                          Mobile optimization ensures that your website provides
+                          a good user experience across all devices. With more
+                          users accessing the web on mobile, it's essential for
+                          maintaining and improving search rankings.
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      itemScope
+                      itemProp="mainEntity"
+                      itemType="https://schema.org/Question"
+                    >
+                      <h3 className="lead fs-4" itemProp="name">
+                        What are high-quality backlinks?
+                      </h3>
+                      <div
+                        itemScope
+                        itemProp="acceptedAnswer"
+                        itemType="https://schema.org/Answer"
+                      >
+                        <p
+                          className="lead border-secondary bg-light border-start border-5 fs-6 my-3 p-3"
+                          itemProp="text"
+                        >
+                          High-quality backlinks come from reputable, relevant
+                          websites. They signal to search engines that your
+                          content is valuable and trustworthy. Focus on
+                          acquiring backlinks through guest posts, partnerships,
+                          and high-quality content.
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      itemScope
+                      itemProp="mainEntity"
+                      itemType="https://schema.org/Question"
+                    >
+                      <h3 className="lead fs-4" itemProp="name">
+                        How often should I update my website's content?
+                      </h3>
+                      <div
+                        itemScope
+                        itemProp="acceptedAnswer"
+                        itemType="https://schema.org/Answer"
+                      >
+                        <p
+                          className="lead border-secondary bg-light border-start border-5 fs-6 my-3 p-3"
+                          itemProp="text"
+                        >
+                          Regular updates are crucial for maintaining SEO
+                          performance. Aim to add new content at least once a
+                          month and review existing content periodically to
+                          ensure it remains relevant and accurate.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </article>
+        <section>
+          <div className="container">
+            <div className="row">
+              <div className="col-12">
+                <div id="social-share-container"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </>
+  );
+}
