@@ -289,6 +289,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="../contact">Contact</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../blog/">Blog</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -486,59 +489,15 @@
             </div>
         </section>
     </article>
-
-    <!-- <section>
+    <section id="share">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2>FAQs</h2>
-                    <div itemscope itemtype="https://schema.org/FAQPage">
-                        <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                            <h3 itemprop="name">What is Bootstrap 5?</h3>
-                            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                <p itemprop="text">Bootstrap 5 is a popular open-source CSS framework used for
-                                    developing responsive and mobile-first websites. It includes a variety of design
-                                    templates and components that make web development faster and easier.</p>
-                            </div>
-                        </div>
-                        <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                            <h3 itemprop="name">What are the main benefits of using Bootstrap 5?</h3>
-                            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                <p itemprop="text">The main benefits of using Bootstrap 5 include an enhanced grid
-                                    system, improved performance, extensive customization options, responsive design,
-                                    and modern components.</p>
-                            </div>
-                        </div>
-                        <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                            <h3 itemprop="name">How does Bootstrap 5 improve performance?</h3>
-                            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                <p itemprop="text">Bootstrap 5 improves performance by removing jQuery dependencies,
-                                    optimizing CSS and JavaScript files, and streamlining the framework to reduce
-                                    loading times.</p>
-                            </div>
-                        </div>
-                        <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                            <h3 itemprop="name">Can I customize Bootstrap 5 to suit my needs?</h3>
-                            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                <p itemprop="text">Yes, Bootstrap 5 offers extensive customization options, including a
-                                    new utility API that allows developers to create custom utility classes without
-                                    writing additional CSS.</p>
-                            </div>
-                        </div>
-                        <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                            <h3 itemprop="name">Is Bootstrap 5 suitable for mobile-first design?</h3>
-                            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                <p itemprop="text">Absolutely. Bootstrap 5 is designed with a mobile-first approach,
-                                    ensuring that websites built with the framework are responsive and look great on any
-                                    device.</p>
-                            </div>
-                        </div>
-                    </div>
+                    <div id="social-share-container"></div>
                 </div>
             </div>
         </div>
-    </section> -->
-    
+    </section>
     <footer>
         <div id="footer-bg">
             <div class="container pt-4">
@@ -706,7 +665,7 @@
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <p class="my-4 px-3">2017-2024 © Anupam Mondal</p>
+                                <p class="my-4 px-3"><span id="current-year"></span> © Anupam Mondal</p>
                             </div>
                         </div>
                     </div>
@@ -717,6 +676,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <!-- Social Sharing Widget -->
+    <script src="../js-tools/socialShareWidget.js"></script>
+    <script>
+        new SocialShareWidget("social-share-container");
+    </script>      
+    <!-- Social Sharing Widget -->
+    <script>
+        document.getElementById("current-year").textContent = new Date().getFullYear();
+    </script>
 </body>
 
 </html>

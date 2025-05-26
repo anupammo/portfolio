@@ -187,6 +187,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="../contact">Contact</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../blog/">Blog</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -393,69 +396,15 @@
             </div>
         </section>
     </article>
-
-    <!-- <section>
+    <section id="share">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2>FAQs</h2>
-                    <div itemscope itemtype="https://schema.org/FAQPage">
-                        <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                            <h3 itemprop="name">What are the benefits of using analytics in marketing?</h3>
-                            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                <p itemprop="text">Using analytics in marketing provides several benefits, including
-                                    improved
-                                    decision-making, enhanced customer targeting, optimized marketing strategies, and
-                                    better measurement
-                                    of campaign performance.</p>
-                            </div>
-                        </div>
-                        <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                            <h3 itemprop="name">What tools can I use for marketing analytics?</h3>
-                            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                <p itemprop="text">Popular marketing analytics tools include Google Analytics, Facebook
-                                    Insights,
-                                    HubSpot, Tableau, Power BI, and Google Data Studio. These tools provide valuable
-                                    data and insights
-                                    to inform your marketing decisions.</p>
-                            </div>
-                        </div>
-                        <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                            <h3 itemprop="name">How can I segment my audience using analytics?</h3>
-                            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                <p itemprop="text">You can segment your audience by analyzing data on demographics,
-                                    behavior, and
-                                    preferences. Identify distinct customer segments and tailor your marketing efforts
-                                    to meet the
-                                    specific needs and interests of each segment.</p>
-                            </div>
-                        </div>
-                        <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                            <h3 itemprop="name">What is A/B testing in marketing?</h3>
-                            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                <p itemprop="text">A/B testing involves comparing two versions of a marketing element,
-                                    such as a webpage
-                                    or email, to determine which one performs better. By analyzing the results, you can
-                                    optimize your
-                                    marketing strategies for better performance.</p>
-                            </div>
-                        </div>
-                        <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                            <h3 itemprop="name">What are key performance indicators (KPIs) in marketing?</h3>
-                            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                                <p itemprop="text">Key performance indicators (KPIs) are metrics used to measure the
-                                    success of
-                                    marketing efforts. Common KPIs include conversion rates, click-through rates,
-                                    customer acquisition
-                                    costs, and return on investment (ROI).</p>
-                            </div>
-                        </div>
-                    </div>
+                    <div id="social-share-container"></div>
                 </div>
             </div>
         </div>
-    </section> -->
-
+    </section>
     <footer>
         <div id="footer-bg">
             <div class="container pt-4">
@@ -623,7 +572,7 @@
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <p class="my-4 px-3">2017-2024 © Anupam Mondal</p>
+                                <p class="my-4 px-3"><span id="current-year"></span> © Anupam Mondal</p>
                             </div>
                         </div>
                     </div>
@@ -634,6 +583,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <!-- Social Sharing Widget -->
+    <script src="../js-tools/socialShareWidget.js"></script>
+    <script>
+        new SocialShareWidget("social-share-container");
+    </script>      
+    <!-- Social Sharing Widget -->
+    <script>
+        document.getElementById("current-year").textContent = new Date().getFullYear();
+    </script>
 </body>
 
 </html>
