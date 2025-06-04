@@ -145,31 +145,81 @@
 
         gtag('config', 'G-VYYY10HF4L');
     </script>
+
+    <!-- Schema -->
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": "How to Improve Website Load Speed for Better User Experience",
-        "description": "Learn how to improve your website load speed for a better user experience. Discover top strategies and tools to enhance your site's performance.",
-        "image": "path/to/image.jpg",
-        "author": {
-            "@type": "Person",
-            "name": "Your Name"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "Your Company",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "path/to/logo.jpg"
+        {
+          "@context": "http://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://anupammondal.in"
+          },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://anupammondal.in/blog/"
+          },{
+            "@type": "ListItem",
+            "position": 3,
+            "name": "How to Improve Website Load Speed for Better User Experience",
+            "item": "https://anupammondal.in/blog/improve-website-load-speed"
+          }]
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "How to Improve Website Load Speed for Better User Experience",
+            "author": {
+                "@type": "Person",
+                "name": "Anupam M",
+                "url": "https://anupammondal.in/"
+            },
+            "datePublished": "2024-11-11T15:00:00+05:30",
+            "dateModified": "2025-06-04T17:35:00+05:30",
+            "url": "https://anupammondal.in/blog/improve-website-load-speed",
+            "image": [
+                "https://anupammondal.in/image/blog/how-to-improve-website-load-speed-for-better-user-experience.png",
+                "https://anupammondal.in/image/meta/blog/improve-website-load-speed.png"
+            ],
+            "articleBody": "Website load speed is a critical factor in providing a positive user experience and achieving high search engine rankings. A fast-loading website can reduce bounce rates, increase user engagement, and boost conversions.",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://anupammondal.in/blog/improve-website-load-speed"
             }
-        },
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "yourwebsite.com/blog/improve-website-load-speed"
-        },
-        "datePublished": "2024-10-27"
-    }
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [{
+            "@type": "Question",
+            "name": "Why is website load speed important?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Website load speed is important because it directly affects user experience, search engine rankings, and conversion rates. A faster website can lead to higher user engagement and lower bounce rates."
+            }
+          },{
+            "@type": "Question",
+            "name": "How can I optimize images for better website performance?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can optimize images by compressing them with tools like TinyPNG or ImageOptim, ensuring they are appropriately sized, and using modern formats like WebP. This can significantly improve your website's load speed."
+            }
+          },{
+            "@type": "Question",
+            "name": "What is a Content Delivery Network (CDN) and how does it improve website load speed?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A Content Delivery Network (CDN) distributes your website's content across multiple servers worldwide. This reduces load times by ensuring users access the content from a server closest to their location, enhancing overall website performance."
+            }
+          }]
+        }
     </script>
 </head>
 
