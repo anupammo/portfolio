@@ -1,1321 +1,987 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Primary Meta Tags -->
-    <title>Anupam Mondal for website, SEO, web design, development</title>
-    <meta name="title" content="Anupam Mondal for website, SEO, web design, development" />
-    <meta name="description"
-        content="Anupam Mondal for website, SEO, web design, development. Boost Your Business with Expert Web Design, Development, & SEO Services by Anupam Mondal." />
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://anupammondal.in" />
-    <meta property="og:title" content="Anupam Mondal for website, SEO, web design, development" />
-    <meta property="og:description"
-        content="Anupam Mondal for website, SEO, web design, development. Boost Your Business with Expert Web Design, Development, & SEO Services by Anupam Mondal." />
-    <meta property="og:image"
-        content="https://anupammondal.in/image/screenshots/halloween/happy-halloween.png" />
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://anupammondal.in" />
-    <meta property="twitter:title" content="Anupam Mondal for website, SEO, web design, development" />
-    <meta property="twitter:description"
-        content="Anupam Mondal for website, SEO, web design, development. Boost Your Business with Expert Web Design, Development, & SEO Services by Anupam Mondal." />
-    <meta property="twitter:image"
-        content="https://anupammondal.in/image/screenshots/halloween/happy-halloween.png" />
-    <link rel="canonical" href="https://anupammondal.in">
-    <link rel="icon" type="image/x-icon" href="./favicon.ico">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anupam Mondal | Web Design, Development & SEO Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .parallax {
-            background-attachment: fixed;
-            background-image: url(./image/common/iiisometric.svg);
-            background-size: cover;
-            background-repeat: no-repeat;
+        :root {
+            --primary: #6441A5;
+            --primary-light: #7d5cc1;
+            --primary-dark: #4e3280;
+            --secondary: #FF6B6B;
+            --dark: #1a1a2e;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+            --transition: all 0.3s ease;
         }
 
-        .parallax-1 {
-            background-attachment: fixed;
-            background-image: url(./image/common/iiisometric-1.svg);
-            background-size: cover;
-            background-repeat: no-repeat;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        .bg-opacity-half {
-            background: rgb(255, 255, 255);
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 100%);
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #fff;
+            overflow-x: hidden;
         }
 
-        .bg-opacity {
-            /* background-color: #6441A5aa; */
-            background-color: #ffffffaa;
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            line-height: 1.3;
+            color: var(--dark);
         }
 
-        .img-flip {
-            -webkit-transform: scaleX(-1);
-            transform: scaleX(-1);
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
         }
 
-        a.a-style {
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+
+        .text-center h2::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        a {
             text-decoration: none;
+            color: var(--primary);
+            transition: var(--transition);
         }
 
-        #porfile-bg {
+        a:hover {
+            color: var(--primary-light);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 4px 15px rgba(100, 65, 165, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-light);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(100, 65, 165, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        .text-primary {
+            color: var(--primary);
+        }
+
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            padding: 10px 0;
+            background: white;
+        }
+
+        .navbar {
             display: flex;
-            flex-direction: column;
-            background-repeat: no-repeat;
-            background-position: bottom;
-            background-image: url(./image/homepage/Stacked_blob.svg);
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
         }
 
-        #porfile-bg img {
-            margin-top: auto;
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
         }
 
-        .silhouette img {
-            transition: .5s ease;
+        .logo span {
+            color: var(--dark);
         }
 
-        .silhouette:hover img {
-            -webkit-filter: contrast(0) sepia(100%) hue-rotate(204deg) saturate(2000%) brightness(100%);
-            filter: contrast(0) sepia(100%) hue-rotate(206deg) saturate(2000%) brightness(80%);
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: var(--dark);
+            font-weight: 500;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            color: var(--dark);
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 180px 0 100px;
+            background: linear-gradient(135deg, rgba(248, 247, 252, 0.9) 0%, rgba(255, 255, 255, 1) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -300px;
+            right: -300px;
+            width: 800px;
+            height: 800px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(100, 65, 165, 0.05) 0%, rgba(100, 65, 165, 0.01) 100%);
+            z-index: -1;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .hero-text {
+            flex: 1;
+            padding-right: 50px;
+        }
+
+        .hero-image {
+            flex: 1;
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: var(--transition);
+        }
+
+        .hero-image:hover {
+            transform: perspective(1000px) rotateY(0);
+        }
+
+        .hero-image img {
+            width: 100%;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .hero-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        /* Services Section */
+        .services {
+            background-color: #f8f9ff;
+            position: relative;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            text-align: center;
+            padding: 40px 30px;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(100, 65, 165, 0.15);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(100, 65, 165, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: var(--primary);
+            font-size: 2rem;
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        /* Stats Section */
+        .stats {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .stat-item {
+            padding: 30px;
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .stat-text {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background-color: white;
+        }
+
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .testimonial {
+            background: #f8f9ff;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .client-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+        }
+
+        .client-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 20px;
+            border: 3px solid var(--primary);
+        }
+
+        .client-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .client-details h4 {
+            margin-bottom: 5px;
+        }
+
+        .client-role {
+            color: var(--gray);
+            font-style: italic;
+        }
+
+        .testimonial-text {
+            font-size: 1.1rem;
+            font-style: italic;
+            line-height: 1.8;
+            position: relative;
+        }
+
+        .testimonial-text::before,
+        .testimonial-text::after {
+            content: '"';
+            font-size: 4rem;
+            color: rgba(100, 65, 165, 0.1);
+            position: absolute;
+        }
+
+        .testimonial-text::before {
+            top: -30px;
+            left: -20px;
+        }
+
+        .testimonial-text::after {
+            bottom: -60px;
+            right: -20px;
+        }
+
+        /* Clients */
+        .clients {
+            background-color: #f8f9ff;
+        }
+
+        .clients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 30px;
+            align-items: center;
+        }
+
+        .client-logo {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 120px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+
+        .client-logo:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(100, 65, 165, 0.1);
+        }
+
+        .client-logo img {
+            max-width: 100%;
+            max-height: 60px;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: var(--transition);
+        }
+
+        .client-logo:hover img {
+            filter: grayscale(0);
             opacity: 1;
         }
 
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        span.fs-5,
-        span.display-1,
-        .txt-anupam {
-            color: #6441A5;
-            font-weight: 500 !important;
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 0;
         }
 
-        .btn-outline-dark:hover {
-            background-color: #6441A5 !important;
-            border-color: #6441A5 !important;
+        .cta h2 {
+            color: white;
+            margin-bottom: 20px;
         }
 
-        hr.hr-dashed {
-            border-style: dashed;
+        .cta h2::after {
+            background: white;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
-        .gradient-bottom-bg {
-            background: rgb(255, 255, 255);
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 1) 50%);
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-size: 1.2rem;
+            opacity: 0.9;
         }
 
-        .bg-anupam {
-            background-color: #6441A5;
+        .cta .btn {
+            background: white;
+            color: var(--primary);
         }
 
+        .cta .btn:hover {
+            background: var(--light);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer */
         footer {
-            background-color: #6441A5;
+            background: var(--dark);
+            color: white;
+            padding: 80px 0 30px;
         }
 
-        #footer-bg {
-            background: rgb(255, 255, 255);
-            background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 0) 30%);
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
         }
 
-        footer a,
-        footer p {
-            color: #fff !important;
+        .footer-col h3 {
+            color: white;
+            margin-bottom: 25px;
+            font-size: 1.5rem;
+            position: relative;
+            padding-bottom: 15px;
         }
 
-        .link-anupam a {
-            color: #6441A5 !important;
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--primary);
         }
 
-        .text-color {
-            color: #6441A5;
+        .footer-links {
+            list-style: none;
         }
 
-        .text-shadow {
-            text-shadow: 5px 5px 5px #000000;
+        .footer-links li {
+            margin-bottom: 12px;
         }
 
-        .bg-color {
-            background-color: #6441A5;
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            transition: var(--transition);
         }
 
-        .card-review {
-            width: 320px;
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.8rem;
+            }
+            
+            h2 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-content {
+                flex-direction: column;
+            }
+            
+            .hero-text {
+                padding-right: 0;
+                margin-bottom: 50px;
+                text-align: center;
+            }
+            
+            .hero-btns {
+                justify-content: center;
+            }
+            
+            .hero-image {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                right: -100%;
+                flex-direction: column;
+                background: white;
+                width: 100%;
+                height: calc(100vh - 80px);
+                padding: 40px 20px;
+                transition: var(--transition);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-links.active {
+                right: 0;
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+            }
+            
+            section {
+                padding: 70px 0;
+            }
+            
+            .hero {
+                padding: 150px 0 70px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .btn {
+                width: 100%;
+            }
         }
     </style>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYYY10HF4L"></script>
-
-    <!-- pinterest verification -->
-    <meta name="p:domain_verify" content="0ba757c94f2195e912a734bc0d6be2fd"/>
-    
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-VYYY10HF4L');
-    </script>
 </head>
-
-<body class="lead">
-    <header>
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
-                <a class="navbar-brand" href="./">Anupam Mondal</a>
-                <button class="navbar-toggler shadow-none collapsed border-0" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto fs-6 mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./">Home</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Services
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="./services/digital-marketing">Digital Marketing</a>
-                                </li>
-                                <li><a class="dropdown-item" href="./services/web-design">Web Design</a></li>
-                                <li><a class="dropdown-item" href="./services/web-development">Web Development</a></li>
-                                <li><a class="dropdown-item" href="./services/website-seo">Website SEO</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                About
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="./about-us">About</a></li>
-                                <li><a class="dropdown-item" href="./portfolio">Portfolio</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./contact">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+<body>
+    <!-- Header -->
+    <header id="header">
         <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h1 class="lead fs-2 my-4">Boost Your Business with Expert Web Design, Development, & SEO Services
-                        by Anupam Mondal</h1>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8 col-12">
-                    <p class="lead fs-6 my-4">Are you in need of a cutting-edge website for your business? Perhaps
-                        you're looking to enhance or modernize your existing site with top-tier web design, web
-                        development, or SEO services.</p>
-                    <p class="lead fs-6 my-4">Look no further! I specialize in optimizing websites for superior
-                        placement on Search Engine Results Pages (SERPs) with sleek, lightweight designs that will
-                        elevate your business among clients. Let's delve into how I can transform your online presence
-                        for success.</p>
-                    <p class="lead fs-6 my-4">Anupam Mondal for website, SEO, web design, development. Boost Your
-                        Business with Expert Web Design, Development, & SEO Services by Anupam Mondal.</p>
-                    <ul class="list-group list-group-flush my-5">
-                        <li class="list-group-item border-0 p-0">
-                            <a href="./services/digital-marketing" class="nav-link txt-anupam h6">
-                                Digital Marketing Services
-                            </a>
-                        </li>
-                        <li class="list-group-item border-0 p-0">
-                            <a href="./services/web-design" class="nav-link txt-anupam h6">
-                                Web Design Services
-                            </a>
-                        </li>
-                        <li class="list-group-item border-0 p-0">
-                            <a href="./services/web-development" class="nav-link txt-anupam h6">
-                                Web Development Services
-                            </a>
-                        </li>
-                        <li class="list-group-item border-0 p-0">
-                            <a href="./services/website-seo" class="nav-link txt-anupam h6">
-                                Website SEO Services
-                            </a>
-                        </li>
-                    </ul>
-                    <nav class="nav my-4">
-                        <a class="text-uppercase btn btn-outline-dark me-2 mb-2 px-4 py-2"
-                            href="portfolio">Portfolio</a>
-                        <a class="text-uppercase btn btn-outline-dark me-2 mb-2 px-4 py-2" href="about-us">About
-                            Us</a>
-                    </nav>
-                </div>
-                <div class="col-lg-4 col-12">
-                    <div class="card shadow">
-                        <img src="./image/profile/anupam-mondal-freelancer.webp" width="360" height="360" loading="lazy"
-                            class="img-fluid my-5" alt="Anupam Mondal for Web Design | Development | SEO Servives">
-                    </div>
-                </div>
-            </div>
+            <nav class="navbar">
+                <a href="#" class="logo">Anupam<span>Mondal</span></a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
-    <!-- <section>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
         <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="marquee">
-                        <p>Scrolling Text Marquee - A Simple CSS Demonstration</p>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Transform Your <span class="text-primary">Digital Presence</span> with Expert Solutions</h1>
+                    <p>I specialize in creating high-performance websites, implementing effective SEO strategies, and developing custom digital solutions that drive growth and maximize your online potential.</p>
+                    <div class="hero-btns">
+                        <a href="#portfolio" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-outline">Get in Touch</a>
                     </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Web Design and Development">
                 </div>
             </div>
         </div>
-    </section> -->
-    <!-- parallax promotion -->
-    <!-- <section class="aug15">
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
         <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="my-5 py-5"></div>
-                    <div class="my-5 py-5"></div>
+            <div class="section-title">
+                <h2>My <span class="text-primary">Services</span></h2>
+                <p>Comprehensive solutions tailored to your business needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Web Design</h3>
+                    <p>Creating visually stunning, user-friendly websites that convert visitors into customers with intuitive interfaces and responsive layouts.</p>
+                    <a href="#" class="btn btn-outline">Learn More</a>
                 </div>
-                <div class="col-md-6 col-12"></div>
-                <div class="col-md-6 col-12 px-0">
-                    <img class="img-fluid d-block mx-auto card"
-                        src="./image/extra/15august/15th-august-independence-day-of-india.webp"
-                        alt="15th August | Har Ghar Tiranga | Independence Day of India">
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Building robust, scalable web applications and websites using the latest technologies for optimal performance and security.</p>
+                    <a href="#" class="btn btn-outline">Learn More</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>SEO Optimization</h3>
+                    <p>Implementing strategic SEO techniques to improve your search rankings, drive organic traffic, and increase online visibility.</p>
+                    <a href="#" class="btn btn-outline">Learn More</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>Digital Marketing</h3>
+                    <p>Developing comprehensive digital marketing strategies to grow your audience, generate leads, and increase conversions.</p>
+                    <a href="#" class="btn btn-outline">Learn More</a>
                 </div>
             </div>
         </div>
-    </section> -->
-    <!-- parallax promotion -->
-    <section class="my-4 py-5" id="services">
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-12 p-4">
-                    <h2 class="lead fs-3 my-5">
-                        <span>Web Design : </span>
-                        <span class="d-block fs-5 pt-2">Crafting Engaging Experiences</span>
-                    </h2>
-                    <p class="lead fs-6 my-5">Discover exceptional web design services tailored to your needs.
-                        From captivating graphics to intuitive User Interface (UI) and User Experience (UX)
-                        design, I create websites that resonate with your audience. Embracing responsive design,
-                        your site will seamlessly adapt to any device, ensuring swift loading times that swiftly
-                        introduce your business and its offerings to potential customers.</p>
-                    <a class="text-uppercase btn btn-outline-dark me-2 px-4 py-2 mb-5" href="services/web-design">Web
-                        Design Services</a>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" id="projectCounter">1000+</div>
+                    <div class="stat-text">Projects Completed</div>
                 </div>
-                <div class="col-lg-6 col-12 p-4 bg-light border rounded">
-                    <h2 class="lead fs-3 my-5">
-                        <span>Web Development : </span>
-                        <span class="d-block fs-5 pt-2">Empowering Global Reach</span>
-                    </h2>
-                    <p class="lead fs-6 my-5">In the digital landscape, web development is crucial for
-                        businesses aiming to connect with a global audience to sell your products or your services as a
-                        Brand. I specialize in developing websites that not only showcase your products but also
-                        facilitate outreach to audiences across smartphones and desktops. With progressive web apps,
-                        your business remains accessible even when users are offline.</p>
-                    <a class="text-uppercase btn btn-outline-dark me-2 px-4 py-2 mb-5"
-                        href="services/web-development">Web Development Services</a>
+                
+                <div class="stat-item">
+                    <div class="stat-number" id="clientCounter">80+</div>
+                    <div class="stat-text">Happy Clients</div>
                 </div>
-                <div class="col-lg-6 col-12 p-4 bg-light border rounded">
-                    <h2 class="lead fs-3 my-5">
-                        <span>Website SEO : </span>
-                        <span class="d-block fs-5 pt-2">Driving Your Online Success</span>
-                    </h2>
-                    <p class="lead fs-6 my-5">Think of SEO as the essential wheels for your digital presence.
-                        Search Engine Optimization (SEO) is a pivotal aspect of website design and development,
-                        prioritized for boosting visibility once your site goes live. In today's era of digital
-                        marketing, SEO stands as the most effective strategy for promoting services and
-                        products, ensuring your business thrives in the online realm.</p>
-                    <a class="text-uppercase  btn btn-outline-dark me-2 px-4 py-2 mb-5"
-                        href="services/website-seo">Website SEO Services</a>
+                
+                <div class="stat-item">
+                    <div class="stat-number" id="experienceCounter">8+</div>
+                    <div class="stat-text">Years Experience</div>
                 </div>
-                <div class="col-lg-6 col-12 p-4">
-                    <h2 class="lead fs-3 my-5">
-                        <span>Digital Marketing : </span>
-                        <span class="d-block fs-5 pt-2">Grow with Organic Traffics & Leads</span>
-                    </h2>
-                    <p class="lead fs-6 my-5">Think of SEO as the essential wheels for your digital presence.
-                        Search Engine Optimization (SEO) is a pivotal aspect of website design and development,
-                        prioritized for boosting visibility once your site goes live. In today's era of digital
-                        marketing, SEO stands as the most effective strategy for promoting services and
-                        products, ensuring your business thrives in the online realm.</p>
-                    <a class="text-uppercase btn btn-outline-dark me-2 px-4 py-2 mb-5"
-                        href="services/digital-marketing">Digital Marketing Services</a>
+                
+                <div class="stat-item">
+                    <div class="stat-number" id="countryCounter">16+</div>
+                    <div class="stat-text">Countries Served</div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="bg-dark parallax my-5" id="quantity">
-        <div class="gradient-bottom-bg">
-            <div class="my-5 py-5">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <h2 class="lead text-white text-shadow fs-3 mb-5"><span
-                                    class="text-uppercase d-block fw-bold display-3">Numbers </span> that Matter to us
-                                for reference</h2>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Client <span class="text-primary">Testimonials</span></h2>
+                <p>What my clients say about my work</p>
+            </div>
+            
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <div class="client-info">
+                        <div class="client-avatar">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client">
+                        </div>
+                        <div class="client-details">
+                            <h4>Michael Anderson</h4>
+                            <div class="client-role">CEO, TechSolutions Inc.</div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-3 col-xs-6">
-                            <div class="card shadow my-3">
-                                <div class="card-body">
-                                    <p class="lead text-center py-4">
-                                        <span class="d-block fs-4 mb-4">Managed </span>
-                                        <span class="text-color fw-bold display-5" id="counter1">1000</span>
-                                        <span class="fs-1">+</span>
-                                        <br>
-                                        <span class="d-block fs-6 mt-4">Website & Projets </span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-xs-6">
-                            <div class="card shadow my-3">
-                                <div class="card-body">
-                                    <p class="lead text-center py-4">
-                                        <span class="d-block fs-4 mb-4">Consecutive </span>
-                                        <span class="text-color fw-bold display-5" id="counter2">102</span>
-                                        <span class="fs-1">+</span>
-                                        <br>
-                                        <span class="d-block fs-6 mt-4">Months of Timeframe</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-xs-6">
-                            <div class="card shadow my-3">
-                                <div class="card-body">
-                                    <p class="lead text-center py-4">
-                                        <span class="d-block fs-4 mb-4">Served </span>
-                                        <span class="text-color fw-bold display-5" id="counter3">80</span>
-                                        <span class="fs-1">+</span>
-                                        <br>
-                                        <span class="d-block fs-6 mt-4">Valued Clients</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-xs-6">
-                            <div class="card shadow my-3">
-                                <div class="card-body">
-                                    <p class="lead text-center py-4">
-                                        <span class="d-block fs-4 mb-4">Countries </span>
-                                        <span class="text-color fw-bold display-5" id="counter4">16</span>
-                                        <span class="fs-1">+</span>
-                                        <br>
-                                        <span class="d-block fs-6 mt-4">Around the Globe</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="testimonial-text">
+                        <p>Anupam completely transformed our online presence. His attention to detail and technical expertise resulted in a website that not only looks stunning but also performs exceptionally well in search rankings. Our conversion rates have increased by 45% since the redesign.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="bg-dark parallax" id="reviews">
-        <div class="gradient-bottom-b">
-            <div class="container py-5">
-                <div class="row">
-                    <div class="col-12">
-                        <div id="carouselExampleRide" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                            <div class="carousel-inner py-4">
-                                <div class="carousel-item active">
-                                    <ul class="nav justify-content-center">
-                                        <li class="nav-item px-2">
-                                            <figure class="figure card shadow p-3">
-                                                <img src="./res/icons/countries/australia.png"
-                                                    alt="Clients of Anupam from Australia" title="Australia" width="64"
-                                                    height="64" loading="lazy">
-                                                <figcaption class="lead text-center fs-6 pt-3">Australia</figcaption>
-                                            </figure>
-                                        </li>
-                                        <li class="nav-item px-2">
-                                            <figure class="figure card shadow p-3">
-                                                <img src="./res/icons/countries/austria.png"
-                                                    alt="Clients of Anupam from Austria" title="Austria" width="64"
-                                                    height="64" loading="lazy">
-                                                <figcaption class="lead text-center fs-6 pt-3">Austria</figcaption>
-                                            </figure>
-                                        </li>
-                                        <li class="nav-item px-2">
-                                            <figure class="figure card shadow p-3">
-                                                <img src="./res/icons/countries/canada.png"
-                                                    alt="Clients of Anupam from Canada" title="Canada" width="64"
-                                                    height="64" loading="lazy">
-                                                <figcaption class="lead text-center fs-6 pt-3">Canada</figcaption>
-                                            </figure>
-                                        </li>
-                                        <li class="nav-item px-2">
-                                            <figure class="figure card shadow p-3">
-                                                <img src="./res/icons/countries/ireland.png"
-                                                    alt="Clients of Anupam from Ireland" title="Ireland" width="64"
-                                                    height="64" loading="lazy">
-                                                <figcaption class="lead text-center fs-6 pt-3">Ireland</figcaption>
-                                            </figure>
-                                        </li>
-                                        <li class="nav-item px-2">
-                                            <figure class="figure card shadow p-3">
-                                                <img src="./res/icons/countries/israel.png"
-                                                    alt="Clients of Anupam from Israel" title="Israel" width="64"
-                                                    height="64" loading="lazy">
-                                                <figcaption class="lead text-center fs-6 pt-3">Israel</figcaption>
-                                            </figure>
-                                        </li>
-                                        <li class="nav-item px-2">
-                                            <figure class="figure card shadow p-3">
-                                                <img src="./res/icons/countries/lithuania.png"
-                                                    alt="Clients of Anupam from Lithuania" title="Lithuania" width="64"
-                                                    height="64" loading="lazy">
-                                                <figcaption class="lead text-center fs-6 pt-3">Lithuania</figcaption>
-                                            </figure>
-                                        </li>
-                                        <li class="nav-item px-2">
-                                            <figure class="figure card shadow p-3">
-                                                <img src="./res/icons/countries/malaysia.png"
-                                                    alt="Clients of Anupam from Malaysia" title="Malaysia" width="64"
-                                                    height="64" loading="lazy">
-                                                <figcaption class="lead text-center fs-6 pt-3">Malaysia</figcaption>
-                                            </figure>
-                                        </li>
-                                        <li class="nav-item px-2">
-                                            <figure class="figure card shadow p-3">
-                                                <img src="./res/icons/countries/mauritius.png"
-                                                    alt="Clients of Anupam from Mauritius" title="Mauritius" width="64"
-                                                    height="64" loading="lazy">
-                                                <figcaption class="lead text-center fs-6 pt-3">Mauritius</figcaption>
-                                            </figure>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="carousel-item">
-                                    <ul class="nav justify-content-center">
-                                        <li class="nav-item px-2">
-                                            <figure class="figure card shadow p-3">
-                                                <img src="./res/icons/countries/nigeria.png"
-                                                    alt="Clients of Anupam from Nigeria" title="Nigeria" width="64"
-                                                    height="64" loading="lazy">
-                                                <figcaption class="lead text-center fs-6 pt-3">Nigeria</figcaption>
-                                            </figure>
-                                        </li>
-                                        <li class="nav-item px-2">
-                                            <figure class="figure card shadow p-3">
-                                                <img src="./res/icons/countries/peru.png"
-                                                    alt="Clients of Anupam from Peru" title="Peru" width="64"
-                                                    height="64" loading="lazy">
-                                                <figcaption class="lead text-center fs-6 pt-3">Peru</figcaption>
-                                            </figure>
-                                        </li>
-                                        <li class="nav-item px-2">
-                                            <figure class="figure card shadow p-3">
-                                                <img src="./res/icons/countries/puerto-rico.png"
-                                                    alt="Clients of Anupam from Puerto Rico" title="Puerto Rico"
-                                                    width="64" height="64" loading="lazy">
-                                                <figcaption class="lead text-center fs-6 pt-3">Puerto R.</figcaption>
-                                            </figure>
-                                        </li>
-                                        <li class="nav-item px-2">
-                                            <figure class="figure card shadow p-3">
-                                                <img src="./res/icons/countries/saudi-arabia.png"
-                                                    alt="Clients of Anupam from Saudi Arabia" title="Saudi Arabia"
-                                                    width="64" height="64" loading="lazy">
-                                                <figcaption class="lead text-center fs-6 pt-3">Saudi A.</figcaption>
-                                            </figure>
-                                        </li>
-                                        <li class="nav-item px-2">
-                                            <figure class="figure card shadow p-3">
-                                                <img src="./res/icons/countries/slovakia.png"
-                                                    alt="Clients of Anupam from Slovakia" title="Slovakia" width="64"
-                                                    height="64" loading="lazy">
-                                                <figcaption class="lead text-center fs-6 pt-3">Slovakia</figcaption>
-                                            </figure>
-                                        </li>
-                                        <li class="nav-item px-2">
-                                            <figure class="figure card shadow p-3">
-                                                <img src="./res/icons/countries/south-africa.png"
-                                                    alt="Clients of Anupam from South Africa" title="South Africa"
-                                                    width="64" height="64" loading="lazy">
-                                                <figcaption class="lead text-center fs-6 pt-3">S. Africa</figcaption>
-                                            </figure>
-                                        </li>
-                                        <li class="nav-item px-2">
-                                            <figure class="figure card shadow p-3">
-                                                <img src="./res/icons/countries/united-kingdom.png"
-                                                    alt="Clients of Anupam from United Kingdom" title="United Kingdom"
-                                                    width="64" height="64" loading="lazy">
-                                                <figcaption class="lead text-center fs-6 pt-3">UK</figcaption>
-                                            </figure>
-                                        </li>
-                                        <li class="nav-item px-2">
-                                            <figure class="figure card shadow p-3">
-                                                <img src="./res/icons/countries/united-states-of-america.png"
-                                                    alt="Clients of Anupam from United States" title="United States"
-                                                    width="64" height="64" loading="lazy">
-                                                <figcaption class="lead text-center fs-6 pt-3">US</figcaption>
-                                            </figure>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+    <!-- Clients Section -->
+    <section class="clients">
+        <div class="container">
+            <div class="section-title">
+                <h2>Trusted <span class="text-primary">By</span></h2>
+                <p>Companies I've had the pleasure to work with</p>
             </div>
-            <!-- <div class="bg-opacity-half">
-                <div class="container my-5">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6 col-12">
-                            <div class="card shadow border-0 my-3 p-4">
-                                <div class="card-body">
-                                    <img src="image/about/gracianna-winery.webp" width="150" height="50" loading="lazy"
-                                        alt="Client of Anupam Mondal, Gracianna Winery - USA">
-                                    <figure>
-                                        <blockquote class="blockquote">
-                                            <p class="lead text-justify fs-6 py-4">Very good communication despite time
-                                                difference between California and India. We will use Anupam again. Very
-                                                generous and wonderful person.</p>
-                                        </blockquote>
-                                        <figcaption class="blockquote-footer text-dark mt-3">
-                                            <strong>Trini Amador </strong>
-                                            <cite class="d-block fs-5" title="Source Title">🇺🇸 United States</cite>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-12">
-                            <div class="card shadow border-0 my-3 p-4">
-                                <div class="card-body">
-                                    <img src="image/about/1300-the-vet.webp" width="150" height="50" loading="lazy"
-                                        alt="Client of Anupam Mondal, 1300 the vet - Australia">
-                                    <figure>
-                                        <blockquote class="blockquote">
-                                            <p class="lead text-justify fs-6 py-4">Great to work with this freelancer,
-                                                very patient and dedicated to achieve the clients vision, My first
-                                                choice for this type of work. AAA+++ 5 Stars.</p>
-                                        </blockquote>
-                                        <figcaption class="blockquote-footer text-dark mt-3">
-                                            <strong>Ben Newth </strong>
-                                            <cite class="d-block fs-5" title="Source Title">🇦🇺 Australia</cite>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-12">
-                            <div class="card shadow border-0 my-3 p-4">
-                                <div class="card-body">
-                                    <img src="image/about/the-flooring-company.webp" width="66" height="50"
-                                        loading="lazy" alt="Client of Anupam Mondal, the flooring company - USA">
-                                    <figure>
-                                        <blockquote class="blockquote">
-                                            <p class="lead text-justify fs-6 py-4">Am so glad, I found Anupam M to do my
-                                                project. He is a professional that knows the work. the job was done as
-                                                fast as he could. He is THE BEST.</p>
-                                        </blockquote>
-                                        <figcaption class="blockquote-footer text-dark mt-3">
-                                            <strong>Tsila R </strong>
-                                            <cite class="d-block fs-5" title="Source Title">🇮🇱 Israel</cite>
-                                        </figcaption>
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            
+            <div class="clients-grid">
+                <div class="client-logo">
+                    <img src="https://via.placeholder.com/150x60/6441A5/FFFFFF?text=Client+1" alt="Client Logo">
                 </div>
-            </div> -->
-        </div>
-    </section>
-    <section class="bg-light" id="testimonial">
-        <div class="gradient-bottom-bg">
-            <div class="container py-5">
-                <div class="row">
-                    <div class="col-md-7 col-12">
-                        <div class="py-5">
-                            <h2 class="lead fs-3 my-4">Client Testimonials: Raving Reviews</h2>
-                            <p class="lead fs-6 my-5">Join the ranks of satisfied clients worldwide who have benefited
-                                from Anupam Mondal's expertise. Garnering acclaim on Google, Facebook, and various
-                                platforms, my freelance projects since 2016 have left a trail of positive reviews. Each
-                                project is approached with dedication, aiming to deliver outstanding results that exceed
-                                expectations.</p>
-                            <nav class="nav">
-                                <a class="text-uppercase btn btn-outline-dark me-2 mb-2 px-4 py-2"
-                                    href="portfolio">Portfolio</a>
-                                <a class="text-uppercase btn btn-outline-dark me-2 mb-2 px-4 py-2" href="about-us">About
-                                    Us</a>
-                            </nav>
-                        </div>
-                    </div>
-                    <div class="col-md-5 col-12 px-0 bg-light">
-                        <!-- <div class="ss2 bg-warning"></div> -->
-                        <div class="gradient-bottom-bg">
-                            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <div class="card card-review shadow d-block mx-auto my-5 p-4 h-100">
-                                            <div class="card-body">
-                                                <img src="image/clients/client-review-anupam-mondal-gracianna-100x100.webp"
-                                                    width="100" height="100" loading="lazy"
-                                                    class="border rounded-circle"
-                                                    alt="Client of Anupam Mondal, Quantum Bullion - Indonesia">
-                                                <figure>
-                                                    <figcaption class="blockquote-footer text-dark mt-3">
-                                                        <strong>Trini Amador </strong>
-                                                        <cite class="d-block fs-5" title="Source Title">🇺🇸 United
-                                                            States</cite>
-                                                    </figcaption>
-                                                    <blockquote class="blockquote">
-                                                        <p class="lead text-justify fs-6 pt-3">Very good communication
-                                                            despite time difference between California and India. We
-                                                            will
-                                                            use Anupam again. Very generous and wonderful person.</p>
-                                                    </blockquote>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="card card-review shadow d-block mx-auto my-5 p-4 h-100">
-                                            <div class="card-body">
-                                                <img src="./image/clients/thevet.webp" width="100" height="100"
-                                                    loading="lazy" class="border rounded-circle"
-                                                    alt="Client of Anupam Mondal, 1300 the vet - Australia">
-                                                <figure>
-                                                    <figcaption class="blockquote-footer text-dark mt-3">
-                                                        <strong>Ben Newth </strong>
-                                                        <cite class="d-block fs-5" title="Source Title">🇦🇺
-                                                            Australia</cite>
-                                                    </figcaption>
-                                                    <blockquote class="blockquote">
-                                                        <p class="lead text-justify fs-6 pt-3">Great to work with this
-                                                            freelancer, very patient and dedicated to achieve the
-                                                            clients
-                                                            vision, My first choice for this type of work. AAA+++ 5
-                                                            Stars.
-                                                        </p>
-                                                    </blockquote>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="card card-review shadow d-block mx-auto my-5 p-4 h-100">
-                                            <div class="card-body">
-                                                <img src="image/clients/client-review-anupam-mondal-100x100.webp"
-                                                    width="100" height="100" loading="lazy"
-                                                    class="border rounded-circle"
-                                                    alt="Client of Anupam Mondal, Quantum Bullion - Indonesia">
-                                                <figure>
-                                                    <figcaption class="blockquote-footer text-dark mt-3">
-                                                        <strong>Azizi Jazmi </strong>
-                                                        <cite class="d-block fs-5" title="Source Title">🇲🇾
-                                                            Malaysia</cite>
-                                                    </figcaption>
-                                                    <blockquote class="blockquote">
-                                                        <p class="lead text-justify fs-6 pt-3">
-                                                            This guy is excellent !! Great experience. Job done within
-                                                            24
-                                                            hour. I will surely contact him for my website now . 1 part
-                                                            done
-                                                            5 more to go.</p>
-                                                    </blockquote>
-                                                </figure>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="client-logo">
+                    <img src="https://via.placeholder.com/150x60/6441A5/FFFFFF?text=Client+2" alt="Client Logo">
+                </div>
+                <div class="client-logo">
+                    <img src="https://via.placeholder.com/150x60/6441A5/FFFFFF?text=Client+3" alt="Client Logo">
+                </div>
+                <div class="client-logo">
+                    <img src="https://via.placeholder.com/150x60/6441A5/FFFFFF?text=Client+4" alt="Client Logo">
+                </div>
+                <div class="client-logo">
+                    <img src="https://via.placeholder.com/150x60/6441A5/FFFFFF?text=Client+5" alt="Client Logo">
+                </div>
+                <div class="client-logo">
+                    <img src="https://via.placeholder.com/150x60/6441A5/FFFFFF?text=Client+6" alt="Client Logo">
                 </div>
             </div>
         </div>
     </section>
-    <section class="bg-dark parallax" id="clients">
-        <div class="container py-5">
-            <div class="row">
-                <div class="col-12">
-                    <h3 class="lead text-center text-white text-shadow fs-3 mb-5">
-                        <span class="text-uppercase d-block fw-bold display-3">Clients </span>
-                        <span>we've worked with, arround the Globe</span>
-                    </h3>
-                    <!-- <hr class="d-block mx-auto border-white w-25 my-5"> -->
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner mb-5">
-                            <div class="carousel-item active">
-                                <ul class="nav justify-content-center">
-                                    <li class="nav-item">
-                                        <img src="./image/brands/august-beauty-lab.jpg" class="card border-0 m-2"
-                                            alt="August Beauty Lab" width="150" height="50">
-                                    </li>
-                                    <li class="nav-item">
-                                        <img src="./image/brands/br-oil-tools.jpg" class="card border-0 m-2"
-                                            alt="BR Oil Tools" width="150" height="50">
-                                    </li>
-                                    <li class="nav-item">
-                                        <img src="./image/brands/capstone-trading-systems.jpg" class="card border-0 m-2"
-                                            alt="Capstone Trading Systems" width="150" height="50">
-                                    </li>
-                                    <li class="nav-item">
-                                        <img src="./image/brands/cpa-australia.jpg" class="card border-0 m-2"
-                                            alt="CPA Australia" width="150" height="50">
-                                    </li>
-                                    <li class="nav-item">
-                                        <img src="./image/brands/dubai-visas.jpg" class="card border-0 m-2"
-                                            alt="Dubai Visas" width="150" height="50">
-                                    </li>
-                                    <li class="nav-item">
-                                        <img src="./image/brands/elephant-overseas.jpg" class="card border-0 m-2"
-                                            alt="Elephant Overseas" width="150" height="50">
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="carousel-item">
-                                <ul class="nav justify-content-center">
-                                    <li class="nav-item">
-                                        <img src="./image/brands/wealth-trust.jpg" class="card border-0 m-2"
-                                            alt="Wealth Trust" width="150" height="50">
-                                    </li>
-                                    <li class="nav-item">
-                                        <img src="./image/brands/gc-technologies.jpg" class="card border-0 m-2"
-                                            alt="GC Technologiess" width="150" height="50">
-                                    </li>
-                                    <li class="nav-item">
-                                        <img src="./image/brands/global-alliance.jpg" class="card border-0 m-2"
-                                            alt="Global Alliance" width="150" height="50">
-                                    </li>
-                                    <li class="nav-item">
-                                        <img src="./image/brands/gracianna-winery.jpg" class="card border-0 m-2"
-                                            alt="Gracianna Winery" width="150" height="50">
-                                    </li>
-                                    <li class="nav-item">
-                                        <img src="./image/brands/huxley.jpg" class="card border-0 m-2" alt="Huxley"
-                                            width="150" height="50">
-                                    </li>
-                                    <li class="nav-item">
-                                        <img src="./image/brands/india-arrival.jpg" class="card border-0 m-2"
-                                            alt="India Arrival" width="150" height="50">
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="carousel-item">
-                                <ul class="nav justify-content-center">
-                                    <li class="nav-item">
-                                        <img src="./image/brands/kids-n-hers.jpg" class="card border-0 m-2"
-                                            alt="Kids N Hers" width="150" height="50">
-                                    </li>
-                                    <li class="nav-item">
-                                        <img src="./image/brands/quick-brain.jpg" class="card border-0 m-2"
-                                            alt="Quick Brain" width="150" height="50">
-                                    </li>
-                                    <li class="nav-item">
-                                        <img src="./image/brands/radiobillboards.jpg" class="card border-0 m-2"
-                                            alt="Radio Billboards" width="150" height="50">
-                                    </li>
-                                    <li class="nav-item">
-                                        <img src="./image/brands/ritehorn.jpg" class="card border-0 m-2" alt="Ritehorn"
-                                            width="150" height="50">
-                                    </li>
-                                    <li class="nav-item">
-                                        <img src="./image/brands/sailing-dreams.jpg" class="card border-0 m-2"
-                                            alt="Sailing Dreams" width="150" height="50">
-                                    </li>
-                                    <li class="nav-item">
-                                        <img src="./image/brands/syncware.jpg" class="card border-0 m-2" alt="Syncware"
-                                            width="150" height="50">
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button> -->
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- <div class="bg-anupam">
-        </div> -->
-    </section>
-    <section class="bg-light pt-5" id="connect">
-        <div class="gradient-bottom-bg">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-7 col-12">
-                        <div class="py-5">
-                            <h2 class="lead fs-3 my-4">Connect with Anupam Mondal</h2>
-                            <p class="lead fs-6 my-5">Ready to elevate your web presence? Reach out to me via WhatsApp
-                                for a
-                                chat or call regarding your web design, web development, or website SEO needs. Whether
-                                you're seeking guidance or a consultation, simply ping me or shoot an email. I'm here to
-                                provide swift solutions that propel your business forward. Let's create something
-                                exceptional together!
-                            </p>
-                            <nav class="nav">
-                                <a class="text-uppercase btn btn-outline-dark me-2 px-3" href="portfolio">Portfolio</a>
-                                <a class="btn btn-outline-dark me-2"
-                                    title="WhatsApp Anupam Mondal for Web Design | Development | SEO Services"
-                                    href="https://wa.me/919474460058?text=Boost%20Your%20Business%20with%20Expert%20Web%20Design%2C%20Development%2C%20%26%20SEO%20Services%20by%20Anupam%20Mondal%20-%20https%3A%2F%2Fanupammondal.in%2F">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-whatsapp" viewBox="0 0 16 18">
-                                        <path
-                                            d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
-                                    </svg>
-                                </a>
-                                <a class="btn btn-outline-dark me-2"
-                                    title="Skype Anupam Mondal for Web Design | Development | SEO Services"
-                                    href="skype:live:anupam2skype?chat">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-skype" viewBox="0 0 16 18">
-                                        <path
-                                            d="M4.671 0c.88 0 1.733.247 2.468.702a7.42 7.42 0 0 1 6.02 2.118 7.37 7.37 0 0 1 2.167 5.215q0 .517-.072 1.026a4.66 4.66 0 0 1 .6 2.281 4.64 4.64 0 0 1-1.37 3.294A4.67 4.67 0 0 1 11.18 16c-.84 0-1.658-.226-2.37-.644a7.42 7.42 0 0 1-6.114-2.107A7.37 7.37 0 0 1 .529 8.035q0-.545.08-1.081a4.644 4.644 0 0 1 .76-5.59A4.68 4.68 0 0 1 4.67 0zm.447 7.01c.18.309.43.572.729.769a7 7 0 0 0 1.257.653q.737.308 1.145.523c.229.112.437.264.615.448.135.142.21.331.21.528a.87.87 0 0 1-.335.723c-.291.196-.64.289-.99.264a2.6 2.6 0 0 1-1.048-.206 11 11 0 0 1-.532-.253 1.3 1.3 0 0 0-.587-.15.72.72 0 0 0-.501.176.63.63 0 0 0-.195.491.8.8 0 0 0 .148.482 1.2 1.2 0 0 0 .456.354 5.1 5.1 0 0 0 2.212.419 4.6 4.6 0 0 0 1.624-.265 2.3 2.3 0 0 0 1.08-.801c.267-.39.402-.855.386-1.327a2.1 2.1 0 0 0-.279-1.101 2.5 2.5 0 0 0-.772-.792A7 7 0 0 0 8.486 7.3a1 1 0 0 0-.145-.058 18 18 0 0 1-1.013-.447 1.8 1.8 0 0 1-.54-.387.73.73 0 0 1-.2-.508.8.8 0 0 1 .385-.723 1.76 1.76 0 0 1 .968-.247c.26-.003.52.03.772.096q.412.119.802.293c.105.049.22.075.336.076a.6.6 0 0 0 .453-.19.7.7 0 0 0 .18-.496.72.72 0 0 0-.17-.476 1.4 1.4 0 0 0-.556-.354 3.7 3.7 0 0 0-.708-.183 6 6 0 0 0-1.022-.078 4.5 4.5 0 0 0-1.536.258 2.7 2.7 0 0 0-1.174.784 1.9 1.9 0 0 0-.45 1.287c-.01.37.076.736.25 1.063" />
-                                    </svg>
-                                </a>
-                                <a class="btn btn-outline-dark me-2"
-                                    title="Skype Anupam Mondal for Web Design | Development | SEO Services"
-                                    href="http://m.me/1600651796916334?text=Boost%20Your%20Business%20with%20Expert%20Web%20Design%2C%20Development%2C%20%26%20SEO%20Services%20by%20Anupam%20Mondal%20-%20https%3A%2F%2Fanupammondal.in%2F">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-messenger" viewBox="0 0 16 18">
-                                        <path
-                                            d="M0 7.76C0 3.301 3.493 0 8 0s8 3.301 8 7.76-3.493 7.76-8 7.76c-.81 0-1.586-.107-2.316-.307a.64.64 0 0 0-.427.03l-1.588.702a.64.64 0 0 1-.898-.566l-.044-1.423a.64.64 0 0 0-.215-.456C.956 12.108 0 10.092 0 7.76m5.546-1.459-2.35 3.728c-.225.358.214.761.551.506l2.525-1.916a.48.48 0 0 1 .578-.002l1.869 1.402a1.2 1.2 0 0 0 1.735-.32l2.35-3.728c.226-.358-.214-.761-.551-.506L9.728 7.381a.48.48 0 0 1-.578.002L7.281 5.98a1.2 1.2 0 0 0-1.735.32z" />
-                                    </svg>
-                                </a>
-                                <a class="btn btn-outline-dark me-2"
-                                    title="Skype Anupam Mondal for Web Design | Development | SEO Services"
-                                    href="tel:+919474450058">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-telephone-inbound-fill" viewBox="0 0 16 18">
-                                        <path fill-rule="evenodd"
-                                            d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877zM15.854.146a.5.5 0 0 1 0 .708L11.707 5H14.5a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 1 0v2.793L15.146.146a.5.5 0 0 1 .708 0" />
-                                    </svg>
-                                </a>
-                            </nav>
-                        </div>
-                    </div>
-                    <div class="col-md-5 col-12">
-                        <div class="card bg-light border-white border-5">
-                            <div class="silhouette">
-                                <img src="image/homepage/Online world-bro.svg" class="img-fluid" width="451"
-                                    height="451" alt="Clients arround world of Anupam Mondal" loading="lazy">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+    <!-- CTA Section -->
+    <section class="cta" id="contact">
+        <div class="container">
+            <h2>Ready to Transform Your Online Presence?</h2>
+            <p>Let's discuss how I can help you achieve your digital goals with a custom solution tailored to your business needs.</p>
+            <a href="#contact" class="btn">Get Started Today</a>
         </div>
     </section>
+
+    <!-- Footer -->
     <footer>
-        <div id="footer-bg">
-            <div class="container pt-4">
-                <div class="row">
-                    <div class="col-lg-3 col-12">
-                        <div class="card shadow my-3">
-                            <div class="card-body px-4 py-5">
-                                <nav class="nav">
-                                    <a class="a-style" target="_blank"
-                                        href="https://udyamregistration.gov.in/verifyudyambarcode.aspx?verifyudrn=5EJ2WVW9T64RK3BduWrfjw==">
-                                        <figure class="figure d-block mb-0">
-                                            <img src="image/res/MSME_S.png" class="figure-img my-2" width="75"
-                                                height="75" alt="MSME | Micro, Small and Medium Enterprises"
-                                                title="Ministry of Micro, Small and Medium Enterprises">
-                                        </figure>
-                                    </a>
-                                </nav>
-                                <figcaption class="figure-caption lead">MSME Registered</figcaption>
-                                <hr class="w-50 my-3">
-                                <address class="lead fs-6 mb-0">
-                                    <strong class="fs-5">Anupam Mondal</strong> <br />
-                                    Metiari, Sonarpur <br />
-                                    South 24 Parganas <br />
-                                    West Bengal, 743330
-                                </address>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-9 col-12">
-                        <div class="row">
-                            <div class="col-12">
-                                <ul class="nav rounded bg-white link-anupam p-4">
-                                    <li class="nav-item">
-                                        <a class="nav-link p-2" href="https://www.linkedin.com/company/anupammondal"
-                                            target="_blank" title="Website | SEO Consultant - Anupam Mondal | Linkedin">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                                                fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z">
-                                                </path>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link p-2" href="https://www.facebook.com/anupammondal.in/"
-                                            target="_blank" title="Web Developer Anupam Mondal on Facebook">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                                                fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z">
-                                                </path>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link p-2" href="https://goo.gl/maps/oBwMFuFssGzWz6m26"
-                                            target="_blank"
-                                            title="Web Designer Developer Anupam Mondal | Google Business Profile">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                                                fill="currentColor" class="bi bi-google" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z">
-                                                </path>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link p-2"
-                                            href="https://youtube.com/@anupamschannel?si=NIpojPBkv_ls5y1J"
-                                            target="_blank" title="Anupam Mondal on YouTube | @anupamschannel">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                                                fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z" />
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <!-- <li class="nav-item">
-                                        <a class="nav-link p-2" href="https://anupammondal.business.site/"
-                                            target="_blank">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                                                fill="currentColor" class="bi bi-globe-central-south-asia"
-                                                viewBox="0 0 16 16">
-                                                <path
-                                                    d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM4.882 1.731a.482.482 0 0 0 .14.291.487.487 0 0 1-.126.78l-.291.146a.721.721 0 0 0-.188.135l-.48.48a1 1 0 0 1-1.023.242l-.02-.007a.996.996 0 0 0-.462-.04 7.03 7.03 0 0 1 2.45-2.027Zm-3 9.674.86-.216a1 1 0 0 0 .758-.97v-.184a1 1 0 0 1 .445-.832l.04-.026a1 1 0 0 0 .152-1.54L3.121 6.621a.414.414 0 0 1 .542-.624l1.09.818a.5.5 0 0 0 .523.047.5.5 0 0 1 .724.447v.455a.78.78 0 0 0 .131.433l.795 1.192a1 1 0 0 1 .116.238l.73 2.19a1 1 0 0 0 .949.683h.058a1 1 0 0 0 .949-.684l.73-2.189a1 1 0 0 1 .116-.238l.791-1.187A.454.454 0 0 1 11.743 8c.16 0 .306.084.392.218.557.875 1.63 2.282 2.365 2.282a.61.61 0 0 0 .04-.001 7.003 7.003 0 0 1-12.658.905Z">
-                                                </path>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link p-2" href="https://dribbble.com/anupammo" target="_blank">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                                                fill="currentColor" class="bi bi-dribbble" viewBox="0 0 16 16">
-                                                <path fill-rule="evenodd"
-                                                    d="M8 0C3.584 0 0 3.584 0 8s3.584 8 8 8c4.408 0 8-3.584 8-8s-3.592-8-8-8zm5.284 3.688a6.802 6.802 0 0 1 1.545 4.251c-.226-.043-2.482-.503-4.755-.217-.052-.112-.096-.234-.148-.355-.139-.33-.295-.668-.451-.99 2.516-1.023 3.662-2.498 3.81-2.69zM8 1.18c1.735 0 3.323.65 4.53 1.718-.122.174-1.155 1.553-3.584 2.464-1.12-2.056-2.36-3.74-2.551-4A6.95 6.95 0 0 1 8 1.18zm-2.907.642A43.123 43.123 0 0 1 7.627 5.77c-3.193.85-6.013.833-6.317.833a6.865 6.865 0 0 1 3.783-4.78zM1.163 8.01V7.8c.295.01 3.61.053 7.02-.971.199.381.381.772.555 1.162l-.27.078c-3.522 1.137-5.396 4.243-5.553 4.504a6.817 6.817 0 0 1-1.752-4.564zM8 14.837a6.785 6.785 0 0 1-4.19-1.44c.12-.252 1.509-2.924 5.361-4.269.018-.009.026-.009.044-.017a28.246 28.246 0 0 1 1.457 5.18A6.722 6.722 0 0 1 8 14.837zm3.81-1.171c-.07-.417-.435-2.412-1.328-4.868 2.143-.338 4.017.217 4.251.295a6.774 6.774 0 0 1-2.924 4.573z">
-                                                </path>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link p-2" href="https://github.com/anupammo" target="_blank">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                                                fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z">
-                                                </path>
-                                            </svg>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link p-2" href="https://www.instagram.com/anupammondal.in"
-                                            target="_blank">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                                                fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z">
-                                                </path>
-                                            </svg>
-                                        </a>
-                                    </li> -->
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-4 col-6">
-                                <ul class="nav flex-column lead fs-6 mt-5">
-                                    <li class="nav-item">
-                                        <a class="nav-link py-1" href="./">Home page</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link py-1" href="./about-us">About page</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link py-1" href="./portfolio">Portfolio page</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link py-1" href="./contact">Contact page</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-4 col-6">
-                                <ul class="nav flex-column lead fs-6 mt-5">
-                                    <li class="nav-item">
-                                        <a class="nav-link py-1" href="./services/digital-marketing">Digital
-                                            Marketing</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link py-1" href="./services/web-design">Web Design</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link py-1" href="./services/web-development">Web
-                                            Development</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link py-1" href="./services/website-seo">Website SEO</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-4 col-6">
-                                <ul class="nav flex-column lead fs-6 mt-5">
-                                    <li class="nav-item lead fs-6">
-                                        <a class="nav-link py-1" target="_blank"
-                                            href="https://api.whatsapp.com/send?phone=919474460058&amp;text=Do%20you%20need%20assistance%20about%20web%20development%3F%20you%20can%20use%20this%20number%20as%20%20contact%20reference%20or%20you%20can%20visit%20https%3A%2F%2Fanupammondal.in%20for%20more%20details.">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z">
-                                                </path>
-                                            </svg>
-                                            <span>WhatsApp</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link py-1" target="_blank" href="http://m.me/anupammondal.in">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                fill="currentColor" class="bi bi-messenger" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M0 7.76C0 3.301 3.493 0 8 0s8 3.301 8 7.76-3.493 7.76-8 7.76c-.81 0-1.586-.107-2.316-.307a.639.639 0 0 0-.427.03l-1.588.702a.64.64 0 0 1-.898-.566l-.044-1.423a.639.639 0 0 0-.215-.456C.956 12.108 0 10.092 0 7.76zm5.546-1.459-2.35 3.728c-.225.358.214.761.551.506l2.525-1.916a.48.48 0 0 1 .578-.002l1.869 1.402a1.2 1.2 0 0 0 1.735-.32l2.35-3.728c.226-.358-.214-.761-.551-.506L9.728 7.381a.48.48 0 0 1-.578.002L7.281 5.98a1.2 1.2 0 0 0-1.735.32z">
-                                                </path>
-                                            </svg>
-                                            <span>Messenger</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link py-1" href="skype:anupam2skype?chat" target="_blank">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                fill="currentColor" class="bi bi-skype" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M4.671 0c.88 0 1.733.247 2.468.702a7.423 7.423 0 0 1 6.02 2.118 7.372 7.372 0 0 1 2.167 5.215c0 .344-.024.687-.072 1.026a4.662 4.662 0 0 1 .6 2.281 4.645 4.645 0 0 1-1.37 3.294A4.673 4.673 0 0 1 11.18 16c-.84 0-1.658-.226-2.37-.644a7.423 7.423 0 0 1-6.114-2.107A7.374 7.374 0 0 1 .529 8.035c0-.363.026-.724.08-1.081a4.644 4.644 0 0 1 .76-5.59A4.68 4.68 0 0 1 4.67 0zm.447 7.01c.18.309.43.572.729.769a7.07 7.07 0 0 0 1.257.653c.492.205.873.38 1.145.523.229.112.437.264.615.448.135.142.21.331.21.528a.872.872 0 0 1-.335.723c-.291.196-.64.289-.99.264a2.618 2.618 0 0 1-1.048-.206 11.44 11.44 0 0 1-.532-.253 1.284 1.284 0 0 0-.587-.15.717.717 0 0 0-.501.176.63.63 0 0 0-.195.491.796.796 0 0 0 .148.482 1.2 1.2 0 0 0 .456.354 5.113 5.113 0 0 0 2.212.419 4.554 4.554 0 0 0 1.624-.265 2.296 2.296 0 0 0 1.08-.801c.267-.39.402-.855.386-1.327a2.09 2.09 0 0 0-.279-1.101 2.53 2.53 0 0 0-.772-.792A7.198 7.198 0 0 0 8.486 7.3a1.05 1.05 0 0 0-.145-.058 18.182 18.182 0 0 1-1.013-.447 1.827 1.827 0 0 1-.54-.387.727.727 0 0 1-.2-.508.805.805 0 0 1 .385-.723 1.76 1.76 0 0 1 .968-.247c.26-.003.52.03.772.096.274.079.542.177.802.293.105.049.22.075.336.076a.6.6 0 0 0 .453-.19.69.69 0 0 0 .18-.496.717.717 0 0 0-.17-.476 1.374 1.374 0 0 0-.556-.354 3.69 3.69 0 0 0-.708-.183 5.963 5.963 0 0 0-1.022-.078 4.53 4.53 0 0 0-1.536.258 2.71 2.71 0 0 0-1.174.784 1.91 1.91 0 0 0-.45 1.287c-.01.37.076.736.25 1.063z">
-                                                </path>
-                                            </svg>
-                                            <span>Skype</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link py-1" href="mailto:a09051985@gmail.com">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z">
-                                                </path>
-                                            </svg>
-                                            <span>Email</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <p class="lead my-4 px-3">2017-2024 © Anupam Mondal</p>
-                            </div>
-                        </div>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Anupam Mondal</h3>
+                    <p>Providing expert web design, development, and SEO services to businesses worldwide since 2016.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
+                
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Web Design</a></li>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">SEO Optimization</a></li>
+                        <li><a href="#">Digital Marketing</a></li>
+                        <li><a href="#">E-Commerce Solutions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> South 24 Parganas, West Bengal</li>
+                        <li><i class="fas fa-phone"></i> +91-9474460058</li>
+                        <li><i class="fas fa-envelope"></i> support@anupammondal.in</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Anupam Mondal. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+
     <script>
-        function animateNumber(elementId, targetNumber, duration) {
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Counter animation
+        function animateCounter(elementId, finalValue, duration) {
             const element = document.getElementById(elementId);
-            let startNumber = 0;
-            const increment = targetNumber / (duration / 10);  // increment value for each interval (10ms)
-            let currentNumber = startNumber;
-
-            const interval = setInterval(() => {
-                currentNumber += increment;
-                if (currentNumber >= targetNumber) {
-                    currentNumber = targetNumber;
-                    clearInterval(interval);
+            const increment = finalValue / (duration / 16);
+            let currentValue = 0;
+            
+            const timer = setInterval(() => {
+                currentValue += increment;
+                if (currentValue >= finalValue) {
+                    clearInterval(timer);
+                    currentValue = finalValue;
                 }
-                element.textContent = Math.floor(currentNumber);
-            }, 20);
+                element.textContent = Math.ceil(currentValue) + (elementId === 'projectCounter' ? '+' : 
+                                      elementId === 'clientCounter' ? '+' : 
+                                      elementId === 'experienceCounter' ? '+' : 
+                                      elementId === 'countryCounter' ? '+' : '');
+            }, 16);
         }
-
-        document.addEventListener('DOMContentLoaded', () => {
-
-            setTimeout(() => {
-                animateNumber('counter1', 1000, 5000);
-                animateNumber('counter2', 102, 5000);
-                animateNumber('counter3', 80, 5000);
-                animateNumber('counter4', 16, 5000);
-            }, 1000);
+        
+        // Initialize counters when in viewport
+        function initCounters() {
+            const statsSection = document.querySelector('.stats');
+            const sectionPosition = statsSection.getBoundingClientRect();
+            
+            if (sectionPosition.top < window.innerHeight - 100) {
+                animateCounter('projectCounter', 1000, 2000);
+                animateCounter('clientCounter', 80, 1500);
+                animateCounter('experienceCounter', 8, 1000);
+                animateCounter('countryCounter', 16, 1200);
+                window.removeEventListener('scroll', initCounters);
+            }
+        }
+        
+        window.addEventListener('scroll', initCounters);
+        // Initialize on load if already in view
+        window.addEventListener('load', initCounters);
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                    }
+                }
+            });
         });
     </script>
-
-    <!-- Header
-    Logo: Your brand logo.
-
-    Navigation Menu: Links to key sections (e.g., Home, Services, Portfolio, About, Contact).
-
-    Hero Section
-    Main Headline: Catchy, value-driven statement (e.g., "Transforming Ideas into Digital Success").
-
-    Subheadline: Brief description of what you do (e.g., "Full Stack Web Development, SEO, and Digital Marketing
-    Solutions").
-
-    Call to Action (CTA): Button leading to your primary offering (e.g., "Get Started" or "Contact Us").
-
-    About Section
-    Introduction: Brief paragraph introducing yourself and your expertise.
-
-    Core Values: Highlight your unique approach and values.
-
-    Services Section
-    Service 1: Web Design
-
-    Brief description of the service.
-
-    Key benefits and features.
-
-    Service 2: Web Development
-
-    Brief description of the service.
-
-    Key benefits and features.
-
-    Service 3: SEO
-
-    Brief description of the service.
-
-    Key benefits and features.
-
-    Service 4: Digital Marketing
-
-    Brief description of the service.
-
-    Key benefits and features.
-
-    Portfolio Section
-    Featured Projects: Showcase some of your best work with images and brief descriptions.
-
-    Client Testimonials: Quotes from satisfied clients to build credibility.
-
-    Blog Section
-    Latest Posts: Display recent blog posts related to web development, SEO, and digital marketing.
-
-    Link to Blog: Encourage visitors to read more.
-
-    Contact Section
-    Contact Form: Simple form for visitors to reach out.
-
-    Contact Information: Email, phone number, and address (if applicable).
-
-    Social Media Links: Icons linking to your social media profiles.
-
-    Footer
-    Quick Links: Navigation links for easy access.
-
-    Privacy Policy: Link to your privacy policy.
-
-    Copyright Information: © [Your Name] [Year] -->
-
-    <!-- 
-        -- Countries --
-
-        Australia 
-        Austria
-        Canada
-        Ireland
-        Israel 
-        Lithuania 
-        Malaysia 
-        Mauritius 
-        Nigeria 
-        Peru
-        Puerto Rico
-        Slovakia 
-        Saudi Arabia 
-        South Africa 
-        United Kingdom
-        United States
-    -->
-
-    <!-- 
-        // Technologies
-        Word / Docs
-        Excel / Sheets
-        Powerpoint / Slide
-        Photoshop
-        HTML
-        CSS
-        Bootstrap
-        JSON
-        AJAX
-        JS
-        API
-        PHP
-        VB
-        ASP
-        MySQL
-        MSSQL
-        JSX
-        ReactJS
-        TypeScript
-        NEXTjs
-        NPM
-        Git
-        Github
-        GitLab
-        Bitbucket
-        AngularJS
-        CodeIgniter
-        Meta Ads
-        Google Ads
-        Google Adsense
-        Google Analytics
-        Google Search Console
-        Progressive Web App [PWA]
-     -->
-
-    <!-- 
-        // Skills
-        Website Mockup
-        Web Flow
-        Digital Marketing
-        WordPress Design
-        WordPress Classsic Development
-        WordPress Theme Development
-        WordPress Plugin Development
-        Website Design
-        Website Management
-        Website Development
-        Website Optimisation
-        Page Load Optimisation
-        Search Engine Optimisation [SEO]
-     -->
 </body>
-
 </html>
