@@ -1,942 +1,1102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Anupam Mondal - Expert Web Designer & Developer</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <style>
-        :root {
-            --primary-color: #6441A5;
-            --secondary-color: #8A6BCF;
-            --light-bg: #F8F9FA;
-            --dark-text: #212529;
-            --light-text: #6C757D;
+      :root {
+        --primary-color: #6441a5;
+        --secondary-color: #8a6bcf;
+        --light-bg: #f8f9fa;
+        --dark-text: #212529;
+        --light-text: #6c757d;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background-color: var(--light-bg);
+        color: var(--dark-text);
+        line-height: 1.6;
+      }
+
+      /* Header Styles */
+      .navbar {
+        background-color: white;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 15px 0;
+      }
+
+      .navbar-brand {
+        color: var(--primary-color);
+        font-weight: 700;
+        font-size: 1.8rem;
+      }
+
+      .nav-link {
+        color: var(--dark-text);
+        font-weight: 500;
+        margin: 0 10px;
+        transition: all 0.3s ease;
+      }
+
+      .nav-link:hover,
+      .nav-link.active {
+        color: var(--primary-color);
+      }
+
+      .navbar-toggler {
+        border: none;
+      }
+
+      .btn-primary {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+        padding: 10px 25px;
+        border-radius: 30px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        background-color: var(--secondary-color);
+        border-color: var(--secondary-color);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(100, 65, 165, 0.3);
+      }
+
+      /* Hero Section */
+      .hero {
+        background: linear-gradient(135deg, #ffffff 0%, #f0ebff 100%);
+        padding: 100px 0 60px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: -200px;
+        right: -200px;
+        width: 600px;
+        height: 600px;
+        background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle cx="100" cy="100" r="80" fill="%236441A5" opacity="0.05"/></svg>')
+          no-repeat;
+        z-index: 0;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+        line-height: 1.3;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        color: var(--light-text);
+        margin-bottom: 30px;
+        max-width: 600px;
+      }
+
+      .hero-image {
+        position: relative;
+        z-index: 1;
+        animation: float 6s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
         }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        50% {
+          transform: translateY(-20px);
         }
-        
-        body {
-            background-color: var(--light-bg);
-            color: var(--dark-text);
-            line-height: 1.6;
+        100% {
+          transform: translateY(0px);
         }
-        
-        /* Header Styles */
-        .navbar {
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            padding: 15px 0;
-        }
-        
-        .navbar-brand {
-            color: var(--primary-color);
-            font-weight: 700;
-            font-size: 1.8rem;
-        }
-        
-        .nav-link {
-            color: var(--dark-text);
-            font-weight: 500;
-            margin: 0 10px;
-            transition: all 0.3s ease;
-        }
-        
-        .nav-link:hover, .nav-link.active {
-            color: var(--primary-color);
-        }
-        
-        .navbar-toggler {
-            border: none;
-        }
-        
-        .btn-primary {
-            background-color: var(--primary-color);
-            border-color: var(--primary-color);
-            padding: 10px 25px;
-            border-radius: 30px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-primary:hover {
-            background-color: var(--secondary-color);
-            border-color: var(--secondary-color);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(100, 65, 165, 0.3);
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #ffffff 0%, #f0ebff 100%);
-            padding: 100px 0 60px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero::before {
-            content: "";
+      }
+
+      /* Section Styles */
+      .section {
+        padding: 80px 0;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 60px;
+        position: relative;
+      }
+
+      .section-title h2 {
+        color: var(--primary-color);
+        font-weight: 700;
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+      }
+
+      .section-title p {
+        color: var(--light-text);
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      /* Stats Section */
+      .stats-section {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 80px 0;
+      }
+
+      .stat-card {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        padding: 30px;
+        text-align: center;
+        height: 100%;
+        transition: all 0.3s ease;
+      }
+
+      .stat-card:hover {
+        transform: translateY(-10px);
+        background: rgba(255, 255, 255, 0.15);
+      }
+
+      .stat-number {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+        color: white;
+      }
+
+      .stat-label {
+        font-size: 1.2rem;
+        opacity: 0.9;
+      }
+
+      /* Testimonials */
+      .testimonial-card {
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        padding: 30px;
+        height: 100%;
+        transition: all 0.3s ease;
+        position: relative;
+      }
+
+      .testimonial-card::before {
+        content: '"';
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 5rem;
+        color: rgba(100, 65, 165, 0.1);
+        font-family: Georgia, serif;
+        line-height: 1;
+      }
+
+      .testimonial-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 35px rgba(100, 65, 165, 0.15);
+      }
+
+      .testimonial-content {
+        padding: 20px 0;
+        font-style: italic;
+        color: var(--light-text);
+      }
+
+      .testimonial-author {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+      }
+
+      .testimonial-author img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 15px;
+        border: 3px solid var(--primary-color);
+      }
+
+      .author-info h5 {
+        margin-bottom: 5px;
+        color: var(--dark-text);
+      }
+
+      .author-info p {
+        margin-bottom: 0;
+        color: var(--light-text);
+      }
+
+      /* Journey Section */
+      .journey-section {
+        background-color: white;
+      }
+
+      .timeline {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .timeline::after {
+        content: "";
+        position: absolute;
+        width: 6px;
+        background-color: var(--primary-color);
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -3px;
+      }
+
+      .timeline-item {
+        padding: 10px 40px;
+        position: relative;
+        width: 50%;
+        box-sizing: border-box;
+      }
+
+      .timeline-item:nth-child(odd) {
+        left: 0;
+      }
+
+      .timeline-item:nth-child(even) {
+        left: 50%;
+      }
+
+      .timeline-item::after {
+            content: '';
             position: absolute;
-            top: -200px;
-            right: -200px;
-            width: 600px;
-            height: 600px;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><circle cx="100" cy="100" r="80" fill="%236441A5" opacity="0.05"/></svg>') no-repeat;
-            z-index: 0;
+            width: 32px;
+            height: 32px;
+            /* background-color: white; */
+            background-color: var(--primary-color);
+            border: 6px solid var(--primary-color);
+            outline: #fff solid 6px;
+            top: 90px;
+            border-radius: 50%;
+            z-index: 1;
         }
-        
+
+      .timeline-item:nth-child(odd)::after {
+        right: -16px;
+      }
+
+      .timeline-item:nth-child(even)::after {
+        left: -16px;
+      }
+
+      .timeline-content {
+        padding: 20px;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        position: relative;
+      }
+
+      .timeline-content h4 {
+        color: var(--primary-color);
+        margin-bottom: 10px;
+      }
+
+      .timeline-content .date {
+        color: var(--secondary-color);
+        font-weight: 600;
+        margin-bottom: 10px;
+        display: block;
+      }
+
+      /* Clients Section */
+      .clients-section {
+        background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+      }
+
+      .client-logo {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px 0;
+        padding: 15px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+      }
+
+      .client-logo:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(100, 65, 165, 0.15);
+      }
+
+      .client-logo img {
+        max-width: 100%;
+        max-height: 50px;
+        filter: grayscale(100%);
+        transition: all 0.3s ease;
+      }
+
+      .client-logo:hover img {
+        filter: grayscale(0%);
+      }
+
+      /* Expertise Section */
+      .expertise-card {
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        padding: 30px;
+        height: 100%;
+        transition: all 0.3s ease;
+        text-align: center;
+      }
+
+      .expertise-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 35px rgba(100, 65, 165, 0.15);
+      }
+
+      .expertise-icon {
+        font-size: 3rem;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+      }
+
+      .expertise-card h4 {
+        color: var(--dark-text);
+        margin-bottom: 15px;
+      }
+
+      /* Footer */
+      .footer {
+        background: var(--primary-color);
+        color: white;
+        padding: 60px 0 30px;
+      }
+
+      .footer h4 {
+        color: white;
+        font-weight: 600;
+        margin-bottom: 25px;
+        font-size: 1.4rem;
+      }
+
+      .footer p,
+      .footer a {
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 10px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .footer a:hover {
+        color: white;
+        text-decoration: underline;
+      }
+
+      .social-links a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        margin-right: 10px;
+        transition: all 0.3s ease;
+      }
+
+      .social-links a:hover {
+        background: white;
+        color: var(--primary-color);
+        transform: translateY(-3px);
+      }
+
+      .copyright {
+        text-align: center;
+        padding-top: 30px;
+        margin-top: 40px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 992px) {
         .hero h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            margin-bottom: 20px;
-            line-height: 1.3;
+          font-size: 2.3rem;
         }
-        
+
         .hero p {
-            font-size: 1.2rem;
-            color: var(--light-text);
-            margin-bottom: 30px;
-            max-width: 600px;
+          font-size: 1.1rem;
         }
-        
-        .hero-image {
-            position: relative;
-            z-index: 1;
-            animation: float 6s ease-in-out infinite;
-        }
-        
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0px); }
-        }
-        
-        /* Section Styles */
-        .section {
-            padding: 80px 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-            position: relative;
-        }
-        
+
         .section-title h2 {
-            color: var(--primary-color);
-            font-weight: 700;
-            font-size: 2.5rem;
-            margin-bottom: 15px;
+          font-size: 2rem;
         }
-        
-        .section-title p {
-            color: var(--light-text);
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        /* Stats Section */
-        .stats-section {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 80px 0;
-        }
-        
-        .stat-card {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 30px;
-            text-align: center;
-            height: 100%;
-            transition: all 0.3s ease;
-        }
-        
-        .stat-card:hover {
-            transform: translateY(-10px);
-            background: rgba(255, 255, 255, 0.15);
-        }
-        
-        .stat-number {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            color: white;
-        }
-        
-        .stat-label {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-        
-        /* Testimonials */
-        .testimonial-card {
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            padding: 30px;
-            height: 100%;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-        
-        .testimonial-card::before {
-            content: '"';
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            font-size: 5rem;
-            color: rgba(100, 65, 165, 0.1);
-            font-family: Georgia, serif;
-            line-height: 1;
-        }
-        
-        .testimonial-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(100, 65, 165, 0.15);
-        }
-        
-        .testimonial-content {
-            padding: 20px 0;
-            font-style: italic;
-            color: var(--light-text);
-        }
-        
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            margin-top: 20px;
-        }
-        
-        .testimonial-author img {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-right: 15px;
-            border: 3px solid var(--primary-color);
-        }
-        
-        .author-info h5 {
-            margin-bottom: 5px;
-            color: var(--dark-text);
-        }
-        
-        .author-info p {
-            margin-bottom: 0;
-            color: var(--light-text);
-        }
-        
-        /* Journey Section */
-        .journey-section {
-            background-color: white;
-        }
-        
-        .timeline {
-            position: relative;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
+
         .timeline::after {
-            content: '';
-            position: absolute;
-            width: 6px;
-            background-color: var(--primary-color);
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -3px;
+          left: 31px;
         }
-        
+
         .timeline-item {
-            padding: 10px 40px;
-            position: relative;
-            width: 50%;
-            box-sizing: border-box;
+          width: 100%;
+          padding-left: 70px;
+          padding-right: 25px;
         }
-        
-        .timeline-item:nth-child(odd) {
-            left: 0;
-        }
-        
+
         .timeline-item:nth-child(even) {
-            left: 50%;
+          left: 0;
         }
-        
+
         .timeline-item::after {
-            content: '';
-            position: absolute;
-            width: 25px;
-            height: 25px;
-            background-color: white;
-            border: 4px solid var(--primary-color);
-            top: 15px;
-            border-radius: 50%;
-            z-index: 1;
+          left: 18px;
         }
-        
-        .timeline-item:nth-child(odd)::after {
-            right: -13px;
+      }
+
+      @media (max-width: 768px) {
+        .hero {
+          padding: 80px 0 40px;
         }
-        
-        .timeline-item:nth-child(even)::after {
-            left: -13px;
+
+        .hero h1 {
+          font-size: 2rem;
         }
-        
-        .timeline-content {
-            padding: 20px;
-            background-color: white;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            position: relative;
+
+        .section {
+          padding: 60px 0;
         }
-        
-        .timeline-content h4 {
-            color: var(--primary-color);
-            margin-bottom: 10px;
+      }
+
+      @media (max-width: 576px) {
+        .hero h1 {
+          font-size: 1.8rem;
         }
-        
-        .timeline-content .date {
-            color: var(--secondary-color);
-            font-weight: 600;
-            margin-bottom: 10px;
-            display: block;
+
+        .section-title h2 {
+          font-size: 1.8rem;
         }
-        
-        /* Clients Section */
-        .clients-section {
-            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+
+        .stat-number {
+          font-size: 2.5rem;
         }
-        
-        .client-logo {
-            height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 20px 0;
-            padding: 15px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
-        }
-        
-        .client-logo:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(100, 65, 165, 0.15);
-        }
-        
-        .client-logo img {
-            max-width: 100%;
-            max-height: 50px;
-            filter: grayscale(100%);
-            transition: all 0.3s ease;
-        }
-        
-        .client-logo:hover img {
-            filter: grayscale(0%);
-        }
-        
-        /* Expertise Section */
-        .expertise-card {
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            padding: 30px;
-            height: 100%;
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-        
-        .expertise-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(100, 65, 165, 0.15);
-        }
-        
-        .expertise-icon {
-            font-size: 3rem;
-            color: var(--primary-color);
-            margin-bottom: 20px;
-        }
-        
-        .expertise-card h4 {
-            color: var(--dark-text);
-            margin-bottom: 15px;
-        }
-        
-        /* Footer */
-        .footer {
-            background: var(--primary-color);
-            color: white;
-            padding: 60px 0 30px;
-        }
-        
-        .footer h4 {
-            color: white;
-            font-weight: 600;
-            margin-bottom: 25px;
-            font-size: 1.4rem;
-        }
-        
-        .footer p, .footer a {
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 10px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        
-        .footer a:hover {
-            color: white;
-            text-decoration: underline;
-        }
-        
-        .social-links a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            margin-right: 10px;
-            transition: all 0.3s ease;
-        }
-        
-        .social-links a:hover {
-            background: white;
-            color: var(--primary-color);
-            transform: translateY(-3px);
-        }
-        
-        .copyright {
-            text-align: center;
-            padding-top: 30px;
-            margin-top: 40px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.6);
-        }
-        
-        /* Responsive Adjustments */
-        @media (max-width: 992px) {
-            .hero h1 {
-                font-size: 2.3rem;
-            }
-            
-            .hero p {
-                font-size: 1.1rem;
-            }
-            
-            .section-title h2 {
-                font-size: 2rem;
-            }
-            
-            .timeline::after {
-                left: 31px;
-            }
-            
-            .timeline-item {
-                width: 100%;
-                padding-left: 70px;
-                padding-right: 25px;
-            }
-            
-            .timeline-item:nth-child(even) {
-                left: 0;
-            }
-            
-            .timeline-item::after {
-                left: 18px;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .hero {
-                padding: 80px 0 40px;
-            }
-            
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .section {
-                padding: 60px 0;
-            }
-        }
-        
-        @media (max-width: 576px) {
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-            
-            .section-title h2 {
-                font-size: 1.8rem;
-            }
-            
-            .stat-number {
-                font-size: 2.5rem;
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Header -->
     <nav class="navbar navbar-expand-lg sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">Anupam Mondal</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Services
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Digital Marketing</a></li>
-                            <li><a class="dropdown-item" href="#">Web Design</a></li>
-                            <li><a class="dropdown-item" href="#">Web Development</a></li>
-                            <li><a class="dropdown-item" href="#">Website SEO</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            About
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item active" href="#">About Us</a></li>
-                            <li><a class="dropdown-item" href="#">Portfolio</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Blog</a>
-                    </li>
-                </ul>
-                <a href="#" class="btn btn-primary ms-3">Get Started</a>
-            </div>
+      <div class="container">
+        <a class="navbar-brand" href="#">Anupam Mondal</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Services
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Digital Marketing</a></li>
+                <li><a class="dropdown-item" href="#">Web Design</a></li>
+                <li><a class="dropdown-item" href="#">Web Development</a></li>
+                <li><a class="dropdown-item" href="#">Website SEO</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle active"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                About
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item active" href="#">About Us</a></li>
+                <li><a class="dropdown-item" href="#">Portfolio</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blog</a>
+            </li>
+          </ul>
+          <a href="#" class="btn btn-primary ms-3">Get Started</a>
         </div>
+      </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h1>Anupam Mondal: Expert Freelancer, Web Designer & Developer</h1>
-                    <p>With over 17 years of experience in the IT industry, I help businesses worldwide achieve digital excellence through innovative web solutions.</p>
-                    <div class="d-flex flex-wrap gap-2 mt-4">
-                        <a href="#portfolio" class="btn btn-primary">View Portfolio</a>
-                        <a href="#contact" class="btn btn-outline-primary">Contact Me</a>
-                    </div>
-                </div>
-                <div class="col-lg-6 text-center">
-                    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 800 600'><rect fill='%236441A5' opacity='0.1' width='800' height='600'/><g fill='%236441A5' opacity='0.5'><circle cx='400' cy='300' r='150'/><rect x='250' y='150' width='300' height='300' rx='20'/><circle cx='400' cy='250' r='60'/><rect x='300' y='350' width='200' height='20' rx='10'/><rect x='300' y='390' width='150' height='20' rx='10'/></g></svg>" alt="Anupam Mondal" class="img-fluid hero-image">
-                </div>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h1>Anupam Mondal: Expert Freelancer, Web Designer & Developer</h1>
+            <p>
+              With over 17 years of experience in the IT industry, I help
+              businesses worldwide achieve digital excellence through innovative
+              web solutions.
+            </p>
+            <div class="d-flex flex-wrap gap-2 mt-4">
+              <a href="#portfolio" class="btn btn-primary">View Portfolio</a>
+              <a href="#contact" class="btn btn-outline-primary">Contact Me</a>
             </div>
+          </div>
+          <div class="col-lg-6 text-center">
+            <img
+              src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300' viewBox='0 0 800 600'><rect fill='%236441A5' opacity='0.1' width='800' height='600'/><g fill='%236441A5' opacity='0.5'><circle cx='400' cy='300' r='150'/><rect x='250' y='150' width='300' height='300' rx='20'/><circle cx='400' cy='250' r='60'/><rect x='300' y='350' width='200' height='20' rx='10'/><rect x='300' y='390' width='150' height='20' rx='10'/></g></svg>"
+              alt="Anupam Mondal"
+              class="img-fluid hero-image"
+            />
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Stats Section -->
     <section class="stats-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-sm-6 mb-4">
-                    <div class="stat-card">
-                        <div class="stat-number" id="projects-counter">70</div>
-                        <div class="stat-label">Projects Completed</div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 mb-4">
-                    <div class="stat-card">
-                        <div class="stat-number" id="clients-counter">41</div>
-                        <div class="stat-label">Happy Clients</div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 mb-4">
-                    <div class="stat-card">
-                        <div class="stat-number" id="countries-counter">8</div>
-                        <div class="stat-label">Countries Served</div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 mb-4">
-                    <div class="stat-card">
-                        <div class="stat-number" id="experience-counter">17</div>
-                        <div class="stat-label">Years Experience</div>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="stat-card">
+              <div class="stat-number" id="projects-counter">70</div>
+              <div class="stat-label">Projects Completed</div>
             </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="stat-card">
+              <div class="stat-number" id="clients-counter">41</div>
+              <div class="stat-label">Happy Clients</div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="stat-card">
+              <div class="stat-number" id="countries-counter">8</div>
+              <div class="stat-label">Countries Served</div>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+            <div class="stat-card">
+              <div class="stat-number" id="experience-counter">17</div>
+              <div class="stat-label">Years Experience</div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- About Section -->
     <section class="section">
-        <div class="container">
-            <div class="section-title">
-                <h2>About Anupam Mondal</h2>
-                <p>Renowned freelancer based in Kolkata, West Bengal, serving clients worldwide since 2016</p>
-            </div>
-            
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                    <div class="p-4">
-                        <p class="lead">Hailing from Kolkata, West Bengal, I embarked on my professional journey as a computer teacher/trainer in 2005. Over the years, I've evolved into a dedicated professional well-versed in various technologies.</p>
-                        <p class="lead">I now provide valuable consultations to businesses and organizations, aiding them in their website growth on digital platforms as a full-stack developer. My prowess in the field is evident through the glowing reviews from happy clients worldwide.</p>
-                        <p class="lead">Before transitioning to freelancing in 2016, I honed my skills in the IT and education sectors as a Faculty/Trainer. Additionally, armed with both basic and advanced knowledge of Finance, Accounting, and Taxation, I bring a holistic approach to my projects.</p>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="position-relative">
-                        <div class="bg-primary p-5 rounded" style="height: 300px;"></div>
-                        <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
-                            <div class="bg-white p-4 rounded shadow" style="max-width: 450px;">
-                                <h4 class="text-primary mb-3">My Mission</h4>
-                                <p>To utilize my vast experience to propel clients towards substantial business growth through innovative web solutions and digital strategies.</p>
-                                <h4 class="text-primary mb-3 mt-4">Core Values</h4>
-                                <ul class="list-unstyled">
-                                    <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Excellence in Execution</li>
-                                    <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Client-Centric Approach</li>
-                                    <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Continuous Learning</li>
-                                    <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Ethical Practices</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-title">
+          <h2>About Anupam Mondal</h2>
+          <p>
+            Renowned freelancer based in Kolkata, West Bengal, serving clients
+            worldwide since 2016
+          </p>
         </div>
+
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <div class="p-4">
+              <p class="lead">
+                Hailing from Kolkata, West Bengal, I embarked on my professional
+                journey as a computer teacher/trainer in 2005. Over the years,
+                I've evolved into a dedicated professional well-versed in
+                various technologies.
+              </p>
+              <p class="lead">
+                I now provide valuable consultations to businesses and
+                organizations, aiding them in their website growth on digital
+                platforms as a full-stack developer. My prowess in the field is
+                evident through the glowing reviews from happy clients
+                worldwide.
+              </p>
+              <p class="lead">
+                Before transitioning to freelancing in 2016, I honed my skills
+                in the IT and education sectors as a Faculty/Trainer.
+                Additionally, armed with both basic and advanced knowledge of
+                Finance, Accounting, and Taxation, I bring a holistic approach
+                to my projects.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="position-relative">
+              <div class="bg-primary p-5 rounded" style="height: 300px"></div>
+              <div
+                class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center"
+              >
+                <div
+                  class="bg-white p-4 rounded shadow"
+                  style="max-width: 450px"
+                >
+                  <h4 class="text-primary mb-3">My Mission</h4>
+                  <p>
+                    To utilize my vast experience to propel clients towards
+                    substantial business growth through innovative web solutions
+                    and digital strategies.
+                  </p>
+                  <h4 class="text-primary mb-3 mt-4">Core Values</h4>
+                  <ul class="list-unstyled">
+                    <li class="mb-2">
+                      <i class="fas fa-check-circle text-primary me-2"></i>
+                      Excellence in Execution
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-check-circle text-primary me-2"></i>
+                      Client-Centric Approach
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-check-circle text-primary me-2"></i>
+                      Continuous Learning
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-check-circle text-primary me-2"></i>
+                      Ethical Practices
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Testimonials Section -->
     <section class="section bg-light">
-        <div class="container">
-            <div class="section-title">
-                <h2>Client Testimonials</h2>
-                <p>What my clients say about working with me</p>
-            </div>
-            
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            Very good communication despite time difference between California and India. We will use Anupam again. Very generous and wonderful person.
-                        </div>
-                        <div class="testimonial-author">
-                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%236441A5' opacity='0.1'/><text x='50' y='55' font-family='Arial' font-size='30' fill='%236441A5' text-anchor='middle'>TA</text></svg>" alt="Trini Amador">
-                            <div class="author-info">
-                                <h5>Trini Amador</h5>
-                                <p>United States</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            Great to work with this freelancer, very patient and dedicated to achieve the client's vision. My first choice for this type of work.
-                        </div>
-                        <div class="testimonial-author">
-                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%236441A5' opacity='0.1'/><text x='50' y='55' font-family='Arial' font-size='30' fill='%236441A5' text-anchor='middle'>BN</text></svg>" alt="Ben Newth">
-                            <div class="author-info">
-                                <h5>Ben Newth</h5>
-                                <p>Australia</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="testimonial-card">
-                        <div class="testimonial-content">
-                            Am so glad I found Anupam to do my project. He is a professional that knows the work. The job was done as fast as he could. He is THE BEST.
-                        </div>
-                        <div class="testimonial-author">
-                            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%236441A5' opacity='0.1'/><text x='50' y='55' font-family='Arial' font-size='30' fill='%236441A5' text-anchor='middle'>TR</text></svg>" alt="Tsila R">
-                            <div class="author-info">
-                                <h5>Tsila R</h5>
-                                <p>Israel</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-title">
+          <h2>Client Testimonials</h2>
+          <p>What my clients say about working with me</p>
         </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                Very good communication despite time difference between
+                California and India. We will use Anupam again. Very generous
+                and wonderful person.
+              </div>
+              <div class="testimonial-author">
+                <img
+                  src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%236441A5' opacity='0.1'/><text x='50' y='55' font-family='Arial' font-size='30' fill='%236441A5' text-anchor='middle'>TA</text></svg>"
+                  alt="Trini Amador"
+                />
+                <div class="author-info">
+                  <h5>Trini Amador</h5>
+                  <p>United States</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                Great to work with this freelancer, very patient and dedicated
+                to achieve the client's vision. My first choice for this type of
+                work.
+              </div>
+              <div class="testimonial-author">
+                <img
+                  src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%236441A5' opacity='0.1'/><text x='50' y='55' font-family='Arial' font-size='30' fill='%236441A5' text-anchor='middle'>BN</text></svg>"
+                  alt="Ben Newth"
+                />
+                <div class="author-info">
+                  <h5>Ben Newth</h5>
+                  <p>Australia</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                Am so glad I found Anupam to do my project. He is a professional
+                that knows the work. The job was done as fast as he could. He is
+                THE BEST.
+              </div>
+              <div class="testimonial-author">
+                <img
+                  src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%236441A5' opacity='0.1'/><text x='50' y='55' font-family='Arial' font-size='30' fill='%236441A5' text-anchor='middle'>TR</text></svg>"
+                  alt="Tsila R"
+                />
+                <div class="author-info">
+                  <h5>Tsila R</h5>
+                  <p>Israel</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Journey Section -->
     <section class="journey-section section">
-        <div class="container">
-            <div class="section-title">
-                <h2>My Professional Journey</h2>
-                <p>Over 17 years of experience in the IT industry</p>
-            </div>
-            
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <span class="date">2005</span>
-                        <h4>Career Beginnings</h4>
-                        <p>Started as a computer teacher/trainer, laying the foundation for my passion for technology and education.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <span class="date">2010</span>
-                        <h4>IT Sector Experience</h4>
-                        <p>Honed skills in the IT sector, gaining valuable industry experience and technical expertise.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <span class="date">2016</span>
-                        <h4>Freelancing Career</h4>
-                        <p>Transitioned to full-time freelancing, serving clients worldwide with web design and development services.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <span class="date">2020</span>
-                        <h4>Global Recognition</h4>
-                        <p>Expanded client base to over 8 countries, delivering successful projects across various industries.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <span class="date">Present</span>
-                        <h4>Full-Stack Expertise</h4>
-                        <p>Providing comprehensive web solutions with over 70 successfully completed projects and counting.</p>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-title">
+          <h2>My Professional Journey</h2>
+          <p>Over 17 years of experience in the IT industry</p>
         </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <span class="date">2005</span>
+              <h4>Career Beginnings</h4>
+              <p>
+                Started as a computer teacher/trainer, laying the foundation for
+                my passion for technology and education.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <span class="date">2010</span>
+              <h4>IT Sector Experience</h4>
+              <p>
+                Honed skills in the IT sector, gaining valuable industry
+                experience and technical expertise.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <span class="date">2016</span>
+              <h4>Freelancing Career</h4>
+              <p>
+                Transitioned to full-time freelancing, serving clients worldwide
+                with web design and development services.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <span class="date">2020</span>
+              <h4>Global Recognition</h4>
+              <p>
+                Expanded client base to over 8 countries, delivering successful
+                projects across various industries.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <span class="date">Present</span>
+              <h4>Full-Stack Expertise</h4>
+              <p>
+                Providing comprehensive web solutions with over 70 successfully
+                completed projects and counting.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Expertise Section -->
     <section class="section bg-light">
-        <div class="container">
-            <div class="section-title">
-                <h2>My Expertise</h2>
-                <p>Comprehensive web solutions tailored to your business needs</p>
-            </div>
-            
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="expertise-card">
-                        <div class="expertise-icon">
-                            <i class="fas fa-paint-brush"></i>
-                        </div>
-                        <h4>Web Design</h4>
-                        <p>Creating visually appealing, user-friendly interfaces with a focus on UI/UX principles to enhance user engagement.</p>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="expertise-card">
-                        <div class="expertise-icon">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <h4>Web Development</h4>
-                        <p>Building robust, responsive websites with front-end, back-end, and full-stack development expertise.</p>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="expertise-card">
-                        <div class="expertise-icon">
-                            <i class="fas fa-search"></i>
-                        </div>
-                        <h4>SEO Optimization</h4>
-                        <p>Implementing effective SEO strategies to improve search engine rankings and drive organic traffic.</p>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="expertise-card">
-                        <div class="expertise-icon">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>
-                        <h4>Responsive Design</h4>
-                        <p>Developing websites that provide optimal viewing experience across all devices and screen sizes.</p>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="expertise-card">
-                        <div class="expertise-icon">
-                            <i class="fas fa-shopping-cart"></i>
-                        </div>
-                        <h4>E-Commerce Solutions</h4>
-                        <p>Building secure, scalable online stores with seamless payment integration and inventory management.</p>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="expertise-card">
-                        <div class="expertise-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h4>Digital Marketing</h4>
-                        <p>Driving business growth through targeted digital marketing strategies and analytics-driven campaigns.</p>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-title">
+          <h2>My Expertise</h2>
+          <p>Comprehensive web solutions tailored to your business needs</p>
         </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="expertise-card">
+              <div class="expertise-icon">
+                <i class="fas fa-paint-brush"></i>
+              </div>
+              <h4>Web Design</h4>
+              <p>
+                Creating visually appealing, user-friendly interfaces with a
+                focus on UI/UX principles to enhance user engagement.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="expertise-card">
+              <div class="expertise-icon">
+                <i class="fas fa-code"></i>
+              </div>
+              <h4>Web Development</h4>
+              <p>
+                Building robust, responsive websites with front-end, back-end,
+                and full-stack development expertise.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="expertise-card">
+              <div class="expertise-icon">
+                <i class="fas fa-search"></i>
+              </div>
+              <h4>SEO Optimization</h4>
+              <p>
+                Implementing effective SEO strategies to improve search engine
+                rankings and drive organic traffic.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="expertise-card">
+              <div class="expertise-icon">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+              <h4>Responsive Design</h4>
+              <p>
+                Developing websites that provide optimal viewing experience
+                across all devices and screen sizes.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="expertise-card">
+              <div class="expertise-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+              <h4>E-Commerce Solutions</h4>
+              <p>
+                Building secure, scalable online stores with seamless payment
+                integration and inventory management.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="expertise-card">
+              <div class="expertise-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <h4>Digital Marketing</h4>
+              <p>
+                Driving business growth through targeted digital marketing
+                strategies and analytics-driven campaigns.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Clients Section -->
     <section class="clients-section section" id="clients">
-        <div class="container">
-            <div class="section-title">
-                <h2>Global Clients</h2>
-                <p>Trusted by businesses and organizations worldwide</p>
-            </div>
-            
-            <div class="row">
-                <div class="col-md-2 col-4">
-                    <div class="client-logo">
-                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='40' viewBox='0 0 100 40'><rect width='100' height='40' fill='%23f8f9fa'/><text x='50' y='25' font-family='Arial' font-size='16' fill='%236441A5' text-anchor='middle'>Gracianna</text></svg>" alt="Gracianna Winery">
-                    </div>
-                </div>
-                <div class="col-md-2 col-4">
-                    <div class="client-logo">
-                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='40' viewBox='0 0 100 40'><rect width='100' height='40' fill='%23f8f9fa'/><text x='50' y='25' font-family='Arial' font-size='16' fill='%236441A5' text-anchor='middle'>1300 Vet</text></svg>" alt="1300 the vet">
-                    </div>
-                </div>
-                <div class="col-md-2 col-4">
-                    <div class="client-logo">
-                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='40' viewBox='0 0 100 40'><rect width='100' height='40' fill='%23f8f9fa'/><text x='50' y='25' font-family='Arial' font-size='16' fill='%236441A5' text-anchor='middle'>Flooring</text></svg>" alt="The Flooring Company">
-                    </div>
-                </div>
-                <div class="col-md-2 col-4">
-                    <div class="client-logo">
-                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='40' viewBox='0 0 100 40'><rect width='100' height='40' fill='%23f8f9fa'/><text x='50' y='25' font-family='Arial' font-size='16' fill='%236441A5' text-anchor='middle'>Sailing</text></svg>" alt="Sailing Dreams">
-                    </div>
-                </div>
-                <div class="col-md-2 col-4">
-                    <div class="client-logo">
-                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='40' viewBox='0 0 100 40'><rect width='100' height='40' fill='%23f8f9fa'/><text x='50' y='25' font-family='Arial' font-size='16' fill='%236441A5' text-anchor='middle'>Beauty</text></svg>" alt="August Beauty Lab">
-                    </div>
-                </div>
-                <div class="col-md-2 col-4">
-                    <div class="client-logo">
-                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='40' viewBox='0 0 100 40'><rect width='100' height='40' fill='%23f8f9fa'/><text x='50' y='25' font-family='Arial' font-size='16' fill='%236441A5' text-anchor='middle'>CPA</text></svg>" alt="CPA Australia">
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center mt-5">
-                <a href="#contact" class="btn btn-primary btn-lg">Start Your Project Today</a>
-            </div>
+      <div class="container">
+        <div class="section-title">
+          <h2>Global Clients</h2>
+          <p>Trusted by businesses and organizations worldwide</p>
         </div>
+
+        <div class="row">
+          <div class="col-md-2 col-4">
+            <div class="client-logo">
+              <img
+                src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='40' viewBox='0 0 100 40'><rect width='100' height='40' fill='%23f8f9fa'/><text x='50' y='25' font-family='Arial' font-size='16' fill='%236441A5' text-anchor='middle'>Gracianna</text></svg>"
+                alt="Gracianna Winery"
+              />
+            </div>
+          </div>
+          <div class="col-md-2 col-4">
+            <div class="client-logo">
+              <img
+                src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='40' viewBox='0 0 100 40'><rect width='100' height='40' fill='%23f8f9fa'/><text x='50' y='25' font-family='Arial' font-size='16' fill='%236441A5' text-anchor='middle'>1300 Vet</text></svg>"
+                alt="1300 the vet"
+              />
+            </div>
+          </div>
+          <div class="col-md-2 col-4">
+            <div class="client-logo">
+              <img
+                src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='40' viewBox='0 0 100 40'><rect width='100' height='40' fill='%23f8f9fa'/><text x='50' y='25' font-family='Arial' font-size='16' fill='%236441A5' text-anchor='middle'>Flooring</text></svg>"
+                alt="The Flooring Company"
+              />
+            </div>
+          </div>
+          <div class="col-md-2 col-4">
+            <div class="client-logo">
+              <img
+                src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='40' viewBox='0 0 100 40'><rect width='100' height='40' fill='%23f8f9fa'/><text x='50' y='25' font-family='Arial' font-size='16' fill='%236441A5' text-anchor='middle'>Sailing</text></svg>"
+                alt="Sailing Dreams"
+              />
+            </div>
+          </div>
+          <div class="col-md-2 col-4">
+            <div class="client-logo">
+              <img
+                src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='40' viewBox='0 0 100 40'><rect width='100' height='40' fill='%23f8f9fa'/><text x='50' y='25' font-family='Arial' font-size='16' fill='%236441A5' text-anchor='middle'>Beauty</text></svg>"
+                alt="August Beauty Lab"
+              />
+            </div>
+          </div>
+          <div class="col-md-2 col-4">
+            <div class="client-logo">
+              <img
+                src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='40' viewBox='0 0 100 40'><rect width='100' height='40' fill='%23f8f9fa'/><text x='50' y='25' font-family='Arial' font-size='16' fill='%236441A5' text-anchor='middle'>CPA</text></svg>"
+                alt="CPA Australia"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+          <a href="#contact" class="btn btn-primary btn-lg"
+            >Start Your Project Today</a
+          >
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-5 mb-lg-0">
-                    <h4>Anupam Mondal</h4>
-                    <p>Expert website design, development, and SEO services to boost your online presence and business growth.</p>
-                    <div class="social-links mt-4">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                
-                <div class="col-lg-2 col-md-4 mb-5 mb-md-0">
-                    <h4>Quick Links</h4>
-                    <ul class="list-unstyled">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">Blog</a></li>
-                    </ul>
-                </div>
-                
-                <div class="col-lg-2 col-md-4 mb-5 mb-md-0">
-                    <h4>Services</h4>
-                    <ul class="list-unstyled">
-                        <li><a href="#">Web Design</a></li>
-                        <li><a href="#">Web Development</a></li>
-                        <li><a href="#">SEO Services</a></li>
-                        <li><a href="#">Digital Marketing</a></li>
-                        <li><a href="#">E-commerce</a></li>
-                    </ul>
-                </div>
-                
-                <div class="col-lg-4 col-md-4">
-                    <h4>Contact Info</h4>
-                    <ul class="list-unstyled">
-                        <li><i class="fas fa-map-marker-alt me-2"></i> Protapnagar, Metiari, WB 743330</li>
-                        <li><i class="fas fa-phone-alt me-2"></i> +91 (947) 446-0058</li>
-                        <li><i class="fas fa-envelope me-2"></i> a09051985@gmail.com</li>
-                        <li><i class="fas fa-clock me-2"></i> Mon-Fri: 12pm - 8pm</li>
-                    </ul>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-5 mb-lg-0">
+            <h4>Anupam Mondal</h4>
+            <p>
+              Expert website design, development, and SEO services to boost your
+              online presence and business growth.
+            </p>
+            <div class="social-links mt-4">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
             </div>
-            
-            <div class="copyright">
-                <p>&copy; 2025 Anupam Mondal. All Rights Reserved.</p>
-            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-4 mb-5 mb-md-0">
+            <h4>Quick Links</h4>
+            <ul class="list-unstyled">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Portfolio</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-4 mb-5 mb-md-0">
+            <h4>Services</h4>
+            <ul class="list-unstyled">
+              <li><a href="#">Web Design</a></li>
+              <li><a href="#">Web Development</a></li>
+              <li><a href="#">SEO Services</a></li>
+              <li><a href="#">Digital Marketing</a></li>
+              <li><a href="#">E-commerce</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-4">
+            <h4>Contact Info</h4>
+            <ul class="list-unstyled">
+              <li>
+                <i class="fas fa-map-marker-alt me-2"></i> Protapnagar, Metiari,
+                WB 743330
+              </li>
+              <li><i class="fas fa-phone-alt me-2"></i> +91 (947) 446-0058</li>
+              <li><i class="fas fa-envelope me-2"></i> a09051985@gmail.com</li>
+              <li><i class="fas fa-clock me-2"></i> Mon-Fri: 12pm - 8pm</li>
+            </ul>
+          </div>
         </div>
+
+        <div class="copyright">
+          <p>&copy; 2025 Anupam Mondal. All Rights Reserved.</p>
+        </div>
+      </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Counter animation
-        function animateCounter(elementId, finalValue, duration) {
-            const element = document.getElementById(elementId);
-            let startValue = 0;
-            const increment = finalValue / (duration / 16); // 16ms per frame (approx 60fps)
-            let currentValue = startValue;
-            
-            const counter = setInterval(() => {
-                currentValue += increment;
-                if (currentValue >= finalValue) {
-                    currentValue = finalValue;
-                    clearInterval(counter);
-                }
-                element.textContent = Math.floor(currentValue);
-            }, 16);
-        }
-        
-        // Initialize counters when page loads
-        document.addEventListener('DOMContentLoaded', () => {
-            setTimeout(() => {
-                animateCounter('projects-counter', 70, 2000);
-                animateCounter('clients-counter', 41, 2000);
-                animateCounter('countries-counter', 8, 2000);
-                animateCounter('experience-counter', 17, 2000);
-            }, 500);
-            
-            // Smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                });
+      // Counter animation
+      function animateCounter(elementId, finalValue, duration) {
+        const element = document.getElementById(elementId);
+        let startValue = 0;
+        const increment = finalValue / (duration / 16); // 16ms per frame (approx 60fps)
+        let currentValue = startValue;
+
+        const counter = setInterval(() => {
+          currentValue += increment;
+          if (currentValue >= finalValue) {
+            currentValue = finalValue;
+            clearInterval(counter);
+          }
+          element.textContent = Math.floor(currentValue);
+        }, 16);
+      }
+
+      // Initialize counters when page loads
+      document.addEventListener("DOMContentLoaded", () => {
+        setTimeout(() => {
+          animateCounter("projects-counter", 70, 2000);
+          animateCounter("clients-counter", 41, 2000);
+          animateCounter("countries-counter", 8, 2000);
+          animateCounter("experience-counter", 17, 2000);
+        }, 500);
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute("href")).scrollIntoView({
+              behavior: "smooth",
             });
+          });
         });
+      });
     </script>
-</body>
+  </body>
 </html>
