@@ -27,6 +27,10 @@
         --transition: all 0.3s ease;
       }
 
+      .text-primary {
+        color: var(--primary) !important;
+      }
+
       * {
         margin: 0;
         padding: 0;
@@ -569,6 +573,7 @@
 
       .footer-links {
         list-style: none;
+        padding-left: 0px;
       }
 
       .footer-links li {
@@ -701,44 +706,44 @@
       }
     </style>
     <style>
-    .marquee-wrapper {
+      .marquee-wrapper {
         padding: 20px 0px;
         overflow: hidden;
         position: relative;
         width: 100%;
-    }
+      }
 
-    .marquee-track {
+      .marquee-track {
         display: flex;
         width: max-content;
         animation: marqueeSlide 30s linear infinite;
-    }
+      }
 
-    .client-logo {
+      .client-logo {
         flex: 0 0 auto;
         padding: 0 40px;
         margin: 0px 10px;
-    }
+      }
 
-    .client-logo img {
+      .client-logo img {
         height: 80px;
         width: auto;
         filter: grayscale(100%);
         transition: filter 0.3s ease;
-    }
+      }
 
-    .client-logo img:hover {
+      .client-logo img:hover {
         filter: none;
-    }
+      }
 
-    @keyframes marqueeSlide {
+      @keyframes marqueeSlide {
         0% {
-        transform: translateX(0%);
+          transform: translateX(0%);
         }
         100% {
-        transform: translateX(-50%);
+          transform: translateX(-50%);
         }
-    }
+      }
     </style>
   </head>
   <body>
@@ -875,14 +880,8 @@
               <i class="fas fa-paint-brush"></i>
             </div>
             <h3>Web Design</h3>
-            <p>
-              Creating visually stunning, user-friendly websites that convert
-              visitors into customers with intuitive interfaces and responsive
-              layouts.
-            </p>
-            <a href="./services/web-design" class="btn btn-outline"
-              >Learn More</a
-            >
+            <p>Creating visually stunning, user-friendly websites that convert visitors into customers with intuitive interfaces and responsive layouts.</p>
+            <a href="./services/web-design" class="btn btn-outline">Learn More</a>
           </div>
 
           <div class="service-card">
@@ -890,13 +889,8 @@
               <i class="fas fa-code"></i>
             </div>
             <h3>Web Development</h3>
-            <p>
-              Building robust, scalable web applications and websites using the
-              latest technologies for optimal performance and security.
-            </p>
-            <a href="./services/web-development" class="btn btn-outline"
-              >Learn More</a
-            >
+            <p>Building robust, scalable web applications and websites using the latest technologies for optimal performance and security.</p>
+            <a href="./services/web-development" class="btn btn-outline">Learn More</a>
           </div>
 
           <div class="service-card">
@@ -904,11 +898,26 @@
               <i class="fas fa-chart-line"></i>
             </div>
             <h3>SEO Optimization</h3>
-            <p>
-              Implementing strategic SEO techniques to improve your search
-              rankings, drive organic traffic, and increase online visibility.
-            </p>
-            <a href="./services/website-seo" class="btn btn-outline"
+            <p>Implementing strategic SEO techniques to improve your search rankings, drive organic traffic, and increase online visibility.</p>
+            <a href="./services/website-seo" class="btn btn-outline">Learn More</a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3>Responsive Design</h3>
+            <p>Developing websites that provide optimal viewing experience across all devices and screen sizes.</p>
+            <a href="./services/website-seo" class="btn btn-outline">Learn More</a>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+            <h3>E-Commerce Solutions</h3>
+            <p>Building secure, scalable online stores with seamless payment integration and inventory management.</p>
+            <a href="./services/digital-marketing" class="btn btn-outline"
               >Learn More</a
             >
           </div>
@@ -918,13 +927,8 @@
               <i class="fas fa-bullhorn"></i>
             </div>
             <h3>Digital Marketing</h3>
-            <p>
-              Developing comprehensive digital marketing strategies to grow your
-              audience, generate leads, and increase conversions.
-            </p>
-            <a href="./services/digital-marketing" class="btn btn-outline"
-              >Learn More</a
-            >
+            <p>Developing comprehensive digital marketing strategies to grow your audience, generate leads, and increase conversions.</p>
+            <a href="./services/digital-marketing" class="btn btn-outline">Learn More</a>
           </div>
         </div>
       </div>
@@ -1041,23 +1045,83 @@
         </div> -->
 
         <div class="marquee-wrapper">
-            <div class="marquee-track">
-                <!-- Original Logo Set -->
-                <div class="client-logo"><img src="https://anupammondal.in/image/brands/gracianna-winery.jpg" alt="Gracianna Winery"></div>
-                <div class="client-logo"><img src="https://anupammondal.in/image/brands/syncware.jpg" alt="Syncware"></div>
-                <div class="client-logo"><img src="https://anupammondal.in/image/brands/capstone-trading-systems.jpg" alt="Capstone Trading"></div>
-                <div class="client-logo"><img src="https://anupammondal.in/image/brands/radiobillboards.jpg" alt="Radio Billboards"></div>
-                <div class="client-logo"><img src="https://anupammondal.in/image/brands/dubai-visas.jpg" alt="Dubai Visas"></div>
-                <div class="client-logo"><img src="https://anupammondal.in/image/brands/cpa-australia.jpg" alt="CPA Australia"></div>
-
-                <!-- Duplicate Logo Set for Loop -->
-                <div class="client-logo"><img src="https://anupammondal.in/image/brands/gracianna-winery.jpg" alt="Gracianna Winery"></div>
-                <div class="client-logo"><img src="https://anupammondal.in/image/brands/syncware.jpg" alt="Syncware"></div>
-                <div class="client-logo"><img src="https://anupammondal.in/image/brands/capstone-trading-systems.jpg" alt="Capstone Trading"></div>
-                <div class="client-logo"><img src="https://anupammondal.in/image/brands/radiobillboards.jpg" alt="Radio Billboards"></div>
-                <div class="client-logo"><img src="https://anupammondal.in/image/brands/dubai-visas.jpg" alt="Dubai Visas"></div>
-                <div class="client-logo"><img src="https://anupammondal.in/image/brands/cpa-australia.jpg" alt="CPA Australia"></div>
+          <div class="marquee-track">
+            <!-- Original Logo Set -->
+            <div class="client-logo">
+              <img
+                src="https://anupammondal.in/image/brands/gracianna-winery.jpg"
+                alt="Gracianna Winery"
+              />
             </div>
+            <div class="client-logo">
+              <img
+                src="https://anupammondal.in/image/brands/syncware.jpg"
+                alt="Syncware"
+              />
+            </div>
+            <div class="client-logo">
+              <img
+                src="https://anupammondal.in/image/brands/capstone-trading-systems.jpg"
+                alt="Capstone Trading"
+              />
+            </div>
+            <div class="client-logo">
+              <img
+                src="https://anupammondal.in/image/brands/radiobillboards.jpg"
+                alt="Radio Billboards"
+              />
+            </div>
+            <div class="client-logo">
+              <img
+                src="https://anupammondal.in/image/brands/dubai-visas.jpg"
+                alt="Dubai Visas"
+              />
+            </div>
+            <div class="client-logo">
+              <img
+                src="https://anupammondal.in/image/brands/cpa-australia.jpg"
+                alt="CPA Australia"
+              />
+            </div>
+
+            <!-- Duplicate Logo Set for Loop -->
+            <div class="client-logo">
+              <img
+                src="https://anupammondal.in/image/brands/gracianna-winery.jpg"
+                alt="Gracianna Winery"
+              />
+            </div>
+            <div class="client-logo">
+              <img
+                src="https://anupammondal.in/image/brands/syncware.jpg"
+                alt="Syncware"
+              />
+            </div>
+            <div class="client-logo">
+              <img
+                src="https://anupammondal.in/image/brands/capstone-trading-systems.jpg"
+                alt="Capstone Trading"
+              />
+            </div>
+            <div class="client-logo">
+              <img
+                src="https://anupammondal.in/image/brands/radiobillboards.jpg"
+                alt="Radio Billboards"
+              />
+            </div>
+            <div class="client-logo">
+              <img
+                src="https://anupammondal.in/image/brands/dubai-visas.jpg"
+                alt="Dubai Visas"
+              />
+            </div>
+            <div class="client-logo">
+              <img
+                src="https://anupammondal.in/image/brands/cpa-australia.jpg"
+                alt="CPA Australia"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -1109,7 +1173,7 @@
             <h3>Quick Links</h3>
             <ul class="footer-links">
               <li><a href="./">Home</a></li>
-              <li><a href="./services/digital-marketing">Services</a></li>
+              <!-- <li><a href="./services/digital-marketing">Services</a></li> -->
               <li><a href="./about-us">About</a></li>
               <li><a href="./portfolio">Portfolio</a></li>
               <li><a href="./contact">Contact</a></li>
@@ -1145,9 +1209,9 @@
       const mobileMenuBtn = document.getElementById("mobileMenuBtn");
       const navLinks = document.getElementById("navLinks");
 
-      mobileMenuBtn.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-      });
+      // mobileMenuBtn.addEventListener("click", () => {
+      //   navLinks.classList.toggle("active");
+      // });
 
       // Header scroll effect
       const header = document.getElementById("header");

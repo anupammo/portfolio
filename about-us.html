@@ -502,6 +502,46 @@
         }
       }
     </style>
+    <style>
+      .marquee-wrapper {
+        padding: 20px 0px;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+      }
+
+      .marquee-track {
+        display: flex;
+        width: max-content;
+        animation: marqueeSlide 30s linear infinite;
+      }
+
+      .client-logo {
+        flex: 0 0 auto;
+        padding: 0 40px;
+        margin: 0px 10px;
+      }
+
+      .client-logo img {
+        height: 80px;
+        width: auto;
+        filter: grayscale(100%);
+        transition: filter 0.3s ease;
+      }
+
+      .client-logo img:hover {
+        filter: none;
+      }
+
+      @keyframes marqueeSlide {
+        0% {
+          transform: translateX(0%);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+    </style>
   </head>
   <body>
     <!-- Header -->
@@ -580,8 +620,10 @@
               web solutions.
             </p>
             <div class="d-flex flex-wrap gap-2 mt-4">
-              <a href="#portfolio" class="btn btn-primary">View Portfolio</a>
-              <a href="#contact" class="btn btn-outline-primary">Contact Me</a>
+              <a href="./portfolio" class="btn btn-primary">View Portfolio</a>
+              <a href="./contact" class="btn btn-primary">Contact Me</a>
+              <!-- <a href="#contact" class="btn btn-outline-primary">Contact Me</a> -->
+              <!-- <a href="./contact" class="btn btn-outline">Contact Me</a> -->
             </div>
           </div>
           <div class="col-lg-6 text-center">
@@ -717,7 +759,7 @@
         <div class="row">
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="testimonial-card">
-              <div class="testimonial-content">
+              <div class="testimonial-content mt-4">
                 Very good communication despite time difference between
                 California and India. We will use Anupam again. Very generous
                 and wonderful person.
@@ -737,7 +779,7 @@
 
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="testimonial-card">
-              <div class="testimonial-content">
+              <div class="testimonial-content mt-4">
                 Great to work with this freelancer, very patient and dedicated
                 to achieve the client's vision. My first choice for this type of
                 work.
@@ -757,7 +799,7 @@
 
           <div class="col-lg-4 col-md-6 mb-4">
             <div class="testimonial-card">
-              <div class="testimonial-content">
+              <div class="testimonial-content mt-4">
                 Am so glad I found Anupam to do my project. He is a professional
                 that knows the work. The job was done as fast as he could. He is
                 THE BEST.
@@ -939,7 +981,7 @@
           <p>Trusted by businesses and organizations worldwide</p>
         </div>
 
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-md-2 col-4">
             <div class="client-logo">
               <img
@@ -984,6 +1026,86 @@
             <div class="client-logo">
               <img
                 src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='40' viewBox='0 0 100 40'><rect width='100' height='40' fill='%23f8f9fa'/><text x='50' y='25' font-family='Arial' font-size='16' fill='%236441A5' text-anchor='middle'>CPA</text></svg>"
+                alt="CPA Australia"
+              />
+            </div>
+          </div>
+        </div> -->
+
+        <div class="marquee-wrapper">
+          <div class="marquee-track">
+            <!-- Original Logo Set -->
+            <div class="client-logo">
+              <img
+                src="https://anupammondal.in/image/brands/gracianna-winery.jpg"
+                alt="Gracianna Winery"
+              />
+            </div>
+            <div class="client-logo">
+              <img
+                src="https://anupammondal.in/image/brands/syncware.jpg"
+                alt="Syncware"
+              />
+            </div>
+            <div class="client-logo">
+              <img
+                src="https://anupammondal.in/image/brands/capstone-trading-systems.jpg"
+                alt="Capstone Trading"
+              />
+            </div>
+            <div class="client-logo">
+              <img
+                src="https://anupammondal.in/image/brands/radiobillboards.jpg"
+                alt="Radio Billboards"
+              />
+            </div>
+            <div class="client-logo">
+              <img
+                src="https://anupammondal.in/image/brands/dubai-visas.jpg"
+                alt="Dubai Visas"
+              />
+            </div>
+            <div class="client-logo">
+              <img
+                src="https://anupammondal.in/image/brands/cpa-australia.jpg"
+                alt="CPA Australia"
+              />
+            </div>
+
+            <!-- Duplicate Logo Set for Loop -->
+            <div class="client-logo">
+              <img
+                src="https://anupammondal.in/image/brands/gracianna-winery.jpg"
+                alt="Gracianna Winery"
+              />
+            </div>
+            <div class="client-logo">
+              <img
+                src="https://anupammondal.in/image/brands/syncware.jpg"
+                alt="Syncware"
+              />
+            </div>
+            <div class="client-logo">
+              <img
+                src="https://anupammondal.in/image/brands/capstone-trading-systems.jpg"
+                alt="Capstone Trading"
+              />
+            </div>
+            <div class="client-logo">
+              <img
+                src="https://anupammondal.in/image/brands/radiobillboards.jpg"
+                alt="Radio Billboards"
+              />
+            </div>
+            <div class="client-logo">
+              <img
+                src="https://anupammondal.in/image/brands/dubai-visas.jpg"
+                alt="Dubai Visas"
+              />
+            </div>
+            <div class="client-logo">
+              <img
+                src="https://anupammondal.in/image/brands/cpa-australia.jpg"
                 alt="CPA Australia"
               />
             </div>
