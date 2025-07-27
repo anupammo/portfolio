@@ -35,7 +35,7 @@
       }
 
       /* Header Styles */
-      .navbar {
+      /* .navbar {
         background-color: white;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         padding: 15px 0;
@@ -61,7 +61,7 @@
 
       .navbar-toggler {
         border: none;
-      }
+      } */
 
       .btn-primary {
         background-color: var(--primary-color);
@@ -81,8 +81,9 @@
 
       /* Hero Section */
       .hero {
+        padding: 180px 0 100px;
         background: linear-gradient(135deg, #ffffff 0%, #f0ebff 100%);
-        padding: 100px 0 60px;
+        /* padding: 100px 0 60px; */
         position: relative;
         overflow: hidden;
       }
@@ -389,7 +390,7 @@
       }
 
       /* Footer */
-      .footer {
+      /* .footer {
         background: var(--primary-color);
         color: white;
         padding: 60px 0 30px;
@@ -413,7 +414,7 @@
       .footer a:hover {
         color: white;
         text-decoration: underline;
-      }
+      } */
 
       .social-links a {
         display: inline-flex;
@@ -503,6 +504,697 @@
       }
     </style>
     <style>
+      :root {
+        --primary: #6441a5;
+        --primary-light: #7d5cc1;
+        --primary-dark: #4e3280;
+        --secondary: #ff6b6b;
+        --dark: #1a1a2e;
+        --light: #f8f9fa;
+        --gray: #6c757d;
+        --transition: all 0.3s ease;
+      }
+
+      .text-primary {
+        color: var(--primary) !important;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        color: #333;
+        line-height: 1.6;
+        background-color: #fff;
+        overflow-x: hidden;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-weight: 700;
+        line-height: 1.3;
+        color: var(--dark);
+      }
+
+      /* h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      h2 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        position: relative;
+      }
+
+      h2::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 80px;
+        height: 4px;
+        background: var(--primary);
+        border-radius: 2px;
+      } */
+
+      .text-center h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      p {
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+      }
+
+      a {
+        text-decoration: none;
+        color: var(--primary);
+        transition: var(--transition);
+      }
+
+      a:hover {
+        color: var(--primary-light);
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 12px 30px;
+        border-radius: 50px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: var(--transition);
+        font-size: 1rem;
+        border: none;
+        cursor: pointer;
+      }
+
+      /* .btn-primary {
+        background: var(--primary);
+        color: white;
+        box-shadow: 0 4px 15px rgba(100, 65, 165, 0.3);
+      } */
+
+      .btn-primary:hover {
+        background: var(--primary-light);
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(100, 65, 165, 0.4);
+      }
+
+      .btn-outline {
+        background: transparent;
+        color: var(--primary);
+        border: 2px solid var(--primary);
+      }
+
+      .btn-outline:hover {
+        background: var(--primary);
+        color: white;
+        transform: translateY(-3px);
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      section {
+        padding: 100px 0;
+      }
+
+      .text-primary {
+        color: var(--primary);
+      }
+
+      /* Header Styles */
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        transition: var(--transition);
+      }
+
+      header.scrolled {
+        padding: 10px 0;
+        background: white;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--primary);
+      }
+
+      .logo span {
+        color: var(--dark);
+      }
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+      }
+
+      .nav-links li {
+        margin-left: 30px;
+      }
+
+      .nav-links a {
+        color: var(--dark);
+        font-weight: 500;
+        position: relative;
+      }
+
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--primary);
+        transition: var(--transition);
+      }
+
+      .nav-links a:hover::after {
+        width: 100%;
+      }
+
+      .mobile-menu-btn {
+        display: none;
+        font-size: 1.5rem;
+        color: var(--dark);
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
+
+      /* Hero Section */
+      /* .hero {
+        padding: 180px 0 100px;
+        background: linear-gradient(
+          135deg,
+          rgba(248, 247, 252, 0.9) 0%,
+          rgba(255, 255, 255, 1) 100%
+        );
+        position: relative;
+        overflow: hidden;
+      } */
+
+      /* .hero::before {
+        content: "";
+        position: absolute;
+        top: -300px;
+        right: -300px;
+        width: 800px;
+        height: 800px;
+        border-radius: 50%;
+        background: linear-gradient(
+          135deg,
+          rgba(100, 65, 165, 0.05) 0%,
+          rgba(100, 65, 165, 0.01) 100%
+        );
+        z-index: -1;
+      } */
+
+      .hero-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .hero-text {
+        flex: 1;
+        padding-right: 50px;
+      }
+
+      /* .hero-image {
+        flex: 1;
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        transform: perspective(1000px) rotateY(-5deg);
+        transition: var(--transition);
+      } */
+
+      /* .hero-image:hover {
+        transform: perspective(1000px) rotateY(0);
+      }
+
+      .hero-image img {
+        width: 100%;
+        display: block;
+        transition: var(--transition);
+      }
+
+      .hero-image:hover img {
+        transform: scale(1.05);
+      } */
+
+      .hero-btns {
+        display: flex;
+        gap: 15px;
+        margin-top: 30px;
+      }
+
+      /* Services Section */
+      .services {
+        background-color: #f8f9ff;
+        position: relative;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      .section-title h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+      }
+
+      .service-card {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        transition: var(--transition);
+        text-align: center;
+        padding: 40px 30px;
+      }
+
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(100, 65, 165, 0.15);
+      }
+
+      .service-icon {
+        width: 80px;
+        height: 80px;
+        background: rgba(100, 65, 165, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 25px;
+        color: var(--primary);
+        font-size: 2rem;
+      }
+
+      .service-card h3 {
+        margin-bottom: 15px;
+        font-size: 1.5rem;
+      }
+
+      /* Stats Section */
+      .stats {
+        background: linear-gradient(
+          135deg,
+          var(--primary) 0%,
+          var(--primary-dark) 100%
+        );
+        color: white;
+        text-align: center;
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+      }
+
+      .stat-item {
+        padding: 30px;
+      }
+
+      .stat-number {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: white;
+      }
+
+      .stat-text {
+        font-size: 1.2rem;
+        opacity: 0.9;
+      }
+
+      /* Testimonials */
+      .testimonials {
+        background-color: white;
+      }
+
+      .testimonial-slider {
+        max-width: 800px;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      .testimonial {
+        background: #f8f9ff;
+        border-radius: 20px;
+        padding: 40px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      }
+
+      .client-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 25px;
+      }
+
+      .client-avatar {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 20px;
+        border: 3px solid var(--primary);
+      }
+
+      .client-avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .client-details h4 {
+        margin-bottom: 5px;
+      }
+
+      .client-role {
+        color: var(--gray);
+        font-style: italic;
+      }
+
+      .testimonial-text {
+        font-size: 1.1rem;
+        font-style: italic;
+        line-height: 1.8;
+        position: relative;
+      }
+
+      .testimonial-text::before,
+      .testimonial-text::after {
+        content: '"';
+        font-size: 4rem;
+        color: rgba(100, 65, 165, 0.1);
+        position: absolute;
+      }
+
+      .testimonial-text::before {
+        top: -30px;
+        left: -20px;
+      }
+
+      .testimonial-text::after {
+        bottom: -60px;
+        right: -20px;
+      }
+
+      /* Clients */
+      .clients {
+        background-color: #f8f9ff;
+      }
+
+      .clients-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 30px;
+        align-items: center;
+      }
+
+      .client-logo {
+        background: white;
+        border-radius: 10px;
+        margin: 0px 15px;
+        padding: 0px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 72px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: var(--transition);
+      }
+
+      .client-logo:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(100, 65, 165, 0.1);
+      }
+
+      .client-logo img {
+        max-width: 100%;
+        max-height: 50px;
+        filter: grayscale(100%);
+        opacity: 0.7;
+        transition: var(--transition);
+      }
+
+      .client-logo:hover img {
+        filter: grayscale(0);
+        opacity: 1;
+      }
+
+      /* CTA Section */
+      .cta {
+        background: linear-gradient(
+          135deg,
+          var(--primary) 0%,
+          var(--primary-dark) 100%
+        );
+        color: white;
+        text-align: center;
+        padding: 80px 0;
+      }
+
+      .cta h2 {
+        color: white;
+        margin-bottom: 20px;
+      }
+
+      .cta h2::after {
+        background: white;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .cta p {
+        max-width: 700px;
+        margin: 0 auto 40px;
+        font-size: 1.2rem;
+        opacity: 0.9;
+      }
+
+      .cta .btn {
+        background: white;
+        color: var(--primary);
+      }
+
+      .cta .btn:hover {
+        background: var(--light);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Footer */
+      footer {
+        background: var(--dark);
+        color: white;
+        padding: 80px 0 30px;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 60px;
+      }
+
+      .footer-col h3 {
+        color: white;
+        margin-bottom: 25px;
+        font-size: 1.5rem;
+        position: relative;
+        padding-bottom: 15px;
+      }
+
+      .footer-col h3::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50px;
+        height: 3px;
+        background: var(--primary);
+      }
+
+      .footer-links {
+        list-style: none;
+        padding-left: 0px;
+      }
+
+      .footer-links li {
+        margin-bottom: 12px;
+      }
+
+      .footer-links a {
+        color: rgba(255, 255, 255, 0.7);
+        transition: var(--transition);
+      }
+
+      .footer-links a:hover {
+        color: white;
+        padding-left: 5px;
+      }
+
+      .social-links {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+      }
+
+      .social-links a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+        transition: var(--transition);
+      }
+
+      .social-links a:hover {
+        background: var(--primary);
+        transform: translateY(-5px);
+      }
+
+      .copyright {
+        text-align: center;
+        padding-top: 30px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.9rem;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 992px) {
+        h1 {
+          font-size: 2.8rem;
+        }
+
+        h2 {
+          font-size: 2.2rem;
+        }
+
+        .hero-content {
+          flex-direction: column;
+        }
+
+        .hero-text {
+          padding-right: 0;
+          margin-bottom: 50px;
+          text-align: center;
+        }
+
+        .hero-btns {
+          justify-content: center;
+        }
+
+        .hero-image {
+          max-width: 600px;
+          margin: 0 auto;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .mobile-menu-btn {
+          display: block;
+        }
+
+        .nav-links {
+          position: fixed;
+          top: 80px;
+          right: -100%;
+          flex-direction: column;
+          background: white;
+          width: 100%;
+          height: calc(100vh - 80px);
+          padding: 40px 20px;
+          transition: var(--transition);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-links.active {
+          right: 0;
+        }
+
+        .nav-links li {
+          margin: 15px 0;
+        }
+
+        section {
+          padding: 70px 0;
+        }
+
+        .hero {
+          padding: 150px 0 70px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        h1 {
+          font-size: 2.2rem;
+        }
+
+        h2 {
+          font-size: 1.8rem;
+        }
+
+        .hero-btns {
+          flex-direction: column;
+          gap: 15px;
+        }
+
+        .btn {
+          width: 100%;
+        }
+      }
+    </style>
+    <style>
       .marquee-wrapper {
         padding: 20px 0px;
         overflow: hidden;
@@ -545,68 +1237,94 @@
   </head>
   <body>
     <!-- Header -->
-    <nav class="navbar navbar-expand-lg sticky-top">
+    <header id="header">
       <div class="container">
-        <a class="navbar-brand" href="#">Anupam Mondal</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Home</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Services
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Digital Marketing</a></li>
-                <li><a class="dropdown-item" href="#">Web Design</a></li>
-                <li><a class="dropdown-item" href="#">Web Development</a></li>
-                <li><a class="dropdown-item" href="#">Website SEO</a></li>
+        <nav class="navbar navbar-expand-lg sticky-top">
+          <div class="container">
+            <a class="navbar-brand" href="./">Anupam Mondal</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Services
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="./services/digital-marketing"
+                        >Digital Marketing</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="./services/web-design"
+                        >Web Design</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="./services/web-development"
+                        >Web Development</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="./services/website-seo"
+                        >Website SEO</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    About
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="./about-us">About Us</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="./portfolio">Portfolio</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="./contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./blog/">Blog</a>
+                </li>
               </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle active"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                About
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item active" href="#">About Us</a></li>
-                <li><a class="dropdown-item" href="#">Portfolio</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Blog</a>
-            </li>
-          </ul>
-          <a href="#" class="btn btn-primary ms-3">Get Started</a>
-        </div>
+              <!-- <a href="./contact" class="btn btn-primary ms-3">Get Started</a> -->
+            </div>
+          </div>
+        </nav>
       </div>
-    </nav>
+    </header>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -638,32 +1356,27 @@
     </section>
 
     <!-- Stats Section -->
-    <section class="stats-section">
+    <section class="stats">
       <div class="container">
-        <div class="row">
-          <div class="col-md-3 col-sm-6 mb-4">
-            <div class="stat-card">
-              <div class="stat-number" id="projects-counter">70</div>
-              <div class="stat-label">Projects Completed</div>
-            </div>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-number" id="projectCounter">1000+</div>
+            <div class="stat-text">Projects Completed</div>
           </div>
-          <div class="col-md-3 col-sm-6 mb-4">
-            <div class="stat-card">
-              <div class="stat-number" id="clients-counter">41</div>
-              <div class="stat-label">Happy Clients</div>
-            </div>
+
+          <div class="stat-item">
+            <div class="stat-number" id="clientCounter">80+</div>
+            <div class="stat-text">Happy Clients</div>
           </div>
-          <div class="col-md-3 col-sm-6 mb-4">
-            <div class="stat-card">
-              <div class="stat-number" id="countries-counter">8</div>
-              <div class="stat-label">Countries Served</div>
-            </div>
+
+          <div class="stat-item">
+            <div class="stat-number" id="experienceCounter">8+</div>
+            <div class="stat-text">Years Experience</div>
           </div>
-          <div class="col-md-3 col-sm-6 mb-4">
-            <div class="stat-card">
-              <div class="stat-number" id="experience-counter">17</div>
-              <div class="stat-label">Years Experience</div>
-            </div>
+
+          <div class="stat-item">
+            <div class="stat-number" id="countryCounter">16+</div>
+            <div class="stat-text">Countries Served</div>
           </div>
         </div>
       </div>
@@ -890,84 +1603,61 @@
           <h2>My Expertise</h2>
           <p>Comprehensive web solutions tailored to your business needs</p>
         </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="expertise-card">
-              <div class="expertise-icon">
-                <i class="fas fa-paint-brush"></i>
-              </div>
-              <h4>Web Design</h4>
-              <p>
-                Creating visually appealing, user-friendly interfaces with a
-                focus on UI/UX principles to enhance user engagement.
-              </p>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-paint-brush"></i>
             </div>
+            <h3>Web Design</h3>
+            <p>Creating visually stunning, user-friendly websites that convert visitors into customers with intuitive interfaces and responsive layouts.</p>
+            <a href="./services/web-design" class="btn btn-outline">Learn More</a>
           </div>
 
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="expertise-card">
-              <div class="expertise-icon">
-                <i class="fas fa-code"></i>
-              </div>
-              <h4>Web Development</h4>
-              <p>
-                Building robust, responsive websites with front-end, back-end,
-                and full-stack development expertise.
-              </p>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-code"></i>
             </div>
+            <h3>Web Development</h3>
+            <p>Building robust, scalable web applications and websites using the latest technologies for optimal performance and security.</p>
+            <a href="./services/web-development" class="btn btn-outline">Learn More</a>
           </div>
 
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="expertise-card">
-              <div class="expertise-icon">
-                <i class="fas fa-search"></i>
-              </div>
-              <h4>SEO Optimization</h4>
-              <p>
-                Implementing effective SEO strategies to improve search engine
-                rankings and drive organic traffic.
-              </p>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-chart-line"></i>
             </div>
+            <h3>SEO Optimization</h3>
+            <p>Implementing strategic SEO techniques to improve your search rankings, drive organic traffic, and increase online visibility.</p>
+            <a href="./services/website-seo" class="btn btn-outline">Learn More</a>
           </div>
 
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="expertise-card">
-              <div class="expertise-icon">
-                <i class="fas fa-mobile-alt"></i>
-              </div>
-              <h4>Responsive Design</h4>
-              <p>
-                Developing websites that provide optimal viewing experience
-                across all devices and screen sizes.
-              </p>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-mobile-alt"></i>
             </div>
+            <h3>Responsive Design</h3>
+            <p>Developing websites that provide optimal viewing experience across all devices and screen sizes.</p>
+            <a href="./services/website-seo" class="btn btn-outline">Learn More</a>
           </div>
 
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="expertise-card">
-              <div class="expertise-icon">
-                <i class="fas fa-shopping-cart"></i>
-              </div>
-              <h4>E-Commerce Solutions</h4>
-              <p>
-                Building secure, scalable online stores with seamless payment
-                integration and inventory management.
-              </p>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-shopping-cart"></i>
             </div>
+            <h3>E-Commerce Solutions</h3>
+            <p>Building secure, scalable online stores with seamless payment integration and inventory management.</p>
+            <a href="./services/digital-marketing" class="btn btn-outline"
+              >Learn More</a
+            >
           </div>
 
-          <div class="col-lg-4 col-md-6 mb-4">
-            <div class="expertise-card">
-              <div class="expertise-icon">
-                <i class="fas fa-chart-line"></i>
-              </div>
-              <h4>Digital Marketing</h4>
-              <p>
-                Driving business growth through targeted digital marketing
-                strategies and analytics-driven campaigns.
-              </p>
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-bullhorn"></i>
             </div>
+            <h3>Digital Marketing</h3>
+            <p>Developing comprehensive digital marketing strategies to grow your audience, generate leads, and increase conversions.</p>
+            <a href="./services/digital-marketing" class="btn btn-outline">Learn More</a>
           </div>
         </div>
       </div>
@@ -975,99 +1665,48 @@
 
     <!-- Clients Section -->
     <section class="clients-section section" id="clients">
-      <div class="container">
+      <div class="container-fluid">
         <div class="section-title">
           <h2>Global Clients</h2>
           <p>Trusted by businesses and organizations worldwide</p>
         </div>
-
-        <!-- <div class="row">
-          <div class="col-md-2 col-4">
-            <div class="client-logo">
-              <img
-                src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='40' viewBox='0 0 100 40'><rect width='100' height='40' fill='%23f8f9fa'/><text x='50' y='25' font-family='Arial' font-size='16' fill='%236441A5' text-anchor='middle'>Gracianna</text></svg>"
-                alt="Gracianna Winery"
-              />
-            </div>
-          </div>
-          <div class="col-md-2 col-4">
-            <div class="client-logo">
-              <img
-                src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='40' viewBox='0 0 100 40'><rect width='100' height='40' fill='%23f8f9fa'/><text x='50' y='25' font-family='Arial' font-size='16' fill='%236441A5' text-anchor='middle'>1300 Vet</text></svg>"
-                alt="1300 the vet"
-              />
-            </div>
-          </div>
-          <div class="col-md-2 col-4">
-            <div class="client-logo">
-              <img
-                src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='40' viewBox='0 0 100 40'><rect width='100' height='40' fill='%23f8f9fa'/><text x='50' y='25' font-family='Arial' font-size='16' fill='%236441A5' text-anchor='middle'>Flooring</text></svg>"
-                alt="The Flooring Company"
-              />
-            </div>
-          </div>
-          <div class="col-md-2 col-4">
-            <div class="client-logo">
-              <img
-                src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='40' viewBox='0 0 100 40'><rect width='100' height='40' fill='%23f8f9fa'/><text x='50' y='25' font-family='Arial' font-size='16' fill='%236441A5' text-anchor='middle'>Sailing</text></svg>"
-                alt="Sailing Dreams"
-              />
-            </div>
-          </div>
-          <div class="col-md-2 col-4">
-            <div class="client-logo">
-              <img
-                src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='40' viewBox='0 0 100 40'><rect width='100' height='40' fill='%23f8f9fa'/><text x='50' y='25' font-family='Arial' font-size='16' fill='%236441A5' text-anchor='middle'>Beauty</text></svg>"
-                alt="August Beauty Lab"
-              />
-            </div>
-          </div>
-          <div class="col-md-2 col-4">
-            <div class="client-logo">
-              <img
-                src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='40' viewBox='0 0 100 40'><rect width='100' height='40' fill='%23f8f9fa'/><text x='50' y='25' font-family='Arial' font-size='16' fill='%236441A5' text-anchor='middle'>CPA</text></svg>"
-                alt="CPA Australia"
-              />
-            </div>
-          </div>
-        </div> -->
-
+        
         <div class="marquee-wrapper">
           <div class="marquee-track">
             <!-- Original Logo Set -->
             <div class="client-logo">
               <img
-                src="https://anupammondal.in/image/brands/gracianna-winery.jpg"
+                src="./image/brands/gracianna-winery.jpg"
                 alt="Gracianna Winery"
               />
             </div>
             <div class="client-logo">
               <img
-                src="https://anupammondal.in/image/brands/syncware.jpg"
+                src="./image/brands/syncware.jpg"
                 alt="Syncware"
               />
             </div>
             <div class="client-logo">
               <img
-                src="https://anupammondal.in/image/brands/capstone-trading-systems.jpg"
+                src="./image/brands/capstone-trading-systems.jpg"
                 alt="Capstone Trading"
               />
             </div>
             <div class="client-logo">
               <img
-                src="https://anupammondal.in/image/brands/radiobillboards.jpg"
+                src="./image/brands/radiobillboards.jpg"
                 alt="Radio Billboards"
               />
             </div>
             <div class="client-logo">
               <img
-                src="https://anupammondal.in/image/brands/dubai-visas.jpg"
+                src="./image/brands/dubai-visas.jpg"
                 alt="Dubai Visas"
               />
             </div>
             <div class="client-logo">
               <img
-                src="https://anupammondal.in/image/brands/cpa-australia.jpg"
+                src="./image/brands/cpa-australia.jpg"
                 alt="CPA Australia"
               />
             </div>
@@ -1075,37 +1714,37 @@
             <!-- Duplicate Logo Set for Loop -->
             <div class="client-logo">
               <img
-                src="https://anupammondal.in/image/brands/gracianna-winery.jpg"
+                src="./image/brands/gracianna-winery.jpg"
                 alt="Gracianna Winery"
               />
             </div>
             <div class="client-logo">
               <img
-                src="https://anupammondal.in/image/brands/syncware.jpg"
+                src="./image/brands/syncware.jpg"
                 alt="Syncware"
               />
             </div>
             <div class="client-logo">
               <img
-                src="https://anupammondal.in/image/brands/capstone-trading-systems.jpg"
+                src="./image/brands/capstone-trading-systems.jpg"
                 alt="Capstone Trading"
               />
             </div>
             <div class="client-logo">
               <img
-                src="https://anupammondal.in/image/brands/radiobillboards.jpg"
+                src="./image/brands/radiobillboards.jpg"
                 alt="Radio Billboards"
               />
             </div>
             <div class="client-logo">
               <img
-                src="https://anupammondal.in/image/brands/dubai-visas.jpg"
+                src="./image/brands/dubai-visas.jpg"
                 alt="Dubai Visas"
               />
             </div>
             <div class="client-logo">
               <img
-                src="https://anupammondal.in/image/brands/cpa-australia.jpg"
+                src="./image/brands/cpa-australia.jpg"
                 alt="CPA Australia"
               />
             </div>
@@ -1121,102 +1760,159 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer>
       <div class="container">
-        <div class="row">
-          <div class="col-lg-4 mb-5 mb-lg-0">
-            <h4>Anupam Mondal</h4>
-            <p>
-              Expert website design, development, and SEO services to boost your
-              online presence and business growth.
-            </p>
-            <div class="social-links mt-4">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-youtube"></i></a>
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h3>Anupam Mondal</h3>
+            <small>
+              Providing expert web design, development, and SEO services to
+              businesses worldwide since 2016.
+            </small>
+            <div class="social-links">
+              <a href="https://www.facebook.com/anupammondal.in/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://goo.gl/maps/oBwMFuFssGzWz6m26" target="_blank"><i class="fab fa-google"></i></a>
+              <a href="https://www.linkedin.com/company/anupammondal" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://www.youtube.com/@anuapm" target="_blank"><i class="fab fa-youtube"></i></a>
+              <!-- <a href="#" target="_blank"><i class="fab fa-instagram"></i></a> -->
             </div>
           </div>
 
-          <div class="col-lg-2 col-md-4 mb-5 mb-md-0">
-            <h4>Quick Links</h4>
-            <ul class="list-unstyled">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Portfolio</a></li>
-              <li><a href="#">Blog</a></li>
+          <div class="footer-col">
+            <h3>Services</h3>
+            <ul class="footer-links">
+              <li><a href="./services/web-design">Web Design</a></li>
+              <li><a href="./services/web-development">Web Development</a></li>
+              <li><a href="./services/website-seo">SEO Optimization</a></li>
+              <li><a href="./services/digital-marketing">Digital Marketing</a></li>
+              <!-- <li><a href="#">E-Commerce Solutions</a></li> -->
             </ul>
           </div>
 
-          <div class="col-lg-2 col-md-4 mb-5 mb-md-0">
-            <h4>Services</h4>
-            <ul class="list-unstyled">
-              <li><a href="#">Web Design</a></li>
-              <li><a href="#">Web Development</a></li>
-              <li><a href="#">SEO Services</a></li>
-              <li><a href="#">Digital Marketing</a></li>
-              <li><a href="#">E-commerce</a></li>
+          <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="./">Home</a></li>
+              <!-- <li><a href="./services/digital-marketing">Services</a></li> -->
+              <li><a href="./about-us">About</a></li>
+              <li><a href="./portfolio">Portfolio</a></li>
+              <li><a href="./contact">Contact</a></li>
             </ul>
           </div>
 
-          <div class="col-lg-4 col-md-4">
-            <h4>Contact Info</h4>
-            <ul class="list-unstyled">
+          <div class="footer-col">
+            <h3>Contact</h3>
+            <ul class="footer-links">
               <li>
-                <i class="fas fa-map-marker-alt me-2"></i> Protapnagar, Metiari,
-                WB 743330
+                <i class="fas fa-map-marker-alt fa-lg"></i>
+                <span class="ps-2">Pratapnagar, Metiari, West Bengal, 743330</span>
               </li>
-              <li><i class="fas fa-phone-alt me-2"></i> +91 (947) 446-0058</li>
-              <li><i class="fas fa-envelope me-2"></i> a09051985@gmail.com</li>
-              <li><i class="fas fa-clock me-2"></i> Mon-Fri: 12pm - 8pm</li>
+              <li>
+                <i class="fas fa-phone"></i>
+                <span class="ps-2">+91-9474460058</span>
+              </li>
+              <!-- <li><i class="fas fa-envelope"></i> support@anupammondal.in</li> -->
+              <li>
+                <i class="fas fa-clock"></i>
+                <span class="ps-2">Mon-Fri: 9AM - 6PM</span>
+              </li>
             </ul>
           </div>
         </div>
 
         <div class="copyright">
-          <p>&copy; 2025 Anupam Mondal. All Rights Reserved.</p>
+          <p class="mb-0">&copy; 2025 Anupam Mondal. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous">
+    </script>
     <script>
+      // Mobile menu toggle
+      const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+      const navLinks = document.getElementById("navLinks");
+
+      // mobileMenuBtn.addEventListener("click", () => {
+      //   navLinks.classList.toggle("active");
+      // });
+
+      // Header scroll effect
+      const header = document.getElementById("header");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 100) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      });
+
       // Counter animation
       function animateCounter(elementId, finalValue, duration) {
         const element = document.getElementById(elementId);
-        let startValue = 0;
-        const increment = finalValue / (duration / 16); // 16ms per frame (approx 60fps)
-        let currentValue = startValue;
+        const increment = finalValue / (duration / 16);
+        let currentValue = 0;
 
-        const counter = setInterval(() => {
+        const timer = setInterval(() => {
           currentValue += increment;
           if (currentValue >= finalValue) {
+            clearInterval(timer);
             currentValue = finalValue;
-            clearInterval(counter);
           }
-          element.textContent = Math.floor(currentValue);
+          element.textContent =
+            Math.ceil(currentValue) +
+            (elementId === "projectCounter"
+              ? "+"
+              : elementId === "clientCounter"
+              ? "+"
+              : elementId === "experienceCounter"
+              ? "+"
+              : elementId === "countryCounter"
+              ? "+"
+              : "");
         }, 16);
       }
 
-      // Initialize counters when page loads
-      document.addEventListener("DOMContentLoaded", () => {
-        setTimeout(() => {
-          animateCounter("projects-counter", 70, 2000);
-          animateCounter("clients-counter", 41, 2000);
-          animateCounter("countries-counter", 8, 2000);
-          animateCounter("experience-counter", 17, 2000);
-        }, 500);
+      // Initialize counters when in viewport
+      function initCounters() {
+        const statsSection = document.querySelector(".stats");
+        const sectionPosition = statsSection.getBoundingClientRect();
 
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-          anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute("href")).scrollIntoView({
+        if (sectionPosition.top < window.innerHeight - 100) {
+          animateCounter("projectCounter", 1000, 2000);
+          animateCounter("clientCounter", 80, 1500);
+          animateCounter("experienceCounter", 8, 1000);
+          animateCounter("countryCounter", 16, 1200);
+          window.removeEventListener("scroll", initCounters);
+        }
+      }
+
+      window.addEventListener("scroll", initCounters);
+      // Initialize on load if already in view
+      window.addEventListener("load", initCounters);
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href");
+          const targetElement = document.querySelector(targetId);
+
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
               behavior: "smooth",
             });
-          });
+
+            // Close mobile menu if open
+            if (navLinks.classList.contains("active")) {
+              navLinks.classList.remove("active");
+            }
+          }
         });
       });
     </script>
