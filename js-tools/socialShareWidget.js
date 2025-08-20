@@ -17,7 +17,7 @@ class SocialShareWidget {
       {
         name: "Facebook",
         url: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(this.pageUrl + ' ')}`,
-        icon: "<i class='bi bi-facebook'></i>", // Replace with an SVG or image for better visuals
+        icon: "<i class='bi bi-facebook'></i>",
       },
       {
         name: "Twitter",
@@ -36,7 +36,7 @@ class SocialShareWidget {
       },
     ];
 
-    container.innerHTML = socialPlatforms
+    let buttonsHtml = socialPlatforms
       .map(
         (platform) => `
           <a href="${platform.url}" target="_blank" class="btn btn-outline-dark rounded-pill social-share-button px-4">
@@ -46,6 +46,41 @@ class SocialShareWidget {
         `
       )
       .join("");
+
+    // Add the copy URL button
+    buttonsHtml += `
+      <button type="button" class="btn btn-outline-dark rounded-pill social-share-button px-4" id="copy-url-btn">
+        <span><i class='bi bi-clipboard'></i></span>
+        Copy URL
+      </button>
+    `;
+
+    container.innerHTML = buttonsHtml;
+
+    // Add event listener for copy button
+    const copyBtn = container.querySelector("#copy-url-btn");
+    if (copyBtn) {
+      copyBtn.addEventListener("click", () => {
+        // Force HTTPS in copied URL
+        let url = this.pageUrl;
+        if (url.startsWith('http://')) {
+          url = 'https://' + url.substring(7);
+        }
+        navigator.clipboard.writeText(url)
+          .then(() => {
+            copyBtn.innerHTML = `<span><i class='bi bi-clipboard-check'></i></span> Copied!`;
+            setTimeout(() => {
+              copyBtn.innerHTML = `<span><i class='bi bi-clipboard'></i></span> Copy URL`;
+            }, 1500);
+          })
+          .catch(() => {
+            copyBtn.innerHTML = `<span><i class='bi bi-clipboard-x'></i></span> Failed!`;
+            setTimeout(() => {
+              copyBtn.innerHTML = `<span><i class='bi bi-clipboard'></i></span> Copy URL`;
+            }, 1500);
+          });
+      });
+    }
 
     this.addStyling(container);
   }
