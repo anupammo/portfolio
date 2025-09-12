@@ -1013,6 +1013,67 @@
         }
       }
     </style>
+  <style>
+    .cta {
+      background: var(--primary);
+      color: white;
+      padding: 5rem 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta:before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      left: -100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .cta:after {
+      content: '';
+      position: absolute;
+      bottom: -100px;
+      right: -100px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .cta h2 {
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .cta h2::after {
+      background: white;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .cta p {
+      max-width: 700px;
+      margin: 0 auto 40px;
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    .cta .btn {
+      background: white;
+      color: var(--primary);
+    }
+
+    .cta .btn:hover {
+      background: var(--light);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+  </style>
 </head>
 <body>
     <!-- Header -->
@@ -1020,7 +1081,7 @@
       <div class="container">
         <nav class="navbar navbar-expand-lg sticky-top">
           <div class="container">
-            <a class="navbar-brand" href="./">Anupam Mondal</a>
+            <a class="navbar-brand" href="../">Anupam Mondal</a>
             <button
               class="navbar-toggler"
               type="button"
@@ -1035,7 +1096,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Home</a>
+                  <a class="nav-link" href="../">Home</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a
@@ -1051,22 +1112,22 @@
                     <li>
                       <a
                         class="dropdown-item"
-                        href="./services/digital-marketing"
+                        href="../services/digital-marketing"
                         >Digital Marketing</a
                       >
                     </li>
                     <li>
-                      <a class="dropdown-item" href="./services/web-design"
+                      <a class="dropdown-item" href="../services/web-design"
                         >Web Design</a
                       >
                     </li>
                     <li>
-                      <a class="dropdown-item" href="./services/web-development"
+                      <a class="dropdown-item" href="../services/web-development"
                         >Web Development</a
                       >
                     </li>
                     <li>
-                      <a class="dropdown-item" href="./services/website-seo"
+                      <a class="dropdown-item" href="../services/website-seo"
                         >Website SEO</a
                       >
                     </li>
@@ -1084,10 +1145,10 @@
                   </a>
                   <ul class="dropdown-menu">
                     <li>
-                      <a class="dropdown-item" href="./about-us">About Us</a>
+                      <a class="dropdown-item" href="../about-us">About Us</a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="./portfolio">Portfolio</a>
+                      <a class="dropdown-item" href="../portfolio">Portfolio</a>
                     </li>
                   </ul>
                 </li>
@@ -1095,7 +1156,7 @@
                   <a class="nav-link active" href="./contact">Contact</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./blog/">Blog</a>
+                  <a class="nav-link" href="../blog/">Blog</a>
                 </li>
               </ul>
               <!-- <a href="./contact" class="btn btn-primary ms-3">Get Started</a> -->
@@ -1413,98 +1474,177 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
-                    <h2 class="mb-4">Ready to Transform Your Digital Presence?</h2>
-                    <p class="lead mb-5">Get a free consultation and discover how our digital marketing services can drive growth for your business.</p>
-                    <a href="#" class="btn btn-primary btn-lg px-5 py-3">Schedule Free Consultation</a>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- CTA Section -->
+  <section class="cta" id="contact">
+    <div class="container">
+      <h2 class="pb-4">Ready to Transform Your Online Presence?</h2>
+      <p class="pt-4">
+        Let's discuss how I can help you achieve your digital goals with a
+        custom solution tailored to your business needs.
+      </p>
+      <a href="./contact" class="btn">Get Started Today</a>
+    </div>
+  </section>
 
     <!-- FAQ Section -->
-    <section id="faq" class="py-5">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-12 text-center">
-                    <h2 class="section-title">Frequently Asked Questions</h2>
-                    <p class="lead">Find answers to common questions about our services</p>
-                </div>
+    <!-- <section id="faq" class="py-5">
+      <div class="container">
+          <div class="row mb-5">
+              <div class="col-12 text-center">
+                  <h2 class="section-title">Frequently Asked Questions</h2>
+                  <p class="lead">Find answers to common questions about our services</p>
+              </div>
+          </div>
+          
+          <div class="row justify-content-center">
+              <div class="col-lg-8">
+                  <div class="faq-item">
+                      <div class="accordion-header">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                              What are digital marketing services?
+                          </button>
+                      </div>
+                      <div id="faq1" class="accordion-collapse collapse show">
+                          <div class="accordion-body">
+                              Digital marketing services encompass a wide range of online strategies aimed at promoting your business and enhancing your online presence. These include SEO, PPC advertising, social media marketing, content marketing, email marketing, and more. Our comprehensive services help businesses reach their target audience and achieve their marketing goals.
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <div class="faq-item">
+                      <div class="accordion-header">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                              How can SEO benefit my business?
+                          </button>
+                      </div>
+                      <div id="faq2" class="accordion-collapse collapse">
+                          <div class="accordion-body">
+                              SEO (Search Engine Optimization) improves your website's visibility in search engine results, driving organic traffic to your site. This leads to higher brand awareness, more qualified leads, and increased conversions. With our expert SEO strategies, your business can achieve sustainable growth and a competitive edge in your industry.
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <div class="faq-item">
+                      <div class="accordion-header">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                              How long does it take to see results?
+                          </button>
+                      </div>
+                      <div id="faq3" class="accordion-collapse collapse">
+                          <div class="accordion-body">
+                              The timeline for seeing results varies depending on your industry, competition, and the strategies implemented. Some tactics like PPC can deliver immediate results, while SEO typically takes 3-6 months to show significant impact. We provide regular performance reports so you can track progress from day one.
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <div class="faq-item">
+                      <div class="accordion-header">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                              Do you work with businesses in any industry?
+                          </button>
+                      </div>
+                      <div id="faq4" class="accordion-collapse collapse">
+                          <div class="accordion-body">
+                              Yes, we have experience working with businesses across various industries including e-commerce, healthcare, finance, education, technology, and more. Our strategies are tailored to meet the unique challenges and opportunities of each industry we serve.
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <div class="faq-item">
+                      <div class="accordion-header">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                              How do you measure success?
+                          </button>
+                      </div>
+                      <div id="faq5" class="accordion-collapse collapse">
+                          <div class="accordion-body">
+                              We measure success based on your specific business goals. Key metrics may include website traffic, conversion rates, lead generation, sales revenue, ROI, and more. Before starting any campaign, we establish clear KPIs and provide detailed monthly reports tracking your progress toward these objectives.
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </section> -->
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        <h2 class="text-center section-title">Frequently Asked Questions</h2>
+        <p class="text-center text-muted mb-5">Find answers to common questions about our services</p>
+
+        <div class="accordion" id="faqAccordion">
+          <!-- FAQ 1 -->
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                What are digital marketing services?
+              </button>
+            </h3>
+            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Digital marketing services encompass a wide range of online strategies aimed at promoting your business and enhancing your online presence. These include SEO, PPC advertising, social media marketing, content marketing, email marketing, and more. Our comprehensive services help businesses reach their target audience and achieve their marketing goals.
+              </div>
             </div>
-            
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="faq-item">
-                        <div class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                                What are digital marketing services?
-                            </button>
-                        </div>
-                        <div id="faq1" class="accordion-collapse collapse show">
-                            <div class="accordion-body">
-                                Digital marketing services encompass a wide range of online strategies aimed at promoting your business and enhancing your online presence. These include SEO, PPC advertising, social media marketing, content marketing, email marketing, and more. Our comprehensive services help businesses reach their target audience and achieve their marketing goals.
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <div class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                                How can SEO benefit my business?
-                            </button>
-                        </div>
-                        <div id="faq2" class="accordion-collapse collapse">
-                            <div class="accordion-body">
-                                SEO (Search Engine Optimization) improves your website's visibility in search engine results, driving organic traffic to your site. This leads to higher brand awareness, more qualified leads, and increased conversions. With our expert SEO strategies, your business can achieve sustainable growth and a competitive edge in your industry.
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <div class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                                How long does it take to see results?
-                            </button>
-                        </div>
-                        <div id="faq3" class="accordion-collapse collapse">
-                            <div class="accordion-body">
-                                The timeline for seeing results varies depending on your industry, competition, and the strategies implemented. Some tactics like PPC can deliver immediate results, while SEO typically takes 3-6 months to show significant impact. We provide regular performance reports so you can track progress from day one.
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <div class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-                                Do you work with businesses in any industry?
-                            </button>
-                        </div>
-                        <div id="faq4" class="accordion-collapse collapse">
-                            <div class="accordion-body">
-                                Yes, we have experience working with businesses across various industries including e-commerce, healthcare, finance, education, technology, and more. Our strategies are tailored to meet the unique challenges and opportunities of each industry we serve.
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="faq-item">
-                        <div class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
-                                How do you measure success?
-                            </button>
-                        </div>
-                        <div id="faq5" class="accordion-collapse collapse">
-                            <div class="accordion-body">
-                                We measure success based on your specific business goals. Key metrics may include website traffic, conversion rates, lead generation, sales revenue, ROI, and more. Before starting any campaign, we establish clear KPIs and provide detailed monthly reports tracking your progress toward these objectives.
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                How can SEO benefit my business?
+              </button>
+            </h3>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                SEO (Search Engine Optimization) improves your website's visibility in search engine results, driving organic traffic to your site. This leads to higher brand awareness, more qualified leads, and increased conversions. With our expert SEO strategies, your business can achieve sustainable growth and a competitive edge in your industry.
+              </div>
             </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                How long does it take to see results?
+              </button>
+            </h3>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                The timeline for seeing results varies depending on your industry, competition, and the strategies implemented. Some tactics like PPC can deliver immediate results, while SEO typically takes 3-6 months to show significant impact. We provide regular performance reports so you can track progress from day one.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                Do you work with businesses in any industry?
+              </button>
+            </h3>
+            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Yes, we have experience working with businesses across various industries including e-commerce, healthcare, finance, education, technology, and more. Our strategies are tailored to meet the unique challenges and opportunities of each industry we serve.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                How do you measure success?
+              </button>
+            </h3>
+            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                We measure success based on your specific business goals. Key metrics may include website traffic, conversion rates, lead generation, sales revenue, ROI, and more. Before starting any campaign, we establish clear KPIs and provide detailed monthly reports tracking your progress toward these objectives.
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
@@ -1529,10 +1669,10 @@
           <div class="footer-col">
             <h3>Services</h3>
             <ul class="footer-links">
-              <li><a href="./services/web-design">Web Design</a></li>
-              <li><a href="./services/web-development">Web Development</a></li>
-              <li><a href="./services/website-seo">SEO Optimization</a></li>
-              <li><a href="./services/digital-marketing">Digital Marketing</a></li>
+              <li><a href="../services/web-design">Web Design</a></li>
+              <li><a href="../services/web-development">Web Development</a></li>
+              <li><a href="../services/website-seo">SEO Optimization</a></li>
+              <li><a href="../services/digital-marketing">Digital Marketing</a></li>
               <!-- <li><a href="#">E-Commerce Solutions</a></li> -->
             </ul>
           </div>
@@ -1540,11 +1680,11 @@
           <div class="footer-col">
             <h3>Quick Links</h3>
             <ul class="footer-links">
-              <li><a href="./">Home</a></li>
-              <!-- <li><a href="./services/digital-marketing">Services</a></li> -->
-              <li><a href="./about-us">About</a></li>
-              <li><a href="./portfolio">Portfolio</a></li>
-              <li><a href="./contact">Contact</a></li>
+              <li><a href="../">Home</a></li>
+              <!-- <li><a href="../services/digital-marketing">Services</a></li> -->
+              <li><a href="../about-us">About</a></li>
+              <li><a href="../portfolio">Portfolio</a></li>
+              <li><a href="../contact">Contact</a></li>
             </ul>
           </div>
 
