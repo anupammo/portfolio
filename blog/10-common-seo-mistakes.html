@@ -1,611 +1,950 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>10 Common SEO Mistakes and How to Avoid Them</title>
-        <meta name="description" content="Avoid common SEO mistakes like keyword stuffing, slow load times, poor backlinks, and missing mobile optimization. Learn actionable fixes to boost rankings.">
-        <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "NewsArticle",
-            "mainEntityOfPage": {
-                "@type": "WebPage",
-                "@id": "https://anupammondal.in/blog/10-common-seo-mistakes"
-            },
-            "headline": "10 Common SEO Mistakes and How to Avoid Them",
-            "description": "Guide covering top SEO errors: weak keyword research, mobile issues, slow speed, duplicate content, poor backlinks, low-quality meta tags, lack of analytics, and more.",
-            "image": [
-                "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&w=1200",
-                "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&w=800",
-                "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&w=400"
-            ],
-            "datePublished": "2024-10-27T03:58:19+05:30",
-            "dateModified": "2025-06-23T19:16:10+05:30",
-            "author": {
-                "@type": "Person",
-                "name": "Anupam Mondal",
-                "url": "https://anupammondal.in/about-us"
-            },
-            "publisher": {
-                "@type": "Organization",
-                "name": "Anupam Mondal",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://anupammondal.in/image/profile/anupam-mondal-freelancer.jpg"
-                }
+    <title>10 Common SEO Mistakes and How to Avoid Them</title>
+    <meta name="description"
+        content="Avoid common SEO mistakes like keyword stuffing, slow load times, poor backlinks, and missing mobile optimization. Learn actionable fixes to boost rankings.">
+    <link rel="canonical" href="https://anupammondal.in/blog/10-common-seo-mistakes">
+    <meta property="og:title" content="10 Common SEO Mistakes and How to Avoid Them">
+    <meta property="og:description" content="Avoid common SEO mistakes like keyword stuffing, slow load times, poor backlinks, and missing mobile optimization. Learn actionable fixes to boost rankings.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://anupammondal.in/blog/10-common-seo-mistakes">
+    <meta property="og:site_name" content="Anupam Mondal">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&w=1200">
+    <meta property="article:published_time" content="2024-10-27T03:58:19+05:30">
+    <meta property="article:modified_time" content="2025-06-23T19:16:10+05:30">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="10 Common SEO Mistakes and How to Avoid Them">
+    <meta name="twitter:description" content="Avoid common SEO mistakes like keyword stuffing, slow load times, poor backlinks, and missing mobile optimization. Learn actionable fixes to boost rankings.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&w=1200">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "NewsArticle",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://anupammondal.in/blog/10-common-seo-mistakes"
+        },
+        "headline": "10 Common SEO Mistakes and How to Avoid Them",
+        "description": "Guide covering top SEO errors: weak keyword research, mobile issues, slow speed, duplicate content, poor backlinks, low-quality meta tags, lack of analytics, and more.",
+        "image": [
+            "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&w=1200",
+            "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&w=800",
+            "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&w=400"
+        ],
+        "datePublished": "2024-10-27T03:58:19+05:30",
+        "dateModified": "2025-06-23T19:16:10+05:30",
+        "author": {
+            "@type": "Person",
+            "name": "Anupam Mondal",
+            "url": "https://anupammondal.in/about-us"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Anupam Mondal",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://anupammondal.in/image/profile/anupam-mondal-freelancer.jpg"
             }
         }
-        </script>
+    }
+    </script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <style>
-        :root {
-            --primary-color: #6441A5;
-            --secondary-color: #ffffff;
-            --accent-color: #f8f9fa;
+        /* Hero section base */
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: #fff;
+            overflow: hidden;
         }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
+
+        /* Glass effect wrapper */
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            /* border-radius: 1rem; */
+            padding: 2rem;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
         }
-        
-        .bg-anupam {
-            background-color: var(--primary-color);
+
+        /* Headline styling */
+        .hero h1 {
+            line-height: 1.3;
+            margin-bottom: 1rem;
         }
-        
-        .txt-anupam {
-            color: var(--primary-color) !important;
+
+        .hero h1 .display-4 {
+            font-size: 3rem;
+            color: #fff;
         }
-        
-        h1, h2, h3, h4, h5, h6 {
-            color: var(--primary-color);
+
+        .hero h1 strong.text-dark {
+            color: #ffc107;
+        }
+
+        /* Paragraph styling */
+        .hero p {
+            color: #f0f0f0;
+            font-size: 1rem;
+            max-width: 700px;
+        }
+
+        /* Lead paragraph */
+        .hero .lead {
+            font-size: 1.1rem;
+            color: #fff;
+        }
+
+        /* Button styling */
+        .hero .btn {
             font-weight: 500;
-        }
-        
-        .navbar {
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        
-        .navbar-brand {
-            font-weight: 600;
-            color: var(--primary-color);
-        }
-        
-        .nav-link {
-            font-weight: 500;
-        }
-        
-        .breadcrumb {
-            background-color: transparent;
-            padding-left: 0;
-        }
-        
-        .card {
-            border: none;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-            border-radius: 12px;
-            transition: transform 0.3s ease;
-        }
-        
-        .card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .social-share-button {
+            border: 2px solid #fff;
             transition: all 0.3s ease;
         }
-        
-        .social-share-button:hover {
-            background-color: var(--primary-color);
-            color: white !important;
+
+        .hero .btn:hover {
+            background-color: #fff;
+            color: var(--primary);
+            transform: translateY(-2px);
         }
-        
-        .faq-answer {
-            border-left: 5px solid var(--primary-color);
-            background-color: #f8f9fa;
-            padding: 20px;
-            border-radius: 0 8px 8px 0;
+
+        /* Image styling */
+        .hero img.card {
+            border-radius: 1rem;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
         }
-        
-        .author-img {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
+
+        .hero img.card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Responsive tweaks */
+        @media (max-width: 768px) {
+            .hero h1 .display-4 {
+                font-size: 2.2rem;
+            }
+
+            .hero .btn {
+                width: 100%;
+                margin-bottom: 0.5rem;
+            }
+
+            .hero img.card {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+        }
+
+        .card {
+            position: relative;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-img-top {
+            width: 100%;
+            height: auto;
             object-fit: cover;
-            border: 3px solid var(--primary-color);
+            display: block;
+            transition: transform 0.4s ease;
         }
-        
-        .pub-info {
-            border-bottom: 1px dashed #ddd;
+
+        .card:hover .card-img-top {
+            transform: scale(1.05);
+        }
+
+        /* Overlay effect using absolute positioning */
+        .card-body.blog-bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(to top, rgb(0 0 0), rgba(0, 0, 0, 0));
+            color: #fff;
+            z-index: 2;
+            border-bottom-left-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        /* Optional glass effect */
+        .glass-effect {
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+
+        /* Typography */
+        .card-body h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+
+        .card-body p {
+            font-size: 0.9rem;
+            color: #ddd;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-body i {
+            color: #ffc107;
+        }
+
+        /* Link styling */
+        .nav-link {
+            text-decoration: none;
+            color: inherit;
+            position: relative;
+            z-index: 3;
+        }
+    </style>
+    <style>
+        :root {
+            --primary: #6441a5;
+            --primary-light: #7d5cc1;
+            --primary-dark: #4e3280;
+            --secondary: #ff6b6b;
+            --dark: #1a1a2e;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+            --transition: all 0.3s ease;
+        }
+
+        .text-primary {
+            color: var(--primary) !important;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #fff;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 700;
+            line-height: 1.3;
+            color: var(--dark);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        /* h2::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        } */
+
+        .text-center h2::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary);
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--primary-light);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 4px 15px rgba(100, 65, 165, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-light);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(100, 65, 165, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* section {
+            padding: 100px 0;
+        } */
+
+        .text-primary {
+            color: var(--primary);
+        }
+
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            padding: 10px 0;
+            background: white;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .logo span {
+            color: var(--dark);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: var(--dark);
+            font-weight: 500;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            color: var(--dark);
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 80px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .footer-col h3 {
+            color: white;
+            margin-bottom: 25px;
+            font-size: 1.5rem;
+            position: relative;
             padding-bottom: 15px;
         }
-        
-        footer {
-            background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 0) 30%);
-            padding-top: 80px;
+
+        .footer-col h3::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--primary);
         }
-        
-        .footer-content {
-            background-color: var(--primary-color);
-            color: white;
-            border-radius: 20px 20px 0 0;
-            padding-top: 50px;
-            padding-bottom: 30px;
+
+        .footer-links {
+            list-style: none;
+            padding-left: 0px;
         }
-        
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
         .footer-links a {
-            color: rgba(255, 255, 255, 0.8) !important;
-            text-decoration: none;
-            transition: all 0.3s ease;
+            color: rgba(255, 255, 255, 0.7);
+            transition: var(--transition);
         }
-        
+
         .footer-links a:hover {
-            color: white !important;
+            color: white;
             padding-left: 5px;
         }
-        
-        .content-img {
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            max-width: 100%;
-            height: auto;
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
         }
-        
-        .content-img:hover {
-            transform: scale(1.02);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-        }
-        
-        .toc-card {
-            position: sticky;
-            top: 20px;
-        }
-        
-        .section-highlight {
-            background: linear-gradient(120deg, rgba(100, 65, 165, 0.1), rgba(100, 65, 165, 0.05));
-            border-radius: 12px;
-            padding: 30px;
-            margin: 30px 0;
-        }
-        
-        .mistake-number {
-            display: inline-block;
-            width: 36px;
-            height: 36px;
-            background-color: var(--primary-color);
-            color: white;
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .copyright {
             text-align: center;
-            line-height: 36px;
-            margin-right: 15px;
-            font-weight: bold;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
         }
     </style>
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">Anupam Mondal</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Services</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Digital Marketing</a></li>
-                            <li><a class="dropdown-item" href="#">Web Design</a></li>
-                            <li><a class="dropdown-item" href="#">Web Development</a></li>
-                            <li><a class="dropdown-item" href="#">Website SEO</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">About</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">About</a></li>
-                            <li><a class="dropdown-item" href="#">Portfolio</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Blog</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Blog Header -->
-    <header class="py-5">
+<body>
+    <header id="header">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a href="#">Blog</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">10 Common SEO Mistakes</li>
-                        </ol>
-                    </nav>
-                    
-                    <h1 class="display-4 fw-bold mb-4">10 Common SEO Mistakes and How to Avoid Them</h1>
-                    
-                    <div class="d-flex align-items-center pub-info mb-4">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="Author" class="author-img me-3">
-                        <div>
-                            <p class="mb-0"><strong class="txt-anupam">Anupam Mondal</strong></p>
-                            <div class="d-flex text-muted">
-                                <span class="me-3"><strong class="txt-anupam">Published:</strong> Nov 11, 2024</span>
-                                <span><strong class="txt-anupam">Modified:</strong> Apr 21, 2025</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="lead mb-4 p-3 bg-light rounded">
-                        <p>Search engine optimization (SEO) is crucial for improving your website's visibility and driving organic traffic. However, many businesses fall into common SEO traps that can hinder their performance. In this guide, we'll explore the top 10 SEO mistakes and how you can avoid them.</p>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4">
-                    <div class="card toc-card mb-4">
-                        <div class="card-body">
-                            <h3 class="h5 mb-4"><i class="bi bi-list-task me-2 txt-anupam"></i> Table of Contents</h3>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item bg-transparent d-flex align-items-center">
-                                    <i class="bi bi-chevron-right me-2 txt-anupam"></i>
-                                    <a href="#keywords" class="text-decoration-none">Keyword & Mobile Mistakes</a>
-                                </li>
-                                <li class="list-group-item bg-transparent d-flex align-items-center">
-                                    <i class="bi bi-chevron-right me-2 txt-anupam"></i>
-                                    <a href="#content" class="text-decoration-none">Content & Backlink Issues</a>
-                                </li>
-                                <li class="list-group-item bg-transparent d-flex align-items-center">
-                                    <i class="bi bi-chevron-right me-2 txt-anupam"></i>
-                                    <a href="#analytics" class="text-decoration-none">Technical & Analytics</a>
-                                </li>
-                                <li class="list-group-item bg-transparent d-flex align-items-center">
-                                    <i class="bi bi-chevron-right me-2 txt-anupam"></i>
-                                    <a href="#seo" class="text-decoration-none">Local SEO & Content Updates</a>
-                                </li>
-                                <li class="list-group-item bg-transparent d-flex align-items-center">
-                                    <i class="bi bi-chevron-right me-2 txt-anupam"></i>
-                                    <a href="#faqs" class="text-decoration-none">Frequently Asked Questions</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="text-center">
-                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="SEO Optimization" class="img-fluid rounded content-img">
+            <nav class="navbar navbar-expand-lg sticky-top">
+                <div class="container">
+                    <a class="navbar-brand" href="../">Anupam Mondal</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Services
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item" href="../services/digital-marketing">Digital
+                                            Marketing</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="../services/web-design">Web Design</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="../services/web-development">Web Development</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="../services/website-seo">Website SEO</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    About
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item" href="../about-us">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="../portfolio">Portfolio</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="../contact">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../blog/">Blog</a>
+                            </li>
+                        </ul>
+                        <!-- <a href="./contact" class="btn btn-primary ms-3">Get Started</a> -->
                     </div>
                 </div>
-            </div>
+            </nav>
         </div>
     </header>
 
     <!-- Main Content -->
-    <main class="py-5">
-        <div class="container">
-            <!-- Section 1: Keywords & Mobile -->
-            <section id="keywords" class="mb-5">
+    <article>
+        <section class="my-5 pt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-12">
+                        <h1 class="fs-1 mt-5 pt-5">10 Common <strong>SEO Mistakes</strong> and <strong>How to
+                                Avoid</strong> Them</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb fs-6">
+                                <li class="breadcrumb-item"><a href="../">Home</a></li>
+                                <li class="breadcrumb-item"><a href="../blog/">Blog</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    <a href="../blog/10-common-seo-mistakes" title="10 Common SEO Mistakes and How to Avoid Them">10 Common SEO Mistakes and How to Avoid Them</a>
+                                </li>
+                            </ol>
+                        </nav>
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <p id="pub-date" class="lead fs-6 me-3"><strong class="txt-anupam">Published on:
+                                    </strong><time datetime="2024-10-27">Oct 27, 2024</time></p>
+                            </li>
+                            <li class="nav-item">
+                                <p id="mod-date" class="lead fs-6 me-3"><strong class="txt-anupam">Last updated on:
+                                    </strong> <time datetime="2025-06-23">Jun 23, 2025</time></p>
+                            </li>
+                            <li class="nav-item">
+                                <p id="publisher" class="lead fs-6 me-3"><strong class="txt-anupam">Published by:
+                                    </strong> <a class="text-dark fw-bold" href="../about-us">Anupam Mondal</a></p>
+                            </li>
+                        </ul>
+                        <p>Search Engine Optimization (SEO) is crucial for improving your website's
+                            visibility and attracting organic traffic. However, many businesses make common SEO mistakes
+                            that can hinder their efforts. In this article, we'll explore ten of these mistakes and
+                            provide actionable tips on how to avoid them.</p>
+                    </div>
+                    <div class="col-md-6 col-12 px-5">
+                        <img class="rounded img-fluid my-5" src="../image/blog/10-common-seo-mistakes.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 1: Keywords & Mobile -->
+        <section id="keywords" class="mb-5">
+            <div class="container">
                 <div class="row">
                     <div class="col-lg-4">
-                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Keyword Research" class="img-fluid rounded content-img mb-4">
+                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+                            alt="Keyword Research" class="img-fluid rounded content-img mb-4">
                     </div>
                     <div class="col-lg-8">
-                        <div class="section-highlight">
-                            <h2 class="h3 mb-4 d-flex align-items-center">
-                                <span class="mistake-number">1</span>
-                                Neglecting Keyword Research
-                            </h2>
-                            <p class="lead">One of the most fundamental aspects of SEO is keyword research. Neglecting this step can result in targeting the wrong keywords. Use tools like Google Keyword Planner and Ahrefs to identify high-value keywords and long-tail keywords relevant to your business.</p>
-                        </div>
-                        
-                        <div class="section-highlight">
-                            <h2 class="h3 mb-4 d-flex align-items-center">
-                                <span class="mistake-number">2</span>
-                                Ignoring Mobile Optimization
-                            </h2>
-                            <p class="lead">With more users accessing the web on mobile devices, having a mobile-friendly website is essential. Ensure your website is responsive and offers a seamless experience across all devices. Google's Mobile-Friendly Test can help you assess your site's mobile performance.</p>
-                        </div>
-                        
-                        <div class="section-highlight">
-                            <h2 class="h3 mb-4 d-flex align-items-center">
-                                <span class="mistake-number">3</span>
-                                Overloading with Keywords
-                            </h2>
-                            <p class="lead">Keyword stuffing can do more harm than good. Focus on creating quality content that naturally incorporates keywords. Aim for a keyword density of around 1-2% and prioritize user experience over keyword count.</p>
-                        </div>
+                        <h2>1. Neglecting Keyword Research</h2>
+                        <p>One of the most fundamental aspects of SEO is keyword research. Neglecting this
+                            step can result in targeting the wrong keywords. Use tools like Google Keyword Planner and
+                            Ahrefs to identify high-value keywords and long-tail keywords relevant to your business.</p>
+
+
+                        <h2>2. Ignoring Mobile Optimization</h2>
+                        <p>With more users accessing the web on mobile devices, having a mobile-friendly
+                            website is essential. Ensure your website is responsive and offers a seamless experience
+                            across all devices. Google's Mobile-Friendly Test can help you assess your site's mobile
+                            performance.</p>
+
+
+                        <h2>3. Overloading with Keywords</h2>
+                        <p>Keyword stuffing can do more harm than good. Focus on creating quality content
+                            that naturally incorporates keywords. Aim for a keyword density of around 1-2% and
+                            prioritize user experience over keyword count.</p>
                     </div>
                 </div>
-            </section>
-            
-            <!-- Section 2: Content & Backlinks -->
-            <section id="content" class="mb-5 py-5 bg-light">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-10">
-                            <div class="section-highlight">
-                                <h2 class="h3 mb-4 d-flex align-items-center">
-                                    <span class="mistake-number">4</span>
-                                    Duplicate Content
-                                </h2>
-                                <p class="lead">Duplicate content can confuse search engines and dilute your rankings. Use tools like Copyscape to identify and eliminate duplicate content. Ensure each page on your website offers unique and valuable information.</p>
-                            </div>
-                            
-                            <div class="section-highlight">
-                                <h2 class="h3 mb-4 d-flex align-items-center">
-                                    <span class="mistake-number">5</span>
-                                    Poor Quality Backlinks
-                                </h2>
-                                <p class="lead">Not all backlinks are created equal. Focus on acquiring high-quality, relevant backlinks from reputable sources. Avoid black-hat SEO tactics like buying links, as they can result in penalties from search engines.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Section 3: Technical & Analytics -->
-            <section id="analytics" class="mb-5">
-                <div class="row">
-                    <div class="col-lg-8">
-                        <div class="section-highlight">
-                            <h2 class="h3 mb-4 d-flex align-items-center">
-                                <span class="mistake-number">6</span>
-                                Ignoring Meta Tags
-                            </h2>
-                            <p class="lead">Meta tags, including title tags and meta descriptions, play a crucial role in SEO. Ensure each page has unique and optimized meta tags that accurately describe the content and include relevant keywords.</p>
-                        </div>
-                        
-                        <div class="section-highlight">
-                            <h2 class="h3 mb-4 d-flex align-items-center">
-                                <span class="mistake-number">7</span>
-                                Slow Page Load Times
-                            </h2>
-                            <p class="lead">Page speed is a critical ranking factor. Use tools like Google PageSpeed Insights to identify and fix issues that are slowing down your website. Compress images, enable browser caching, and minimize HTTP requests to improve load times.</p>
-                        </div>
-                        
-                        <div class="section-highlight">
-                            <h2 class="h3 mb-4 d-flex align-items-center">
-                                <span class="mistake-number">8</span>
-                                Not Using Analytics
-                            </h2>
-                            <p class="lead">Without analytics, you're operating in the dark. Use tools like Google Analytics and Google Search Console to track your SEO performance and make data-driven decisions. Regularly review your analytics to identify areas for improvement.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="SEO Analytics" class="img-fluid rounded content-img mt-5">
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Section 4: Local SEO & Content Updates -->
-            <section id="seo" class="mb-5 py-5 bg-light">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-10">
-                            <div class="section-highlight">
-                                <h2 class="h3 mb-4 d-flex align-items-center">
-                                    <span class="mistake-number">9</span>
-                                    Failing to Optimize for Local SEO
-                                </h2>
-                                <p class="lead">Local SEO is essential for businesses targeting a specific geographic area. Ensure your business is listed on Google My Business and other local directories. Optimize your website with local keywords and include your location in your content and meta tags.</p>
-                            </div>
-                            
-                            <div class="section-highlight">
-                                <h2 class="h3 mb-4 d-flex align-items-center">
-                                    <span class="mistake-number">10</span>
-                                    Not Updating Content Regularly
-                                </h2>
-                                <p class="lead">Search engines favor fresh content. Regularly update your website with new blog posts, articles, and other content. Ensure your existing content remains relevant by revisiting and updating it periodically.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- FAQ Section -->
-            <section id="faqs" class="py-5">
+            </div>
+        </section>
+
+        <!-- Section 2: Content & Backlinks -->
+        <section id="content" class="mb-5 py-5 bg-light">
+            <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-lg-10">
-                        <div class="text-center mb-5">
-                            <h2 class="display-5 fw-bold mb-3">Frequently Asked Questions</h2>
-                            <p class="lead">Common questions about SEO mistakes and solutions</p>
-                        </div>
-                        
-                        <div class="accordion" id="faqAccordion">
-                            <!-- FAQ 1 -->
-                            <div class="accordion-item mb-3">
+                    <div class="col-12">
+                        <h2>4. Duplicate Content</h2>
+                        <p>Duplicate content can confuse search engines and dilute your rankings. Use
+                            tools like Copyscape to identify and eliminate duplicate content. Ensure each page on
+                            your website offers unique and valuable information.</p>
+
+                        <h2>5. Poor Quality Backlinks</h2>
+                        <p>Not all backlinks are created equal. Focus on acquiring high-quality,
+                            relevant backlinks from reputable sources. Avoid black-hat SEO tactics like buying
+                            links, as they can result in penalties from search engines.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Technical & Analytics -->
+        <section id="analytics" class="mb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h2>6. Ignoring Meta Tags</h2>
+                        <p>Meta tags, including title tags and meta descriptions, play a crucial role
+                            in SEO. Ensure each page has unique and optimized meta tags that accurately describe the
+                            content and include relevant keywords.</p>
+
+                        <h2>7. Slow Page Load Times</h2>
+                        <p>Featured snippets are a great way to get more visibility in search results.
+                            Optimize your content to answer common questions concisely and clearly. Use bullet
+                            points, numbered lists, and tables to make it easier for search engines to extract your
+                            content as a snippet.</p>
+
+                        <h2>8. Ignoring Page Speed</h2>
+                        <p>Page speed is a critical ranking factor. Use tools like Google PageSpeed
+                            Insights to identify and fix issues that are slowing down your website. Compress images,
+                            enable browser caching, and minimize HTTP requests to improve load times.</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+                            alt="SEO Analytics" class="img-fluid rounded content-img mt-5">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Local SEO & Content Updates -->
+        <section id="seo" class="mb-5 py-5 bg-light">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <h2>9. Not Using Analytics</h2>
+                        <p>Without analytics, you're operating in the dark. Use tools like Google
+                            Analytics and Google Search Console to track your SEO performance and make
+                            data-driven decisions. Regularly review your analytics to identify areas for
+                            improvement.</p>
+
+                        <h2>10. Not Updating Content Regularly</h2>
+                        <p>Search engines favor fresh content. Regularly update your website with
+                            new blog posts, articles, and other content. Ensure your existing content remains
+                            relevant by revisiting and updating it periodically.</p>
+                    </div>
+                </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="pb-5" id="faqs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="h3 my-5">
+                            <span class="d-block text-dark fw-bold display-4 mb-2">FAQ : </span>
+                            Frequently Asked Questions
+                        </h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="accordion accordion-flush" id="accordionFaq" itemscope
+                            itemtype="https://schema.org/FAQPage">
+                            <div class="accordion-item bg-transparent" itemprop="mainEntity" itemscope
+                                itemtype="https://schema.org/Question">
                                 <h3 class="accordion-header">
-                                    <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-                                        What is keyword stuffing?
+                                    <button class="accordion-button shadow-none bg-transparent fs-5 px-0" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false"
+                                        aria-controls="collapseOne">
+                                        <span itemprop="name">What is keyword stuffing?</span>
                                     </button>
                                 </h3>
-                                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body faq-answer">
-                                        Keyword stuffing involves overloading a webpage with keywords in an attempt to manipulate search engine rankings. This practice can lead to penalties and a poor user experience.
+                                <div id="collapseOne" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFaq">
+                                    <div class="accordion-body fs-6 px-0" itemscope itemprop="acceptedAnswer"
+                                        itemtype="https://schema.org/Answer">
+                                        <p class="fs-6" itemprop="text">Keyword stuffing involves overloading a webpage
+                                            with keywords in an attempt to manipulate search engine rankings. This
+                                            practice can lead to penalties and a poor user experience.</p>
                                     </div>
                                 </div>
                             </div>
-                            
-                            <!-- FAQ 2 -->
-                            <div class="accordion-item mb-3">
+
+                            <div class="accordion-item bg-transparent" itemprop="mainEntity" itemscope
+                                itemtype="https://schema.org/Question">
                                 <h3 class="accordion-header">
-                                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-                                        How can I improve my website's load time?
+                                    <button class="accordion-button shadow-none bg-transparent fs-5 px-0" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                                        aria-controls="collapseTwo">
+                                        <span itemprop="name">How can I improve my website's load time?</span>
                                     </button>
                                 </h3>
-                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body faq-answer">
-                                        Improve load time by compressing images, enabling browser caching, and minimizing HTTP requests. Tools like Google PageSpeed Insights can help identify areas for improvement.
+                                <div id="collapseTwo" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFaq">
+                                    <div class="accordion-body fs-6 px-0" itemscope itemprop="acceptedAnswer"
+                                        itemtype="https://schema.org/Answer">
+                                        <p class="fs-6" itemprop="text">Improve load time by compressing images,
+                                            enabling browser caching, and minimizing HTTP requests. Tools like Google
+                                            PageSpeed Insights can help identify areas for improvement.</p>
                                     </div>
                                 </div>
                             </div>
-                            
-                            <!-- FAQ 3 -->
-                            <div class="accordion-item mb-3">
+
+                            <div class="accordion-item bg-transparent" itemprop="mainEntity" itemscope
+                                itemtype="https://schema.org/Question">
                                 <h3 class="accordion-header">
-                                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-                                        Why is mobile optimization important?
+                                    <button class="accordion-button shadow-none bg-transparent fs-5 px-0" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        <span itemprop="name">Why is mobile optimization important?</span>
                                     </button>
                                 </h3>
-                                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body faq-answer">
-                                        Mobile optimization ensures that your website provides a good user experience across all devices. With more users accessing the web on mobile, it's essential for maintaining and improving search rankings.
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFaq">
+                                    <div class="accordion-body fs-6 px-0" itemscope itemprop="acceptedAnswer"
+                                        itemtype="https://schema.org/Answer">
+                                        <p class="fs-6" itemprop="text">Mobile optimization ensures that your website
+                                            provides a good user experience across all devices. With more users
+                                            accessing the web on mobile, it's essential for maintaining and improving
+                                            search rankings.</p>
                                     </div>
                                 </div>
                             </div>
-                            
-                            <!-- FAQ 4 -->
-                            <div class="accordion-item mb-3">
+
+                            <div class="accordion-item bg-transparent" itemprop="mainEntity" itemscope
+                                itemtype="https://schema.org/Question">
                                 <h3 class="accordion-header">
-                                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-                                        What are high-quality backlinks?
+                                    <button class="accordion-button shadow-none bg-transparent fs-5 px-0" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
+                                        aria-controls="collapseFour">
+                                        <span itemprop="name">What are high-quality backlinks?</span>
                                     </button>
                                 </h3>
-                                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body faq-answer">
-                                        High-quality backlinks come from reputable, relevant websites. They signal to search engines that your content is valuable and trustworthy. Focus on acquiring backlinks through guest posts, partnerships, and high-quality content.
+                                <div id="collapseFour" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFaq">
+                                    <div class="accordion-body fs-6 px-0" itemscope itemprop="acceptedAnswer"
+                                        itemtype="https://schema.org/Answer">
+                                        <p class="fs-6" itemprop="text">High-quality backlinks come from reputable,
+                                            relevant websites. They signal to search engines that your content is
+                                            valuable and trustworthy. Focus on acquiring backlinks through guest posts,
+                                            partnerships, and high-quality content.</p>
                                     </div>
                                 </div>
                             </div>
-                            
-                            <!-- FAQ 5 -->
-                            <div class="accordion-item">
+
+                            <div class="accordion-item bg-transparent" itemprop="mainEntity" itemscope
+                                itemtype="https://schema.org/Question">
                                 <h3 class="accordion-header">
-                                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
-                                        How often should I update my website's content?
+                                    <button class="accordion-button shadow-none bg-transparent fs-5 px-0" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false"
+                                        aria-controls="collapseFive">
+                                        <span itemprop="name">How often should I update my website's content?</span>
                                     </button>
                                 </h3>
-                                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                    <div class="accordion-body faq-answer">
-                                        Regular updates are crucial for maintaining SEO performance. Aim to add new content at least once a month and review existing content periodically to ensure it remains relevant and accurate.
+                                <div id="collapseFive" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionFaq">
+                                    <div class="accordion-body fs-6 px-0" itemscope itemprop="acceptedAnswer"
+                                        itemtype="https://schema.org/Answer">
+                                        <p class="fs-6" itemprop="text">Regular updates are crucial for maintaining SEO
+                                            performance. Aim to add new content at least once a month and review
+                                            existing content periodically to ensure it remains relevant and accurate.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-            
-            <!-- Social Sharing -->
-            <section class="py-5">
-                <div class="text-center">
-                    <h3 class="h4 mb-4">Share this article</h3>
-                    <div class="d-flex justify-content-center flex-wrap gap-3">
-                        <a href="#" class="btn btn-outline-primary social-share-button">
-                            <i class="bi bi-facebook me-2"></i> Facebook
-                        </a>
-                        <a href="#" class="btn btn-outline-primary social-share-button">
-                            <i class="bi bi-twitter-x me-2"></i> Twitter
-                        </a>
-                        <a href="#" class="btn btn-outline-primary social-share-button">
-                            <i class="bi bi-linkedin me-2"></i> LinkedIn
-                        </a>
-                        <a href="#" class="btn btn-outline-primary social-share-button">
-                            <i class="bi bi-link-45deg me-2"></i> Copy Link
-                        </a>
-                    </div>
+            </div>
+        </section>
+
+        <!-- Social Sharing -->
+        <section class="py-5">
+            <div class="text-center">
+                <h3 class="h4 mb-4">Share this article</h3>
+                <div class="d-flex justify-content-center flex-wrap gap-3">
+                    <a href="#" class="btn btn-outline-primary social-share-button">
+                        <i class="bi bi-facebook me-2"></i> Facebook
+                    </a>
+                    <a href="#" class="btn btn-outline-primary social-share-button">
+                        <i class="bi bi-twitter-x me-2"></i> Twitter
+                    </a>
+                    <a href="#" class="btn btn-outline-primary social-share-button">
+                        <i class="bi bi-linkedin me-2"></i> LinkedIn
+                    </a>
+                    <a href="#" class="btn btn-outline-primary social-share-button">
+                        <i class="bi bi-link-45deg me-2"></i> Copy Link
+                    </a>
                 </div>
-            </section>
-        </div>
-    </main>
+            </div>
+        </section>
+    </article>
 
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="row">
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h3 class="h4 mb-4">Anupam Mondal</h3>
-                        <p class="mb-4">Providing expert SEO, web design, and development services to help your business succeed online.</p>
-                        <div class="d-flex gap-3">
-                            <a href="#" class="text-white fs-5"><i class="bi bi-facebook"></i></a>
-                            <a href="#" class="text-white fs-5"><i class="bi bi-twitter-x"></i></a>
-                            <a href="#" class="text-white fs-5"><i class="bi bi-linkedin"></i></a>
-                            <a href="#" class="text-white fs-5"><i class="bi bi-instagram"></i></a>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="h5 mb-4">Quick Links</h4>
-                        <ul class="list-unstyled footer-links">
-                            <li class="mb-2"><a href="#"><i class="bi bi-chevron-right me-2"></i> Home</a></li>
-                            <li class="mb-2"><a href="#"><i class="bi bi-chevron-right me-2"></i> Services</a></li>
-                            <li class="mb-2"><a href="#"><i class="bi bi-chevron-right me-2"></i> Portfolio</a></li>
-                            <li class="mb-2"><a href="#"><i class="bi bi-chevron-right me-2"></i> About</a></li>
-                            <li class="mb-2"><a href="#"><i class="bi bi-chevron-right me-2"></i> Contact</a></li>
-                            <li><a href="#"><i class="bi bi-chevron-right me-2"></i> Blog</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="col-lg-4">
-                        <h4 class="h5 mb-4">Contact Information</h4>
-                        <ul class="list-unstyled footer-links">
-                            <li class="mb-3 d-flex align-items-start">
-                                <i class="bi bi-geo-alt fs-5 me-3 mt-1"></i>
-                                <span>Metiari, Sonarpur<br>South 24 Parganas<br>West Bengal, 743330</span>
-                            </li>
-                            <li class="mb-3 d-flex align-items-center">
-                                <i class="bi bi-envelope fs-5 me-3"></i>
-                                <a href="mailto:contact@example.com">contact@example.com</a>
-                            </li>
-                            <li class="d-flex align-items-center">
-                                <i class="bi bi-telephone fs-5 me-3"></i>
-                                <a href="tel:+1234567890">+91 94744 60058</a>
-                            </li>
-                        </ul>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Anupam Mondal</h3>
+                    <small>
+                        Providing expert web design, development, and SEO services to
+                        businesses worldwide since 2016.
+                    </small>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/anupammondal.in/" target="_blank"><i
+                                class="bi bi-facebook"></i></a>
+                        <a href="https://goo.gl/maps/oBwMFuFssGzWz6m26" target="_blank"><i class="bi bi-google"></i></a>
+                        <a href="https://www.linkedin.com/company/anupammondal" target="_blank"><i
+                                class="bi bi-linkedin"></i></a>
+                        <a href="https://www.youtube.com/@anuapm" target="_blank"><i class="bi bi-youtube"></i></a>
+                        <!-- <a href="#" target="_blank"><i class="fab fa-instagram"></i></a> -->
                     </div>
                 </div>
-                
-                <hr class="my-4 bg-light">
-                
+
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="../services/web-design">Web Design</a></li>
+                        <li><a href="../services/web-development">Web Development</a></li>
+                        <li><a href="../services/website-seo">SEO Optimization</a></li>
+                        <li><a href="../services/digital-marketing">Digital Marketing</a></li>
+                        <!-- <li><a href="#">E-Commerce Solutions</a></li> -->
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="../">Home</a></li>
+                        <!-- <li><a href="./services/digital-marketing">Services</a></li> -->
+                        <li><a href="../about-us">About</a></li>
+                        <li><a href="../portfolio">Portfolio</a></li>
+                        <li><a href="../contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li>
+                            <!-- <i class="fas fa-map-marker-alt fa-lg"></i> -->
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <span class="ps-2">Pratapnagar, Metiari, West Bengal, 743330</span>
+                        </li>
+                        <li>
+                            <!-- <i class="fas fa-phone"></i> -->
+                            <i class="bi bi-telephone-fill"></i>
+                            <span class="ps-2">+91-9474460058</span>
+                        </li>
+                        <!-- <li><i class="fas fa-envelope"></i> support@anupammondal.in</li> -->
+                        <li>
+                            <!-- <i class="fas fa-clock"></i> -->
+                            <i class="bi bi-clock"></i>
+                            <span class="ps-2">Mon-Fri: 9AM - 6PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
                 <div class="row">
-                    <div class="col-md-6">
-                        <p>&copy; 2025 Anupam Mondal. All rights reserved.</p>
+                    <div class="col">
+                        <p class="text-start mb-0">&copy; <span id="current-year"></span> Anupam Mondal</p>
                     </div>
-                    <div class="col-md-6 text-md-end">
-                        <p>MSME Registered Business</p>
+                    <div class="col">
+                        <p class="text-end mb-0">MSME Registered Business</p>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
+        </script>
     <script>
-        // Simple animation for when sections come into view
-        document.addEventListener('DOMContentLoaded', function() {
-            const sections = document.querySelectorAll('section');
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = 1;
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, { threshold: 0.1 });
-            
-            sections.forEach(section => {
-                section.style.opacity = 0;
-                section.style.transform = 'translateY(20px)';
-                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                observer.observe(section);
-            });
-        });
+        document.getElementById("current-year").textContent = new Date().getFullYear();
     </script>
 </body>
+
 </html>
