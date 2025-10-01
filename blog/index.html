@@ -42,6 +42,28 @@
             overflow: hidden;
         }
 
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            left: -100px;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .hero:after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
         /* Glass effect wrapper */
         .glass-effect {
             background: rgba(255, 255, 255, 0.1);
@@ -562,17 +584,17 @@
         </div>
     </header>
 
-    <section class="hero mt-5">
-        <div class="glass-effect">
+    <section class="hero mt-5 pt-5">
+        <div class="glass--effect">
             <div class="container py-5">
                 <div class="row">
                     <div class="col-lg-8 col-md-6 col-12">
                         <h1 class="text-white">
-                            <span class="d-block h3">Welcome to <strong class="text-dark">Blog</strong> of </span>
-                            <span class="fw-bold d-block display-4"><strong class="text-dark">Anupam</strong> Mondal
+                            <span class="d-block h3">Welcome to <strong>Blog</strong> of </span>
+                            <span class="fw-bold d-block display-4"><strong>Anupam</strong> Mondal
                             </span>
-                            <span class="d-block h3 mt-3">Insights on <strong class="text-dark">Web Development</strong>
-                                & <strong class="text-dark">Digital Marketing</strong></span>
+                            <span class="d-block h3 mt-3">Insights on <strong>Web Development</strong>
+                                & <strong>Digital Marketing</strong></span>
                         </h1>
                         <p class="fs-6 mt-4 mt-4">Explore expert insights and tips on web development, digital
                             marketing, and more on Anupam Mondal's blog. Stay updated with the latest trends,
