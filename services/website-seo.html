@@ -1836,7 +1836,7 @@
       <div class="copyright">
         <div class="row">
           <div class="col">
-            <p class="text-start mb-0">&copy; 2025 Anupam Mondal</p>
+            <p class="text-start mb-0">&copy; <span id="current-year"></span></p>
           </div>
           <div class="col">
             <p class="text-end mb-0">MSME Registered Business</p>
@@ -1931,6 +1931,9 @@
         }
       });
     });
+  </script>
+  <script>
+      document.getElementById("current-year").textContent = new Date().getFullYear();
   </script>
 </body>
 

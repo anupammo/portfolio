@@ -3,55 +3,6 @@
 
 <head>
   <meta charset="UTF-8">
-    <!-- Structured Data: FAQPage -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How can I get in touch with Anupam Mondal?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "You can contact Anupam Mondal through the contact form, email, phone, or social media profiles."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What services does Anupam Mondal offer?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Website design, development, SEO, and digital marketing services."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the turnaround time for a website project?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A standard website typically takes 4 to 6 weeks, depending on complexity and requirements."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What payment methods do you accept?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We accept credit cards, bank transfers, and online payment gateways like PayPal."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you offer support after the website is live?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, we offer ongoing support and maintenance packages to keep your website updated and secure."
-          }
-        }
-      ]
-    }
-    </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Primary Meta Tags -->
   <title>Contact us for Website Design, Development & SEO in Kolkata</title>
@@ -144,6 +95,56 @@
         "https://github.com/anupammondal",
         "https://x.com/anupammondal_in",
         "https://www.instagram.com/anupammondal.in"
+      ]
+    }
+  </script>
+  
+  <!-- Structured Data: FAQPage -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How can I get in touch with Anupam Mondal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can contact Anupam Mondal through the contact form, email, phone, or social media profiles."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What services does Anupam Mondal offer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Website design, development, SEO, and digital marketing services."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the turnaround time for a website project?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A standard website typically takes 4 to 6 weeks, depending on complexity and requirements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What payment methods do you accept?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We accept credit cards, bank transfers, and online payment gateways like PayPal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer support after the website is live?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we offer ongoing support and maintenance packages to keep your website updated and secure."
+          }
+        }
       ]
     }
   </script>
@@ -1033,17 +1034,17 @@
     }
 
     .btn {
-    display: inline-block;
-    padding: 12px 30px;
-    border-radius: 50px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: var(--transition);
-    font-size: 1rem;
-    border: none;
-    cursor: pointer;
-}   
+      display: inline-block;
+      padding: 12px 30px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: var(--transition);
+      font-size: 1rem;
+      border: none;
+      cursor: pointer;
+    }
 
     .cta .btn {
       background: white;
@@ -1365,7 +1366,8 @@
                 <meta itemprop="position" content="1" />
               </li>
               <!-- Contact (current page) -->
-              <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+              <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope
+                itemtype="https://schema.org/ListItem">
                 <span itemprop="name">Contact</span>
                 <meta itemprop="position" content="2" />
               </li>
@@ -1386,9 +1388,9 @@
           </div>
         </div>
         <div class="col-lg-6 text-center">
-          <img
-            src="https://images.pexels.com/photos/4200831/pexels-photo-4200831.jpeg"
-            alt="Contact Anupam Mondal for website design, development, and SEO in Kolkata" class="img-fluid hero-image rounded shadow">
+          <img src="https://images.pexels.com/photos/4200831/pexels-photo-4200831.jpeg"
+            alt="Contact Anupam Mondal for website design, development, and SEO in Kolkata"
+            class="img-fluid hero-image rounded shadow">
           <!-- Example Unsplash image: modern workspace, suitable for contact page -->
         </div>
       </div>
@@ -1739,7 +1741,7 @@
       </div>
 
       <div class="copyright">
-        <p class="mb-0">&copy; 2025 Anupam Mondal. All Rights Reserved.</p>
+        <p class="mb-0">&copy; <span id="current-year"></span>. All Rights Reserved.</p>
       </div>
     </div>
   </footer>
@@ -1767,6 +1769,9 @@
         });
       });
     });
+  </script>
+  <script>
+      document.getElementById("current-year").textContent = new Date().getFullYear();
   </script>
 </body>
 
