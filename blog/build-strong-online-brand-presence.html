@@ -446,17 +446,23 @@
             margin-top: 20px;
         }
 
-        .social-links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            transition: var(--transition);
-        }
+    .social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      margin: auto;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      transition: var(--transition);
+    }
+
+    div.social-links a small {
+        position: absolute;
+        margin-top: 60px;
+    }
 
         .social-links a:hover {
             background: var(--primary);
@@ -810,15 +816,16 @@
                         Providing expert web design, development, and SEO services to
                         businesses worldwide since 2016.
                     </small>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/anupammondal.in/" target="_blank"><i
-                                class="bi bi-facebook"></i></a>
-                        <a href="https://goo.gl/maps/oBwMFuFssGzWz6m26" target="_blank"><i class="bi bi-google"></i></a>
-                        <a href="https://www.linkedin.com/company/anupammondal" target="_blank"><i
-                                class="bi bi-linkedin"></i></a>
-                        <a href="https://www.youtube.com/@anuapm" target="_blank"><i class="bi bi-youtube"></i></a>
-                        <!-- <a href="#" target="_blank"><i class="fab fa-instagram"></i></a> -->
-                    </div>
+          <div class="social-links">
+            <a href="https://www.facebook.com/anupammondal.in/" target="_blank">
+              <i class="bi bi-facebook"></i>
+              <small class="">Facebook</small>
+            </a>
+            <a href="https://goo.gl/maps/oBwMFuFssGzWz6m26" target="_blank"><i class="bi bi-google"></i><small class="">Google</small></a>
+            <a href="https://www.linkedin.com/company/anupammondal" target="_blank"><i class="bi bi-linkedin"></i><small class="">LinkedIn</small></a>
+            <a href="https://www.youtube.com/@anuapm" target="_blank"><i class="bi bi-youtube"></i><small class="">YouTube</small></a>
+            <!-- <a href="#" target="_blank"><i class="fab fa-instagram"></i></a> -->
+          </div>
                 </div>
 
                 <div class="footer-col">
