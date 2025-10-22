@@ -1007,7 +1007,10 @@
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
         </script>
     <script>
-        document.getElementById("current-year").textContent = new Date().getFullYear();
+                (function(){
+                    const y = document.getElementById("current-year");
+                    if (y) y.textContent = new Date().getFullYear();
+                })();
     </script>
 </body>
 

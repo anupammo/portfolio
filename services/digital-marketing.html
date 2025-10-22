@@ -1878,17 +1878,22 @@
               behavior: "smooth",
             });
 
-            // Close mobile menu if open
-            if (navLinks.classList.contains("active")) {
-              navLinks.classList.remove("active");
+            // Close mobile menu if open (supports custom and Bootstrap collapse)
+            const navContainer = document.getElementById('navLinks') || document.getElementById('navbarNav');
+            if (navContainer) {
+              navContainer.classList.remove('active');
+              navContainer.classList.remove('show');
             }
           }
         });
       });
     </script>
-    <script>
-        document.getElementById("current-year").textContent = new Date().getFullYear();
-    </script>
+  <script>
+    (function(){
+      const y = document.getElementById("current-year");
+      if (y) y.textContent = new Date().getFullYear();
+    })();
+  </script>
     
     <!-- WhatsApp CTA Modal -->
     <div class="modal fade" id="whatsappCtaModal" tabindex="-1" aria-labelledby="whatsappCtaLabel" aria-hidden="true">

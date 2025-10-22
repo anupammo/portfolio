@@ -1974,9 +1974,11 @@
             behavior: "smooth",
           });
 
-          // Close mobile menu if open
-          if (navLinks.classList.contains("active")) {
-            navLinks.classList.remove("active");
+          // Close mobile menu if open (supports custom and Bootstrap collapse)
+          const navContainer = document.getElementById('navLinks') || document.getElementById('navbarNav');
+          if (navContainer) {
+            navContainer.classList.remove('active');
+            navContainer.classList.remove('show');
           }
         }
       });
