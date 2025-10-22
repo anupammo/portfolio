@@ -51,6 +51,98 @@
     ]
   }
   </script>
+  
+  <!-- WhatsApp CTA Modal -->
+  <div class="modal fade" id="whatsappCtaModal" tabindex="-1" aria-labelledby="whatsappCtaLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <form class="modal-content" id="whatsappCtaForm" novalidate>
+        <div class="modal-header">
+          <h5 class="modal-title" id="whatsappCtaLabel">Get a Free Quote</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <input type="hidden" id="serviceName" name="service" value="Web Design" />
+          <div class="mb-3">
+            <label for="clientName" class="form-label">Your Name</label>
+            <input type="text" class="form-control" id="clientName" name="name" placeholder="John Doe" required>
+          </div>
+          <div class="mb-3">
+            <label for="clientEmail" class="form-label">Email</label>
+            <input type="email" class="form-control" id="clientEmail" name="email" placeholder="you@example.com" required>
+          </div>
+          <div class="mb-3">
+            <label for="clientPhone" class="form-label">Phone</label>
+            <input type="tel" class="form-control" id="clientPhone" name="phone" placeholder="+91 9XXXXXXXXX" required>
+          </div>
+          <div class="mb-3">
+            <label for="clientWebsite" class="form-label">Website (optional)</label>
+            <input type="url" class="form-control" id="clientWebsite" name="website" placeholder="https://yourdomain.com">
+          </div>
+          <div class="mb-3">
+            <label for="projectDetails" class="form-label">Project Details</label>
+            <textarea class="form-control" id="projectDetails" name="details" rows="4" placeholder="Brief about your goals, timeline, budget..." required></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a class="btn btn-outline-success" id="quickWhatsAppLink" target="_blank" rel="noopener">Chat Now</a>
+          <button type="submit" class="btn btn-success">Send via WhatsApp</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // WhatsApp CTA behavior for Web Design page
+    (function() {
+      const SERVICE_NAME = 'Web Design';
+      const WHATSAPP_NUMBER = '919474460058';
+      const pageUrl = window.location.href;
+
+      const modalEl = document.getElementById('whatsappCtaModal');
+      const quickLink = document.getElementById('quickWhatsAppLink');
+
+      modalEl.addEventListener('show.bs.modal', function () {
+        document.getElementById('serviceName').value = SERVICE_NAME;
+        const quickText = `Hello Anupam, I want to discuss ${SERVICE_NAME}. Page: ${pageUrl}`;
+        quickLink.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(quickText)}`;
+      });
+
+      function matchesCtaText(el) {
+        const t = (el.textContent || '').trim().toLowerCase();
+        return t === 'get started' || t === 'get started today';
+      }
+
+      Array.from(document.querySelectorAll('a, button')).filter(matchesCtaText).forEach((el) => {
+        el.setAttribute('role', 'button');
+        el.addEventListener('click', function (e) {
+          e.preventDefault();
+          const modal = new bootstrap.Modal(modalEl);
+          modal.show();
+        });
+      });
+
+      document.getElementById('whatsappCtaForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const service = document.getElementById('serviceName').value.trim();
+        const name = document.getElementById('clientName').value.trim();
+        const email = document.getElementById('clientEmail').value.trim();
+        const phone = document.getElementById('clientPhone').value.trim();
+        const website = document.getElementById('clientWebsite').value.trim();
+        const details = document.getElementById('projectDetails').value.trim();
+        if (!name || !email || !phone || !details) return;
+        const lines = [
+          `New ${service} enquiry`,
+          `Name: ${name}`,
+          `Email: ${email}`,
+          `Phone: ${phone}`,
+          website ? `Website: ${website}` : null,
+          `Details: ${details}`,
+          `Page: ${pageUrl}`
+        ].filter(Boolean);
+        window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join('\n'))}`, '_blank', 'noopener');
+      });
+    })();
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Primary Meta Tags -->
@@ -1866,12 +1958,17 @@
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
       anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-
         const targetId = this.getAttribute("href");
+
+        // Skip empty hash so Bootstrap components keep working
+        if (!targetId || targetId.trim() === "#") {
+          return;
+        }
+
         const targetElement = document.querySelector(targetId);
 
         if (targetElement) {
+          e.preventDefault();
           window.scrollTo({
             top: targetElement.offsetTop - 80,
             behavior: "smooth",
