@@ -228,6 +228,14 @@
      <ror:sortOrder>2</ror:sortOrder>
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
+<item>
+     <link>https://anupammondal.in/chrome-extension/seo-checklist</link>
+     <title>SEO Checklist Chrome Extension for SEO | Anupam Mondal</title>
+     <description>Free SEO Checklist Chrome extension to audit on-page SEO: titles, descriptions, headings, links, images, schema, speed, and accessibility.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
 </channel>
 </rss>
   
