@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Search engines: do not index or follow this page -->
+    <meta name="robots" content="noindex, nofollow, noimageindex, nosnippet, noarchive" />
+    <meta name="googlebot" content="noindex, nofollow" />
+    <meta name="bingbot" content="noindex, nofollow" />
+    <title>Anupam Mondal - Full Stack Developer & Consultant</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #34495e;
+            --text: #333;
+            --border: #bdc3c7;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--text);
+            background-color: #f9f9f9;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background-color: white;
+        }
+        
+        .resume-header {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 2px solid var(--secondary);
+            margin-bottom: 20px;
+        }
+        
+        .name {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        .title {
+            font-size: 18px;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            font-size: 14px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+        }
+        
+        .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--primary);
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--border);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .experience-item, .education-item, .project-item {
+            margin-bottom: 15px;
+            page-break-inside: avoid;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 5px;
+        }
+        
+        .company {
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .job-title {
+            font-weight: 500;
+            color: var(--secondary);
+        }
+        
+        .duration {
+            font-style: italic;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .job-description {
+            font-size: 14px;
+        }
+        
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+        }
+        
+        .skill-category {
+            margin-bottom: 15px;
+        }
+        
+        .skill-category-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: var(--dark);
+            font-size: 15px;
+        }
+        
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        
+        .skill-tag {
+            background-color: var(--light);
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 13px;
+            border-left: 3px solid var(--secondary);
+        }
+        
+        .project-title {
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 3px;
+        }
+        
+        .project-tech {
+            font-style: italic;
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        
+        .project-url {
+            color: var(--secondary);
+            font-size: 14px;
+            word-break: break-all;
+        }
+        
+        .awards-list, .languages-list {
+            list-style-type: none;
+        }
+        
+        .awards-list li, .languages-list li {
+            margin-bottom: 5px;
+            padding-left: 15px;
+            position: relative;
+        }
+        
+        .awards-list li:before, .languages-list li:before {
+            content: "•";
+            color: var(--secondary);
+            position: absolute;
+            left: 0;
+        }
+        
+        @media print {
+            body {
+                padding: 10px;
+                box-shadow: none;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+            
+            .experience-item, .project-item {
+                page-break-inside: avoid;
+            }
+        }
+        
+        .keywords {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- ATS Keywords - Hidden but parsable by ATS systems -->
+    <div class="keywords">
+        Full Stack Developer, Consultant, Project Manager, Tech Lead, JavaScript, TypeScript, ReactJS, Node.js, PHP, Python, HTML, CSS, Bootstrap, WordPress, Magento, CodeIgniter, Laravel, MySQL, MongoDB, AWS, GCP, Agile Methodology, SEO, Digital Marketing, Web Development, Frontend Development, Backend Development, JAMstack, MERN Stack, LAMP Stack, Team Management, Resource Management, Risk Analysis, Product Development, E-commerce, Shopify, WooCommerce, REST API, Git, GitHub, CI/CD, Responsive Design, UI/UX, Software Development, Application Development, System Design, Technical Consulting, Freelance Developer, Remote Work
+    </div>
+
+    <header class="resume-header">
+        <h1 class="name">Anupam Mondal</h1>
+        <div class="title">Full Stack Developer & Technical Consultant | 5-Star Rated Preferred Freelancer</div>
+        <div class="contact-info">
+            <div class="contact-item">📍 Mettari, Protapnagar, Sonarpur, West Bengal, India</div>
+            <div class="contact-item">📞 (947) 446-0058</div>
+            <div class="contact-item">✉️ a09051985@gmail.com</div>
+            <div class="contact-item">🌐 anupammondal.in</div>
+        </div>
+    </header>
+
+    <section class="section">
+        <h2 class="section-title">Professional Summary</h2>
+        <p>Experienced Full Stack Developer and Technical Consultant with 8+ years of expertise in web development, project management, and digital solutions. Proven track record of delivering high-quality software solutions for international clients across various industries. Specialized in JavaScript frameworks, PHP development, e-commerce platforms, and SEO optimization. Strong leadership skills with experience managing cross-functional teams and driving project success from conception to deployment.</p>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Work Experience</h2>
+        
+        <div class="experience-item">
+            <div class="job-header">
+                <div>
+                    <div class="company">TechEva FZCO, UAE</div>
+                    <div class="job-title">JAMstack Developer</div>
+                </div>
+                <div class="duration">Jan 2025 - Mar 2025</div>
+            </div>
+        </div>
+        
+        <div class="experience-item">
+            <div class="job-header">
+                <div>
+                    <div class="company">Velocity Media, Australia</div>
+                    <div class="job-title">Senior Web Developer</div>
+                </div>
+                <div class="duration">Dec 2023 - Apr 2024</div>
+            </div>
+        </div>
+        
+        <div class="experience-item">
+            <div class="job-header">
+                <div>
+                    <div class="company">Solid Dot, Coimbatore</div>
+                    <div class="job-title">Senior Web Developer</div>
+                </div>
+                <div class="duration">Nov 2022 - Aug 2023</div>
+            </div>
+        </div>
+        
+        <div class="experience-item">
+            <div class="job-header">
+                <div>
+                    <div class="company">Shivila Technologies, Kolkata</div>
+                    <div class="job-title">Tech Lead</div>
+                </div>
+                <div class="duration">May 2022 - Nov 2022</div>
+            </div>
+            <div class="job-description">
+                Led development team in designing and implementing web solutions. Managed project timelines, code reviews, and technical documentation.
+            </div>
+        </div>
+        
+        <div class="experience-item">
+            <div class="job-header">
+                <div>
+                    <div class="company">Krins Life Sciences, Canada</div>
+                    <div class="job-title">Project Manager / Consultant</div>
+                </div>
+                <div class="duration">2019 - 2022</div>
+            </div>
+            <div class="job-description">
+                Managed brand development, SEO strategy, and digital marketing initiatives. Coordinated cross-functional teams for product development and growth strategies.
+            </div>
+        </div>
+        
+        <div class="experience-item">
+            <div class="job-header">
+                <div>
+                    <div class="company">Preferred Freelancer Platform</div>
+                    <div class="job-title">Full Stack Developer</div>
+                </div>
+                <div class="duration">2016 - 2024</div>
+            </div>
+            <div class="job-description">
+                5-star rated preferred freelancer with successful completion of 50+ projects for international clients. Specialized in custom web applications, e-commerce solutions, and digital marketing implementations.
+            </div>
+        </div>
+        
+        <div class="experience-item">
+            <div class="job-header">
+                <div>
+                    <div class="company">TATA INTERACTIVE</div>
+                    <div class="job-title">System Designer</div>
+                </div>
+                <div class="duration">Apr 2016 - Nov 2016</div>
+            </div>
+        </div>
+        
+        <div class="experience-item">
+            <div class="job-header">
+                <div>
+                    <div class="company">Pyramids Consultancy, Kolkata</div>
+                    <div class="job-title">Tech Lead</div>
+                </div>
+                <div class="duration">May 2015 - Jan 2016</div>
+            </div>
+        </div>
+        
+        <div class="experience-item">
+            <div class="job-header">
+                <div>
+                    <div class="company">Softech ERP Solution, WB</div>
+                    <div class="job-title">Web Developer</div>
+                </div>
+                <div class="duration">Aug 2012 - Apr 2016</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <div class="skill-category-title">Frontend Technologies</div>
+                <div class="skill-list">
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS3</span>
+                    <span class="skill-tag">SCSS</span>
+                    <span class="skill-tag">Bootstrap</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">TypeScript</span>
+                    <span class="skill-tag">ReactJS</span>
+                    <span class="skill-tag">Next.js</span>
+                    <span class="skill-tag">AngularJS</span>
+                    <span class="skill-tag">Ionic</span>
+                    <span class="skill-tag">Cordova</span>
+                </div>
+            </div>
+            
+            <div class="skill-category">
+                <div class="skill-category-title">Backend Technologies</div>
+                <div class="skill-list">
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">PHP</span>
+                    <span class="skill-tag">ASP</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">C#</span>
+                    <span class="skill-tag">C++</span>
+                </div>
+            </div>
+            
+            <div class="skill-category">
+                <div class="skill-category-title">Databases</div>
+                <div class="skill-list">
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">MSSQL</span>
+                    <span class="skill-tag">Oracle</span>
+                </div>
+            </div>
+            
+            <div class="skill-category">
+                <div class="skill-category-title">Frameworks & CMS</div>
+                <div class="skill-list">
+                    <span class="skill-tag">Laravel</span>
+                    <span class="skill-tag">CodeIgniter</span>
+                    <span class="skill-tag">WordPress</span>
+                    <span class="skill-tag">Magento</span>
+                    <span class="skill-tag">Drupal</span>
+                    <span class="skill-tag">Joomla</span>
+                    <span class="skill-tag">Shopify</span>
+                    <span class="skill-tag">WooCommerce</span>
+                </div>
+            </div>
+            
+            <div class="skill-category">
+                <div class="skill-category-title">Tools & Platforms</div>
+                <div class="skill-list">
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">GitHub</span>
+                    <span class="skill-tag">AWS</span>
+                    <span class="skill-tag">GCP</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">npm</span>
+                    <span class="skill-tag">Jira</span>
+                    <span class="skill-tag">Asana</span>
+                    <span class="skill-tag">Microsoft Project</span>
+                </div>
+            </div>
+            
+            <div class="skill-category">
+                <div class="skill-category-title">Methodologies & Specializations</div>
+                <div class="skill-list">
+                    <span class="skill-tag">Agile Methodology</span>
+                    <span class="skill-tag">Scrum</span>
+                    <span class="skill-tag">SEO</span>
+                    <span class="skill-tag">Digital Marketing</span>
+                    <span class="skill-tag">UI/UX Design</span>
+                    <span class="skill-tag">Responsive Design</span>
+                    <span class="skill-tag">REST API</span>
+                    <span class="skill-tag">CI/CD</span>
+                    <span class="skill-tag">Project Management</span>
+                    <span class="skill-tag">Team Leadership</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Education</h2>
+        
+        <div class="education-item">
+            <div class="job-header">
+                <div>
+                    <div class="company">IGNOU, Kolkata</div>
+                    <div class="job-title">Master of Computer Applications (MCA)</div>
+                </div>
+                <div class="duration">2012 - 2015 (Incomplete)</div>
+            </div>
+        </div>
+        
+        <div class="education-item">
+            <div class="job-header">
+                <div>
+                    <div class="company">Sushil Kar College, Champahati</div>
+                    <div class="job-title">Bachelor Degree</div>
+                </div>
+                <div class="duration">2007</div>
+            </div>
+        </div>
+        
+        <div class="education-item">
+            <div class="job-header">
+                <div>
+                    <div class="company">NIIT, Jadavpur</div>
+                    <div class="job-title">Advanced Program in Information Technology (APIT)</div>
+                </div>
+                <div class="duration">2008</div>
+            </div>
+        </div>
+        
+        <div class="education-item">
+            <div class="job-header">
+                <div>
+                    <div class="company">IIJT, Jadavpur</div>
+                    <div class="job-title">Bachelor of Computer Applications (BCA)</div>
+                </div>
+                <div class="duration">2007</div>
+            </div>
+        </div>
+        
+        <div class="education-item">
+            <div class="job-header">
+                <div>
+                    <div class="company">SITD, Sonarpur</div>
+                    <div class="job-title">Computer Teacher Training Course (CTTC)</div>
+                </div>
+                <div class="duration">2006</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Certifications & Awards</h2>
+        <ul class="awards-list">
+            <li>5-Star Rated Preferred Freelancer - freelancer.in</li>
+            <li>Certificate of Recognition - Mentors Without Borders</li>
+            <li>State Badminton Championship - WBSSA</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Languages</h2>
+        <ul class="languages-list">
+            <li>Bengali - Native</li>
+            <li>Hindi - Working Proficiency</li>
+            <li>English - Working Proficiency</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Project Portfolio</h2>
+        
+        <div class="project-item">
+            <div class="project-title">Eaximo - Digital Marketing Agency</div>
+            <div class="project-tech">NextJS, ReactJS, SEO, Digital Marketing</div>
+            <div class="job-description">Consulting and development for startup digital marketing agency. Coordinated with owner to establish brand identity and implement optimized digital footprint for accelerated growth.</div>
+            <div class="project-url">https://eaximo.com/</div>
+        </div>
+        
+        <div class="project-item">
+            <div class="project-title">BongTrendz - E-commerce Portal</div>
+            <div class="project-tech">Shopify, SEO, Structured Data, Digital Marketing</div>
+            <div class="job-description">Development and SEO consultation for eCommerce portal. Optimized Shopify themes, structured data, and digital marketing strategies to enhance search visibility and user engagement.</div>
+            <div class="project-url">https://bongtrendz.in</div>
+        </div>
+        
+        <div class="project-item">
+            <div class="project-title">HawkEye - Product Development</div>
+            <div class="project-tech">WordPress, WooCommerce, Multi-Vendor, UI/UX</div>
+            <div class="job-description">Product development, maintenance and management with R&D about tech stack scope. Team management and optimized website development for internal products.</div>
+            <div class="project-url">hawk-eye.net.in</div>
+        </div>
+        
+        <div class="project-item">
+            <div class="project-title">Krins Life Sciences</div>
+            <div class="project-tech">WordPress, SEO, Digital Marketing, Team Management</div>
+            <div class="job-description">Brand management, growth strategy, and 360-degree development for Canadian client. Managed small team of designers and developers, coordinated with external marketing team.</div>
+            <div class="project-url">krinslifescienceslab.ca</div>
+        </div>
+        
+        <div class="project-item">
+            <div class="project-title">Crowed4test - SAAS Tool</div>
+            <div class="project-tech">Next.js, ReactJS, TypeScript, Bitbucket</div>
+            <div class="job-description">Internal product development of a SAAS-based testing automation system including company portfolio. Designed and developed frontend using Next.js framework.</div>
+            <div class="project-url">crowed4test.com</div>
+        </div>
+    </section>
+</body>
+</html>
