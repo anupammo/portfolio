@@ -223,6 +223,11 @@
             .projects-grid {
                 grid-template-columns: 1fr;
             }
+            /* Hide UI marked as no-print and the floating download button when printing */
+            .no-print,
+            .floating-download-btn {
+                display: none !important;
+            }
         }
         
         .keywords {
@@ -247,6 +252,45 @@
             background-color: #e2e3e5;
             color: #383d41;
         }
+        
+        /* Floating Download PDF button */
+        .floating-download-btn {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            z-index: 1000;
+            background: var(--secondary);
+            color: #fff;
+            border: none;
+            border-radius: 999px;
+            padding: 12px 16px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: transform .15s ease, box-shadow .15s ease, background .2s ease;
+        }
+
+        .floating-download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+            background: #2e7fb9; /* slightly darker than --secondary */
+        }
+
+        .floating-download-btn:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+        }
+
+        .floating-download-btn svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -260,9 +304,9 @@
         <div class="title">Full Stack Developer & Technical Consultant | 5-Star Rated Preferred Freelancer</div>
         <div class="contact-info">
             <div class="contact-item">📍 Mettari, Protapnagar, Sonarpur, West Bengal, India</div>
-            <div class="contact-item">📞 (947) 446-0058</div>
-            <div class="contact-item">✉️ a09051985@gmail.com</div>
-            <div class="contact-item">🌐 anupammondal.in</div>
+            <div class="contact-item">📞 <a href="tel:+919474460058">(947) 446-0058</a></div>
+            <div class="contact-item">✉️ <a href="mailto:a09051985@gmail.com">a09051985@gmail.com</a></div>
+            <div class="contact-item">🌐 <a href="https://anupammondal.in" target="_blank" rel="noopener">anupammondal.in</a></div>
         </div>
     </header>
 
@@ -779,5 +823,19 @@
             </div>
         </div>
     </section>
+    
+    <!-- Floating "Download PDF" button (excluded from print) -->
+    <button type="button"
+            class="floating-download-btn no-print"
+            id="download-pdf-btn"
+            aria-label="Download PDF"
+            title="Download PDF"
+            onclick="window.print();">
+        <!-- Download icon -->
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M5 20h14a1 1 0 0 0 1-1v-3h-2v2H6v-2H4v3a1 1 0 0 0 1 1zm7-17a1 1 0 0 0-1 1v8.586l-2.293-2.293-1.414 1.414L12 16.414l4.707-4.707-1.414-1.414L13 12.586V4a1 1 0 0 0-1-1z"></path>
+        </svg>
+        <span>Download PDF</span>
+    </button>
 </body>
 </html>
