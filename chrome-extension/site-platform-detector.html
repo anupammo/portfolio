@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="author" content="Anupam Mondal" />
+
+  <title>Site Platform Detector Chrome Extension | Anupam Mondal</title>
+  <meta name="description" content="Free Site Platform Detector Chrome extension to identify a website's platform: CMS, frameworks, hosting/CDN, server, analytics tags, SEO meta, and more in one click." />
+
+  <link rel="canonical" href="https://anupammondal.in/chrome-extension/site-platform-detector" />
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Site Platform Detector Chrome Extension | Anupam Mondal" />
+  <meta property="og:description" content="Free Site Platform Detector Chrome extension to identify a website's platform: CMS, frameworks, hosting/CDN, server, analytics tags, SEO meta, and more in one click." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://anupammondal.in/chrome-extension/site-platform-detector" />
+  <meta property="og:site_name" content="Anupam Mondal" />
+  <meta property="og:image" content="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop" />
+  <meta property="article:published_time" content="2025-10-30T10:00:00+05:30" />
+  <meta property="article:modified_time" content="2025-10-30T10:00:00+05:30" />
+  <meta property="og:image:alt" content="Site Platform Detector Chrome extension preview showing detection results UI" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@anupammondal" />
+  <meta name="twitter:creator" content="@anupammondal" />
+  <meta name="twitter:title" content="Site Platform Detector Chrome Extension | Anupam Mondal" />
+  <meta name="twitter:description" content="Identify a website's platform instantly: CMS, frameworks, hosting/CDN, server, analytics tags, SEO meta, and more in one click." />
+  <meta name="twitter:image" content="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop" />
+  <meta name="twitter:image:alt" content="Site Platform Detector extension preview with detection summary" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <style>
+    :root { --primary:#6441a5; --primary-light:#7d5cc1; --primary-dark:#4e3280; --secondary:#ff6b6b; --dark:#1a1a2e; --light:#f8f9fa; --gray:#6c757d; --transition: all .3s ease; }
+    body { font-family: 'Poppins', sans-serif; color:#333; line-height:1.6; background:#fff; overflow-x:hidden; }
+    a { text-decoration:none; color: var(--primary); transition: var(--transition); }
+    a:hover { color: var(--primary-light); }
+
+    header { position: sticky; top:0; z-index:100; background: rgba(255,255,255,.95); box-shadow: 0 2px 15px rgba(0,0,0,.06); }
+    .navbar-brand { font-weight:700; color: var(--primary); }
+
+    .hero { padding: 120px 0 70px; background: linear-gradient(135deg, rgba(248,247,252,.9) 0%, #fff 100%); }
+    .hero h1 { font-weight:800; }
+
+    .section-title { text-align:center; margin-bottom:40px; position:relative; }
+    .section-title::after { content:""; position:absolute; bottom:-10px; left:50%; transform:translateX(-50%); width:80px; height:4px; background:var(--primary); border-radius:2px; }
+
+    .feature-card { background:#fff; border-radius:14px; padding:24px; box-shadow:0 8px 28px rgba(0,0,0,.06); height:100%; }
+    .feature-card .bi { color: var(--primary); }
+
+    .screenshot { border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,.08); }
+
+    .badge-perm { background: #F5F3FF; color: var(--primary); }
+
+    .cta { background: linear-gradient(135deg, var(--primary) 0%, #4e3280 100%); padding:70px 0; text-align:center; }
+    footer { background:#0f0a1e; color:#fff; padding:60px 0 30px; }
+  </style>
+
+  <!-- Schema.org: SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"SoftwareApplication",
+    "name":"Site Platform Detector",
+    "applicationCategory":"BrowserExtension",
+    "operatingSystem":"Chrome, ChromeOS, Windows, macOS, Linux",
+    "softwareVersion":"1.0.0",
+    "offers": {"@type":"Offer","price":"0","priceCurrency":"INR"},
+  "image":"https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop",
+    "description":"Detect a website's platform instantly: CMS, frameworks/libraries, hosting/CDN, server stack, analytics tags, and SEO/meta.",
+    "url":"https://anupammondal.in/chrome-extension/site-platform-detector",
+    "downloadUrl":"https://chromewebstore.google.com/detail/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx", 
+    "datePublished":"2025-10-30T10:00:00+05:30",
+    "dateModified":"2025-10-30T10:00:00+05:30",
+    "sameAs":["https://github.com/anupammo/site-platform-detector"],
+    "author":{"@type":"Person","name":"Anupam Mondal","url":"https://anupammondal.in/"}
+  }
+  </script>
+
+  <!-- Structured Data: WebPage -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebPage",
+    "name":"Site Platform Detector Chrome Extension | Anupam Mondal",
+    "url":"https://anupammondal.in/chrome-extension/site-platform-detector",
+    "datePublished":"2025-10-30T10:00:00+05:30",
+    "dateModified":"2025-10-30T10:00:00+05:30",
+    "breadcrumb": {"@id":"https://anupammondal.in/chrome-extension/site-platform-detector#breadcrumb"},
+    "inLanguage":"en-IN"
+  }
+  </script>
+
+  <!-- Structured Data: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "@id":"https://anupammondal.in/chrome-extension/site-platform-detector#breadcrumb",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"item":{"@id":"https://anupammondal.in/","name":"Home"}},
+      {"@type":"ListItem","position":2,"item":{"@id":"https://anupammondal.in/chrome-extension/site-platform-detector","name":"Site Platform Detector"}}
+    ]
+  }
+  </script>
+
+  <!-- Structured Data: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"What does the Site Platform Detector do?","acceptedAnswer":{"@type":"Answer","text":"It detects the platform of the current site—CMS (WordPress, Shopify, Wix, Magento), frameworks/libraries (React, Vue, Angular, jQuery), hosting/CDN (Cloudflare, Netlify, Vercel), server (Apache, Nginx, IIS), analytics tags (GA4, GTM, Facebook Pixel), and SEO/meta hints."}},
+      {"@type":"Question","name":"Is it free?","acceptedAnswer":{"@type":"Answer","text":"Yes. The extension is free to install and use. Source code will be available on GitHub."}},
+      {"@type":"Question","name":"How do I install the extension?","acceptedAnswer":{"@type":"Answer","text":"Use the Chrome Web Store listing and click Add to Chrome. You can also load it unpacked in Developer Mode from the GitHub release."}},
+      {"@type":"Question","name":"Does it collect data?","acceptedAnswer":{"@type":"Answer","text":"No. Detection runs locally in your browser and no personal data is sent to any server."}}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="../">Anupam Mondal</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="../">Home</a></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="../services/digital-marketing">Digital Marketing</a></li>
+                  <li><a class="dropdown-item" href="../services/web-design">Web Design</a></li>
+                  <li><a class="dropdown-item" href="../services/web-development">Web Development</a></li>
+                  <li><a class="dropdown-item" href="../services/website-seo">Website SEO</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="../about-us">About Us</a></li>
+                  <li><a class="dropdown-item" href="../portfolio">Portfolio</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="../contact">Contact</a></li>
+              <li class="nav-item"><a class="nav-link" href="../blog/">Blog</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <!-- Breadcrumb -->
+      <nav aria-label="breadcrumb" class="pt-3">
+        <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="https://anupammondal.in/"><span itemprop="name">Home</span></a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <span itemprop="name">Site Platform Detector</span>
+            <meta itemprop="position" content="2" />
+          </li>
+        </ol>
+      </nav>
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <h1 class="display-5">Free Site Platform Detector Chrome Extension</h1>
+          <p class="lead">Find out what a website is built with: CMS, frameworks, hosting/CDN, server stack, analytics tags, and SEO/meta—instantly.</p>
+          <p class="small text-muted mb-2">Published: <time datetime="2025-10-30">Oct 30, 2025</time> &nbsp;•&nbsp; Updated: <time datetime="2025-10-30">Oct 30, 2025</time></p>
+          <div class="d-flex gap-3 flex-wrap mt-3">
+            <a class="btn btn-primary" href="https://chromewebstore.google.com/detail/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" target="_blank" rel="noopener">
+              <img src="https://fonts.gstatic.com/s/i/productlogos/chrome_store/v7/192px.svg" alt="Chrome Web Store" class="icon-chrome" width="20" height="20" />
+              Install from Chrome Web Store
+            </a>
+            <a class="btn btn-outline-primary" href="https://github.com/anupammo/site-platform-detector" target="_blank" rel="noopener">
+              <i class="bi bi-github me-2"></i>View on GitHub
+            </a>
+            <a class="btn btn-outline-success" href="https://wa.me/919474460058?text=Hello%20Anupam%2C%20I%20have%20a%20question%20about%20the%20Site%20Platform%20Detector%20Chrome%20Extension." target="_blank" rel="noopener">
+              <i class="bi bi-whatsapp me-2"></i>Ask a Question
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-5 d-none d-lg-block text-center">
+          <img class="img-fluid screenshot" src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Site Platform Detector Chrome extension UI showing detection panel" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Features -->
+  <section>
+    <div class="container py-5">
+      <h2 class="section-title">Key Features</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4"><div class="feature-card h-100"><h5><i class="bi bi-window-sidebar me-2"></i>CMS Detection</h5><p>Identifies common CMSs like WordPress, Shopify, Wix, Magento, Drupal, Joomla, and more.</p></div></div>
+        <div class="col-md-6 col-lg-4"><div class="feature-card h-100"><h5><i class="bi bi-braces-asterisk me-2"></i>Frameworks & Libraries</h5><p>Detects React, Vue, Angular, Next.js, jQuery, Bootstrap, Tailwind, and popular UI kits.</p></div></div>
+        <div class="col-md-6 col-lg-4"><div class="feature-card h-100"><h5><i class="bi bi-hdd-network me-2"></i>Hosting & CDN</h5><p>Surface providers like Cloudflare, Netlify, Vercel, AWS, Google Cloud, and common CDNs.</p></div></div>
+        <div class="col-md-6 col-lg-4"><div class="feature-card h-100"><h5><i class="bi bi-cpu me-2"></i>Server & Backend</h5><p>Signals server stack hints (Apache, Nginx, IIS), languages (PHP, Node.js, ASP.NET), and headers.</p></div></div>
+        <div class="col-md-6 col-lg-4"><div class="feature-card h-100"><h5><i class="bi bi-graph-up me-2"></i>Analytics & Tags</h5><p>Finds GA4, Google Tag Manager, Facebook Pixel, Hotjar, and other tracking snippets.</p></div></div>
+        <div class="col-md-6 col-lg-4"><div class="feature-card h-100"><h5><i class="bi bi-search-heart me-2"></i>SEO & Meta</h5><p>Checks canonical, robots, structured data presence, meta tags, and social cards.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screenshots -->
+  <section class="bg-light py-5">
+    <div class="container">
+      <h2 class="section-title">Screenshots</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <img class="img-fluid screenshot" loading="lazy" src="https://images.pexels.com/photos/3861964/pexels-photo-3861964.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Extension detection results screenshot" />
+        </div>
+        <div class="col-md-6">
+          <img class="img-fluid screenshot" loading="lazy" src="https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Extension technology stack breakdown screenshot" />
+        </div>
+      </div>
+      <p class="mt-3 text-muted">View real extension screenshots on the <a href="https://chromewebstore.google.com/detail/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" target="_blank" rel="noopener">Chrome Web Store</a> and <a href="https://github.com/anupammo/site-platform-detector" target="_blank" rel="noopener">GitHub</a>. Images above are illustrative placeholders.</p>
+    </div>
+  </section>
+
+  <!-- Requested Permissions -->
+  <section>
+    <div class="container">
+      <h2 class="section-title">Requested Permissions</h2>
+      <ul class="list-unstyled">
+        <li class="mb-2"><span class="badge badge-perm me-2">activeTab</span>Read the current page to evaluate content.</li>
+        <li class="mb-2"><span class="badge badge-perm me-2">scripting</span>Run content scripts to detect technologies.</li>
+        <li class="mb-2"><span class="badge badge-perm me-2">storage</span>Save lightweight detection preferences.</li>
+      </ul>
+      <p class="small text-muted">Exact permissions will be finalized per the manifest (see GitHub repo).</p>
+    </div>
+  </section>
+
+  <!-- Install Instructions -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title">How to Install</h2>
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <h5>From Chrome Web Store</h5>
+          <ol class="mb-4">
+            <li>Open the Chrome Web Store listing.</li>
+            <li>Click “Add to Chrome”.</li>
+            <li>Confirm the installation prompt.</li>
+          </ol>
+          <a class="btn btn-primary" href="https://chromewebstore.google.com/detail/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" target="_blank" rel="noopener">
+            <img src="https://fonts.gstatic.com/s/i/productlogos/chrome_store/v7/192px.svg" alt="Chrome Web Store" class="icon-chrome" width="20" height="20" />
+            Open Web Store
+          </a>
+        </div>
+        <div class="col-lg-6">
+          <h5>Manual (Developer Mode)</h5>
+          <ol class="mb-0">
+            <li>Download the latest release from GitHub.</li>
+            <li>Go to chrome://extensions and enable Developer mode.</li>
+            <li>Click “Load unpacked” and select the extension folder.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Privacy -->
+  <section>
+    <div class="container">
+      <h2 class="section-title">Privacy & Data</h2>
+      <p>This extension runs locally in your browser. No personal data is collected or transmitted. Detection happens on-device. Optional GitHub usage is client-side only.</p>
+    </div>
+  </section>
+
+  <!-- FAQs -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="section-title">Site Platform Detector FAQs</h2>
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+          <h3 class="accordion-header" id="q1h"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="true" aria-controls="q1">What does the Site Platform Detector do?</button></h3>
+          <div id="q1" class="accordion-collapse collapse show" aria-labelledby="q1h" data-bs-parent="#faqAccordion"><div class="accordion-body">It detects the platform of the active tab—CMS, frameworks/libraries, hosting/CDN, server stack, analytics tags, and SEO/meta—using page markup, headers, and script patterns.</div></div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header" id="q2h"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">Is the extension free?</button></h3>
+          <div id="q2" class="accordion-collapse collapse" aria-labelledby="q2h" data-bs-parent="#faqAccordion"><div class="accordion-body">Yes. It's free to install and use. Source code will be available on GitHub.</div></div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header" id="q3h"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">How do I install the extension?</button></h3>
+          <div id="q3" class="accordion-collapse collapse" aria-labelledby="q3h" data-bs-parent="#faqAccordion"><div class="accordion-body">Use the Chrome Web Store listing and click “Add to Chrome”. Alternatively, load it unpacked in Developer Mode using the GitHub release.</div></div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header" id="q4h"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">Does the extension collect any data?</button></h3>
+          <div id="q4" class="accordion-collapse collapse" aria-labelledby="q4h" data-bs-parent="#faqAccordion"><div class="accordion-body">No. All detection runs locally in your browser. No personal data is collected or sent anywhere.</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container">
+      <div class="row"><div class="col-12">
+        <h2 class="text-white mb-3">Questions or Feature Requests?</h2>
+        <p class="text-white mb-4">Reach out via WhatsApp or open an issue on GitHub. I’d love your feedback.</p>
+        <a class="btn btn-light" href="https://wa.me/919474460058?text=Hello%20Anupam%2C%20I%27d%20like%20to%20discuss%20the%20Site%20Platform%20Detector%20Chrome%20Extension." target="_blank" rel="noopener">Contact on WhatsApp</a>
+        <a class="btn btn-outline-light ms-2" href="https://github.com/anupammo/site-platform-detector/issues" target="_blank" rel="noopener">Open GitHub Issue</a>
+      </div></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <h3>Anupam Mondal</h3>
+          <small>Providing expert web design, development, and SEO services to businesses worldwide since 2016.</small>
+          <div class="social-links d-flex gap-2 mt-3">
+            <a class="d-flex align-items-center justify-content-center rounded-circle" style="width:40px;height:40px;background:rgba(255,255,255,.1);color:#fff;" href="https://www.facebook.com/anupammondal.in/" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a class="d-flex align-items-center justify-content-center rounded-circle" style="width:40px;height:40px;background:rgba(255,255,255,.1);color:#fff;" href="https://goo.gl/maps/oBwMFuFssGzWz6m26" target="_blank" rel="noopener" aria-label="Google"><i class="bi bi-google"></i></a>
+            <a class="d-flex align-items-center justify-content-center rounded-circle" style="width:40px;height:40px;background:rgba(255,255,255,.1);color:#fff;" href="https://www.linkedin.com/company/anupammondal" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a class="d-flex align-items-center justify-content-center rounded-circle" style="width:40px;height:40px;background:rgba(255,255,255,.1);color:#fff;" href="https://www.youtube.com/@anuapm" target="_blank" rel="noopener" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <h3>Services</h3>
+          <ul class="list-unstyled">
+            <li><a href="../services/web-design" class="text-white-50">Web Design</a></li>
+            <li><a href="../services/web-development" class="text-white-50">Web Development</a></li>
+            <li><a href="../services/website-seo" class="text-white-50">SEO Optimization</a></li>
+            <li><a href="../services/digital-marketing" class="text-white-50">Digital Marketing</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <h3>Quick Links</h3>
+          <ul class="list-unstyled">
+            <li><a href="../" class="text-white-50">Home</a></li>
+            <li><a href="../about-us" class="text-white-50">About</a></li>
+            <li><a href="../portfolio" class="text-white-50">Portfolio</a></li>
+            <li><a href="../contact" class="text-white-50">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-2">
+          <h3>Contact</h3>
+          <ul class="list-unstyled">
+            <li><i class="bi bi-geo-alt-fill"></i><span class="ps-2">Pratapnagar, Metiari, West Bengal, 743330</span></li>
+            <li><i class="bi bi-telephone-fill"></i><a class="ps-2 text-white-50" href="tel:+919474460058">+91-9474460058</a></li>
+            <li><i class="bi bi-clock"></i><span class="ps-2">Mon-Fri: 9AM - 6PM</span></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary opacity-25" />
+      <div class="d-flex justify-content-between">
+        <p class="mb-0">&copy; <span id="current-year"></span> Anupam Mondal</p>
+        <p class="mb-0">MSME Registered Business</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script>(function(){ const y=document.getElementById('current-year'); if(y) y.textContent=new Date().getFullYear(); })();</script>
+</body>
+</html>
