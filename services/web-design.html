@@ -2,147 +2,6 @@
 <html lang="en">
 
 <head>
-  <!-- Structured Data: FAQPage -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How long does it take to design a website?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A basic website typically takes 2-4 weeks, while more complex e-commerce or custom web applications can take 8-12 weeks. We'll provide a detailed timeline after our initial consultation."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you provide website hosting services?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, we offer reliable hosting solutions optimized for the websites we build, including security monitoring, regular backups, and technical support."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Will my website be mobile-friendly?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Absolutely! All websites we design are fully responsive and mobile-friendly, using a mobile-first approach."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can you redesign my existing website?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, we specialize in website redesigns that maintain your existing content while improving design, functionality, and performance."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is your design process?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Our process includes: 1) Discovery and planning, 2) Wireframing and prototyping, 3) Design development, 4) Development and coding, 5) Testing and QA, and 6) Launch and support."
-        }
-      }
-    ]
-  }
-  </script>
-  
-  <!-- WhatsApp CTA Modal -->
-  <div class="modal fade" id="whatsappCtaModal" tabindex="-1" aria-labelledby="whatsappCtaLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <form class="modal-content" id="whatsappCtaForm" novalidate>
-        <div class="modal-header">
-          <h5 class="modal-title" id="whatsappCtaLabel">Get a Free Quote</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <input type="hidden" id="serviceName" name="service" value="Web Design" />
-          <div class="mb-3">
-            <label for="clientName" class="form-label">Your Name</label>
-            <input type="text" class="form-control" id="clientName" name="name" placeholder="John Doe" required>
-          </div>
-          <div class="mb-3">
-            <label for="clientEmail" class="form-label">Email</label>
-            <input type="email" class="form-control" id="clientEmail" name="email" placeholder="you@example.com" required>
-          </div>
-          <div class="mb-3">
-            <label for="clientPhone" class="form-label">Phone</label>
-            <input type="tel" class="form-control" id="clientPhone" name="phone" placeholder="+91 9XXXXXXXXX" required>
-          </div>
-          <div class="mb-3">
-            <label for="clientWebsite" class="form-label">Website (optional)</label>
-            <input type="url" class="form-control" id="clientWebsite" name="website" placeholder="https://yourdomain.com">
-          </div>
-          <div class="mb-3">
-            <label for="projectDetails" class="form-label">Project Details</label>
-            <textarea class="form-control" id="projectDetails" name="details" rows="4" placeholder="Brief about your goals, timeline, budget..." required></textarea>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <a class="btn btn-outline-success" id="quickWhatsAppLink" target="_blank" rel="noopener">Chat Now</a>
-          <button type="submit" class="btn btn-success">Send via WhatsApp</button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <script>
-    // WhatsApp CTA behavior for Web Design page
-    (function() {
-      const SERVICE_NAME = 'Web Design';
-      const WHATSAPP_NUMBER = '919474460058';
-      const pageUrl = window.location.href;
-
-      const modalEl = document.getElementById('whatsappCtaModal');
-      const quickLink = document.getElementById('quickWhatsAppLink');
-
-      modalEl.addEventListener('show.bs.modal', function () {
-        document.getElementById('serviceName').value = SERVICE_NAME;
-        const quickText = `Hello Anupam, I want to discuss ${SERVICE_NAME}. Page: ${pageUrl}`;
-        quickLink.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(quickText)}`;
-      });
-
-      function matchesCtaText(el) {
-        const t = (el.textContent || '').trim().toLowerCase();
-        return t === 'get started' || t === 'get started today';
-      }
-
-      Array.from(document.querySelectorAll('a, button')).filter(matchesCtaText).forEach((el) => {
-        el.setAttribute('role', 'button');
-        el.addEventListener('click', function (e) {
-          e.preventDefault();
-          const modal = new bootstrap.Modal(modalEl);
-          modal.show();
-        });
-      });
-
-      document.getElementById('whatsappCtaForm').addEventListener('submit', function (e) {
-        e.preventDefault();
-        const service = document.getElementById('serviceName').value.trim();
-        const name = document.getElementById('clientName').value.trim();
-        const email = document.getElementById('clientEmail').value.trim();
-        const phone = document.getElementById('clientPhone').value.trim();
-        const website = document.getElementById('clientWebsite').value.trim();
-        const details = document.getElementById('projectDetails').value.trim();
-        if (!name || !email || !phone || !details) return;
-        const lines = [
-          `New ${service} enquiry`,
-          `Name: ${name}`,
-          `Email: ${email}`,
-          `Phone: ${phone}`,
-          website ? `Website: ${website}` : null,
-          `Details: ${details}`,
-          `Page: ${pageUrl}`
-        ].filter(Boolean);
-        window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join('\n'))}`, '_blank', 'noopener');
-      });
-    })();
-  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Primary Meta Tags -->
@@ -172,16 +31,16 @@
 
   <!-- Structured Data: WebPage (Web Design Service) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": ["WebPage", "Service"],
-    "name": "Professional Web Design Services | Anupam Mondal",
-    "description": "Expert web design services by Anupam Mondal. Responsive, SEO-optimized websites that convert. 70+ projects since 2016. Modern designs for your business.",
-    "url": "https://anupammondal.in/services/web-design",
-    "inLanguage": "en",
-    "isPartOf": { "@id": "https://anupammondal.in/#website" },
-    "breadcrumb": { "@id": "https://anupammondal.in/services/web-design#breadcrumb" }
-  }
+    {
+      "@context": "https://schema.org",
+      "@type": ["WebPage", "Service"],
+      "name": "Professional Web Design Services | Anupam Mondal",
+      "description": "Expert web design services by Anupam Mondal. Responsive, SEO-optimized websites that convert. 70+ projects since 2016. Modern designs for your business.",
+      "url": "https://anupammondal.in/services/web-design",
+      "inLanguage": "en",
+      "isPartOf": { "@id": "https://anupammondal.in/#website" },
+      "breadcrumb": { "@id": "https://anupammondal.in/services/web-design#breadcrumb" }
+    }
   </script>
 
   <!-- Structured Data: BreadcrumbList -->
@@ -243,6 +102,66 @@
       "https://www.youtube.com/@anuapm"
     ]
   }
+  </script>
+  <!-- Structured Data: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long does it take to design a website?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A basic website typically takes 2-4 weeks, while more complex e-commerce or custom web applications can take 8-12 weeks. We'll provide a detailed timeline after our initial consultation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you provide website hosting services?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we offer reliable hosting solutions optimized for the websites we build, including security monitoring, regular backups, and technical support."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will my website be mobile-friendly?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely! All websites we design are fully responsive and mobile-friendly, using a mobile-first approach."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you redesign my existing website?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we specialize in website redesigns that maintain your existing content while improving design, functionality, and performance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is your design process?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our process includes: 1) Discovery and planning, 2) Wireframing and prototyping, 3) Design development, 4) Development and coding, 5) Testing and QA, and 6) Launch and support."
+        }
+      }
+    ]
+  }
+  </script>
+  <!-- Structured Data: ItemList (Chrome Extensions) -->`
+  <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"ItemList",
+      "itemListElement":[
+        {"@type":"SoftwareApplication","name":"SEO Checklist","applicationCategory":"BrowserExtension","operatingSystem":"Chrome, ChromeOS, Windows, macOS, Linux","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"url":"https://anupammondal.in/chrome-extension/seo-checklist","downloadUrl":"https://chromewebstore.google.com/detail/jgigdhidhmgikfnccdnehcpgoggmagfh"},
+        {"@type":"SoftwareApplication","name":"Website Framework Detector","applicationCategory":"BrowserExtension","operatingSystem":"Chrome, ChromeOS, Windows, macOS, Linux","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"url":"https://anupammondal.in/chrome-extension/website-framework-detector","downloadUrl":"https://chromewebstore.google.com/detail/ebkogcpaeaofidbegiadlfcfhlnaccnn"}
+      ]
+    }
   </script>
 
   <!-- Meta Tags Generated with https://metatags.io -->
@@ -1448,17 +1367,8 @@
       </div>
       <p class="text-muted small mt-3">No data collected; all checks run locally in your browser.</p>
     </div>
-    <script type="application/ld+json">
-    {
-      "@context":"https://schema.org",
-      "@type":"ItemList",
-      "itemListElement":[
-        {"@type":"SoftwareApplication","name":"SEO Checklist","applicationCategory":"BrowserExtension","operatingSystem":"Chrome, ChromeOS, Windows, macOS, Linux","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"url":"https://anupammondal.in/chrome-extension/seo-checklist","downloadUrl":"https://chromewebstore.google.com/detail/jgigdhidhmgikfnccdnehcpgoggmagfh"},
-        {"@type":"SoftwareApplication","name":"Website Framework Detector","applicationCategory":"BrowserExtension","operatingSystem":"Chrome, ChromeOS, Windows, macOS, Linux","offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"url":"https://anupammondal.in/chrome-extension/website-framework-detector","downloadUrl":"https://chromewebstore.google.com/detail/ebkogcpaeaofidbegiadlfcfhlnaccnn"}
-      ]
-    }
-    </script>
   </section>
+
   <!-- Services Section -->
   <section class="py-6">
     <div class="container">
@@ -1946,8 +1856,48 @@
       </div>
     </div>
   </footer>
+  
+  <!-- WhatsApp CTA Modal -->
+  <div class="modal fade" id="whatsappCtaModal" tabindex="-1" aria-labelledby="whatsappCtaLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <form class="modal-content" id="whatsappCtaForm" novalidate>
+        <div class="modal-header">
+          <h5 class="modal-title" id="whatsappCtaLabel">Get a Free Quote</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <input type="hidden" id="serviceName" name="service" value="Web Design" />
+          <div class="mb-3">
+            <label for="clientName" class="form-label">Your Name</label>
+            <input type="text" class="form-control" id="clientName" name="name" placeholder="John Doe" required>
+          </div>
+          <div class="mb-3">
+            <label for="clientEmail" class="form-label">Email</label>
+            <input type="email" class="form-control" id="clientEmail" name="email" placeholder="you@example.com" required>
+          </div>
+          <div class="mb-3">
+            <label for="clientPhone" class="form-label">Phone</label>
+            <input type="tel" class="form-control" id="clientPhone" name="phone" placeholder="+91 9XXXXXXXXX" required>
+          </div>
+          <div class="mb-3">
+            <label for="clientWebsite" class="form-label">Website (optional)</label>
+            <input type="url" class="form-control" id="clientWebsite" name="website" placeholder="https://yourdomain.com">
+          </div>
+          <div class="mb-3">
+            <label for="projectDetails" class="form-label">Project Details</label>
+            <textarea class="form-control" id="projectDetails" name="details" rows="4" placeholder="Brief about your goals, timeline, budget..." required></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a class="btn btn-outline-success" id="quickWhatsAppLink" target="_blank" rel="noopener">Chat Now</a>
+          <button type="submit" class="btn btn-success">Send via WhatsApp</button>
+        </div>
+      </form>
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
   <script>
     // Mobile menu toggle
     const mobileMenuBtn = document.getElementById("mobileMenuBtn");
@@ -2039,6 +1989,59 @@
         }
       });
     });
+  </script>
+
+  <script>
+    // WhatsApp CTA behavior for Web Design page
+    (function() {
+      const SERVICE_NAME = 'Web Design';
+      const WHATSAPP_NUMBER = '919474460058';
+      const pageUrl = window.location.href;
+
+      const modalEl = document.getElementById('whatsappCtaModal');
+      const quickLink = document.getElementById('quickWhatsAppLink');
+
+      modalEl.addEventListener('show.bs.modal', function () {
+        document.getElementById('serviceName').value = SERVICE_NAME;
+        const quickText = `Hello Anupam, I want to discuss ${SERVICE_NAME}. Page: ${pageUrl}`;
+        quickLink.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(quickText)}`;
+      });
+
+      function matchesCtaText(el) {
+        const t = (el.textContent || '').trim().toLowerCase();
+        return t === 'get started' || t === 'get started today';
+      }
+
+      Array.from(document.querySelectorAll('a, button')).filter(matchesCtaText).forEach((el) => {
+        el.setAttribute('role', 'button');
+        el.addEventListener('click', function (e) {
+          e.preventDefault();
+          const modal = new bootstrap.Modal(modalEl);
+          modal.show();
+        });
+      });
+
+      document.getElementById('whatsappCtaForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const service = document.getElementById('serviceName').value.trim();
+        const name = document.getElementById('clientName').value.trim();
+        const email = document.getElementById('clientEmail').value.trim();
+        const phone = document.getElementById('clientPhone').value.trim();
+        const website = document.getElementById('clientWebsite').value.trim();
+        const details = document.getElementById('projectDetails').value.trim();
+        if (!name || !email || !phone || !details) return;
+        const lines = [
+          `New ${service} enquiry`,
+          `Name: ${name}`,
+          `Email: ${email}`,
+          `Phone: ${phone}`,
+          website ? `Website: ${website}` : null,
+          `Details: ${details}`,
+          `Page: ${pageUrl}`
+        ].filter(Boolean);
+        window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join('\n'))}`, '_blank', 'noopener');
+      });
+    })();
   </script>
 </body>
 
