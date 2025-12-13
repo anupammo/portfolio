@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="author" content="Anupam Mondal" />
+
+    <title>Smart SEO Booster - WordPress SEO Plugin | Anupam Mondal</title>
+    <meta name="description"
+        content="Comprehensive WordPress SEO plugin with advanced content audit, schema markup, and PageSpeed Insights-style reporting for better search engine optimization." />
+
+    <link rel="canonical" href="https://anupammondal.in/wordpress-plugin/smart-seo-booster" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Smart SEO Booster - WordPress SEO Plugin | Anupam Mondal" />
+    <meta property="og:description"
+        content="Comprehensive WordPress SEO plugin with advanced content audit, schema markup, and PageSpeed Insights-style reporting for better search engine optimization." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://anupammondal.in/wordpress-plugin/smart-seo-booster" />
+    <meta property="og:site_name" content="Anupam Mondal" />
+    <meta property="og:image" content="https://anupammondal.in/image/meta/smart-seo-booster-wordpress-plugin.png" />
+    <meta property="article:published_time" content="2025-01-04T10:00:00+05:30" />
+    <meta property="article:modified_time" content="2025-12-14T10:00:00+05:30" />
+    <meta property="og:image:alt" content="Smart SEO Booster WordPress plugin preview showing SEO audit interface" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@anupammondal" />
+    <meta name="twitter:creator" content="@anupammondal" />
+    <meta name="twitter:title" content="Smart SEO Booster - WordPress SEO Plugin | Anupam Mondal" />
+    <meta name="twitter:description"
+        content="Comprehensive WordPress SEO plugin with advanced content audit, schema markup, and PageSpeed Insights-style reporting for better search engine optimization." />
+    <meta name="twitter:image" content="https://anupammondal.in/image/meta/smart-seo-booster-wordpress-plugin.png" />
+    <meta name="twitter:image:alt" content="Smart SEO Booster WordPress plugin preview showing SEO audit interface" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        /* Hero section base */
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            left: -100px;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .hero:after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Glass effect wrapper */
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 2rem;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Headline styling */
+        .hero h1 {
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+
+        .hero h1 .display-4 {
+            font-size: 3rem;
+            color: #fff;
+        }
+
+        .hero h1 strong.text-dark {
+            color: #ffc107;
+        }
+
+        /* Paragraph styling */
+        .hero p {
+            color: #f0f0f0;
+            font-size: 1rem;
+            max-width: 700px;
+        }
+
+        /* Lead paragraph */
+        .hero .lead {
+            font-size: 1.1rem;
+            color: #fff;
+        }
+
+        /* Button styling */
+        .hero .btn {
+            font-weight: 500;
+            border: 2px solid #fff;
+            transition: all 0.3s ease;
+        }
+
+        .hero .btn:hover {
+            background-color: #fff;
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        /* Image styling */
+        .hero img.card {
+            border-radius: 1rem;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .hero img.card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Responsive tweaks */
+        @media (max-width: 768px) {
+            .hero h1 .display-4 {
+                font-size: 2.2rem;
+            }
+
+            .hero .btn {
+                width: 100%;
+                margin-bottom: 0.5rem;
+            }
+
+            .hero img.card {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+        }
+
+        .card {
+            position: relative;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-img-top {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .card:hover .card-img-top {
+            transform: scale(1.05);
+        }
+
+        /* Overlay effect using absolute positioning */
+        .card-body.blog-bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(to top, rgb(0 0 0), rgba(0, 0, 0, 0));
+            color: #fff;
+            z-index: 2;
+            border-bottom-left-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        /* Optional glass effect */
+        .glass-effect {
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+
+        /* Typography */
+        .card-body h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+
+        .card-body p {
+            font-size: 0.9rem;
+            color: #ddd;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-body i {
+            color: #ffc107;
+        }
+
+        /* Link styling */
+        .nav-link {
+            text-decoration: none;
+            color: inherit;
+            position: relative;
+            z-index: 3;
+        }
+    </style>
+    <style>
+        :root {
+            --primary: #6441a5;
+            --primary-light: #7d5cc1;
+            --primary-dark: #4e3280;
+            --secondary: #ff6b6b;
+            --dark: #1a1a2e;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+            --transition: all 0.3s ease;
+        }
+
+        .text-primary {
+            color: var(--primary) !important;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #fff;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 700;
+            line-height: 1.3;
+            color: var(--dark);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .text-center h2::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary);
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--primary-light);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 4px 15px rgba(100, 65, 165, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-light);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(100, 65, 165, 0.4);
+        }
+
+        /* Icon inside buttons */
+        .btn .icon-wp {
+            height: 20px;
+            width: 20px;
+            margin-right: 8px;
+            vertical-align: -3px;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .text-primary {
+            color: var(--primary);
+        }
+
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            padding: 10px 0;
+            background: white;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .logo span {
+            color: var(--dark);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: var(--dark);
+            font-weight: 500;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            color: var(--dark);
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 80px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .footer-col h3 {
+            color: white;
+            margin-bottom: 25px;
+            font-size: 1.5rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .footer-col h3::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--primary);
+        }
+
+        .footer-links {
+            list-style: none;
+            padding-left: 0px;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            margin: auto;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: var(--transition);
+        }
+
+        div.social-links a small {
+            position: absolute;
+            margin-top: 60px;
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        .cta:before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            left: -100px;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .cta:after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+    <style>
+        :root {
+            --primary: #6441A5;
+            --secondary: #9C7BEE;
+            --light: #F5F3FF;
+            --dark: #1A0933;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark);
+            background: #fff;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, .06);
+        }
+
+        .hero {
+            padding: 120px 0 70px;
+            background: linear-gradient(135deg, rgba(248, 247, 252, .9) 0%, rgba(255, 255, 255, 1) 100%);
+        }
+
+        .hero h1 {
+            font-weight: 800;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+
+        .feature-card {
+            background: #fff;
+            border-radius: 14px;
+            padding: 24px;
+            box-shadow: 0 8px 28px rgba(0, 0, 0, .06);
+            height: 100%;
+        }
+
+        .feature-card .bi {
+            color: var(--primary);
+        }
+
+        .screenshot {
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+        }
+
+        .badge-req {
+            background: var(--light);
+            color: var(--primary);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+
+        .cta {
+            background: linear-gradient(135deg, var(--primary) 0%, #4e3280 100%);
+            padding: 70px 0;
+            text-align: center;
+        }
+
+        footer {
+            background: #0f0a1e;
+            color: #fff;
+            padding: 60px 0 30px;
+        }
+        /* Minimal CTA buttons for hero */
+        .btn-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            line-height: 1.2;
+            border: 1px solid transparent;
+            transition: transform .15s ease, background-color .15s ease, border-color .15s ease, color .15s ease;
+            text-decoration: none;
+        }
+        .btn-cta:focus-visible {
+            outline: 2px solid rgba(255,255,255,.7);
+            outline-offset: 2px;
+        }
+        .btn-cta-primary {
+            background: #fff;
+            color: var(--primary);
+            border-color: rgba(255,255,255,0);
+            box-shadow: 0 4px 12px rgba(0,0,0,.08);
+        }
+        .btn-cta-primary:hover {
+            background: #f8f9fa;
+            color: var(--primary-dark);
+            transform: translateY(-1px);
+        }
+        .btn-cta-ghost {
+            background: transparent;
+            color: var(--primary);
+            border-color: rgba(100, 65, 165, .4);
+        }
+        .btn-cta-ghost:hover {
+            background: rgba(100, 65, 165, .06);
+            border-color: rgba(100, 65, 165, .6);
+            transform: translateY(-1px);
+        }
+        .btn-cta .icon-wp { height: 20px; width: 20px; }
+
+        .requirements-table {
+            width: 100%;
+            margin: 2rem 0;
+        }
+        .requirements-table th,
+        .requirements-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .requirements-table th {
+            background: var(--light);
+            color: var(--primary);
+            font-weight: 600;
+        }
+    </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYYY10HF4L"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-VYYY10HF4L');
+    </script>
+
+    <!-- Schema.org: SoftwareApplication -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "Smart SEO Booster",
+            "applicationCategory": "Plugin",
+            "operatingSystem": "WordPress",
+            "softwareVersion": "2.1.0",
+            "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+            },
+            "description": "Comprehensive WordPress SEO plugin with advanced content audit, schema markup, and PageSpeed Insights-style reporting for better search engine optimization.",
+            "url": "https://anupammondal.in/wordpress-plugin/smart-seo-booster",
+            "downloadUrl": "https://github.com/anupammo/smart-seo-booster",
+            "datePublished": "2025-01-04T10:00:00+05:30",
+            "dateModified": "2025-12-14T10:00:00+05:30",
+            "sameAs": [
+            "https://github.com/anupammo/smart-seo-booster"
+            ],
+            "author": {
+            "@type": "Person",
+            "name": "Anupam Mondal",
+            "url": "https://anupammondal.in/"
+            }
+        }
+    </script>
+
+    <!-- Structured Data: WebPage with publish/modify dates -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Smart SEO Booster - WordPress SEO Plugin | Anupam Mondal",
+        "url": "https://anupammondal.in/wordpress-plugin/smart-seo-booster",
+        "datePublished": "2025-01-04T10:00:00+05:30",
+        "dateModified": "2025-12-14T10:00:00+05:30",
+        "breadcrumb": { "@id": "https://anupammondal.in/wordpress-plugin/smart-seo-booster#breadcrumb" },
+        "inLanguage": "en-IN"
+    }
+    </script>
+
+    <!-- Structured Data: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "@id": "https://anupammondal.in/wordpress-plugin/smart-seo-booster#breadcrumb",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "item": { "@id": "https://anupammondal.in/", "name": "Home" }
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "item": { "@id": "https://anupammondal.in/wordpress-plugin/smart-seo-booster", "name": "Smart SEO Booster Plugin" }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Structured Data: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What does Smart SEO Booster plugin do?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Smart SEO Booster is a comprehensive WordPress SEO plugin that provides 20+ point SEO analysis, content quality assessment, keyword optimization, image optimization, schema markup, and PageSpeed Insights-style reporting."}
+            },
+            {
+                "@type": "Question",
+                "name": "Is Smart SEO Booster free?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Yes. Smart SEO Booster is a free and open-source WordPress plugin. You can download it from GitHub and install it on your WordPress site."}
+            },
+            {
+                "@type": "Question",
+                "name": "What are the requirements for Smart SEO Booster?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Minimum requirements: WordPress 5.0+, PHP 7.4+, 64MB memory, MySQL 5.6+. Recommended: WordPress 6.0+, PHP 8.0+, 128MB+ memory, MySQL 8.0+."}
+            },
+            {
+                "@type": "Question",
+                "name": "Does Smart SEO Booster affect site performance?",
+                "acceptedAnswer": {"@type": "Answer", "text": "No. The plugin is performance optimized with efficient database queries and caching. It follows WordPress coding standards to ensure minimal impact on your site's speed."}
+            }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header id="header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+          <a class="navbar-brand" href="../">Anupam Mondal</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="../">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  Services
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="../services/digital-marketing">Digital Marketing</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="../services/web-design">Web Design</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="../services/web-development">Web Development</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="../services/website-seo">Website SEO</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  About
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="../about-us">About Us</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="../portfolio">Portfolio</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="../contact">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../blog/">Blog</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <!-- Breadcrumb Navigation -->
+            <nav aria-label="breadcrumb" class="pt-3">
+                <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+                    <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="https://anupammondal.in/"><span itemprop="name">Home</span></a>
+                        <meta itemprop="position" content="1" />
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <span itemprop="name">Smart SEO Booster Plugin</span>
+                        <meta itemprop="position" content="2" />
+                    </li>
+                </ol>
+            </nav>
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <h1 class="display-5">Smart SEO Booster - WordPress Plugin</h1>
+                    <p class="lead text-dark">Comprehensive WordPress SEO plugin with advanced content audit, schema markup, and PageSpeed Insights-style reporting for better search engine optimization.</p>
+                    <p class="small text-dark mb-2">
+                        <span class="badge bg-light text-primary me-2">WordPress 5.0+</span>
+                        <span class="badge bg-light text-primary me-2">PHP 7.4+</span>
+                        <span class="badge bg-light text-primary me-2">Version 2.1.0</span>
+                    </p>
+                    <p class="small text-dark mb-2">
+                        Published: <time datetime="2025-01-04">Jan 4, 2025</time>
+                        &nbsp;•&nbsp;
+                        Updated: <time datetime="2025-12-14">Dec 14, 2025</time>
+                    </p>
+                    <div class="d-flex gap-3 flex-wrap mt-3">
+                        <a class="btn-cta btn-cta-primary" href="https://github.com/anupammo/smart-seo-booster/releases"
+                            target="_blank" rel="noopener">
+                            <i class="bi bi-download me-2"></i>Download Plugin
+                        </a>
+                        <a class="btn-cta btn-cta-ghost" href="https://github.com/anupammo/smart-seo-booster"
+                            target="_blank" rel="noopener">
+                            <i class="bi bi-github me-2"></i>View on GitHub
+                        </a>
+                        <a class="btn-cta btn-cta-ghost" href="https://wa.me/919474460058?text=Hello%20Anupam%2C%20I%20have%20a%20question%20about%20Smart%20SEO%20Booster%20WordPress%20plugin." target="_blank" rel="noopener">
+                            <i class="bi bi-whatsapp me-2"></i>Get Support
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block text-center">
+                    <img class="img-fluid screenshot"
+                        src="https://raw.githubusercontent.com/anupammo/smart-seo-booster/main/screenshot-1.png"
+                        alt="Smart SEO Booster WordPress plugin interface showing SEO audit dashboard"
+                        onerror="this.src='https://via.placeholder.com/600x400/6441A5/ffffff?text=Smart+SEO+Booster'" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section>   
+        <div class="container py-5">
+            <h2 class="section-title">Key Features</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card h-100">
+                        <h5><i class="bi bi-clipboard-check me-2"></i>20+ Point Analysis</h5>
+                        <p>Complete SEO health check covering title tags, meta descriptions, content structure, and more.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card h-100">
+                        <h5><i class="bi bi-file-text me-2"></i>Content Quality</h5>
+                        <p>Word count, readability analysis, keyword optimization, and heading structure validation.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card h-100">
+                        <h5><i class="bi bi-image me-2"></i>Image Optimization</h5>
+                        <p>Alt text validation, file size analysis, and image naming best practices.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card h-100">
+                        <h5><i class="bi bi-speedometer2 me-2"></i>PageSpeed Insights Design</h5>
+                        <p>Professional, Google-inspired interface with color-coded indicators and detailed reporting.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card h-100">
+                        <h5><i class="bi bi-diagram-3 me-2"></i>Schema Markup</h5>
+                        <p>Automatic JSON-LD structured data for articles, organizations, FAQs, and local businesses.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card h-100">
+                        <h5><i class="bi bi-link-45deg me-2"></i>Link Analysis</h5>
+                        <p>Internal and external link validation with quality assessment and optimization tips.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card h-100">
+                        <h5><i class="bi bi-shield-check me-2"></i>Security Standards</h5>
+                        <p>Proper sanitization, escaping, and WordPress security best practices implementation.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card h-100">
+                        <h5><i class="bi bi-globe me-2"></i>Social Media</h5>
+                        <p>Open Graph and Twitter Card meta tags for enhanced social media sharing.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card h-100">
+                        <h5><i class="bi bi-translate me-2"></i>Translation Ready</h5>
+                        <p>Full internationalization support with WordPress translation standards.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Requirements -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2 class="section-title">System Requirements</h2>
+            <div class="table-responsive">
+                <table class="requirements-table table">
+                    <thead>
+                        <tr>
+                            <th>Requirement</th>
+                            <th>Minimum</th>
+                            <th>Recommended</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>WordPress</strong></td>
+                            <td>5.0+</td>
+                            <td>6.0+</td>
+                        </tr>
+                        <tr>
+                            <td><strong>PHP</strong></td>
+                            <td>7.4+</td>
+                            <td>8.0+</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Memory</strong></td>
+                            <td>64MB</td>
+                            <td>128MB+</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Database</strong></td>
+                            <td>MySQL 5.6+</td>
+                            <td>MySQL 8.0+</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Installation -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title">Installation Methods</h2>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="feature-card">
+                        <h5><i class="bi bi-wordpress text-primary me-2"></i>Automatic Installation</h5>
+                        <ol class="ps-3">
+                            <li>Log into WordPress admin</li>
+                            <li>Go to Plugins → Add New</li>
+                            <li>Search "Smart SEO Booster"</li>
+                            <li>Click Install & Activate</li>
+                        </ol>
+                        <p class="text-muted small mb-0">Coming soon to WordPress.org</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="feature-card">
+                        <h5><i class="bi bi-upload text-primary me-2"></i>Manual Installation</h5>
+                        <ol class="ps-3">
+                            <li>Download from GitHub Releases</li>
+                            <li>Upload to /wp-content/plugins/</li>
+                            <li>Activate via Plugins menu</li>
+                            <li>Configure in SEO Settings</li>
+                        </ol>
+                        <a href="https://github.com/anupammo/smart-seo-booster/releases" target="_blank" class="btn btn-sm btn-outline-primary">Download ZIP</a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="feature-card">
+                        <h5><i class="bi bi-terminal text-primary me-2"></i>Development Install</h5>
+                        <div class="bg-dark text-light p-3 rounded mb-3" style="font-family: monospace; font-size: 0.85rem;">
+cd wp-content/plugins/<br>
+git clone https://github.com/anupammo/smart-seo-booster.git
+                        </div>
+                        <p class="text-muted small mb-0">For developers and contributors</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Start -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2 class="section-title">Quick Start Guide</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="text-center">
+                        <div class="display-4 text-primary mb-3">1</div>
+                        <h5>Activate Plugin</h5>
+                        <p class="text-muted">Enable Smart SEO Booster in your WordPress admin panel</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="text-center">
+                        <div class="display-4 text-primary mb-3">2</div>
+                        <h5>Navigate Settings</h5>
+                        <p class="text-muted">Go to SEO Settings in your admin menu</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="text-center">
+                        <div class="display-4 text-primary mb-3">3</div>
+                        <h5>Run First Audit</h5>
+                        <p class="text-muted">Click "Audit Report" to analyze your content</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="text-center">
+                        <div class="display-4 text-primary mb-3">4</div>
+                        <h5>Implement & Monitor</h5>
+                        <p class="text-muted">Follow recommendations and track progress</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEO Analysis Features -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title">Comprehensive SEO Analysis</h2>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <h4 class="mb-3"><i class="bi bi-file-earmark-text text-primary me-2"></i>Content Analysis (20+ Factors)</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Title tag optimization</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Meta description quality</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Content length and structure</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Keyword optimization</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Heading structure (H1-H6)</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Internal linking quality</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>External link validation</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Image optimization & alt text</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <h4 class="mb-3"><i class="bi bi-gear-fill text-primary me-2"></i>Technical SEO</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Robots.txt validation</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Canonical URL analysis</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>SSL certificate check</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>URL structure optimization</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Schema markup detection</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Social media meta tags</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Page speed considerations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2 class="section-title">Plugin Screenshots</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <img class="img-fluid screenshot" loading="lazy" 
+                        src="https://raw.githubusercontent.com/anupammo/smart-seo-booster/main/screenshot-1.png"
+                        alt="Smart SEO Booster admin dashboard interface"
+                        onerror="this.src='https://via.placeholder.com/600x400/6441A5/ffffff?text=Admin+Dashboard'" />
+                    <p class="text-center mt-2 text-muted">Admin Dashboard</p>
+                </div>
+                <div class="col-md-6">
+                    <img class="img-fluid screenshot" loading="lazy" 
+                        src="https://raw.githubusercontent.com/anupammo/smart-seo-booster/main/screenshot-2.png"
+                        alt="Smart SEO Booster SEO audit report"
+                        onerror="this.src='https://via.placeholder.com/600x400/6441A5/ffffff?text=SEO+Audit+Report'" />
+                    <p class="text-center mt-2 text-muted">SEO Audit Report</p>
+                </div>
+            </div>
+            <p class="mt-4 text-center text-muted">See more screenshots and documentation on <a href="https://github.com/anupammo/smart-seo-booster" target="_blank" rel="noopener">GitHub</a></p>
+        </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="q1h">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="true" aria-controls="q1">
+                            What does Smart SEO Booster plugin do?
+                        </button>
+                    </h3>
+                    <div id="q1" class="accordion-collapse collapse show" aria-labelledby="q1h" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Smart SEO Booster is a comprehensive WordPress SEO plugin that provides 20+ point SEO analysis, content quality assessment, keyword optimization, image optimization, schema markup, and PageSpeed Insights-style reporting to help improve your website's search engine rankings.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="q2h">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+                            Is Smart SEO Booster free?
+                        </button>
+                    </h3>
+                    <div id="q2" class="accordion-collapse collapse" aria-labelledby="q2h" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes. Smart SEO Booster is a free and open-source WordPress plugin. You can download it from GitHub, contribute to its development, and use it on unlimited WordPress sites at no cost.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="q3h">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
+                            What are the requirements for Smart SEO Booster?
+                        </button>
+                    </h3>
+                    <div id="q3" class="accordion-collapse collapse" aria-labelledby="q3h" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Minimum requirements: WordPress 5.0+, PHP 7.4+, 64MB memory, MySQL 5.6+. For optimal performance, we recommend WordPress 6.0+, PHP 8.0+, 128MB+ memory, and MySQL 8.0+.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="q4h">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
+                            Does Smart SEO Booster affect site performance?
+                        </button>
+                    </h3>
+                    <div id="q4" class="accordion-collapse collapse" aria-labelledby="q4h" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            No. The plugin is performance optimized with efficient database queries and caching mechanisms. It follows WordPress coding standards to ensure minimal impact on your site's speed and loading times.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="q5h">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">
+                            Can I contribute to Smart SEO Booster development?
+                        </button>
+                    </h3>
+                    <div id="q5" class="accordion-collapse collapse" aria-labelledby="q5h" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes! Smart SEO Booster is open-source on GitHub. You can fork the repository, create feature branches, submit pull requests, report bugs, and contribute improvements to help make the plugin better for everyone.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Changelog -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Version History</h2>
+            <div class="mb-4">
+                <h5><strong>Version 2.1.0</strong> - January 4, 2025</h5>
+                <ul>
+                    <li>✅ Added: WordPress 6.8 compatibility</li>
+                    <li>✅ Added: Comprehensive 20+ point SEO analysis</li>
+                    <li>✅ Added: PageSpeed Insights-style interface</li>
+                    <li>✅ Added: Advanced security enhancements</li>
+                    <li>✅ Improved: Performance and code quality</li>
+                    <li>✅ Fixed: All PHP warnings and notices</li>
+                </ul>
+            </div>
+            <div class="mb-4">
+                <h5><strong>Version 1.0.0</strong> - Initial Release</h5>
+                <ul>
+                    <li>✅ Core SEO functionality with enhanced meta tags</li>
+                    <li>✅ Schema markup generation (5 types supported)</li>
+                    <li>✅ Advanced content auditing system</li>
+                    <li>✅ Admin interface with improved styling</li>
+                    <li>✅ Internal link analysis</li>
+                    <li>✅ Open Graph meta tags</li>
+                </ul>
+            </div>
+            <p class="text-muted small">Full changelog available on <a href="https://github.com/anupammo/smart-seo-booster/releases" target="_blank">GitHub Releases</a></p>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-white mb-3">Ready to Boost Your WordPress SEO?</h2>
+                    <p class="text-white mb-4">Download Smart SEO Booster and start optimizing your content today. Need help? Contact us for support.</p>
+                    <a class="btn btn-light me-2" href="https://github.com/anupammo/smart-seo-booster/releases" target="_blank" rel="noopener">
+                        <i class="bi bi-download me-2"></i>Download Plugin
+                    </a>
+                    <a class="btn btn-outline-light ms-2" href="https://wa.me/919474460058?text=Hello%20Anupam%2C%20I%20need%20help%20with%20Smart%20SEO%20Booster%20WordPress%20plugin." target="_blank" rel="noopener">
+                        <i class="bi bi-whatsapp me-2"></i>Get Support
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+            <h3>Anupam Mondal</h3>
+            <small>
+                Providing expert web design, development, and SEO services to
+                businesses worldwide since 2016.
+            </small>
+            <div class="social-links">
+                <a href="https://www.facebook.com/anupammondal.in/" target="_blank">
+                <i class="bi bi-facebook"></i>
+                <small class="">Facebook</small>
+                </a>
+                <a href="https://goo.gl/maps/oBwMFuFssGzWz6m26" target="_blank"><i class="bi bi-google"></i><small
+                    class="">Google</small></a>
+                <a href="https://www.linkedin.com/company/anupammondal" target="_blank"><i class="bi bi-linkedin"></i><small
+                    class="">LinkedIn</small></a>
+                <a href="https://www.youtube.com/@anuapm" target="_blank"><i class="bi bi-youtube"></i><small
+                    class="">YouTube</small></a>
+            </div>
+            </div>
+
+            <div class="footer-col">
+            <h3>Services</h3>
+            <ul class="footer-links">
+                <li><a href="../services/web-design">Web Design</a></li>
+                <li><a href="../services/web-development">Web Development</a></li>
+                <li><a href="../services/website-seo">SEO Optimization</a></li>
+                <li><a href="../services/digital-marketing">Digital Marketing</a></li>
+            </ul>
+            </div>
+
+            <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="../">Home</a></li>
+                <li><a href="../about-us">About</a></li>
+                <li><a href="../portfolio">Portfolio</a></li>
+                <li><a href="../contact">Contact</a></li>
+            </ul>
+            </div>
+
+            <div class="footer-col">
+            <h3>Contact</h3>
+            <ul class="footer-links">
+                <li>
+                <i class="bi bi-geo-alt-fill"></i>
+                <span class="ps-2">Pratapnagar, Metiari, West Bengal, 743330</span>
+                </li>
+                <li>
+                <i class="bi bi-telephone-fill"></i>
+                <a href="tel:+919474460058" class="ps-2">+91-9474460058</a>
+                </li>
+                <li>
+                <i class="bi bi-clock"></i>
+                <span class="ps-2">Mon-Fri: 9AM - 6PM</span>
+                </li>
+            </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <div class="row">
+            <div class="col">
+                <p class="text-start mb-0">&copy; <span id="current-year"></span></p>
+            </div>
+            <div class="col">
+                <p class="text-end mb-0">MSME Registered Business</p>
+            </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
+    </script>
+    <script>
+        (function(){
+            const y = document.getElementById("current-year");
+            if (y) y.textContent = new Date().getFullYear();
+        })();
+    </script>
+
+    <!-- Smooth scroll guard -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+            anchor.addEventListener("click", function (e) {
+                const targetId = this.getAttribute("href");
+                if (!targetId || targetId.trim() === "#") return;
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    e.preventDefault();
+                    window.scrollTo({ top: targetElement.offsetTop - 80, behavior: "smooth" });
+                    const navContainer = document.getElementById('navLinks') || document.getElementById('navbarNav');
+                    if (navContainer) { navContainer.classList.remove('active'); navContainer.classList.remove('show'); }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
