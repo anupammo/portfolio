@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="author" content="Anupam Mondal" />
+
+    <title>Meta Image Generator v1.0.0 Chrome Extension | OG & Social Preview Image Tool</title>
+    <meta name="description"
+        content="Meta Image Generator v1.0.0 is a privacy-focused Chrome extension to audit OG/meta image tags, review social preview metadata, and generate downloadable social images in PNG, JPEG, and WebP." />
+
+    <link rel="canonical" href="https://anupammondal.in/chrome-extension/meta-image-generator" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Meta Image Generator v1.0.0 Chrome Extension | OG & Social Preview Image Tool" />
+    <meta property="og:description"
+        content="Audit Open Graph and Twitter image tags, verify social preview readiness, and generate professional meta images with downloadable multi-format output." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://anupammondal.in/chrome-extension/meta-image-generator" />
+    <meta property="og:site_name" content="Anupam Mondal" />
+    <meta property="og:image" content="https://anupammondal.in/chrome-extension/meta-image-generator-screenshot-2026-04-12-222742.png" />
+    <meta property="article:published_time" content="2026-04-12T10:00:00+05:30" />
+    <meta property="article:modified_time" content="2026-04-12T10:00:00+05:30" />
+    <meta property="og:image:alt" content="Meta Image Generator Chrome extension preview showing social meta image checker and generator" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@anupammondal" />
+    <meta name="twitter:creator" content="@anupammondal" />
+    <meta name="twitter:title" content="Meta Image Generator v1.0.0 Chrome Extension | OG & Social Preview Image Tool" />
+    <meta name="twitter:description"
+        content="Check meta image availability, audit social tags, and generate professional OG images with one-click downloads." />
+    <meta name="twitter:image" content="https://anupammondal.in/chrome-extension/meta-image-generator-screenshot-2026-04-12-222742.png" />
+    <meta name="twitter:image:alt" content="Meta Image Generator Chrome extension preview showing social meta image checker and generator" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            left: -100px;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .hero:after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 2rem;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero h1 {
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+
+        .hero h1 .display-4 {
+            font-size: 3rem;
+            color: #fff;
+        }
+
+        .hero h1 strong.text-dark {
+            color: #ffc107;
+        }
+
+        .hero p {
+            color: #f0f0f0;
+            font-size: 1rem;
+            max-width: 700px;
+        }
+
+        .hero .lead {
+            font-size: 1.1rem;
+            color: #fff;
+        }
+
+        .hero .btn {
+            font-weight: 500;
+            border: 2px solid #fff;
+            transition: all 0.3s ease;
+        }
+
+        .hero .btn:hover {
+            background-color: #fff;
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .hero img.card {
+            border-radius: 1rem;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .hero img.card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 .display-4 {
+                font-size: 2.2rem;
+            }
+
+            .hero .btn {
+                width: 100%;
+                margin-bottom: 0.5rem;
+            }
+
+            .hero img.card {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+        }
+
+        .card {
+            position: relative;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-img-top {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .card:hover .card-img-top {
+            transform: scale(1.05);
+        }
+
+        .card-body.blog-bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(to top, rgb(0 0 0), rgba(0, 0, 0, 0));
+            color: #fff;
+            z-index: 2;
+            border-bottom-left-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .glass-effect {
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+
+        .card-body h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+
+        .card-body p {
+            font-size: 0.9rem;
+            color: #ddd;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-body i {
+            color: #ffc107;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: inherit;
+            position: relative;
+            z-index: 3;
+        }
+    </style>
+    <style>
+        :root {
+            --primary: #6441a5;
+            --primary-light: #7d5cc1;
+            --primary-dark: #4e3280;
+            --secondary: #ff6b6b;
+            --dark: #1a1a2e;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+            --transition: all 0.3s ease;
+        }
+
+        .text-primary {
+            color: var(--primary) !important;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #fff;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 700;
+            line-height: 1.3;
+            color: var(--dark);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .text-center h2::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary);
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--primary-light);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 4px 15px rgba(100, 65, 165, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-light);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(100, 65, 165, 0.4);
+        }
+
+        .btn .icon-chrome {
+            height: 20px;
+            width: 20px;
+            margin-right: 8px;
+            vertical-align: -3px;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            padding: 10px 0;
+            background: white;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .logo span {
+            color: var(--dark);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: var(--dark);
+            font-weight: 500;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            color: var(--dark);
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 80px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .footer-col h3 {
+            color: white;
+            margin-bottom: 25px;
+            font-size: 1.5rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .footer-col h3::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--primary);
+        }
+
+        .footer-links {
+            list-style: none;
+            padding-left: 0px;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            margin: auto;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: var(--transition);
+        }
+
+        div.social-links a small {
+            position: absolute;
+            margin-top: 60px;
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        .cta:before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            left: -100px;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .cta:after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+    <style>
+        :root {
+            --primary: #6441A5;
+            --secondary: #9C7BEE;
+            --light: #F5F3FF;
+            --dark: #1A0933;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark);
+            background: #fff;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, .06);
+        }
+
+        .hero {
+            padding: 120px 0 70px;
+            background: linear-gradient(135deg, rgba(248, 247, 252, .9) 0%, rgba(255, 255, 255, 1) 100%);
+        }
+
+        .hero h1 {
+            font-weight: 800;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+
+        .feature-card {
+            background: #fff;
+            border-radius: 14px;
+            padding: 24px;
+            box-shadow: 0 8px 28px rgba(0, 0, 0, .06);
+            height: 100%;
+        }
+
+        .feature-card .bi {
+            color: var(--primary);
+        }
+
+        .screenshot {
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+        }
+
+        .badge-perm {
+            background: var(--light);
+            color: var(--primary);
+        }
+
+        .cta {
+            background: linear-gradient(135deg, var(--primary) 0%, #4e3280 100%);
+            padding: 70px 0;
+            text-align: center;
+        }
+
+        footer {
+            background: #0f0a1e;
+            color: #fff;
+            padding: 60px 0 30px;
+        }
+
+        .btn-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            line-height: 1.2;
+            border: 1px solid transparent;
+            transition: transform .15s ease, background-color .15s ease, border-color .15s ease, color .15s ease;
+            text-decoration: none;
+        }
+
+        .btn-cta:focus-visible {
+            outline: 2px solid rgba(255, 255, 255, .7);
+            outline-offset: 2px;
+        }
+
+        .btn-cta-primary {
+            background: #fff;
+            color: var(--primary);
+            border-color: rgba(255, 255, 255, 0);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+        }
+
+        .btn-cta-primary:hover {
+            background: #f8f9fa;
+            color: var(--primary-dark);
+            transform: translateY(-1px);
+        }
+
+        .btn-cta-ghost {
+            background: transparent;
+            color: var(--primary);
+            border-color: rgba(100, 65, 165, .4);
+        }
+
+        .btn-cta-ghost:hover {
+            background: rgba(100, 65, 165, .06);
+            border-color: rgba(100, 65, 165, .6);
+            transform: translateY(-1px);
+        }
+
+        .btn-cta .icon-chrome {
+            height: 20px;
+            width: 20px;
+        }
+    </style>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYYY10HF4L"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-VYYY10HF4L');
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebPage",
+                "@id": "https://anupammondal.in/chrome-extension/meta-image-generator#webpage",
+                "url": "https://anupammondal.in/chrome-extension/meta-image-generator",
+                "name": "Meta Image Generator v1.0.0 Chrome Extension | OG & Social Preview Image Tool",
+                "description": "Meta Image Generator is a Chrome extension to audit social meta image tags and generate professional preview images in multiple formats.",
+                "datePublished": "2026-04-12T10:00:00+05:30",
+                "dateModified": "2026-04-12T10:00:00+05:30",
+                "inLanguage": "en-IN",
+                "breadcrumb": {
+                    "@id": "https://anupammondal.in/chrome-extension/meta-image-generator#breadcrumb"
+                },
+                "primaryImageOfPage": {
+                    "@type": "ImageObject",
+                    "url": "https://anupammondal.in/chrome-extension/meta-image-generator-screenshot-2026-04-12-222742.png",
+                    "width": 1200,
+                    "height": 630
+                }
+            },
+            {
+                "@type": "SoftwareApplication",
+                "@id": "https://anupammondal.in/chrome-extension/meta-image-generator#software",
+                "name": "Meta Image Generator",
+                "applicationCategory": "BrowserApplication",
+                "operatingSystem": "Chrome, ChromeOS, Windows, macOS, Linux",
+                "softwareVersion": "1.0.0",
+                "description": "Client-side Chrome extension that checks OG/meta image availability, audits social preview tags, and generates downloadable social images.",
+                "url": "https://anupammondal.in/chrome-extension/meta-image-generator",
+                "downloadUrl": "https://chromewebstore.google.com/detail/ddggaejgikjcideandkhipnojjefpjod?utm_source=item-share-cb",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                },
+                "sameAs": [
+                    "https://github.com/anupammo/meta-image-generator"
+                ],
+                "author": {
+                    "@type": "Person",
+                    "name": "Anupam Mondal",
+                    "url": "https://anupammondal.in/"
+                },
+                "datePublished": "2026-04-12T10:00:00+05:30",
+                "dateModified": "2026-04-12T10:00:00+05:30"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://anupammondal.in/chrome-extension/meta-image-generator#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "item": {
+                            "@id": "https://anupammondal.in/",
+                            "name": "Home"
+                        }
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "item": {
+                            "@id": "https://anupammondal.in/chrome-extension/meta-image-generator",
+                            "name": "Meta Image Generator Extension"
+                        }
+                    }
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://anupammondal.in/chrome-extension/meta-image-generator#faq",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "What does the Meta Image Generator Chrome extension do?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "It checks if a page has social meta images, audits Open Graph and Twitter card fields, compares image dimensions with recommended social specs, and lets you generate and download professional preview images in PNG, JPEG, and WebP."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Is Meta Image Generator free?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes. Meta Image Generator is free to install and use from the Chrome Web Store."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How do I install Meta Image Generator?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Open the Chrome Web Store listing and click Add to Chrome. For development, enable Developer mode at chrome://extensions and load the extension folder using Load unpacked."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What image sizes are supported in the generator?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "The extension supports 1200x630, 1200x628, 1024x512, 800x418, and 600x314 presets for social preview image generation."
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+    <header id="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg sticky-top">
+                <div class="container">
+                    <a class="navbar-brand" href="../">Anupam Mondal</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Services
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../services/digital-marketing">Digital Marketing</a></li>
+                                    <li><a class="dropdown-item" href="../services/web-design">Web Design</a></li>
+                                    <li><a class="dropdown-item" href="../services/web-development">Web Development</a></li>
+                                    <li><a class="dropdown-item" href="../services/website-seo">Website SEO</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    About
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../about-us">About Us</a></li>
+                                    <li><a class="dropdown-item" href="../portfolio">Portfolio</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="../contact">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../blog/">Blog</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <nav aria-label="breadcrumb" class="pt-3">
+                <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+                    <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a itemprop="item" href="https://anupammondal.in/"><span itemprop="name">Home</span></a>
+                        <meta itemprop="position" content="1" />
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <span itemprop="name">Meta Image Generator Extension</span>
+                        <meta itemprop="position" content="2" />
+                    </li>
+                </ol>
+            </nav>
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <h1 class="display-5">Meta Image Generator v1.0.0 Chrome Extension</h1>
+                    <p class="lead text-dark">Check meta image availability and generate professional OG/social preview images with downloadable links in PNG, JPEG, and WebP.</p>
+                    <p class="small text-dark mb-2">
+                        File created: <time datetime="2026-04-12">Apr 12, 2026</time>
+                        &nbsp;•&nbsp;
+                        Last modified: <time datetime="2026-04-12">Apr 12, 2026</time>
+                    </p>
+                    <div class="d-flex gap-3 flex-wrap mt-3">
+                        <a class="btn-cta btn-cta-primary" href="https://chromewebstore.google.com/detail/ddggaejgikjcideandkhipnojjefpjod?utm_source=item-share-cb"
+                            target="_blank" rel="noopener">
+                            <img src="https://fonts.gstatic.com/s/i/productlogos/chrome_store/v7/192px.svg" alt="Chrome Web Store" class="icon-chrome" width="20" height="20" />
+                            Install from Chrome Web Store
+                        </a>
+                        <a class="btn-cta btn-cta-ghost" href="./seo-checklist">
+                            Explore SEO Checklist
+                        </a>
+                        <a class="btn-cta btn-cta-ghost" href="https://github.com/anupammo/meta-image-generator"
+                            target="_blank" rel="noopener">
+                            <i class="bi bi-github me-2"></i>View on GitHub
+                        </a>
+                        <a class="btn-cta btn-cta-ghost" href="https://wa.me/919474460058?text=Hello%20Anupam%2C%20I%20have%20a%20question%20about%20the%20Meta%20Image%20Generator%20Chrome%20Extension." target="_blank" rel="noopener">
+                            <i class="bi bi-whatsapp me-2"></i>Ask a Question
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block text-center">
+                    <img class="img-fluid screenshot"
+                        src="./meta-image-generator-screenshot-2026-04-12-222742.png"
+                        alt="Meta Image Generator Chrome extension UI showing checker and preview image generator" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Highlights in v1.0.0 (April 2026)</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card h-100">
+                        <h5><i class="bi bi-image me-2"></i>Meta Image Checker</h5>
+                        <p>Detect og:image and twitter:image tags with live image preview, source URL visibility, and dimension context.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card h-100">
+                        <h5><i class="bi bi-search me-2"></i>Social Preview Audit</h5>
+                        <p>Validate OG, Twitter/X, Facebook, and LinkedIn tag completeness with size checks against recommended formats.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card h-100">
+                        <h5><i class="bi bi-download me-2"></i>Pro Image Downloads</h5>
+                        <p>Generate social preview graphics with 12 templates and export as PNG, JPEG, or WebP in one click.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container py-5">
+            <h2 class="section-title">Key Features</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card h-100">
+                        <h5><i class="bi bi-card-image me-2"></i>Meta Image Checker</h5>
+                        <p>Instantly checks active pages for og:image and twitter:image tags with preview, source, and dimensions.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card h-100">
+                        <h5><i class="bi bi-card-text me-2"></i>Page Meta Summary</h5>
+                        <p>Surfaces title, description, domain, OG type, and Twitter card data to streamline social optimization.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card h-100">
+                        <h5><i class="bi bi-broadcast me-2"></i>Social Preview Audit</h5>
+                        <p>Audits OG/Meta, Twitter/X, Facebook, and LinkedIn tag presence with image-ratio quality checks.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card h-100">
+                        <h5><i class="bi bi-palette me-2"></i>Brand-Aware Generator</h5>
+                        <p>Auto-builds branded templates from page colors, favicon/logo hints, and extracted metadata.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card h-100">
+                        <h5><i class="bi bi-sliders me-2"></i>Flexible Visual Assets</h5>
+                        <p>Use text-only mode, page meta image, detected brand image, or custom direct image URLs.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card h-100">
+                        <h5><i class="bi bi-grid-1x2 me-2"></i>12 Pro Templates + Presets</h5>
+                        <p>Generate 1200x630 visuals with character guards, gradient overlays, and 5 social resolution presets.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card h-100">
+                        <h5><i class="bi bi-search-heart me-2"></i>Royalty-Free Search Shortcuts</h5>
+                        <p>Quick links for Unsplash, Pexels, Pixabay, Getty Images, and Freepik to speed up visual selection.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card h-100">
+                        <h5><i class="bi bi-file-earmark-image me-2"></i>Multi-format Downloads</h5>
+                        <p>Export generated preview images as PNG, JPEG, or WebP with one-click output links.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card h-100">
+                        <h5><i class="bi bi-lightning-charge me-2"></i>Simple Workflow</h5>
+                        <p>Open any webpage, launch the extension, inspect tags instantly, then generate and download optimized assets.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title">Watch It in Action</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-8">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube-nocookie.com/embed/pq5xT31VVOo"
+                            title="Meta Image Generator Chrome Extension demo"
+                            loading="lazy"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen
+                            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2 class="section-title">Screenshots</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <img class="img-fluid screenshot" loading="lazy" src="./meta-image-generator-screenshot-2026-04-12-222811.png"
+                        alt="Meta Image Generator extension popup showing checker and generator layout" />
+                </div>
+                <div class="col-md-6">
+                    <img class="img-fluid screenshot" loading="lazy" src="./meta-image-generator-screenshot-2026-04-12-223014.png"
+                        alt="Meta Image Generator extension popup showing template controls and social image output" />
+                </div>
+            </div>
+            <p class="mt-3 text-muted">See complete details on the <a href="https://chromewebstore.google.com/detail/ddggaejgikjcideandkhipnojjefpjod?utm_source=item-share-cb" target="_blank" rel="noopener">Chrome Web Store</a> and <a href="https://github.com/anupammo/meta-image-generator" target="_blank" rel="noopener">GitHub</a>.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class="section-title mt-5">Requested Permissions</h2>
+            <ul class="list-unstyled">
+                <li class="mb-2"><span class="badge badge-perm me-2">activeTab</span>Read active page metadata and social image tags for analysis.</li>
+                <li class="mb-2"><span class="badge badge-perm me-2">scripting</span>Run content scripts to extract Open Graph, Twitter, and standard meta information.</li>
+                <li class="mb-2"><span class="badge badge-perm me-2">&lt;all_urls&gt;</span>Allow checks and generation support across pages you actively open in Chrome.</li>
+            </ul>
+            <p class="small text-muted mb-5">Analysis runs in your browser context and permissions are used for on-page metadata auditing and generation features.</p>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">How to Install</h2>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <h5>From Chrome Web Store</h5>
+                    <ol class="mb-4">
+                        <li>Open the Chrome Web Store listing.</li>
+                        <li>Click Add to Chrome.</li>
+                        <li>Confirm the installation prompt.</li>
+                    </ol>
+                    <a class="btn btn-primary" href="https://chromewebstore.google.com/detail/ddggaejgikjcideandkhipnojjefpjod?utm_source=item-share-cb"
+                        target="_blank" rel="noopener">
+                        <img src="https://fonts.gstatic.com/s/i/productlogos/chrome_store/v7/192px.svg" alt="Chrome Web Store" class="icon-chrome" width="20" height="20" />
+                        Open Web Store
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <h5>Manual (Developer Mode)</h5>
+                    <ol class="mb-0">
+                        <li>Clone or download the extension repository.</li>
+                        <li>Open <code>chrome://extensions/</code> and enable Developer mode.</li>
+                        <li>Click Load unpacked and select the extension folder containing <code>manifest.json</code>.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class="section-title mt-5">Supported Meta Tags</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card h-100">
+                        <h5>Open Graph</h5>
+                        <p class="mb-2">og:title, og:description, og:image, og:url, og:site_name, og:type</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card h-100">
+                        <h5>Twitter Card</h5>
+                        <p class="mb-2">twitter:card, twitter:title, twitter:description, twitter:image, twitter:site</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card h-100">
+                        <h5>Standard</h5>
+                        <p class="mb-2">title, meta name="description", and canonical link tags</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title">Recommended Image Sizes</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4"><div class="feature-card h-100"><h5>OG / Meta</h5><p>1200 x 630</p></div></div>
+                <div class="col-md-6 col-lg-4"><div class="feature-card h-100"><h5>Facebook / LinkedIn</h5><p>1200 x 628</p></div></div>
+                <div class="col-md-6 col-lg-4"><div class="feature-card h-100"><h5>Twitter Summary Large</h5><p>1024 x 512</p></div></div>
+                <div class="col-md-6 col-lg-4"><div class="feature-card h-100"><h5>Compact OG</h5><p>800 x 418</p></div></div>
+                <div class="col-md-6 col-lg-4"><div class="feature-card h-100"><h5>Minimum OG</h5><p>600 x 314</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Privacy & Store Disclosure</h2>
+            <p>According to the Chrome Web Store listing, the extension discloses handling of the following categories: personally identifiable information, health information, financial and payment information, authentication information, personal communications, location, web history, user activity, and website content. Refer to the published privacy policy for complete details.</p>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title">Meta Image Generator FAQs</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="q1h">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="true" aria-controls="q1">
+                            What does the Meta Image Generator Chrome extension do?
+                        </button>
+                    </h3>
+                    <div id="q1" class="accordion-collapse collapse show" aria-labelledby="q1h" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            It checks meta/OG image availability, audits social tags, and generates downloadable social preview images from brand-aware templates.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="q2h">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+                            Is Meta Image Generator free?
+                        </button>
+                    </h3>
+                    <div id="q2" class="accordion-collapse collapse" aria-labelledby="q2h" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes. It is free to install and use from the Chrome Web Store.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="q3h">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
+                            Which download formats are available?
+                        </button>
+                    </h3>
+                    <div id="q3" class="accordion-collapse collapse" aria-labelledby="q3h" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            You can export generated social images as PNG, JPEG, or WebP.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="q4h">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
+                            Which social image resolutions are supported?
+                        </button>
+                    </h3>
+                    <div id="q4" class="accordion-collapse collapse" aria-labelledby="q4h" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            1200x630, 1200x628, 1024x512, 800x418, and 600x314.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Changelog</h2>
+            <ul>
+                <li><strong>v1.0.0 (April 2026)</strong> - Initial release with meta image checker, social preview audit, brand-aware generator, template presets, and multi-format image downloads.</li>
+            </ul>
+            <p class="text-muted small">License: MIT</p>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-white mb-3">Questions or Feature Requests?</h2>
+                    <p class="text-white mb-4">Reach out via WhatsApp or open an issue on GitHub. I would love your feedback.</p>
+                    <a class="btn btn-light" href="https://wa.me/919474460058?text=Hello%20Anupam%2C%20I%27d%20like%20to%20discuss%20the%20Meta%20Image%20Generator%20Chrome%20Extension." target="_blank" rel="noopener">Contact on WhatsApp</a>
+                    <a class="btn btn-outline-light ms-2" href="https://github.com/anupammo/meta-image-generator/issues"
+                        target="_blank" rel="noopener">Open GitHub Issue</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Anupam Mondal</h3>
+                    <small>
+                        Providing expert web design, development, and SEO services to
+                        businesses worldwide since 2016.
+                    </small>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/anupammondal.in/" target="_blank">
+                            <i class="bi bi-facebook"></i>
+                            <small>Facebook</small>
+                        </a>
+                        <a href="https://goo.gl/maps/oBwMFuFssGzWz6m26" target="_blank"><i class="bi bi-google"></i><small>Google</small></a>
+                        <a href="https://www.linkedin.com/company/anupammondal" target="_blank"><i class="bi bi-linkedin"></i><small>LinkedIn</small></a>
+                        <a href="https://www.youtube.com/@anuapm" target="_blank"><i class="bi bi-youtube"></i><small>YouTube</small></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="../services/web-design">Web Design</a></li>
+                        <li><a href="../services/web-development">Web Development</a></li>
+                        <li><a href="../services/website-seo">SEO Optimization</a></li>
+                        <li><a href="../services/digital-marketing">Digital Marketing</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="../">Home</a></li>
+                        <li><a href="../about-us">About</a></li>
+                        <li><a href="../portfolio">Portfolio</a></li>
+                        <li><a href="../contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li>
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <span class="ps-2">Pratapnagar, Metiari, West Bengal, 743330</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-telephone-fill"></i>
+                            <a href="tel:+919474460058" class="ps-2">+91-9474460058</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-clock"></i>
+                            <span class="ps-2">Mon-Fri: 9AM - 6PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <div class="row">
+                    <div class="col">
+                        <p class="text-start mb-0">&copy; <span id="current-year"></span></p>
+                    </div>
+                    <div class="col">
+                        <p class="text-end mb-0">MSME Registered Business</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
+    </script>
+    <script>
+        (function () {
+            const y = document.getElementById("current-year");
+            if (y) y.textContent = new Date().getFullYear();
+        })();
+    </script>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+            anchor.addEventListener("click", function (e) {
+                const targetId = this.getAttribute("href");
+                if (!targetId || targetId.trim() === "#") return;
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    e.preventDefault();
+                    window.scrollTo({ top: targetElement.offsetTop - 80, behavior: "smooth" });
+                    const navContainer = document.getElementById('navLinks') || document.getElementById('navbarNav');
+                    if (navContainer) {
+                        navContainer.classList.remove('active');
+                        navContainer.classList.remove('show');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
