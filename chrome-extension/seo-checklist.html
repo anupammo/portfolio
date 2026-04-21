@@ -42,6 +42,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
     <style>
         /* Hero section base */
         .hero {
@@ -636,6 +637,7 @@
             color: #fff;
             padding: 60px 0 30px;
         }
+
         /* Minimal CTA buttons for hero */
         .btn-cta {
             display: inline-flex;
@@ -650,32 +652,41 @@
             transition: transform .15s ease, background-color .15s ease, border-color .15s ease, color .15s ease;
             text-decoration: none;
         }
+
         .btn-cta:focus-visible {
-            outline: 2px solid rgba(255,255,255,.7);
+            outline: 2px solid rgba(255, 255, 255, .7);
             outline-offset: 2px;
         }
+
         .btn-cta-primary {
             background: #fff;
             color: var(--primary);
-            border-color: rgba(255,255,255,0);
-            box-shadow: 0 4px 12px rgba(0,0,0,.08);
+            border-color: rgba(255, 255, 255, 0);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
         }
+
         .btn-cta-primary:hover {
             background: #f8f9fa;
             color: var(--primary-dark);
             transform: translateY(-1px);
         }
+
         .btn-cta-ghost {
             background: transparent;
             color: var(--primary);
             border-color: rgba(100, 65, 165, .4);
         }
+
         .btn-cta-ghost:hover {
             background: rgba(100, 65, 165, .06);
             border-color: rgba(100, 65, 165, .6);
             transform: translateY(-1px);
         }
-        .btn-cta .icon-chrome { height: 20px; width: 20px; }
+
+        .btn-cta .icon-chrome {
+            height: 20px;
+            width: 20px;
+        }
     </style>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYYY10HF4L"></script>
@@ -803,68 +814,69 @@
 </head>
 
 <body>
-  <!-- Header -->
-  <header id="header">
-    <div class="container">
-      <nav class="navbar navbar-expand-lg sticky-top">
+    <!-- Header -->
+    <header id="header">
         <div class="container">
-          <a class="navbar-brand" href="../">Anupam Mondal</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="../">Home</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  Services
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-item" href="../services/digital-marketing">Digital Marketing</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="../services/web-design">Web Design</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="../services/web-development">Web Development</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="../services/website-seo">Website SEO</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  About
-                </a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-item" href="../about-us">About Us</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="../portfolio">Portfolio</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="../contact">Contact</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../blog/">Blog</a>
-              </li>
-            </ul>
-            <!-- <a href="./contact" class="btn btn-primary ms-3">Get Started</a> -->
-          </div>
+            <nav class="navbar navbar-expand-lg sticky-top">
+                <div class="container">
+                    <a class="navbar-brand" href="../">Anupam Mondal</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Services
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item" href="../services/digital-marketing">Digital
+                                            Marketing</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="../services/web-design">Web Design</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="../services/web-development">Web Development</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="../services/website-seo">Website SEO</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    About
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item" href="../about-us">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="../portfolio">Portfolio</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="../contact">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../blog/">Blog</a>
+                            </li>
+                        </ul>
+                        <!-- <a href="./contact" class="btn btn-primary ms-3">Get Started</a> -->
+                    </div>
+                </div>
+            </nav>
         </div>
-      </nav>
-    </div>
-  </header>
+    </header>
 
     <!-- Hero -->
     <section class="hero">
@@ -872,11 +884,13 @@
             <!-- Breadcrumb Navigation -->
             <nav aria-label="breadcrumb" class="pt-3">
                 <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-                    <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <li class="breadcrumb-item" itemprop="itemListElement" itemscope
+                        itemtype="https://schema.org/ListItem">
                         <a itemprop="item" href="https://anupammondal.in/"><span itemprop="name">Home</span></a>
                         <meta itemprop="position" content="1" />
                     </li>
-                    <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <li class="breadcrumb-item active" aria-current="page" itemprop="itemListElement" itemscope
+                        itemtype="https://schema.org/ListItem">
                         <span itemprop="name">SEO Checklist Extension</span>
                         <meta itemprop="position" content="2" />
                     </li>
@@ -885,16 +899,19 @@
             <div class="row align-items-center">
                 <div class="col-lg-7">
                     <h1 class="display-5">SEO Checklist v1.3 Chrome Extension</h1>
-                    <p class="lead text-dark">A privacy-friendly on-page SEO analyzer with checklist scoring, social preview analysis, broken-link visibility, and one-click launch for top SEO testing tools.</p>
+                    <p class="lead text-dark">A privacy-friendly on-page SEO analyzer with checklist scoring, social
+                        preview analysis, broken-link visibility, and one-click launch for top SEO testing tools.</p>
                     <p class="small text-dark mb-2">
                         File created: <time datetime="2025-10-28">Oct 28, 2025</time>
                         &nbsp;•&nbsp;
                         Last modified: <time datetime="2026-03-03">Mar 3, 2026</time>
                     </p>
                     <div class="d-flex gap-3 flex-wrap mt-3">
-                        <a class="btn-cta btn-cta-primary" href="https://chromewebstore.google.com/detail/jgigdhidhmgikfnccdnehcpgoggmagfh?utm_source=item-share-cb"
+                        <a class="btn-cta btn-cta-primary"
+                            href="https://chromewebstore.google.com/detail/jgigdhidhmgikfnccdnehcpgoggmagfh?utm_source=item-share-cb"
                             target="_blank" rel="noopener">
-                            <img src="https://fonts.gstatic.com/s/i/productlogos/chrome_store/v7/192px.svg" alt="Chrome Web Store" class="icon-chrome" width="20" height="20" />
+                            <img src="https://fonts.gstatic.com/s/i/productlogos/chrome_store/v7/192px.svg"
+                                alt="Chrome Web Store" class="icon-chrome" width="20" height="20" />
                             Install from Chrome Web Store
                         </a>
                         <a class="btn-cta btn-cta-ghost" href="./website-framework-detector">
@@ -904,7 +921,9 @@
                             target="_blank" rel="noopener">
                             <i class="bi bi-github me-2"></i>View on GitHub
                         </a>
-                        <a class="btn-cta btn-cta-ghost" href="https://wa.me/919474460058?text=Hello%20Anupam%2C%20I%20have%20a%20question%20about%20the%20SEO%20Checklist%20Chrome%20Extension." target="_blank" rel="noopener">
+                        <a class="btn-cta btn-cta-ghost"
+                            href="https://wa.me/919474460058?text=Hello%20Anupam%2C%20I%20have%20a%20question%20about%20the%20SEO%20Checklist%20Chrome%20Extension."
+                            target="_blank" rel="noopener">
                             <i class="bi bi-whatsapp me-2"></i>Ask a Question
                         </a>
                     </div>
@@ -926,19 +945,22 @@
                 <div class="col-md-4">
                     <div class="feature-card h-100">
                         <h5><i class="bi bi-card-image me-2"></i>Social Preview Analyzer</h5>
-                        <p>Preview Open Graph and Twitter-style title, description, image, and URL metadata instantly.</p>
+                        <p>Preview Open Graph and Twitter-style title, description, image, and URL metadata instantly.
+                        </p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="feature-card h-100">
                         <h5><i class="bi bi-box-arrow-up-right me-2"></i>Quick SEO Tool Launcher</h5>
-                        <p>Launch Rich Results Test, PageSpeed Insights, Facebook Sharing Debugger, and LinkedIn Post Inspector in one click.</p>
+                        <p>Launch Rich Results Test, PageSpeed Insights, Facebook Sharing Debugger, and LinkedIn Post
+                            Inspector in one click.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="feature-card h-100">
                         <h5><i class="bi bi-link-45deg me-2"></i>Broken Link Visibility</h5>
-                        <p>Get clearer internal-link quality signals with broken-link status directly in the popup workflow.</p>
+                        <p>Get clearer internal-link quality signals with broken-link status directly in the popup
+                            workflow.</p>
                     </div>
                 </div>
             </div>
@@ -946,20 +968,22 @@
     </section>
 
     <!-- Features -->
-    <section>   
+    <section>
         <div class="container py-5">
             <h2 class="section-title">Key Features</h2>
             <div class="row g-4">
                 <div class="col-md-6 col-lg-4">
                     <div class="feature-card h-100">
                         <h5><i class="bi bi-card-checklist me-2"></i>One-Click SEO Analysis</h5>
-                        <p>Analyze the active tab instantly with a clear SEO score and checklist-based feedback summary.</p>
+                        <p>Analyze the active tab instantly with a clear SEO score and checklist-based feedback summary.
+                        </p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
                     <div class="feature-card h-100">
                         <h5><i class="bi bi-type me-2"></i>Core On-Page Checks</h5>
-                        <p>Reviews title, meta description, heading structure, content depth, canonical, viewport, and schema presence.</p>
+                        <p>Reviews title, meta description, heading structure, content depth, canonical, viewport, and
+                            schema presence.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
@@ -977,13 +1001,15 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="feature-card h-100">
                         <h5><i class="bi bi-activity me-2"></i>Analytics Detection</h5>
-                        <p>Detects Google Analytics or Google Tag Manager implementation as part of technical checks.</p>
+                        <p>Detects Google Analytics or Google Tag Manager implementation as part of technical checks.
+                        </p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
                     <div class="feature-card h-100">
                         <h5><i class="bi bi-tools me-2"></i>External SEO Test Tools</h5>
-                        <p>Open Rich Results, PageSpeed, Facebook Debugger, and LinkedIn Inspector with the current URL pre-filled.</p>
+                        <p>Open Rich Results, PageSpeed, Facebook Debugger, and LinkedIn Inspector with the current URL
+                            pre-filled.</p>
                     </div>
                 </div>
             </div>
@@ -998,21 +1024,17 @@
                 <div class="col-md-6">
                     <div class="ratio ratio-16x9">
                         <iframe src="https://www.youtube-nocookie.com/embed/NN9xz7cNlOo"
-                            title="SEO Checklist Chrome Extension overview"
-                            loading="lazy"
+                            title="SEO Checklist Chrome Extension overview" loading="lazy"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen
-                            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                            allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="ratio ratio-16x9">
                         <iframe src="https://www.youtube-nocookie.com/embed/FGlPW6LZHaw"
-                            title="On-page SEO audit demo using SEO Checklist"
-                            loading="lazy"
+                            title="On-page SEO audit demo using SEO Checklist" loading="lazy"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen
-                            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                            allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
                     </div>
                 </div>
             </div>
@@ -1025,15 +1047,20 @@
             <h2 class="section-title">Screenshots</h2>
             <div class="row g-4">
                 <div class="col-md-6">
-                    <img class="img-fluid screenshot" loading="lazy" src="../image/chrome-extension/seo-checklist-google-chrome-extension-preview-2.jpg"
+                    <img class="img-fluid screenshot" loading="lazy"
+                        src="../image/chrome-extension/seo-checklist-google-chrome-extension-preview-2.jpg"
                         alt="SEO Checklist extension on-page audit results screenshot" />
                 </div>
                 <div class="col-md-6">
-                    <img class="img-fluid screenshot" loading="lazy" src="../image/chrome-extension/seo-checklist-google-chrome-extension-preview-4.jpg"
+                    <img class="img-fluid screenshot" loading="lazy"
+                        src="../image/chrome-extension/seo-checklist-google-chrome-extension-preview-4.jpg"
                         alt="SEO Checklist extension performance and accessibility checks" />
                 </div>
             </div>
-            <p class="mt-3 text-muted">See more screenshots and full details on the <a href="https://chromewebstore.google.com/detail/jgigdhidhmgikfnccdnehcpgoggmagfh?utm_source=item-share-cb" target="_blank" rel="noopener">Chrome Web Store</a> and <a href="https://github.com/anupammo/seo-checklist" target="_blank" rel="noopener">GitHub</a>.</p>
+            <p class="mt-3 text-muted">See more screenshots and full details on the <a
+                    href="https://chromewebstore.google.com/detail/jgigdhidhmgikfnccdnehcpgoggmagfh?utm_source=item-share-cb"
+                    target="_blank" rel="noopener">Chrome Web Store</a> and <a
+                    href="https://github.com/anupammo/seo-checklist" target="_blank" rel="noopener">GitHub</a>.</p>
         </div>
     </section>
 
@@ -1046,9 +1073,11 @@
                     content.</li>
                 <li class="mb-2"><span class="badge badge-perm me-2">scripting</span>Run content scripts for on-page
                     checks.</li>
-                <li class="mb-2"><span class="badge badge-perm me-2">&lt;all_urls&gt;</span>Allow analysis on supported web pages you actively open in Chrome.</li>
+                <li class="mb-2"><span class="badge badge-perm me-2">&lt;all_urls&gt;</span>Allow analysis on supported
+                    web pages you actively open in Chrome.</li>
             </ul>
-            <p class="small text-muted mb-5">All analysis is client-side and uses only required extension permissions.</p>
+            <p class="small text-muted mb-5">All analysis is client-side and uses only required extension permissions.
+            </p>
         </div>
     </section>
 
@@ -1064,9 +1093,11 @@
                         <li>Click “Add to Chrome”.</li>
                         <li>Confirm the installation prompt.</li>
                     </ol>
-                    <a class="btn btn-primary" href="https://chromewebstore.google.com/detail/jgigdhidhmgikfnccdnehcpgoggmagfh?utm_source=item-share-cb"
+                    <a class="btn btn-primary"
+                        href="https://chromewebstore.google.com/detail/jgigdhidhmgikfnccdnehcpgoggmagfh?utm_source=item-share-cb"
                         target="_blank" rel="noopener">
-                        <img src="https://fonts.gstatic.com/s/i/productlogos/chrome_store/v7/192px.svg" alt="Chrome Web Store" class="icon-chrome" width="20" height="20" />
+                        <img src="https://fonts.gstatic.com/s/i/productlogos/chrome_store/v7/192px.svg"
+                            alt="Chrome Web Store" class="icon-chrome" width="20" height="20" />
                         Open Web Store
                     </a>
                 </div>
@@ -1075,7 +1106,8 @@
                     <ol class="mb-0">
                         <li>Clone or download the extension repository.</li>
                         <li>Open <code>chrome://extensions/</code> and enable Developer mode.</li>
-                        <li>Click “Load unpacked” and select the extension folder containing <code>manifest.json</code>.</li>
+                        <li>Click “Load unpacked” and select the extension folder containing <code>manifest.json</code>.
+                        </li>
                     </ol>
                 </div>
             </div>
@@ -1086,7 +1118,8 @@
     <section>
         <div class="container">
             <h2 class="section-title mt-5">Privacy & Data</h2>
-            <p>SEO Checklist does not collect, store, or transmit user data. Every analysis runs locally in your browser and no audit payload is sent to external servers.</p>
+            <p>SEO Checklist does not collect, store, or transmit user data. Every analysis runs locally in your browser
+                and no audit payload is sent to external servers.</p>
         </div>
     </section>
 
@@ -1097,23 +1130,29 @@
             <div class="accordion" id="faqAccordion">
                 <div class="accordion-item">
                     <h3 class="accordion-header" id="q1h">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="true" aria-controls="q1">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#q1"
+                            aria-expanded="true" aria-controls="q1">
                             What does the SEO Checklist Chrome extension do?
                         </button>
                     </h3>
-                    <div id="q1" class="accordion-collapse collapse show" aria-labelledby="q1h" data-bs-parent="#faqAccordion">
+                    <div id="q1" class="accordion-collapse collapse show" aria-labelledby="q1h"
+                        data-bs-parent="#faqAccordion">
                         <div class="accordion-body">
-                            It runs a client-side on-page SEO analysis of the active tab, checking title and meta quality, headings, content depth, image alt coverage, links, canonical and viewport tags, schema presence, analytics detection, social metadata preview, and broken-link status.
+                            It runs a client-side on-page SEO analysis of the active tab, checking title and meta
+                            quality, headings, content depth, image alt coverage, links, canonical and viewport tags,
+                            schema presence, analytics detection, social metadata preview, and broken-link status.
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h3 class="accordion-header" id="q2h">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
                             Is the SEO Checklist extension free?
                         </button>
                     </h3>
-                    <div id="q2" class="accordion-collapse collapse" aria-labelledby="q2h" data-bs-parent="#faqAccordion">
+                    <div id="q2" class="accordion-collapse collapse" aria-labelledby="q2h"
+                        data-bs-parent="#faqAccordion">
                         <div class="accordion-body">
                             Yes. SEO Checklist is free to install and use from the Chrome Web Store.
                         </div>
@@ -1121,25 +1160,31 @@
                 </div>
                 <div class="accordion-item">
                     <h3 class="accordion-header" id="q3h">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
                             How do I install the SEO Checklist extension?
                         </button>
                     </h3>
-                    <div id="q3" class="accordion-collapse collapse" aria-labelledby="q3h" data-bs-parent="#faqAccordion">
+                    <div id="q3" class="accordion-collapse collapse" aria-labelledby="q3h"
+                        data-bs-parent="#faqAccordion">
                         <div class="accordion-body">
-                            Open the Chrome Web Store listing and click “Add to Chrome”. For development, enable Developer mode at chrome://extensions and use “Load unpacked”.
+                            Open the Chrome Web Store listing and click “Add to Chrome”. For development, enable
+                            Developer mode at chrome://extensions and use “Load unpacked”.
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h3 class="accordion-header" id="q4h">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
                             Does the extension collect any data?
                         </button>
                     </h3>
-                    <div id="q4" class="accordion-collapse collapse" aria-labelledby="q4h" data-bs-parent="#faqAccordion">
+                    <div id="q4" class="accordion-collapse collapse" aria-labelledby="q4h"
+                        data-bs-parent="#faqAccordion">
                         <div class="accordion-body">
-                            No. SEO Checklist does not collect, store, or transmit data. Analysis runs locally in your browser.
+                            No. SEO Checklist does not collect, store, or transmit data. Analysis runs locally in your
+                            browser.
                         </div>
                     </div>
                 </div>
@@ -1152,7 +1197,8 @@
         <div class="container">
             <h2 class="section-title">Changelog</h2>
             <ul>
-                <li><strong>v1.3 (March 2026)</strong> – Added social preview analyzer, quick SEO tool launcher, and improved broken-link visibility.</li>
+                <li><strong>v1.3 (March 2026)</strong> – Added social preview analyzer, quick SEO tool launcher, and
+                    improved broken-link visibility.</li>
                 <li><strong>v1.0.0</strong> – Initial release with core on-page SEO checklist and scoring workflow.</li>
             </ul>
             <p class="text-muted small">Full changelog available in the GitHub repository.</p>
@@ -1165,8 +1211,11 @@
             <div class="row">
                 <div class="col-12">
                     <h2 class="text-white mb-3">Questions or Feature Requests?</h2>
-                    <p class="text-white mb-4">Reach out via WhatsApp or open an issue on GitHub. I’d love your feedback.</p>
-                    <a class="btn btn-light" href="https://wa.me/919474460058?text=Hello%20Anupam%2C%20I%27d%20like%20to%20discuss%20the%20SEO%20Checklist%20Chrome%20Extension." target="_blank" rel="noopener">Contact on WhatsApp</a>
+                    <p class="text-white mb-4">Reach out via WhatsApp or open an issue on GitHub. I’d love your
+                        feedback.</p>
+                    <a class="btn btn-light"
+                        href="https://wa.me/919474460058?text=Hello%20Anupam%2C%20I%27d%20like%20to%20discuss%20the%20SEO%20Checklist%20Chrome%20Extension."
+                        target="_blank" rel="noopener">Contact on WhatsApp</a>
                     <a class="btn btn-outline-light ms-2" href="https://github.com/anupammo/seo-checklist/issues"
                         target="_blank" rel="noopener">Open GitHub Issue</a>
                 </div>
@@ -1177,91 +1226,91 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-        <div class="footer-grid">
-            <div class="footer-col">
-            <h3>Anupam Mondal</h3>
-            <small>
-                Providing expert web design, development, and SEO services to
-                businesses worldwide since 2016.
-            </small>
-            <div class="social-links">
-                <a href="https://www.facebook.com/anupammondal.in/" target="_blank">
-                <i class="bi bi-facebook"></i>
-                <small class="">Facebook</small>
-                </a>
-                <a href="https://goo.gl/maps/oBwMFuFssGzWz6m26" target="_blank"><i class="bi bi-google"></i><small
-                    class="">Google</small></a>
-                <a href="https://www.linkedin.com/company/anupammondal" target="_blank"><i class="bi bi-linkedin"></i><small
-                    class="">LinkedIn</small></a>
-                <a href="https://www.youtube.com/@anuapm" target="_blank"><i class="bi bi-youtube"></i><small
-                    class="">YouTube</small></a>
-                <!-- <a href="#" target="_blank"><i class="fab fa-instagram"></i></a> -->
-            </div>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Anupam Mondal</h3>
+                    <small>
+                        Providing expert web design, development, and SEO services to
+                        businesses worldwide since 2016.
+                    </small>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/anupammondal.in/" target="_blank">
+                            <i class="bi bi-facebook"></i>
+                            <small class="">Facebook</small>
+                        </a>
+                        <a href="https://goo.gl/maps/oBwMFuFssGzWz6m26" target="_blank"><i
+                                class="bi bi-google"></i><small class="">Google</small></a>
+                        <a href="https://www.linkedin.com/company/anupammondal" target="_blank"><i
+                                class="bi bi-linkedin"></i><small class="">LinkedIn</small></a>
+                        <a href="https://www.youtube.com/@anuapm" target="_blank"><i class="bi bi-youtube"></i><small
+                                class="">YouTube</small></a>
+                        <!-- <a href="#" target="_blank"><i class="fab fa-instagram"></i></a> -->
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="../services/web-design">Web Design</a></li>
+                        <li><a href="../services/web-development">Web Development</a></li>
+                        <li><a href="../services/website-seo">SEO Optimization</a></li>
+                        <li><a href="../services/digital-marketing">Digital Marketing</a></li>
+                        <!-- <li><a href="#">E-Commerce Solutions</a></li> -->
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="../">Home</a></li>
+                        <!-- <li><a href="../services/digital-marketing">Services</a></li> -->
+                        <li><a href="../about-us">About</a></li>
+                        <li><a href="../portfolio">Portfolio</a></li>
+                        <li><a href="../contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li>
+                            <!-- <i class="fas fa-map-marker-alt fa-lg"></i> -->
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <span class="ps-2">Pratapnagar, Metiari, West Bengal, 743330</span>
+                        </li>
+                        <li>
+                            <!-- <i class="fas fa-phone"></i> -->
+                            <i class="bi bi-telephone-fill"></i>
+                            <a href="tel:+919474460058" class="ps-2">+91-9474460058</a>
+                        </li>
+                        <!-- <li><i class="fas fa-envelope"></i> support@anupammondal.in</li> -->
+                        <li>
+                            <!-- <i class="fas fa-clock"></i> -->
+                            <i class="bi bi-clock"></i>
+                            <span class="ps-2">Mon-Fri: 9AM - 6PM</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="footer-col">
-            <h3>Services</h3>
-            <ul class="footer-links">
-                <li><a href="../services/web-design">Web Design</a></li>
-                <li><a href="../services/web-development">Web Development</a></li>
-                <li><a href="../services/website-seo">SEO Optimization</a></li>
-                <li><a href="../services/digital-marketing">Digital Marketing</a></li>
-                <!-- <li><a href="#">E-Commerce Solutions</a></li> -->
-            </ul>
+            <div class="copyright">
+                <div class="row">
+                    <div class="col">
+                        <p class="text-start mb-0">&copy; <span id="current-year"></span></p>
+                    </div>
+                    <div class="col">
+                        <p class="text-end mb-0">MSME Registered Business</p>
+                    </div>
+                </div>
             </div>
-
-            <div class="footer-col">
-            <h3>Quick Links</h3>
-            <ul class="footer-links">
-                <li><a href="../">Home</a></li>
-                <!-- <li><a href="../services/digital-marketing">Services</a></li> -->
-                <li><a href="../about-us">About</a></li>
-                <li><a href="../portfolio">Portfolio</a></li>
-                <li><a href="../contact">Contact</a></li>
-            </ul>
-            </div>
-
-            <div class="footer-col">
-            <h3>Contact</h3>
-            <ul class="footer-links">
-                <li>
-                <!-- <i class="fas fa-map-marker-alt fa-lg"></i> -->
-                <i class="bi bi-geo-alt-fill"></i>
-                <span class="ps-2">Pratapnagar, Metiari, West Bengal, 743330</span>
-                </li>
-                <li>
-                <!-- <i class="fas fa-phone"></i> -->
-                <i class="bi bi-telephone-fill"></i>
-                <a href="tel:+919474460058" class="ps-2">+91-9474460058</a>
-                </li>
-                <!-- <li><i class="fas fa-envelope"></i> support@anupammondal.in</li> -->
-                <li>
-                <!-- <i class="fas fa-clock"></i> -->
-                <i class="bi bi-clock"></i>
-                <span class="ps-2">Mon-Fri: 9AM - 6PM</span>
-                </li>
-            </ul>
-            </div>
-        </div>
-
-        <div class="copyright">
-            <div class="row">
-            <div class="col">
-                <p class="text-start mb-0">&copy; <span id="current-year"></span></p>
-            </div>
-            <div class="col">
-                <p class="text-end mb-0">MSME Registered Business</p>
-            </div>
-            </div>
-        </div>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
-    </script>
+        </script>
     <script>
-        (function(){
+        (function () {
             const y = document.getElementById("current-year");
             if (y) y.textContent = new Date().getFullYear();
         })();
