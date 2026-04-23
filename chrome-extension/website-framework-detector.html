@@ -156,6 +156,7 @@
       color: #fff;
       padding: 60px 0 30px;
     }
+
     /* Minimal CTA buttons for hero (match SEO Checklist) */
     .btn-cta {
       display: inline-flex;
@@ -170,17 +171,41 @@
       transition: transform .15s ease, background-color .15s ease, border-color .15s ease, color .15s ease;
       text-decoration: none;
     }
-  .btn-cta:focus-visible { outline: 2px solid rgba(255,255,255,.7); outline-offset: 2px; }
+
+    .btn-cta:focus-visible {
+      outline: 2px solid rgba(255, 255, 255, .7);
+      outline-offset: 2px;
+    }
+
     .btn-cta-primary {
       background: #fff;
       color: var(--primary);
-      border-color: rgba(255,255,255,0);
-      box-shadow: 0 4px 12px rgba(0,0,0,.08);
+      border-color: rgba(255, 255, 255, 0);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
     }
-    .btn-cta-primary:hover { background: #f8f9fa; color: var(--primary-dark); transform: translateY(-1px); }
-    .btn-cta-ghost { background: transparent; color: var(--primary); border-color: rgba(100,65,165,.4); }
-    .btn-cta-ghost:hover { background: rgba(100,65,165,.06); border-color: rgba(100,65,165,.6); transform: translateY(-1px); }
-    .btn-cta .icon-chrome { height: 20px; width: 20px; }
+
+    .btn-cta-primary:hover {
+      background: #f8f9fa;
+      color: var(--primary-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-cta-ghost {
+      background: transparent;
+      color: var(--primary);
+      border-color: rgba(100, 65, 165, .4);
+    }
+
+    .btn-cta-ghost:hover {
+      background: rgba(100, 65, 165, .06);
+      border-color: rgba(100, 65, 165, .6);
+      transform: translateY(-1px);
+    }
+
+    .btn-cta .icon-chrome {
+      height: 20px;
+      width: 20px;
+    }
   </style>
   <style>
     :root {
@@ -1246,37 +1271,37 @@
       <div class="row g-4">
         <div class="col-md-6 col-lg-4">
           <div class="feature-card h-100">
-            <h5><i class="bi bi-window-sidebar me-2"></i>CMS Detection</h5>
+            <h4><i class="bi bi-window-sidebar me-2"></i>CMS Detection</h4>
             <p>Identifies common CMSs like WordPress, Shopify, Wix, Magento, Drupal, Joomla, and more.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-4">
           <div class="feature-card h-100">
-            <h5><i class="bi bi-braces-asterisk me-2"></i>Frameworks & Libraries</h5>
+            <h4><i class="bi bi-braces-asterisk me-2"></i>Frameworks & Libraries</h4>
             <p>Detects React, Vue, Angular, Next.js, jQuery, Bootstrap, Tailwind, and popular UI kits.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-4">
           <div class="feature-card h-100">
-            <h5><i class="bi bi-hdd-network me-2"></i>Hosting & CDN</h5>
+            <h4><i class="bi bi-hdd-network me-2"></i>Hosting & CDN</h4>
             <p>Surface providers like Cloudflare, Netlify, Vercel, AWS, Google Cloud, and common CDNs.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-4">
           <div class="feature-card h-100">
-            <h5><i class="bi bi-cpu me-2"></i>Server & Backend</h5>
+            <h4><i class="bi bi-cpu me-2"></i>Server & Backend</h4>
             <p>Signals server stack hints (Apache, Nginx, IIS), languages (PHP, Node.js, ASP.NET), and headers.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-4">
           <div class="feature-card h-100">
-            <h5><i class="bi bi-graph-up me-2"></i>Analytics & Tags</h5>
+            <h4><i class="bi bi-graph-up me-2"></i>Analytics & Tags</h4>
             <p>Finds GA4, Google Tag Manager, Facebook Pixel, Hotjar, and other tracking snippets.</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-4">
           <div class="feature-card h-100">
-            <h5><i class="bi bi-search-heart me-2"></i>SEO & Meta</h5>
+            <h4><i class="bi bi-search-heart me-2"></i>SEO & Meta</h4>
             <p>Checks canonical, robots, structured data presence, meta tags, and social cards.</p>
           </div>
         </div>
@@ -1296,12 +1321,38 @@
             finds — including CMS detection (WordPress, Shopify, Wix, Magento, Drupal), popular frontend libraries and
             frameworks (React, Vue, Angular, Next.js, jQuery, Bootstrap, Tailwind), hosting/CDN providers (Cloudflare,
             Netlify, Vercel, AWS, Google Cloud), server and backend hints (Apache, Nginx, IIS; PHP, Node.js, ASP.NET),
-            analytics tags (GA4, Google Tag Manager, Facebook Pixel, Hotjar), and essential SEO/meta signals. If you also 
+            analytics tags (GA4, Google Tag Manager, Facebook Pixel, Hotjar), and essential SEO/meta signals. If you
+            also
             care about on‑page optimization details, pair this tool
             with the <a href="./seo-checklist">SEO Checklist</a> extension to audit titles, meta descriptions,
             headings, links, images, structured data, and quick performance/accessibility hints.
           </p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Demo -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="section-title">Watch It in Action</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube-nocookie.com/embed/ohVjXchZdmI?si=4lJYxUD4-MCAwuir"
+              title="Website Framework Detector - Instantly Identify WordPress, Shopify, Wix & More!" loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </div>
+        </div>
+        <!-- <div class="col-md-6">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube-nocookie.com/embed/NN9xz7cNlOo"
+              title="SEO Checklist Chrome Extension overview" loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </div>
+        </div> -->
       </div>
     </div>
   </section>
@@ -1350,7 +1401,7 @@
       <h2 class="section-title">How to Install</h2>
       <div class="row g-4">
         <div class="col-lg-6">
-          <h5>From Chrome Web Store</h5>
+          <h4>From Chrome Web Store</h4>
           <ol class="mb-4">
             <li>Open the Chrome Web Store listing.</li>
             <li>Click “Add to Chrome”.</li>
@@ -1365,7 +1416,7 @@
           </a>
         </div>
         <div class="col-lg-6">
-          <h5>Manual (Developer Mode)</h5>
+          <h4>Manual (Developer Mode)</h4>
           <ol class="mb-0">
             <li>Download the latest release from GitHub.</li>
             <li>Go to chrome://extensions and enable Developer mode.</li>
@@ -1395,7 +1446,8 @@
               data-bs-target="#q1" aria-expanded="true" aria-controls="q1">What does the Website Framework Detector
               do?</button></h3>
           <div id="q1" class="accordion-collapse collapse show" aria-labelledby="q1h" data-bs-parent="#faqAccordion">
-            <div class="accordion-body">It detects the framework and platform of the active tab—CMS, frameworks/libraries,
+            <div class="accordion-body">It detects the framework and platform of the active tab—CMS,
+              frameworks/libraries,
               hosting/CDN, server stack, analytics tags, and SEO/meta—using page markup, headers, and script patterns.
             </div>
           </div>
@@ -1537,5 +1589,3 @@
 </body>
 
 </html>
-
-  
