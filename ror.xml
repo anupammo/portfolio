@@ -252,6 +252,30 @@
      <ror:sortOrder>1</ror:sortOrder>
      <ror:resourceOf>sitemap</ror:resourceOf>
 </item>
+<item>
+     <link>https://anupammondal.in/chrome-extension/meta-image-generator</link>
+     <title>Meta Image Generator | Free Chrome Extension for website SEO</title>
+     <description>Meta Image Generator — a free Chrome extension to audit OG/Meta tags, preview social previews & generate PNG, JPEG & WebP images to boost website SEO instantly</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://anupammondal.in/wordpress-plugin/smart-seo-booster</link>
+     <title>Smart SEO Booster 1.1 WordPress SEO Audit Plugin Launch</title>
+     <description>Launch Smart SEO Booster by Anupam Mondal, a WordPress SEO plugin with 20+ audits, schema checks, speed-focused insights, and actionable recommendations.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://anupammondal.in/privacy-policy</link>
+     <title>Privacy Policy | Anupam Mondal</title>
+     <description>Read the Privacy Policy for Anupam Mondal's web design, development, SEO, and digital marketing services. Learn how data is collected, used, and protected.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
 </channel>
 </rss>
   

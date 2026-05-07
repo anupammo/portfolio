@@ -6,8 +6,13 @@ https://anupammondal.in/services/website-seo
 https://anupammondal.in/about-us
 https://anupammondal.in/portfolio
 https://anupammondal.in/contact
-https://anupammondal.in/privacy-policy
 https://anupammondal.in/blog/
+https://anupammondal.in/chrome-extension/seo-checklist
+https://anupammondal.in/wordpress-plugin/smart-seo-booster
+https://anupammondal.in/chrome-extension/website-framework-detector
+https://anupammondal.in/chrome-extension/meta-image-generator
+https://anupammondal.in/sms/school-management-system
+https://anupammondal.in/privacy-policy
 https://anupammondal.in/blog/10-common-seo-mistakes
 https://anupammondal.in/blog/benefits-of-using-bootstrap-5
 https://anupammondal.in/blog/build-strong-online-brand-presence
@@ -27,6 +32,3 @@ https://anupammondal.in/blog/top-tools-for-web-designers-and-developers
 https://anupammondal.in/blog/top-web-design-trends-2024
 https://anupammondal.in/blog/ultimate-guide-seo-small-businesses
 https://anupammondal.in/blog/use-analytics-to-drive-marketing-decisions
-https://anupammondal.in/chrome-extension/seo-checklist
-https://anupammondal.in/chrome-extension/website-framework-detector
-https://anupammondal.in/sms/school-management-system
