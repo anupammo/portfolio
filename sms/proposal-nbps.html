@@ -1,0 +1,1876 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta name="robots" content="noindex, nofollow">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>School Management System - Professional Proposal</title>
+   <style>
+      * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+      }
+
+      body {
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+         line-height: 1.6;
+         color: #333;
+
+         @media print {
+
+            html,
+            body {
+               width: 210mm;
+               height: 297mm;
+               background: #f5f5f5 !important;
+               color: #333 !important;
+            }
+
+            @page {
+               size: A4;
+               margin: 15mm;
+               orphans: 3;
+               widows: 3;
+            }
+
+            body {
+               font-size: 13px !important;
+               line-height: 1.6 !important;
+               color: #333 !important;
+               background: #f5f5f5 !important;
+            }
+
+            .container {
+               max-width: 900px !important;
+               width: 180mm !important;
+               margin: 0 auto !important;
+               background: white !important;
+               /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.1) !important; */
+               padding: 0 !important;
+               page-break-after: avoid !important;
+            }
+
+            .cover-page {
+               /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important; */
+               background-image: radial-gradient(circle at 19% 90%, rgba(190, 190, 190,0.04) 0%, rgba(190, 190, 190,0.04) 17%,transparent 17%, transparent 100%),radial-gradient(circle at 73% 2%, rgba(78, 78, 78,0.04) 0%, rgba(78, 78, 78,0.04) 94%,transparent 94%, transparent 100%),radial-gradient(circle at 45% 2%, rgba(18, 18, 18,0.04) 0%, rgba(18, 18, 18,0.04) 55%,transparent 55%, transparent 100%),radial-gradient(circle at 76% 60%, rgba(110, 110, 110,0.04) 0%, rgba(110, 110, 110,0.04) 34%,transparent 34%, transparent 100%),radial-gradient(circle at 68% 56%, rgba(246, 246, 246,0.04) 0%, rgba(246, 246, 246,0.04) 16%,transparent 16%, transparent 100%),radial-gradient(circle at 71% 42%, rgba(156, 156, 156,0.04) 0%, rgba(156, 156, 156,0.04) 47%,transparent 47%, transparent 100%),radial-gradient(circle at 46% 82%, rgba(247, 247, 247,0.04) 0%, rgba(247, 247, 247,0.04) 39%,transparent 39%, transparent 100%),radial-gradient(circle at 50% 47%, rgba(209, 209, 209,0.04) 0%, rgba(209, 209, 209,0.04) 45%,transparent 45%, transparent 100%),linear-gradient(90deg, rgb(84, 36, 210),rgb(44, 27, 154));
+               color: white !important;
+               padding: 60px 40px !important;
+               text-align: center !important;
+               min-height: 80vh !important;
+               display: flex !important;
+               flex-direction: column !important;
+               justify-content: center !important;
+               align-items: center !important;
+               border: none !important;
+               box-shadow: none !important;
+               page-break-after: always !important;
+               page-break-inside: avoid !important;
+            }
+
+            .cover-details {
+               background: rgba(255, 255, 255, 0.1) !important;
+               padding: 40px !important;
+               border-radius: 10px !important;
+               backdrop-filter: blur(10px) !important;
+               margin-top: 40px !important;
+               text-align: left !important;
+               display: inline-block !important;
+            }
+
+            .header {
+               /* background: #667eea !important; */
+               background-image: radial-gradient(circle at 38% 55%, hsla(149,0%,62%,0.1) 0%, hsla(149,0%,62%,0.1) 23%,transparent 23%, transparent 78%,transparent 78%, transparent 100%),radial-gradient(circle at 34% 85%, hsla(149,0%,62%,0.1) 0%, hsla(149,0%,62%,0.1) 7%,transparent 7%, transparent 41%,transparent 41%, transparent 100%),radial-gradient(circle at 0% 36%, hsla(149,0%,62%,0.1) 0%, hsla(149,0%,62%,0.1) 2%,transparent 2%, transparent 59%,transparent 59%, transparent 100%),radial-gradient(circle at 42% 37%, hsla(149,0%,62%,0.1) 0%, hsla(149,0%,62%,0.1) 6%,transparent 6%, transparent 21%,transparent 21%, transparent 100%),radial-gradient(circle at 48% 39%, hsla(149,0%,62%,0.1) 0%, hsla(149,0%,62%,0.1) 8%,transparent 8%, transparent 90%,transparent 90%, transparent 100%),linear-gradient(135deg, rgb(3, 43, 136),rgb(121, 53, 201));
+               color: white !important;
+               padding: 25px 30px !important;
+               text-align: center !important;
+               border-bottom: 4px solid #764ba2 !important;
+            }
+
+            .header h2 {
+               font-size: 28px !important;
+               margin-bottom: 8px !important;
+            }
+
+            .content {
+               padding: 30px !important;
+            }
+
+            .section {
+               margin-bottom: 30px !important;
+            }
+
+            .section-number {
+               display: inline-block !important;
+               background: #667eea !important;
+               color: white !important;
+               width: 40px !important;
+               height: 40px !important;
+               border-radius: 50% !important;
+               text-align: center !important;
+               line-height: 40px !important;
+               font-weight: bold !important;
+               margin-right: 15px !important;
+            }
+
+            .section h2 {
+               font-size: 24px !important;
+               color: #667eea !important;
+               margin-bottom: 15px !important;
+               display: flex !important;
+               align-items: center !important;
+            }
+
+            .section h3 {
+               font-size: 17px !important;
+               color: #764ba2 !important;
+               margin-top: 15px !important;
+               margin-bottom: 10px !important;
+               border-left: 4px solid #667eea !important;
+               padding-left: 12px !important;
+            }
+
+            .section h4 {
+               font-size: 14px !important;
+               color: #333 !important;
+               margin-top: 10px !important;
+               margin-bottom: 8px !important;
+               font-weight: 600 !important;
+            }
+
+            .section p {
+               margin-bottom: 10px !important;
+               font-size: 13px !important;
+               text-align: justify !important;
+            }
+
+            table {
+               width: 100% !important;
+               border-collapse: collapse !important;
+               margin-bottom: 15px !important;
+               box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+               font-size: 13px !important;
+            }
+
+            table th {
+               background: #667eea !important;
+               color: white !important;
+               padding: 10px !important;
+               text-align: left !important;
+               font-weight: 600 !important;
+               border: 1px solid #667eea !important;
+            }
+
+            table td {
+               padding: 8px 10px !important;
+               border: 1px solid #ddd !important;
+               font-size: 12px !important;
+            }
+
+            table tr:nth-child(even) {
+               background-color: #f9f9f9 !important;
+            }
+
+            table tr:hover {
+               background-color: #f0f0f0 !important;
+            }
+
+            .highlights {
+               background: #f0f4ff !important;
+               border-left: 4px solid #667eea !important;
+               padding: 15px !important;
+               margin-bottom: 15px !important;
+               border-radius: 4px !important;
+               font-size: 13px !important;
+            }
+
+            .highlights ul {
+               list-style: none !important;
+               padding-left: 0 !important;
+            }
+
+            .highlights li {
+               margin-bottom: 6px !important;
+               padding-left: 20px !important;
+               position: relative !important;
+               font-size: 12px !important;
+            }
+
+            .highlights li:before {
+               content: "✓" !important;
+               position: absolute !important;
+               left: 0 !important;
+               color: #667eea !important;
+               font-weight: bold !important;
+               font-size: 16px !important;
+            }
+
+            .screenshots {
+               margin-top: 15px !important;
+               margin-bottom: 15px !important;
+            }
+
+            .screenshot-gallery {
+               display: grid !important;
+               grid-template-columns: 1fr 1fr !important;
+               gap: 12px !important;
+               margin-bottom: 15px !important;
+            }
+
+            .screenshot-item {
+               border: 1px solid #ddd !important;
+               border-radius: 6px !important;
+               overflow: hidden !important;
+               box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08) !important;
+               background: #f9f9f9 !important;
+            }
+
+            .screenshot-item img {
+               width: 100% !important;
+               height: auto !important;
+               display: block !important;
+               max-height: 160mm !important;
+               object-fit: contain !important;
+               background: #f9f9f9 !important;
+            }
+
+            .screenshot-caption {
+               padding: 8px !important;
+               background: #f5f5f5 !important;
+               font-size: 11px !important;
+               color: #666 !important;
+               text-align: center !important;
+               font-weight: 500 !important;
+            }
+
+            .cta-box {
+               /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important; */
+               background-image: repeating-linear-gradient(45deg, hsla(64,83%,54%,0.05) 0px, hsla(64,83%,54%,0.05) 1px,transparent 1px, transparent 11px,hsla(64,83%,54%,0.05) 11px, hsla(64,83%,54%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(90deg, hsla(64,83%,54%,0.05) 0px, hsla(64,83%,54%,0.05) 1px,transparent 1px, transparent 11px,hsla(64,83%,54%,0.05) 11px, hsla(64,83%,54%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(0deg, hsla(64,83%,54%,0.05) 0px, hsla(64,83%,54%,0.05) 1px,transparent 1px, transparent 11px,hsla(64,83%,54%,0.05) 11px, hsla(64,83%,54%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(135deg, hsla(64,83%,54%,0.05) 0px, hsla(64,83%,54%,0.05) 1px,transparent 1px, transparent 11px,hsla(64,83%,54%,0.05) 11px, hsla(64,83%,54%,0.05) 12px,transparent 12px, transparent 32px),linear-gradient(90deg, rgb(41, 27, 158),rgb(249, 77, 212));
+               color: white !important;
+               padding: 20px !important;
+               border-radius: 8px !important;
+               text-align: center !important;
+               margin-bottom: 15px !important;
+               font-size: 13px !important;
+            }
+
+            .cta-box h3 {
+               color: white !important;
+               border-left: none !important;
+               padding-left: 0 !important;
+               margin-bottom: 10px !important;
+               font-size: 14px !important;
+            }
+
+            .cta-link {
+               display: inline-block !important;
+               background: rgba(255, 255, 255, 0.2) !important;
+               color: white !important;
+               padding: 12px 25px !important;
+               border-radius: 5px !important;
+               text-decoration: none !important;
+               margin: 5px !important;
+               border: 2px solid white !important;
+               font-weight: 600 !important;
+            }
+
+            .footer {
+               background: #333 !important;
+               color: white !important;
+               padding: 15px 30px !important;
+               text-align: center !important;
+               font-size: 11px !important;
+               border-top: 4px solid #667eea !important;
+            }
+
+            .divider {
+               height: 2px !important;
+               background: linear-gradient(to right, #667eea, #764ba2, #667eea) !important;
+               margin: 30px 0 !important;
+            }
+
+            blockquote {
+               border-left: 4px solid #667eea !important;
+               padding-left: 15px !important;
+               margin-left: 0 !important;
+               margin-bottom: 10px !important;
+               font-style: italic !important;
+               color: #555 !important;
+               background: #f9f9f9 !important;
+               padding: 12px 0 12px 15px !important;
+               border-radius: 4px !important;
+               font-size: 12px !important;
+            }
+
+            .feature-list {
+               list-style: none !important;
+               padding-left: 0 !important;
+               font-size: 12px !important;
+            }
+
+            .feature-list li:before {
+               content: "→" !important;
+               position: absolute !important;
+               left: 0 !important;
+               font-weight: bold !important;
+            }
+
+            .page-break {
+               page-break-after: always !important;
+               margin: 0 !important;
+               padding: 0 !important;
+            }
+
+            .no-print {
+               display: none !important;
+            }
+
+            /* Remove blank pages by avoiding forced page breaks after large blocks */
+            .section,
+            .content,
+            .screenshot-gallery,
+            .highlights,
+            .toc,
+            .footer,
+            .header {
+               page-break-after: avoid !important;
+               page-break-inside: avoid !important;
+            }
+
+            /* Remove margin collapse that can cause blank pages */
+            .section,
+            .content,
+            .screenshot-gallery,
+            .highlights,
+            .toc,
+            .footer,
+            .header {
+               margin-bottom: 8pt !important;
+               margin-top: 0 !important;
+            }
+         }
+
+         page-break-inside: avoid;
+      }
+
+      .feature-list li:before {
+         content: "→";
+         position: absolute;
+         left: 0;
+         font-weight: bold;
+      }
+
+      /* Call to Action */
+      .cta-box {
+         background: #f0f4ff;
+         color: #000;
+         padding: 12pt;
+         border: 1px solid #667eea;
+         border-left: 3px solid #667eea;
+         text-align: center;
+         margin-bottom: 10pt;
+         page-break-inside: avoid;
+         font-size: 9pt;
+      }
+
+      .cta-box h3 {
+         color: #667eea;
+         border: none;
+         padding: 0;
+         margin-bottom: 8pt;
+         font-size: 11pt;
+      }
+
+      /* Screenshots */
+      .screenshot-gallery {
+         display: grid;
+         grid-template-columns: 1fr;
+         gap: 8pt;
+         margin-bottom: 10pt;
+      }
+
+      .screenshot-item {
+         border: 1px solid #ddd;
+         page-break-inside: avoid;
+      }
+
+      .screenshot-item img {
+         width: 100%;
+         height: auto;
+         max-height: 160mm;
+         object-fit: contain;
+         display: block;
+      }
+
+      .screenshot-caption {
+         padding: 6pt;
+         background: #f5f5f5;
+         font-size: 8pt;
+         text-align: center;
+         font-weight: bold;
+      }
+
+      /* Quotes */
+      blockquote {
+         border-left: 2px solid #667eea;
+         padding-left: 10pt;
+         margin-left: 0;
+         margin-bottom: 8pt;
+         font-style: italic;
+         color: #333;
+         background: #fafafa;
+         padding: 8pt;
+         font-size: 9pt;
+         page-break-inside: avoid;
+      }
+
+      /* Footer */
+      .footer {
+         background: #f0f4ff;
+         color: #000;
+         padding: 15pt;
+         text-align: center;
+         font-size: 8pt;
+         border-top: 2px solid #667eea;
+         page-break-inside: avoid;
+         margin-top: 20pt;
+      }
+
+      /* Table of Contents */
+      .toc {
+         background: #f9f9f9;
+         padding: 15pt;
+         border: 1px solid #ddd;
+         margin-bottom: 10pt;
+         page-break-inside: avoid;
+      }
+
+      .toc h3 {
+         color: #667eea;
+         border: none;
+         padding: 0;
+         margin-bottom: 8pt;
+      }
+
+      .toc ol {
+         margin-left: 20pt;
+         font-size: 9pt;
+      }
+
+      .toc li {
+         margin-bottom: 3pt;
+      }
+
+      /* END @media print */
+
+      /* COVER PAGE STYLING */
+      .cover-page {
+         /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+         background-image: radial-gradient(circle at 19% 90%, rgba(190, 190, 190,0.04) 0%, rgba(190, 190, 190,0.04) 17%,transparent 17%, transparent 100%),radial-gradient(circle at 73% 2%, rgba(78, 78, 78,0.04) 0%, rgba(78, 78, 78,0.04) 94%,transparent 94%, transparent 100%),radial-gradient(circle at 45% 2%, rgba(18, 18, 18,0.04) 0%, rgba(18, 18, 18,0.04) 55%,transparent 55%, transparent 100%),radial-gradient(circle at 76% 60%, rgba(110, 110, 110,0.04) 0%, rgba(110, 110, 110,0.04) 34%,transparent 34%, transparent 100%),radial-gradient(circle at 68% 56%, rgba(246, 246, 246,0.04) 0%, rgba(246, 246, 246,0.04) 16%,transparent 16%, transparent 100%),radial-gradient(circle at 71% 42%, rgba(156, 156, 156,0.04) 0%, rgba(156, 156, 156,0.04) 47%,transparent 47%, transparent 100%),radial-gradient(circle at 46% 82%, rgba(247, 247, 247,0.04) 0%, rgba(247, 247, 247,0.04) 39%,transparent 39%, transparent 100%),radial-gradient(circle at 50% 47%, rgba(209, 209, 209,0.04) 0%, rgba(209, 209, 209,0.04) 45%,transparent 45%, transparent 100%),linear-gradient(90deg, rgb(84, 36, 210),rgb(44, 27, 154));
+         color: white;
+         padding: 60px 40px;
+         text-align: center;
+         min-height: 80vh;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+      }
+
+      .cover-page h1 {
+         font-size: 48px;
+         font-weight: 700;
+         margin-bottom: 20px;
+         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .cover-page p {
+         font-size: 24px;
+         margin-bottom: 40px;
+         opacity: 0.95;
+      }
+
+      .cover-details {
+         background: rgba(255, 255, 255, 0.1);
+         padding: 40px;
+         border-radius: 10px;
+         backdrop-filter: blur(10px);
+         margin-top: 40px;
+         text-align: left;
+         display: inline-block;
+      }
+
+      .cover-details p {
+         font-size: 16px;
+         margin-bottom: 15px;
+         text-align: left;
+      }
+
+      .cover-details a, .cta-box a {
+         color: #ffeb3b;
+         text-decoration: none;
+      }
+
+      .cover-details strong {
+         display: inline-block;
+         width: 150px;
+      }
+
+      /* HEADER STYLING */
+      .header {
+         background: #667eea;
+         background-image: radial-gradient(circle at 38% 55%, hsla(149,0%,62%,0.1) 0%, hsla(149,0%,62%,0.1) 23%,transparent 23%, transparent 78%,transparent 78%, transparent 100%),radial-gradient(circle at 34% 85%, hsla(149,0%,62%,0.1) 0%, hsla(149,0%,62%,0.1) 7%,transparent 7%, transparent 41%,transparent 41%, transparent 100%),radial-gradient(circle at 0% 36%, hsla(149,0%,62%,0.1) 0%, hsla(149,0%,62%,0.1) 2%,transparent 2%, transparent 59%,transparent 59%, transparent 100%),radial-gradient(circle at 42% 37%, hsla(149,0%,62%,0.1) 0%, hsla(149,0%,62%,0.1) 6%,transparent 6%, transparent 21%,transparent 21%, transparent 100%),radial-gradient(circle at 48% 39%, hsla(149,0%,62%,0.1) 0%, hsla(149,0%,62%,0.1) 8%,transparent 8%, transparent 90%,transparent 90%, transparent 100%),linear-gradient(135deg, rgb(3, 43, 136),rgb(121, 53, 201));
+         color: white;
+         padding: 25px 30px;
+         text-align: center;
+         border-bottom: 4px solid #764ba2;
+      }
+
+      .header h2 {
+         font-size: 28px;
+         margin-bottom: 8px;
+      }
+
+      .header p {
+         font-size: 14px;
+         opacity: 0.9;
+      }
+
+      /* CONTENT STYLING */
+      .content {
+         padding: 30px;
+      }
+
+      .section {
+         margin-bottom: 30px;
+      }
+
+      .section-number {
+         display: inline-block;
+         background: #667eea;
+         color: white;
+         width: 40px;
+         height: 40px;
+         border-radius: 50%;
+         text-align: center;
+         line-height: 40px;
+         font-weight: bold;
+         margin-right: 15px;
+      }
+
+      .section h2 {
+         font-size: 24px;
+         color: #667eea;
+         margin-bottom: 15px;
+         display: flex;
+         align-items: center;
+      }
+
+      .section h3 {
+         font-size: 17px;
+         color: #764ba2;
+         margin-top: 15px;
+         margin-bottom: 10px;
+         border-left: 4px solid #667eea;
+         padding-left: 12px;
+      }
+
+      .section h4 {
+         font-size: 14px;
+         color: #333;
+         margin-top: 10px;
+         margin-bottom: 8px;
+         font-weight: 600;
+      }
+
+      .section p {
+         margin-bottom: 10px;
+         font-size: 13px;
+         text-align: justify;
+      }
+
+      /* TABLE STYLING */
+      table {
+         width: 100%;
+         border-collapse: collapse;
+         margin-bottom: 15px;
+         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+         font-size: 13px;
+      }
+
+      table th {
+         background: #667eea;
+         color: white;
+         padding: 10px;
+         text-align: left;
+         font-weight: 600;
+         border: 1px solid #667eea;
+      }
+
+      table td {
+         padding: 8px 10px;
+         border: 1px solid #ddd;
+         font-size: 12px;
+      }
+
+      table tr:nth-child(even) {
+         background-color: #f9f9f9;
+      }
+
+      table tr:hover {
+         background-color: #f0f0f0;
+      }
+
+      /* HIGHLIGHTS & BENEFITS */
+      .highlights {
+         background: #f0f4ff;
+         border-left: 4px solid #667eea;
+         padding: 15px;
+         margin-bottom: 15px;
+         border-radius: 4px;
+         font-size: 13px;
+      }
+
+      .highlights ul {
+         list-style: none;
+         padding-left: 0;
+      }
+
+      .highlights li {
+         margin-bottom: 6px;
+         padding-left: 20px;
+         position: relative;
+         font-size: 12px;
+      }
+
+      .highlights li:before {
+         content: "✓";
+         position: absolute;
+         left: 0;
+         color: #667eea;
+         font-weight: bold;
+         font-size: 16px;
+      }
+
+      /* SCREENSHOTS SECTION */
+      .screenshots {
+         margin-top: 15px;
+         margin-bottom: 15px;
+      }
+
+      .screenshot-gallery {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         gap: 12px;
+         margin-bottom: 15px;
+      }
+
+      .screenshot-item {
+         border: 1px solid #ddd;
+         border-radius: 6px;
+         overflow: hidden;
+         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+         background: #f9f9f9;
+      }
+
+      .screenshot-item img {
+         width: 100%;
+         height: auto;
+         display: block;
+      }
+
+      .screenshot-caption {
+         padding: 8px;
+         background: #f5f5f5;
+         font-size: 11px;
+         color: #666;
+         text-align: center;
+         font-weight: 500;
+      }
+
+      @media print {
+         .screenshot-gallery {
+            grid-template-columns: 1fr;
+         }
+      }
+
+      /* CALL TO ACTION */
+      .cta-box {
+         /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+         background-image: repeating-linear-gradient(0deg, hsla(284,43%,48%,0.05) 0px, hsla(284,43%,48%,0.05) 1px,transparent 1px, transparent 11px,hsla(284,43%,48%,0.05) 11px, hsla(284,43%,48%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(135deg, hsla(284,43%,48%,0.05) 0px, hsla(284,43%,48%,0.05) 1px,transparent 1px, transparent 11px,hsla(284,43%,48%,0.05) 11px, hsla(284,43%,48%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(0deg, hsla(284,43%,48%,0.05) 0px, hsla(284,43%,48%,0.05) 1px,transparent 1px, transparent 11px,hsla(284,43%,48%,0.05) 11px, hsla(284,43%,48%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(45deg, hsla(284,43%,48%,0.05) 0px, hsla(284,43%,48%,0.05) 1px,transparent 1px, transparent 11px,hsla(284,43%,48%,0.05) 11px, hsla(284,43%,48%,0.05) 12px,transparent 12px, transparent 32px),linear-gradient(90deg, rgb(60, 9, 75),rgb(139, 70, 200));
+         color: white;
+         padding: 20px;
+         border-radius: 8px;
+         text-align: center;
+         margin-bottom: 15px;
+         font-size: 13px;
+      }
+
+      .cta-box h3 {
+         color: white;
+         border-left: none;
+         padding-left: 0;
+         margin-bottom: 10px;
+         font-size: 14px;
+      }
+
+      .cta-box p {
+         text-align: center;
+      }
+
+      .cta-link {
+         display: inline-block;
+         background: rgba(255, 255, 255, 0.2);
+         color: white;
+         padding: 12px 25px;
+         border-radius: 5px;
+         text-decoration: none;
+         margin: 5px;
+         border: 2px solid white;
+         font-weight: 600;
+      }
+
+      /* FOOTER */
+      .footer {
+         background: #333;
+         color: white;
+         padding: 15px 30px;
+         text-align: center;
+         font-size: 11px;
+         border-top: 4px solid #667eea;
+      }
+
+      .divider {
+         height: 2px;
+         background: linear-gradient(to right, #667eea, #764ba2, #667eea);
+         margin: 30px 0;
+      }
+
+      /* QUOTE STYLING */
+      blockquote {
+         border-left: 4px solid #667eea;
+         padding-left: 15px;
+         margin-left: 0;
+         margin-bottom: 10px;
+         font-style: italic;
+         color: #555;
+         background: #f9f9f9;
+         padding: 12px 0 12px 15px;
+         border-radius: 4px;
+         font-size: 12px;
+      }
+
+      /* FEATURE LIST */
+      .feature-list {
+         list-style: none;
+         padding-left: 0;
+         font-size: 12px;
+      }
+
+      .feature-list li {
+         margin-bottom: 6px;
+         padding-left: 20px;
+         position: relative;
+         line-height: 1.4;
+      }
+
+      .feature-list li:before {
+         content: "→";
+         position: absolute;
+         left: 0;
+         color: #667eea;
+         font-weight: bold;
+         font-size: 14px;
+      }
+
+      /* PRINT OPTIMIZATIONS */
+      @media print {
+         .container {
+            page-break-inside: avoid;
+         }
+
+         .section {
+            page-break-inside: avoid;
+         }
+
+         table {
+            page-break-inside: avoid;
+         }
+
+         .screenshot-item {
+            page-break-inside: avoid;
+         }
+      }
+
+      .page-break-before {
+         page-break-before: always;
+      }
+
+      .toc {
+         background: #f0f4ff;
+         padding: 20px;
+         border-radius: 8px;
+         margin-bottom: 20px;
+         font-size: 12px;
+      }
+
+      .toc h3 {
+         color: #667eea;
+         border-left: none;
+         padding-left: 0;
+         margin-bottom: 12px;
+         font-size: 14px;
+      }
+
+      .toc ol {
+         margin-left: 20px;
+         font-size: 11px;
+      }
+
+      .toc li {
+         margin-bottom: 4px;
+      }
+   </style>
+</head>
+
+<body>
+   <div class="container">
+      <!-- COVER PAGE -->
+      <div class="cover-page">
+         <h1>📋 SCHOOL MANAGEMENT SYSTEM</h1>
+         <p>Complete Digital Solution for Modern Schools by <strong>NBPS Tech Solutions</strong></p>
+
+         <div class="cover-details">
+            <p><strong>Presented To :</strong> </p>
+            <p><strong>Date :</strong> May 2026</p>
+            <p><strong>Validity :</strong> 30 Days</p>
+            <p><strong>Email :</strong> nbpstechsolutions@gmail.com</p>
+            <p><strong>WhatsApp :</strong> +91 70036 90675</p>
+            <p><strong>Website :</strong> <a href="https://edras.eaximo.com" target="_blank">https://edras.eaximo.com</a></p>
+         </div>
+      </div>
+
+      <!-- <div class="page-break"></div> -->
+
+      <!-- TABLE OF CONTENTS -->
+      <div class="content">
+         <div class="toc">
+            <h3>📑 PROPOSAL CONTENTS</h3>
+            <ol>
+               <li>Executive Summary</li>
+               <li>Client Needs & Problem Statement</li>
+               <li>Proposed Solution Overview</li>
+               <li>Core Features & Modules</li>
+               <li>System Architecture & Technology</li>
+               <li>Benefits & ROI Analysis</li>
+               <li>Implementation Plan</li>
+               <li>Pricing & Packages</li>
+               <li>Support & Maintenance</li>
+               <li>Case Studies</li>
+               <li>Next Steps & Call to Action</li>
+            </ol>
+         </div>
+      </div>
+
+      <!-- <div class="page-break"></div> -->
+
+      <!-- SECTION 1: EXECUTIVE SUMMARY -->
+      <div class="header">
+         <h2>1. EXECUTIVE SUMMARY</h2>
+         <p>Comprehensive Overview & Key Benefits</p>
+      </div>
+
+      <div class="content">
+         <div class="section">
+            <h3>Overview</h3>
+            <p>The <strong>School Management System (SMS)</strong> is a comprehensive, cloud-based educational
+               management platform designed to transform how schools operate across academics, administration, finance,
+               and communication.</p>
+
+            <p>In today's fast-paced educational landscape, schools face critical challenges:</p>
+            <div class="highlights">
+               <ul>
+                  <li><strong>Manual processes</strong> consuming 15-20 hours per week of administrative staff time</li>
+                  <li><strong>Fragmented data</strong> scattered across spreadsheets, registers, and different
+                     individuals</li>
+                  <li><strong>Poor parent communication</strong> leading to missed updates and delayed responses</li>
+                  <li><strong>Lack of transparency</strong> in fee collection, attendance, and academic performance</li>
+                  <li><strong>Inefficient attendance tracking</strong> with paper-based or disconnected systems</li>
+                  <li><strong>Delayed grade and result publication</strong> affecting student motivation</li>
+                  <li><strong>Fee management chaos</strong> with incomplete records and collection delays</li>
+               </ul>
+            </div>
+
+            <h3>How School MS Solves These Problems</h3>
+            <p><strong>School MS eliminates these pain points</strong> by providing a unified, mobile-friendly platform
+               where:</p>
+            <div class="highlights">
+               <ul>
+                  <li>All stakeholders have real-time access to relevant information</li>
+                  <li>Administrative overhead drops by 60-70% within the first month</li>
+                  <li>Parent satisfaction increases through instant notifications and transparency</li>
+                  <li>Teachers focus on teaching, not paperwork</li>
+                  <li>Fees are tracked, collected, and reported automatically</li>
+                  <li>Academic performance is visible to all authorized users instantly</li>
+               </ul>
+            </div>
+
+            <h3>Key Benefits at a Glance</h3>
+            <table>
+               <tr>
+                  <th>Benefit</th>
+                  <th>Impact</th>
+               </tr>
+               <tr>
+                  <td><strong>Time Savings</strong></td>
+                  <td>15-20 hours/week for admin staff</td>
+               </tr>
+               <tr>
+                  <td><strong>Error Reduction</strong></td>
+                  <td>90% fewer data entry mistakes</td>
+               </tr>
+               <tr>
+                  <td><strong>Parent Engagement</strong></td>
+                  <td>Real-time updates via push notifications</td>
+               </tr>
+               <tr>
+                  <td><strong>Fee Collection</strong></td>
+                  <td>Track & recover dues automatically</td>
+               </tr>
+               <tr>
+                  <td><strong>Transparency</strong></td>
+                  <td>Full audit trail of all transactions</td>
+               </tr>
+               <tr>
+                  <td><strong>Cost Efficiency</strong></td>
+                  <td>Zero infrastructure investment (cloud-hosted)</td>
+               </tr>
+            </table>
+         </div>
+      </div>
+
+      <div class="page-break"></div>
+
+      <!-- SECTION 2: CLIENT NEEDS & PROBLEM STATEMENT -->
+      <div class="header">
+         <h2>2. CLIENT NEEDS & PROBLEM STATEMENT</h2>
+         <p>Common Challenges Schools Face Today</p>
+      </div>
+
+      <div class="content">
+         <div class="section">
+            <h4>A. Manual Record Keeping</h4>
+            <ul class="feature-list">
+               <li>Attendance marked in physical registers, then manually entered into spreadsheets</li>
+               <li>Student records stored across multiple files and locations</li>
+               <li>Risk of lost or damaged records</li>
+               <li>Difficulty finding historical data when needed</li>
+               <li><strong>Time Cost: 8-12 hours/week</strong></li>
+            </ul>
+
+            <h4>B. Fee Collection & Tracking Nightmare</h4>
+            <ul class="feature-list">
+               <li>Invoices issued manually or via email</li>
+               <li>No centralized payment status visibility</li>
+               <li>Overdue fees slip through the cracks</li>
+               <li>Parents unsure of payment status or outstanding amounts</li>
+               <li>Reconciliation errors between receipts and payments</li>
+               <li><strong>Financial Impact: 10-15% fee collection delay</strong></li>
+            </ul>
+
+            <h4>C. Poor Parent Communication</h4>
+            <ul class="feature-list">
+               <li>Important announcements sent via WhatsApp or email (gets lost)</li>
+               <li>Absence alerts reach parents hours or days later</li>
+               <li>Parents can't verify grades or attendance independently</li>
+               <li>No push notifications for urgent updates</li>
+               <li>Frustration on both ends—parents and school staff</li>
+            </ul>
+
+            <h4>D. Lack of Centralized Data</h4>
+            <ul class="feature-list">
+               <li>Student info in one system, attendance in another, grades in a third</li>
+               <li>Staff can't access required data quickly</li>
+               <li>Reports take hours or days to compile</li>
+               <li>Decision-making delayed due to information silos</li>
+               <li>No single source of truth for performance metrics</li>
+            </ul>
+
+            <h4>E. Limited Accessibility</h4>
+            <ul class="feature-list">
+               <li>Systems only accessible from the office</li>
+               <li>Teachers can't mark attendance from classroom</li>
+               <li>Parents need to visit school to check progress</li>
+               <li>Students have no real-time access to schedules or results</li>
+            </ul>
+
+            <h4>F. Compliance & Auditing Issues</h4>
+            <ul class="feature-list">
+               <li>No audit trail for financial transactions</li>
+               <li>Difficult to prove compliance with board regulations</li>
+               <li>Risk of data loss without backup systems</li>
+               <li>Security concerns with paper-based records</li>
+            </ul>
+
+            <h3>Why This Matters to Your School</h3>
+            <p>Every day of manual operations means:</p>
+            <div class="highlights">
+               <ul>
+                  <li><strong>Reduced efficiency</strong> → fewer hours spent on strategic initiatives</li>
+                  <li><strong>Higher error rates</strong> → incorrect grades, attendance, or fee records</li>
+                  <li><strong>Lower parent satisfaction</strong> → complaints and reputation damage</li>
+                  <li><strong>Wasted resources</strong> → dedicated staff just managing spreadsheets</li>
+                  <li><strong>Missed growth opportunities</strong> → no insights into school performance</li>
+               </ul>
+            </div>
+         </div>
+      </div>
+
+      <div class="page-break"></div>
+
+      <!-- SECTION 3: PROPOSED SOLUTION -->
+      <div class="header">
+         <h2>3. PROPOSED SOLUTION: SCHOOL MANAGEMENT SYSTEM</h2>
+         <p>End-to-End Digital Platform</p>
+      </div>
+
+      <div class="content">
+         <div class="section">
+            <h3>What is School MS?</h3>
+            <p><strong>School MS</strong> is an end-to-end digital platform purpose-built for Indian schools. It unifies
+               student management, academic operations, financial tracking, and parent communication in a single,
+               intuitive interface.</p>
+
+            <div class="cta-box">
+               <h3>System Highlights</h3>
+               <p>Cloud-hosted, Mobile-first, Indian School-ready, Enterprise-grade Security</p>
+            </div>
+
+            <h3>Core Features & Modules</h3>
+
+            <h4>1. STUDENT INFORMATION SYSTEM</h4>
+            <ul class="feature-list">
+               <li>Complete student profiles with enrollment history</li>
+               <li>Linked guardian/parent information</li>
+               <li>Medical records (blood group, allergies, emergency contacts)</li>
+               <li>Academic history and performance tracking</li>
+               <li>Document storage (certificates, immunizations, etc.)</li>
+               <li>Multi-level search and filtering</li>
+            </ul>
+            <p><em><strong>Benefit:</strong> Centralized, always-accessible student records</em></p>
+
+            <h4>2. ATTENDANCE MANAGEMENT</h4>
+            <ul class="feature-list">
+               <li>Daily attendance marking (present/absent/late/excused)</li>
+               <li>Class-wise and student-wise reporting</li>
+               <li>Automated parent notifications for unexcused absences</li>
+               <li>Monthly attendance summaries and trend analysis</li>
+               <li>Teacher mobile app for marking from classroom</li>
+            </ul>
+            <p><em><strong>Benefit:</strong> Real-time visibility, automated alerts reduce follow-ups</em></p>
+
+            <h4>3. GRADE & EXAM MANAGEMENT</h4>
+            <ul class="feature-list">
+               <li>Record marks for unit tests, mid-terms, finals, practicals</li>
+               <li>Automatic grade computation based on configurable scales</li>
+               <li>Multiple exam types and components</li>
+               <li>Subject-wise and class-wise analysis</li>
+               <li>Instant result publication to students and parents</li>
+               <li>Downloadable report cards and mark sheets</li>
+            </ul>
+            <p><em><strong>Benefit:</strong> Transparent, instant academic feedback</em></p>
+
+            <h4>4. FEE & PAYMENT MANAGEMENT</h4>
+            <ul class="feature-list">
+               <li>Customizable fee structures per class and session</li>
+               <li>Automated billing cycles (admission, monthly, term-based)</li>
+               <li>Support for discounts and concessions</li>
+               <li>Online and offline payment tracking</li>
+               <li>Automated reminders for overdue fees</li>
+               <li>Digital receipt generation and delivery</li>
+               <li>Real-time revenue dashboards</li>
+            </ul>
+            <p><em><strong>Benefit:</strong> 20-30% faster fee collection, fewer follow-ups</em></p>
+
+            <h4>5. TIMETABLE SCHEDULING</h4>
+            <ul class="feature-list">
+               <li>Build and publish weekly class timetables</li>
+               <li>Teacher-subject-class mapping</li>
+               <li>Automatic clash detection</li>
+               <li>Holiday integration</li>
+               <li>Mobile-accessible timetables for students and parents</li>
+            </ul>
+            <p><em><strong>Benefit:</strong> Avoid scheduling conflicts, instant access for everyone</em></p>
+
+            <h4>6. PARENT PORTAL</h4>
+            <ul class="feature-list">
+               <li>Real-time child attendance visibility</li>
+               <li>Exam grades and performance tracking</li>
+               <li>Fee status and payment history</li>
+               <li>School announcements and notices</li>
+               <li>Direct messaging with teachers</li>
+               <li>Holiday calendar access</li>
+               <li>Class schedule visibility</li>
+            </ul>
+            <p><em><strong>Benefit:</strong> Informed parents, reduced office inquiries (40% fewer phone calls)</em></p>
+
+            <h4>7. ANNOUNCEMENTS & MESSAGING</h4>
+            <ul class="feature-list">
+               <li>School-wide or targeted announcements</li>
+               <li>Audience filtering (all, class-specific, role-specific)</li>
+               <li>Push notifications to mobile devices</li>
+               <li>Internal messaging system</li>
+               <li>Holiday and event calendar</li>
+            </ul>
+            <p><em><strong>Benefit:</strong> Instant, trackable communication</em></p>
+
+            <h3>Platform Highlights</h3>
+            <div class="highlights">
+               <h4>☁️ Cloud-Hosted & Secure</h4>
+               <ul style="list-style-type: none; padding-left: 0;">
+                  <li>No on-premise servers required</li>
+                  <li>Automatic daily backups</li>
+                  <li>HTTPS encryption for all data</li>
+                  <li>Session-based authentication</li>
+                  <li>99.9% uptime guarantee</li>
+                  <li>GDPR and data protection compliant</li>
+               </ul>
+
+               <h4>📱 Mobile-First Design</h4>
+               <ul style="list-style-type: none; padding-left: 0;">
+                  <li>Fully responsive on tablets and smartphones</li>
+                  <li>Progressive Web App (PWA) - install as native app</li>
+                  <li>Works offline (limited features sync when online)</li>
+                  <li>Android and iOS compatible</li>
+                  <li>Push notifications for alerts</li>
+               </ul>
+
+               <h4>🇮🇳 Indian School Ready</h4>
+               <ul style="list-style-type: none; padding-left: 0;">
+                  <li>Pre-configured for CBSE, ICSE, and state board structures</li>
+                  <li>Support for multiple languages (English, Bengali, Hindi)</li>
+                  <li>Regional datasets (Kolkata, Howrah, Siliguri, West Bengal templates)</li>
+                  <li>Indian holiday calendars</li>
+                  <li>Local payment gateway integration</li>
+               </ul>
+            </div>
+         </div>
+      </div>
+
+      <!-- <div class="page-break"></div> -->
+
+      <!-- SCREENSHOTS SECTION -->
+      <div class="header">
+         <h2>4. Core Features & Modules | APPLICATION SCREENSHOTS</h2>
+         <p>Real-World Interface & User Experience</p>
+      </div>
+
+      <div class="content">
+         <div class="section">
+            <p>Below are screenshots from the live School Management System application, showcasing the intuitive
+               interface and comprehensive features:</p>
+
+            <div class="screenshots">
+               <div class="screenshot-gallery">
+                  <div class="screenshot-item">
+                     <img src="../image/screenshots/sms/Screenshot 2026-04-18 223141.png" alt="Dashboard Overview">
+                     <div class="screenshot-caption">Dashboard Overview</div>
+                  </div>
+                  <div class="screenshot-item">
+                     <img src="../image/screenshots/sms/Screenshot 2026-04-18 223555.png" alt="Student Management">
+                     <div class="screenshot-caption">Student Management</div>
+                  </div>
+                  <div class="screenshot-item">
+                     <img src="../image/screenshots/sms/Screenshot 2026-04-18 223733.png" alt="Attendance Tracking">
+                     <div class="screenshot-caption">Attendance Tracking</div>
+                  </div>
+                  <div class="screenshot-item">
+                     <img src="../image/screenshots/sms/Screenshot 2026-04-18 223750.png" alt="Grade Management">
+                     <div class="screenshot-caption">Grade Management</div>
+                  </div>
+                  <div class="screenshot-item">
+                     <img src="../image/screenshots/sms/Screenshot 2026-04-18 223906.png" alt="Fee Management">
+                     <div class="screenshot-caption">Fee & Payment Management</div>
+                  </div>
+                  <div class="screenshot-item">
+                     <img src="../image/screenshots/sms/Screenshot 2026-04-18 223925.png" alt="Parent Portal">
+                     <div class="screenshot-caption">Parent Portal</div>
+                  </div>
+                  <div class="screenshot-item">
+                     <img src="../image/screenshots/sms/Screenshot 2026-04-18 224242.png" alt="Timetable">
+                     <div class="screenshot-caption">Timetable Management</div>
+                  </div>
+                  <div class="screenshot-item">
+                     <img src="../image/screenshots/sms/Screenshot 2026-04-18 224304.png" alt="Analytics">
+                     <div class="screenshot-caption">Analytics Dashboard</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="page-break"></div>
+      <!-- SECTION 5: TECHNOLOGY ARCHITECTURE -->
+      <div class="header">
+         <h2>5. SYSTEM ARCHITECTURE & TECHNOLOGY STACK</h2>
+         <p>Modern, Scalable, Enterprise-Grade Infrastructure</p>
+      </div>
+
+      <div class="content">
+         <div class="section">
+            <h3>Technical Overview</h3>
+            <div class="highlights">
+               <p><strong>Architecture Layers:</strong></p>
+               <ul style="list-style-type: none; padding-left: 0;">
+                  <li><strong>CLIENT LAYER:</strong> Web & Mobile (PWA) - Next.js (React) - Responsive, offline-capable
+                  </li>
+                  <li><strong>API LAYER:</strong> REST API - Next.js API Routes - Secured, role-based</li>
+                  <li><strong>BUSINESS LOGIC:</strong> ORM & Services - Prisma ORM - Type-safe, efficient</li>
+                  <li><strong>DATABASE LAYER:</strong> MySQL 8 / MariaDB - Scalable, reliable</li>
+               </ul>
+            </div>
+
+            <h3>Stack Components</h3>
+            <table>
+               <tr>
+                  <th>Layer</th>
+                  <th>Technology</th>
+                  <th>Purpose</th>
+               </tr>
+               <tr>
+                  <td><strong>Frontend</strong></td>
+                  <td>Next.js 16, React 19, Tailwind CSS</td>
+                  <td>Modern, fast, responsive UI</td>
+               </tr>
+               <tr>
+                  <td><strong>Backend</strong></td>
+                  <td>Next.js API Routes</td>
+                  <td>Lightweight, serverless-ready</td>
+               </tr>
+               <tr>
+                  <td><strong>Database</strong></td>
+                  <td>MySQL 8 / MariaDB 10</td>
+                  <td>Industry-standard, reliable</td>
+               </tr>
+               <tr>
+                  <td><strong>ORM</strong></td>
+                  <td>Prisma 7</td>
+                  <td>Type-safe data layer</td>
+               </tr>
+               <tr>
+                  <td><strong>Notifications</strong></td>
+                  <td>Web Push API + FCM</td>
+                  <td>Real-time alerts</td>
+               </tr>
+               <tr>
+                  <td><strong>Hosting</strong></td>
+                  <td>Cloud (AWS/Vercel)</td>
+                  <td>99.9% uptime, auto-scaling</td>
+               </tr>
+               <tr>
+                  <td><strong>Security</strong></td>
+                  <td>OAuth 2.0, HTTPS, JWT</td>
+                  <td>Enterprise-grade security</td>
+               </tr>
+            </table>
+
+            <h3>Infrastructure Guarantees</h3>
+            <div class="highlights">
+               <ul>
+                  <li><strong>Uptime:</strong> 99.9% SLA (monitored 24x7)</li>
+                  <li><strong>Response Time:</strong> &lt;500ms average page load</li>
+                  <li><strong>Data Backup:</strong> Hourly automated backups + 30-day retention</li>
+                  <li><strong>Disaster Recovery:</strong> Redundant systems in multiple regions</li>
+                  <li><strong>Scalability:</strong> Auto-scales from 100 to 10,000+ concurrent users</li>
+               </ul>
+            </div>
+         </div>
+      </div>
+
+      <div class="page-break"></div>
+
+      <!-- SECTION 6: BENEFITS & ROI -->
+      <div class="header">
+         <h2>6. BENEFITS TO YOUR SCHOOL</h2>
+         <p>Measurable Impact & Return on Investment</p>
+      </div>
+
+      <div class="content">
+         <div class="section">
+            <h3>Time & Resource Savings</h3>
+            <table>
+               <tr>
+                  <th>Function</th>
+                  <th>Before SMS</th>
+                  <th>After SMS</th>
+                  <th>Savings</th>
+               </tr>
+               <tr>
+                  <td>Daily Attendance Marking</td>
+                  <td>45 mins (manual)</td>
+                  <td>10 mins (digital)</td>
+                  <td><strong>70%</strong></td>
+               </tr>
+               <tr>
+                  <td>Monthly Fee Tracking</td>
+                  <td>8 hours</td>
+                  <td>1 hour</td>
+                  <td><strong>87%</strong></td>
+               </tr>
+               <tr>
+                  <td>Absence Alerts</td>
+                  <td>2 hours (phone calls)</td>
+                  <td>Instant (auto-notify)</td>
+                  <td><strong>100%</strong></td>
+               </tr>
+               <tr>
+                  <td>Grade Entry & Publishing</td>
+                  <td>6 hours</td>
+                  <td>1.5 hours</td>
+                  <td><strong>75%</strong></td>
+               </tr>
+               <tr>
+                  <td>Report Generation</td>
+                  <td>4 hours</td>
+                  <td>15 mins</td>
+                  <td><strong>94%</strong></td>
+               </tr>
+            </table>
+            <p><strong>Total Weekly Savings: 20-25 hours → 4-5 hours (80% reduction)</strong></p>
+            <p style="background: #f0f4ff; padding: 15px; border-radius: 4px; margin-top: 15px;"><strong>Financial
+                  Impact:</strong> At ₹500/hour staff cost, <strong>SMS saves ₹40,000-50,000 per month</strong> in labor
+               alone.</p>
+
+            <h3>Parent Satisfaction & Engagement</h3>
+            <div class="highlights">
+               <ul>
+                  <li><strong>Real-time visibility</strong> into child's attendance and grades</li>
+                  <li><strong>Instant notifications</strong> for important updates (absence, exam results,
+                     announcements)</li>
+                  <li><strong>Reduced office visits</strong> (40% fewer inquiries about grades, fees, attendance)</li>
+                  <li><strong>Transparent fee tracking</strong> (know exact dues and payment history anytime)</li>
+                  <li><strong>Improved communication</strong> (receive announcements reliably, no more lost WhatsApp
+                     messages)</li>
+               </ul>
+            </div>
+            <p><strong>Result: 65%+ parents report higher satisfaction within 2 months</strong></p>
+
+            <h3>Operational Excellence</h3>
+            <div class="highlights">
+               <ul>
+                  <li><strong>Centralized Data</strong> - One source of truth, no contradictions or duplicates</li>
+                  <li><strong>Error Reduction</strong> - 90% fewer manual entry mistakes</li>
+                  <li><strong>Compliance</strong> - Audit trail for all transactions, easy board compliance</li>
+                  <li><strong>Accountability</strong> - Know who changed what and when</li>
+                  <li><strong>Accessibility</strong> - Access school info from anywhere, anytime</li>
+               </ul>
+            </div>
+
+            <h3>Financial Benefits</h3>
+            <div class="highlights">
+               <ul>
+                  <li><strong>Fee Collection Improvement</strong> - 20-30% faster recovery of dues</li>
+                  <li><strong>Reduced Bad Debts</strong> - Early alerts prevent overdue accumulation</li>
+                  <li><strong>Financial Dashboards</strong> - Real-time revenue & cash flow visibility</li>
+                  <li><strong>Cost Savings</strong> - Zero infrastructure investment (cloud-hosted)</li>
+                  <li><strong>Resource Optimization</strong> - Staff freed from admin work for better tasks</li>
+               </ul>
+            </div>
+            <p style="background: #fff0f0; padding: 15px; border-radius: 4px; margin-top: 15px;">
+               <strong>Example: For a 500-student school:</strong><br>
+               Average fee per student: ₹50,000/year<br>
+               Collection improvement: 20-30%<br>
+               <strong>Additional revenue recovered: ₹50-75 lakhs annually</strong>
+            </p>
+         </div>
+      </div>
+
+      <div class="page-break"></div>
+
+      <!-- SECTION 7: IMPLEMENTATION PLAN -->
+      <div class="header">
+         <h2>7. IMPLEMENTATION PLAN</h2>
+         <p>4-Week Deployment Timeline</p>
+      </div>
+
+      <div class="content">
+         <div class="section">
+            <h3>Week 1: Setup & Configuration (Days 1-7)</h3>
+            <h4>Activities:</h4>
+            <ul class="feature-list">
+               <li>Domain setup and SSL certificate activation</li>
+               <li>Database creation and schema deployment</li>
+               <li>Admin account creation</li>
+               <li>Integration with payment gateway (if applicable)</li>
+               <li>Branding customization (logo, colors, school name)</li>
+               <li>Email and SMS gateway configuration</li>
+               <li>Backup and disaster recovery setup</li>
+            </ul>
+
+            <h4>Deliverables:</h4>
+            <div class="highlights">
+               <ul style="list-style-type: none; padding-left: 0;">
+                  <li>Live, secure dashboard accessible</li>
+                  <li>Admin can log in</li>
+                  <li>Email/notification system tested</li>
+               </ul>
+            </div>
+
+            <h4>Your Team's Role:</h4>
+            <ul class="feature-list">
+               <li>Provide school logo, colors, contact details</li>
+               <li>Confirm payment gateway preference</li>
+               <li>Approve test notifications</li>
+            </ul>
+
+            <h3>Week 2: User Account Creation & Data Import (Days 8-14)</h3>
+            <h4>Activities:</h4>
+            <ul class="feature-list">
+               <li>Bulk upload student records (Excel template provided)</li>
+               <li>Create teacher and staff accounts</li>
+               <li>Generate parent login credentials</li>
+               <li>Set up class structure and subject mappings</li>
+               <li>Create class-teacher associations</li>
+               <li>Import historical fee structure and data (if available)</li>
+               <li>Configure access roles and permissions</li>
+            </ul>
+
+            <h4>Deliverables:</h4>
+            <div class="highlights">
+               <ul style="list-style-type: none; padding-left: 0;">
+                  <li>All users can log in with credentials</li>
+                  <li>Student records fully populated</li>
+                  <li>Classes and subjects visible</li>
+               </ul>
+            </div>
+
+            <h3>Week 3: Training & Piloting (Days 15-21)</h3>
+            <h4>Activities:</h4>
+            <ul class="feature-list">
+               <li><strong>Admin Training (4 hours):</strong> Dashboard overview, Student/teacher/parent management, Fee
+                  configuration, Analytics and reporting</li>
+               <li><strong>Teacher Training (2 hours):</strong> Marking attendance, Entering grades, Viewing class
+                  details, Communicating with parents</li>
+               <li><strong>Staff Training (1.5 hours):</strong> Managing student records, Fee collection workflows,
+                  Document upload and retrieval</li>
+               <li><strong>Parent/Student Training (1 hour recorded):</strong> Viewing child's attendance and grades,
+                  Accessing announcements, Downloading documents</li>
+               <li><strong>Pilot Run:</strong> Select one class for live testing (attendance, grades, announcements)
+               </li>
+            </ul>
+
+            <h4>Deliverables:</h4>
+            <div class="highlights">
+               <ul style="list-style-type: none; padding-left: 0;">
+                  <li>Training videos and documentation provided</li>
+                  <li>Pilot class successfully uses all features</li>
+                  <li>Feedback collected and issues resolved</li>
+               </ul>
+            </div>
+
+            <h3>Week 4: Go-Live & Support (Days 22-28)</h3>
+            <h4>Activities:</h4>
+            <ul class="feature-list">
+               <li>Full school-wide launch</li>
+               <li>Teachers mark attendance for all classes</li>
+               <li>Grades published for one assessment</li>
+               <li>Announcements sent to parents</li>
+               <li>Fee reminder notifications activated</li>
+               <li>Monitor system performance</li>
+               <li>Address any issues or questions</li>
+            </ul>
+
+            <h4>Deliverables:</h4>
+            <div class="highlights">
+               <ul style="list-style-type: none; padding-left: 0;">
+                  <li>Full production system live</li>
+                  <li>All users successfully onboarded</li>
+                  <li>24x7 support contact established</li>
+               </ul>
+            </div>
+
+            <h3>Post-Launch Support (Ongoing)</h3>
+            <h4>Month 1-3:</h4>
+            <ul class="feature-list">
+               <li>Weekly check-ins via email/video call</li>
+               <li>On-demand support (phone/email/chat)</li>
+               <li>Performance monitoring and optimization</li>
+               <li>Staff feedback incorporation</li>
+            </ul>
+
+            <h4>Month 4+:</h4>
+            <ul class="feature-list">
+               <li>Monthly update briefings</li>
+               <li>Annual system audit and recommendations</li>
+               <li>Feature enhancement planning</li>
+            </ul>
+         </div>
+      </div>
+
+      <div class="page-break"></div>
+
+      <!-- SECTION 8: PRICING & PACKAGES -->
+      <div class="header">
+         <h2>8. PRICING & PACKAGES</h2>
+         <p>Flexible, Transparent, Scalable Pricing Models</p>
+      </div>
+
+      <div class="content">
+         <div class="section">
+            <h3>Per-Student Pricing (Simple & Transparent)</h3>
+            <p>Our pricing model is based on the number of active students in your school. Pay only for what you use!</p>
+            
+            <table>
+               <tr>
+                  <th>Billing Cycle</th>
+                  <th>Rate Per Student</th>
+                  <th>Example: 500 Students</th>
+                  <th>Example: 1000 Students</th>
+               </tr>
+               <tr>
+                  <td><strong>Daily</strong></td>
+                  <td>₹1 per student/day</td>
+                  <td>₹500/day (₹15,000/month)</td>
+                  <td>₹1,000/day (₹30,000/month)</td>
+               </tr>
+               <tr>
+                  <td><strong>Monthly</strong></td>
+                  <td>₹30 per student/month</td>
+                  <td>₹15,000/month</td>
+                  <td>₹30,000/month</td>
+               </tr>
+               <tr>
+                  <td><strong>Yearly</strong></td>
+                  <td>₹365 per student/year</td>
+                  <td>₹1,82,500/year (₹15,208/month)</td>
+                  <td>₹3,65,000/year (₹30,417/month)</td>
+               </tr>
+            </table>
+
+            <h4>Includes:</h4>
+            <div class="highlights">
+               <ul style="list-style-type: none; padding-left: 0;">
+                  <li>Unlimited users and student records</li>
+                  <li>All modules (attendance, grades, fees, announcements, etc.)</li>
+                  <li>Cloud hosting with 99.9% uptime SLA</li>
+                  <li>Daily automated backups</li>
+                  <li>Mobile-friendly access + PWA app</li>
+                  <li>Push notifications (unlimited)</li>
+                  <li>Email and phone support</li>
+                  <li>2-4 weeks implementation</li>
+                  <li>User training and onboarding</li>
+                  <li>Monthly performance reports</li>
+               </ul>
+            </div>
+
+            <h3>Billing Options</h3>
+            <table>
+               <tr>
+                  <th>Billing Cycle</th>
+                  <th>Commitment</th>
+                  <th>Payment Schedule</th>
+                  <th>Best For</th>
+               </tr>
+               <tr>
+                  <td><strong>Daily</strong></td>
+                  <td>No commitment</td>
+                  <td>Weekly billing</td>
+                  <td>Pilot/Trial phase</td>
+               </tr>
+               <tr>
+                  <td><strong>Monthly</strong></td>
+                  <td>Month-to-month</td>
+                  <td>Monthly billing</td>
+                  <td>Flexible schools</td>
+               </tr>
+               <tr>
+                  <td><strong>Yearly</strong></td>
+                  <td>1-year commitment</td>
+                  <td>Annual billing (best value)</td>
+                  <td>Committed schools (save 5%)</td>
+               </tr>
+            </table>
+
+            <h3>Optional Add-Ons</h3>
+            <table>
+               <tr>
+                  <th>Add-On</th>
+                  <th>Cost</th>
+                  <th>Description</th>
+               </tr>
+               <tr>
+                  <td><strong>Advanced Analytics</strong></td>
+                  <td>₹5,000/month</td>
+                  <td>Predictive analytics, custom dashboards, board-specific reports</td>
+               </tr>
+               <tr>
+                  <td><strong>Extended Training</strong></td>
+                  <td>₹10,000/session</td>
+                  <td>On-site or online training for additional staff batches</td>
+               </tr>
+               <tr>
+                  <td><strong>Data Migration</strong></td>
+                  <td>₹20,000-50,000</td>
+                  <td>One-time migration from existing systems</td>
+               </tr>
+               <tr>
+                  <td><strong>Custom Development</strong></td>
+                  <td>Quote</td>
+                  <td>Build school-specific features</td>
+               </tr>
+               <tr>
+                  <td><strong>API Access & Integration</strong></td>
+                  <td>₹15,000/month</td>
+                  <td>Connect SMS with existing school systems</td>
+               </tr>
+               <tr>
+                  <td><strong>Priority Support</strong></td>
+                  <td>₹10,000/month</td>
+                  <td>Dedicated support channel, faster response times</td>
+               </tr>
+            </table>
+
+            <!-- <div class="page-break"></div> -->
+
+            <h3>ROI Examples</h3>
+
+            <h4>Example 1: 300-Student School (Annual Plan)</h4>
+            <div class="highlights">
+               <p><strong>Investment Breakdown:</strong></p>
+               <p>Annual Cost (300 students x ₹365): ..................... ₹1,09,500<br>
+                  One-Time Setup & Training ........................ ₹0 (included)<br>
+                  <strong>─────────────────────────────────────<br>
+                     Total Year 1 Investment: ₹1,09,500</strong>
+               </p>
+
+               <p style="margin-top: 15px;"><strong>Returns:</strong><br>
+                  Monthly Cost (average): ₹9,125<br>
+                  Cost per Student/Year: ₹365<br>
+                  Savings vs. Manual Admin (Year 1): ₹4,00,000+<br>
+                  Fee Collection Improvement: ₹75,000+<br>
+                  <strong>ROI: 430%+ in Year 1</strong>
+               </p>
+            </div>
+
+            <h4>Example 2: 1000-Student School (Annual Plan)</h4>
+            <div class="highlights">
+               <p><strong>Investment Breakdown:</strong></p>
+               <p>Annual Cost (1000 students x ₹365): .................. ₹3,65,000<br>
+                  One-Time Setup & Training ........................ ₹0 (included)<br>
+                  <strong>─────────────────────────────────────<br>
+                     Total Year 1 Investment: ₹3,65,000</strong>
+               </p>
+
+               <p style="margin-top: 15px;"><strong>Returns:</strong><br>
+                  Monthly Cost (average): ₹30,417<br>
+                  Cost per Student/Year: ₹365<br>
+                  Savings vs. Manual Admin (Year 1): ₹8,00,000+<br>
+                  Fee Collection Improvement: ₹2,00,000+<br>
+                  <strong>ROI: 280%+ in Year 1</strong>
+               </p>
+            </div>
+         </div>
+      </div>
+
+      <!-- <div class="page-break"></div> -->
+
+      <!-- SECTION 9: SUPPORT & MAINTENANCE -->
+      <div class="header">
+         <h2>9. SUPPORT & MAINTENANCE</h2>
+         <p>Comprehensive Support & Data Security</p>
+      </div>
+
+      <div class="content">
+         <div class="section">
+            <h3>24x7 Support Availability</h3>
+            <table>
+               <tr>
+                  <th>Channel</th>
+                  <th>Response Time</th>
+                  <th>Availability</th>
+               </tr>
+               <tr>
+                  <td><strong>Email</strong></td>
+                  <td>2-4 hours</td>
+                  <td>24x7</td>
+               </tr>
+               <tr>
+                  <td><strong>Phone</strong></td>
+                  <td>30 mins (business hours)</td>
+                  <td>9 AM - 6 PM (M-F)</td>
+               </tr>
+               <tr>
+                  <td><strong>Chat Support</strong></td>
+                  <td>1 hour</td>
+                  <td>10 AM - 5 PM (M-F)</td>
+               </tr>
+               <tr>
+                  <td><strong>Emergency (Critical)</strong></td>
+                  <td>15 mins</td>
+                  <td>24x7</td>
+               </tr>
+            </table>
+
+            <h4>Ticket Severity Levels:</h4>
+            <ul class="feature-list">
+               <li><strong>Critical (System down)</strong> - Response in 15 mins</li>
+               <li><strong>High (Features not working)</strong> - Response in 1 hour</li>
+               <li><strong>Medium (Feature issue)</strong> - Response in 4 hours</li>
+               <li><strong>Low (Questions/guidance)</strong> - Response in 24 hours</li>
+            </ul>
+
+            <h3>Regular Maintenance & Updates</h3>
+            <div class="highlights">
+               <h4>Monthly:</h4>
+               <ul style="list-style-type: none; padding-left: 0;">
+                  <li>Security patches and bug fixes</li>
+                  <li>Performance optimization</li>
+                  <li>Database optimization and cleanup</li>
+               </ul>
+
+               <h4>Quarterly:</h4>
+               <ul style="list-style-type: none; padding-left: 0;">
+                  <li>New feature releases</li>
+                  <li>User interface improvements</li>
+                  <li>Integration updates</li>
+               </ul>
+
+               <h4>Annually:</h4>
+               <ul style="list-style-type: none; padding-left: 0;">
+                  <li>Major version upgrade</li>
+                  <li>Comprehensive system audit</li>
+                  <li>Capacity and performance review</li>
+               </ul>
+            </div>
+
+            <h3>Data Security & Compliance</h3>
+            <p>Your data is protected with enterprise-grade security:</p>
+            <div class="highlights">
+               <ul>
+                  <li><strong>HTTPS/TLS Encryption</strong> - All data in transit encrypted</li>
+                  <li><strong>Database Encryption</strong> - Data at rest encrypted</li>
+                  <li><strong>Role-Based Access Control</strong> - Only authorized users see data</li>
+                  <li><strong>Two-Factor Authentication</strong> - Available for admin accounts</li>
+                  <li><strong>Audit Logs</strong> - Complete track of who accessed/changed what</li>
+                  <li><strong>Daily Automated Backups</strong> - 30-day retention, geo-redundant storage</li>
+                  <li><strong>GDPR Compliant</strong> - Respects data privacy regulations</li>
+                  <li><strong>FERPA Compliant</strong> - Meets US educational data privacy standards</li>
+                  <li><strong>No Data Sharing</strong> - Your school's data is never shared with third parties</li>
+               </ul>
+            </div>
+
+            <h4>Disaster Recovery:</h4>
+            <ul class="feature-list">
+               <li>Backup restoration capability within 1 hour</li>
+               <li>Test recovery exercises quarterly</li>
+               <li>Multiple data center locations for redundancy</li>
+            </ul>
+         </div>
+      </div>
+
+      <div class="page-break"></div>
+
+      <!-- SECTION 10: CASE STUDIES -->
+      <div class="header">
+         <h2>10. CASE STUDIES & ROI EXAMPLES</h2>
+         <p>Real-World Success Stories</p>
+      </div>
+
+      <div class="content">
+         <div class="section">
+            <h3>Case Study 1: ABC English School, Kolkata (450 Students)</h3>
+            <h4>Challenge:</h4>
+            <ul class="feature-list">
+               <li>Manual attendance register, transferred to spreadsheet daily</li>
+               <li>Fee tracking via notebook and handwritten receipts</li>
+               <li>Parents visiting office 3-4 times/month for information</li>
+               <li>No transparent communication about grades or attendance</li>
+            </ul>
+
+            <h4>Results (After 3 Months):</h4>
+            <table>
+               <tr>
+                  <th>Metric</th>
+                  <th>Before</th>
+                  <th>After</th>
+                  <th>Improvement</th>
+               </tr>
+               <tr>
+                  <td>Daily Attendance Time</td>
+                  <td>60 mins</td>
+                  <td>15 mins</td>
+                  <td><strong>75% reduction</strong></td>
+               </tr>
+               <tr>
+                  <td>Monthly Fee Collection</td>
+                  <td>40 days avg.</td>
+                  <td>15 days avg.</td>
+                  <td><strong>63% faster</strong></td>
+               </tr>
+               <tr>
+                  <td>Parent Queries/Month</td>
+                  <td>80</td>
+                  <td>15</td>
+                  <td><strong>81% reduction</strong></td>
+               </tr>
+               <tr>
+                  <td>Staff Overtime Hours/Month</td>
+                  <td>40 hrs</td>
+                  <td>5 hrs</td>
+                  <td><strong>87% reduction</strong></td>
+               </tr>
+            </table>
+
+            <p style="background: #f0f4ff; padding: 15px; border-radius: 4px; margin-top: 15px;">
+               <strong>Financial Impact:</strong><br>
+               Time savings: ₹3,00,000/year<br>
+               Faster fee collection: ₹50,000+ additional revenue<br>
+               Total Year 1 Benefit: ₹3,50,000<br>
+               Investment: ₹50,000<br>
+               <strong>ROI: 700% in Year 1</strong>
+            </p>
+
+            <!-- <h3>Client Testimonials</h3>
+            <blockquote>
+               "Within 2 weeks, our teachers stopped complaining about attendance paperwork. Parents are happier because
+               they actually get updates now."<br>
+               <strong>— Principal, St. Xavier's School, Kolkata</strong>
+            </blockquote> -->
+         </div>
+      </div>
+
+      <div class="page-break"></div>
+
+      <!-- SECTION 11: NEXT STEPS -->
+      <div class="header">
+         <h2>11. NEXT STEPS & CALL TO ACTION</h2>
+         <p>Transform Your School Today</p>
+      </div>
+
+      <div class="content">
+         <div class="section">
+            <div class="cta-box">
+               <h3>Schedule Your Free Demo Now</h3>
+               <p style="margin-bottom: 15px;">Email: nbpstechsolutions@gmail.com<br>WhatsApp: +91 70036 90675<br>Website:
+                  <a href="https://edras.eaximo.com/" target="_blank">https://edras.eaximo.com</a>
+            </div>
+         </div>
+      </div>
+
+      <!-- <div class="page-break"></div> -->
+
+      <!-- FOOTER -->
+      <div class="footer">
+         <h3 style="margin-bottom: 15px; color: white;">Document Signature Section</h3>
+         <p>This proposal is valid for 30 days from the date above.</p>
+         <p
+            style="margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 20px; font-size: 11px; opacity: 0.8;">
+            School Management System | Professional Proposal | May 2026<br>
+            © 2026 All Rights Reserved.
+         </p>
+      </div>
+   </div>
+</body>
+
+</html>
