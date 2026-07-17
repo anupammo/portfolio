@@ -1751,6 +1751,29 @@
   <!-- Footer -->
   <footer>
     <div class="container">
+      <!-- Newsletter signup (Phase 1). Swap for a free MailerLite embed later to add automated welcome emails. -->
+      <div class="newsletter-box mb-4 p-4 rounded" style="background:rgba(255,255,255,0.07);">
+        <div class="row align-items-center g-3">
+          <div class="col-lg-6">
+            <h3 class="h5 mb-1">Get practical web &amp; SEO tips</h3>
+            <p class="mb-0 small" style="opacity:.8;">Occasional, no-spam emails to help you get more leads from your website.</p>
+          </div>
+          <div class="col-lg-6">
+            <form id="newsletterForm" action="https://api.web3forms.com/submit" method="POST"
+              class="d-flex flex-column flex-sm-row gap-2">
+              <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+              <input type="hidden" name="subject" value="New newsletter subscriber (anupammondal.in)">
+              <input type="hidden" name="from_name" value="anupammondal.in newsletter">
+              <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none !important;">
+              <input type="email" name="email" class="form-control" placeholder="you@example.com" required
+                aria-label="Email address">
+              <button type="submit" class="btn btn-primary flex-shrink-0">Subscribe</button>
+            </form>
+            <div id="newsletterStatus" class="small mt-2" role="status" aria-live="polite"></div>
+          </div>
+        </div>
+      </div>
+
       <div class="footer-grid">
         <div class="footer-col">
           <h3>Anupam Mondal</h3>
@@ -2103,6 +2126,35 @@
           track('generate_lead', { method: 'whatsapp_form' });
         });
       }
+    })();
+  </script>
+
+  <!-- Phase 1: Newsletter signup handler -->
+  <script>
+    (function () {
+      var form = document.getElementById('newsletterForm');
+      if (!form) return;
+      var statusEl = document.getElementById('newsletterStatus');
+      var keyField = form.querySelector('input[name="access_key"]');
+      function setStatus(msg, ok) { if (statusEl) { statusEl.textContent = msg; statusEl.style.color = ok ? '#7CFC98' : '#ff9b9b'; } }
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!form.checkValidity()) { form.reportValidity(); return; }
+        if (!keyField.value || keyField.value.indexOf('YOUR_WEB3FORMS') === 0) {
+          setStatus('Almost there — the newsletter isn\'t connected yet. Please use the contact form.', false);
+          return;
+        }
+        fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(form) })
+          .then(function (r) { return r.json(); })
+          .then(function (data) {
+            if (data.success) {
+              setStatus('You\'re subscribed — thank you!', true);
+              form.reset();
+              if (typeof gtag === 'function') gtag('event', 'newsletter_signup', { location: window.location.pathname });
+            } else { setStatus('Something went wrong. Please try again.', false); }
+          })
+          .catch(function () { setStatus('Network error. Please try again.', false); });
+      });
     })();
   </script>
 
