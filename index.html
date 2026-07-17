@@ -160,12 +160,74 @@
         "https://www.facebook.com/anupammondal.in/",
         "https://www.linkedin.com/in/anupammondal/",
         "https://www.linkedin.com/company/anupammondal",
+        "https://www.youtube.com/@viewanupam",
+        "https://www.freelancer.in/u/anupammondal",
+        "https://www.peopleperhour.com/freelancer/technology-programming/anupam-mondal-front-end-back-end-full-stack-web-qzvywym",
+        "https://wordpress.org/plugins/smart-seo-booster/",
+        "https://chromewebstore.google.com/detail/seo-checklist/jgigdhidhmgikfnccdnehcpgoggmagfh",
+        "https://chromewebstore.google.com/detail/website-framework-detecto/ebkogcpaeaofidbegiadlfcfhlnaccnn",
+        "https://chromewebstore.google.com/detail/meta-image-generator/ddggaejgikjcideandkhipnojjefpjod",
+        "https://maps.app.goo.gl/rdpXRwyMReApQync6",
         "https://github.com/anupammo",
         "https://twitter.com/anupammo",
         "https://www.instagram.com/anupammondal.in/"
       ]
     }
 
+  </script>
+
+  <!-- Structured Data: LocalBusiness / ProfessionalService (local SEO) -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "@id": "https://anupammondal.in/#localbusiness",
+      "name": "Anupam Mondal — Web Design, Development & SEO",
+      "image": "https://anupammondal.in/image/common/anupam-mondal-logo.png",
+      "url": "https://anupammondal.in/",
+      "telephone": "+91-9474460058",
+      "email": "a09051985@gmail.com",
+      "priceRange": "$$",
+      "description": "Udyam/MSME-registered web design, development, and SEO consultancy in Kolkata. 18+ years' experience helping local and international businesses turn websites into lead-generating assets.",
+      "founder": { "@type": "Person", "name": "Anupam Mondal" },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Metiari, Protapnagar, Sonarpur",
+        "addressLocality": "Kolkata",
+        "addressRegion": "West Bengal",
+        "postalCode": "700150",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 22.4497,
+        "longitude": 88.4265
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Kolkata" },
+        { "@type": "State", "name": "West Bengal" },
+        { "@type": "Country", "name": "India" },
+        { "@type": "Place", "name": "Worldwide (remote)" }
+      ],
+      "knowsAbout": [
+        "Web Design", "Web Development", "Search Engine Optimization",
+        "WordPress", "Next.js", "React", "eCommerce", "Digital Marketing", "Local SEO"
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "sameAs": [
+        "https://www.facebook.com/anupammondal.in/",
+        "https://www.linkedin.com/company/anupammondal",
+        "https://www.youtube.com/@viewanupam",
+        "https://www.freelancer.in/u/anupammondal",
+        "https://maps.app.goo.gl/rdpXRwyMReApQync6",
+        "https://wordpress.org/plugins/smart-seo-booster/"
+      ]
+    }
   </script>
 
   <!-- Structured Data: BreadcrumbList -->
@@ -1090,6 +1152,89 @@
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     }
   </style>
+
+  <!-- Phase 0: conversion-layer styles (trust bar, sticky mobile CTA) -->
+  <style>
+    /* Above-the-fold trust bar */
+    .trust-bar {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 22px;
+      padding: 0;
+      margin: 22px 0 0;
+    }
+    .trust-bar li {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--dark);
+    }
+    .trust-bar i {
+      color: var(--primary);
+      font-size: 1rem;
+    }
+    .hero .trust-bar li {
+      color: rgba(255, 255, 255, 0.92);
+    }
+    .hero .trust-bar i {
+      color: #ffd166;
+    }
+
+    /* Sticky mobile CTA bar */
+    .mobile-cta-bar {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1040;
+      display: none;
+      grid-template-columns: 1fr 1fr 1fr;
+      background: #fff;
+      box-shadow: 0 -2px 14px rgba(0, 0, 0, 0.12);
+      border-top: 1px solid #eee;
+    }
+    .mobile-cta-bar a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+      padding: 10px 4px;
+      min-height: 56px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-decoration: none;
+      color: var(--dark);
+    }
+    .mobile-cta-bar a i {
+      font-size: 1.15rem;
+    }
+    .mobile-cta-bar a.cta-book {
+      background: var(--primary);
+      color: #fff;
+    }
+    .mobile-cta-bar a.cta-wa {
+      color: #25d366;
+    }
+
+    @media (max-width: 991.98px) {
+      .nav-cta {
+        display: inline-block;
+        margin-top: 10px;
+      }
+    }
+    @media (max-width: 767.98px) {
+      .mobile-cta-bar {
+        display: grid;
+      }
+      body {
+        padding-bottom: 60px;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -1149,7 +1294,7 @@
                 <a class="nav-link" href="./blog/">Blog</a>
               </li>
             </ul>
-            <!-- <a href="./contact" class="btn btn-primary ms-3">Get Started</a> -->
+            <a href="./book-a-call" class="btn btn-primary ms-lg-3 nav-cta" data-cta="book_call">Book a Free Call</a>
           </div>
         </div>
       </nav>
@@ -1173,19 +1318,27 @@
       <div class="hero-content">
         <div class="hero-text">
           <h1>
-            Transform Your
-            <span class="text-primary">Digital Presence</span> with Expert
-            Solutions
+            Websites That Bring You
+            <span class="text-primary">Customers</span> — Not Just
+            Compliments
           </h1>
           <p>
-            I specialize in creating high-performance websites, implementing
-            effective SEO strategies, and developing custom digital solutions
-            that drive growth and maximize your online potential.
+            I'm Anupam Mondal — a Kolkata-based full-stack developer &amp; SEO
+            specialist with 18+ years' experience. I help local and
+            international businesses turn their websites into lead-generating
+            assets that rank, convert, and grow.
           </p>
           <div class="hero-btns">
-            <a href="./portfolio" class="btn btn-primary">View My Work</a>
-            <a href="./contact" class="btn btn-outline">Get in Touch</a>
+            <a href="./book-a-call" class="btn btn-primary" data-cta="book_call">Book a Free 15-min Call</a>
+            <a href="#" class="btn btn-outline open-whatsapp-cta" data-service="Free Quote" data-cta="whatsapp">Get a Free Quote</a>
           </div>
+          <!-- Trust bar -->
+          <ul class="trust-bar" aria-label="Credentials and trust signals">
+            <li><i class="bi bi-star-fill"></i> 5.0★ Preferred Freelancer</li>
+            <li><i class="bi bi-patch-check-fill"></i> Udyam / MSME Registered</li>
+            <li><i class="bi bi-briefcase-fill"></i> 18+ Years · 24+ Projects</li>
+            <li><i class="bi bi-globe2"></i> Clients in 5 Countries</li>
+          </ul>
         </div>
         <div class="hero-image">
           <img width="100%" height="auto"
@@ -1903,6 +2056,59 @@
     }(window, document, 'script', '53F69615817A44BDA06A54EB6E0F909C');
   </script>
   <script>claspo('init');</script>
+  <!-- Phase 0: Sticky mobile CTA bar (Call · WhatsApp · Book) -->
+  <nav class="mobile-cta-bar" aria-label="Quick contact">
+    <a href="tel:+919474460058" class="cta-call" data-cta="call">
+      <i class="bi bi-telephone-fill"></i><span>Call</span>
+    </a>
+    <a href="https://wa.me/919474460058?text=Hi%20Anupam%2C%20I%20found%20your%20website%20and%20would%20like%20to%20discuss%20a%20project."
+      class="cta-wa" target="_blank" rel="noopener" data-cta="whatsapp">
+      <i class="bi bi-whatsapp"></i><span>WhatsApp</span>
+    </a>
+    <a href="./book-a-call" class="cta-book" data-cta="book_call">
+      <i class="bi bi-calendar-check-fill"></i><span>Book</span>
+    </a>
+  </nav>
+
+  <!-- Phase 0: GA4 conversion event tracking -->
+  <script>
+    (function () {
+      function track(name, params) {
+        if (typeof gtag === 'function') gtag('event', name, params || {});
+      }
+      document.addEventListener('click', function (e) {
+        var el = e.target.closest && e.target.closest('a, button');
+        if (!el) return;
+        var href = (el.getAttribute && el.getAttribute('href')) || '';
+        var cta = el.getAttribute && el.getAttribute('data-cta');
+        if (cta === 'whatsapp' || href.indexOf('wa.me') > -1 || href.indexOf('api.whatsapp') > -1) {
+          track('whatsapp_click', { location: window.location.pathname });
+        } else if (cta === 'book_call' || href.indexOf('book-a-call') > -1) {
+          track('book_call', { location: window.location.pathname });
+        } else if (cta === 'call' || href.indexOf('tel:') === 0) {
+          track('phone_click', { location: window.location.pathname });
+        }
+      }, true);
+      // Lead captured when the WhatsApp quote form is submitted
+      var waForm = document.getElementById('whatsappCtaForm');
+      if (waForm) {
+        waForm.addEventListener('submit', function () {
+          track('generate_lead', { method: 'whatsapp_form' });
+        });
+      }
+    })();
+  </script>
+
+  <!-- Phase 0: Microsoft Clarity (free heatmaps). Paste your project ID below to activate. -->
+  <script>
+    (function (c, l, a, r, i, t, y) {
+      var CLARITY_ID = ""; // <-- REPLACE with your Clarity project ID (clarity.microsoft.com), then this activates
+      if (!CLARITY_ID) return;
+      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+      t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + CLARITY_ID;
+      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script");
+  </script>
 </body>
 
 </html>
