@@ -25,6 +25,13 @@ Read the documents in order:
 | 05 | **05-uiux-checklist.md** | UI/UX changes that lift conversion |
 | 06 | **06-roadmap-and-phased-checklist.md** | The actual to-do list, in priority phases with a 90-day roadmap |
 | 07 | **07-git-commands.md** | Copy-paste git commands (you run them, not me) |
+| 08 | **08-content-engine.md** | Phase 3: the weekly content workflow, 12-week calendar, post template & repurposing |
+
+> **Implementation status (code):** Phases 0–2 are built and verified on the site
+> (lead capture, booking, trust bars, entity/local schema, 2 Kolkata pillar pages, free-audit lead
+> magnet, 4 upgraded service pages, 19 converting blog posts, `/tools` hub, `/case-studies`).
+> Remaining work is mostly *your* account setup (Web3Forms key, Cal.com, Clarity, GBP, MailerLite)
+> plus the ongoing Phase 3 content habit in doc 08.
 
 ---
 
