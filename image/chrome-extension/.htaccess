@@ -1,0 +1,5 @@
+# 301 redirects: old misspelled filenames ("webiste-") -> corrected ("website-")
+# Keeps any existing backlinks, search-engine image cache, or bookmarks working.
+Redirect 301 /image/chrome-extension/webiste-framework-detector-google-chrome-extension-preview.png /image/chrome-extension/website-framework-detector-google-chrome-extension-preview.png
+Redirect 301 /image/chrome-extension/webiste-framework-detector-google-chrome-extension-preview-1.png /image/chrome-extension/website-framework-detector-google-chrome-extension-preview-1.png
+Redirect 301 /image/chrome-extension/webiste-framework-detector-google-chrome-extension-preview-2.png /image/chrome-extension/website-framework-detector-google-chrome-extension-preview-2.png
