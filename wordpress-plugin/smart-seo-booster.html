@@ -8,25 +8,25 @@
     <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="author" content="Anupam Mondal" />
 
-    <title>Smart SEO Booster – Free WordPress SEO Plugin (Schema, Sitemap, AI SEO)</title>
+    <title>Smart SEO Booster – Free WordPress SEO &amp; AI SEO Plugin</title>
     <meta name="description"
-        content="Smart SEO Booster is a free, lightweight WordPress SEO plugin — schema markup, XML sitemaps, meta tags, breadcrumbs, Open Graph & AI (GEO) SEO. Fast, automated, no upsells." />
+        content="Free WordPress SEO plugin: schema, XML sitemaps, meta tags, breadcrumbs, Core Web Vitals and llms.txt for AI search. No upsells. Import from Yoast in a click." />
     <meta name="keywords"
-        content="free wordpress seo plugin, wordpress schema plugin, xml sitemap plugin, yoast alternative, rank math alternative, ai seo plugin, geo seo, breadcrumbs plugin, meta tags, smart seo booster" />
+        content="free wordpress seo plugin, llms.txt wordpress, ai seo plugin, block ai crawlers wordpress, core web vitals wordpress, faq schema plugin, wordpress schema plugin, xml sitemap plugin, yoast alternative, rank math alternative, smart seo booster" />
 
     <link rel="canonical" href="https://anupammondal.in/wordpress-plugin/smart-seo-booster" />
     <link rel="icon" type="image/x-icon" href="../favicon.ico" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Smart SEO Booster – Free WordPress SEO Plugin (Schema, Sitemap & AI SEO)" />
+    <meta property="og:title" content="Smart SEO Booster – Free WordPress SEO & AI SEO Plugin" />
     <meta property="og:description"
-        content="Complete, free WordPress SEO — schema markup, XML sitemaps, meta tags, breadcrumbs, Open Graph & AI/GEO SEO. Lightweight, automated, no upsells." />
+        content="Free WordPress SEO plugin: schema, XML sitemaps, meta tags, breadcrumbs, Core Web Vitals and llms.txt for AI search. Lightweight, no upsells." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://anupammondal.in/wordpress-plugin/smart-seo-booster" />
     <meta property="og:site_name" content="Anupam Mondal" />
     <meta property="og:image" content="https://anupammondal.in/wordpress-plugin/smart-seo-booster-logo-banner.png" />
     <meta property="article:published_time" content="2025-10-28T10:00:00+05:30" />
-    <meta property="article:modified_time" content="2026-03-15T10:00:00+05:30" />
+    <meta property="article:modified_time" content="2026-08-11T10:00:00+05:30" />
     <meta property="og:image:alt" content="Smart SEO Booster WordPress plugin preview showing SEO audit interface" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -35,9 +35,9 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@anupammondal" />
     <meta name="twitter:creator" content="@anupammondal" />
-    <meta name="twitter:title" content="Smart SEO Booster – Free WordPress SEO Plugin (Schema, Sitemap & AI SEO)" />
+    <meta name="twitter:title" content="Smart SEO Booster – Free WordPress SEO & AI SEO Plugin" />
     <meta name="twitter:description"
-        content="Free, lightweight WordPress SEO plugin: schema markup, XML sitemaps, meta tags, breadcrumbs, Open Graph & AI/GEO SEO. No upsells." />
+        content="Free WordPress SEO plugin: schema, sitemaps, meta tags, breadcrumbs, Core Web Vitals and llms.txt for AI search. No upsells." />
     <meta name="twitter:image" content="https://anupammondal.in/wordpress-plugin/smart-seo-booster-logo-banner.png" />
     <meta name="twitter:image:alt" content="Smart SEO Booster WordPress plugin preview showing SEO audit interface" />
 
@@ -46,10 +46,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
         /* Hero section base */
+        /* NOTE: a later <style> block overrides .hero's background to a LIGHT
+           gradient. Setting `color:#fff` here therefore made any hero child
+           without an explicit .text-dark class render white-on-white (the
+           "In short" callout was effectively invisible). Colour is inherited
+           from body instead; the light-on-dark rules below are scoped to the
+           .cta section, which genuinely does have a dark background. */
         .hero {
             position: relative;
-            background: linear-gradient(135deg, var(--primary), var(--primary-light));
-            color: #fff;
             overflow: hidden;
         }
 
@@ -101,7 +105,7 @@
 
         /* Paragraph styling */
         .hero p {
-            color: #f0f0f0;
+            color: #4a4458;
             font-size: 1rem;
             max-width: 700px;
         }
@@ -109,7 +113,7 @@
         /* Lead paragraph */
         .hero .lead {
             font-size: 1.1rem;
-            color: #fff;
+            color: var(--dark);
         }
 
         /* Button styling */
@@ -765,7 +769,7 @@
             "applicationCategory": "WebApplication",
             "applicationSubCategory": "SEO Plugin",
             "operatingSystem": "WordPress",
-            "softwareVersion": "2.1.1",
+            "softwareVersion": "2.2.2",
             "offers": {
             "@type": "Offer",
             "price": "0",
@@ -776,7 +780,7 @@
             "downloadUrl": "https://wordpress.org/plugins/smart-seo-booster/",
             "installUrl": "https://wordpress.org/plugins/smart-seo-booster/",
             "datePublished": "2024-11-01T10:00:00+05:30",
-            "dateModified": "2026-07-24T10:00:00+05:30",
+            "dateModified": "2026-08-11T10:00:00+05:30",
             "softwareRequirements": "WordPress 5.9 or higher; PHP 7.4 or higher",
             "license": "https://www.gnu.org/licenses/gpl-2.0.html",
             "isAccessibleForFree": true,
@@ -792,7 +796,12 @@
                 "WooCommerce and Local SEO support",
                 "Google Analytics 4 and Microsoft Clarity integration",
                 "AI / GEO SEO: llms.txt and AI-crawler opt-out",
-                "Gutenberg blocks, native editor sidebar and bulk SEO editor"
+                "Gutenberg blocks, native editor sidebar and bulk SEO editor",
+                "Core Web Vitals and PageSpeed Insights report (LCP, CLS, INP) with no API key",
+                "FAQ and How-To blocks with automatic FAQPage and HowTo schema",
+                "Table of Contents block generated from post headings",
+                "Flesch Reading Ease readability scoring",
+                "Admin interface translated into 17 languages"
             ],
             "publisher": {
             "@type": "Person",
@@ -866,6 +875,26 @@
             },
             {
                 "@type": "Question",
+                "name": "How do I add an llms.txt file to WordPress?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Enable 'Serve an llms.txt file' under Smart SEO → Settings → AI & GEO. The file is generated from your published content and served at /llms.txt, so it stays current as you publish instead of going stale like a hand-written one. If it does not load, visit Settings → Permalinks and click Save once to flush your rewrite rules."}
+            },
+            {
+                "@type": "Question",
+                "name": "How do I stop ChatGPT and other AI crawlers from training on my content?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Turn on 'Ask AI crawlers not to train on this site' under Smart SEO → Settings → AI & GEO. This adds robots.txt rules for GPTBot, Google-Extended, ClaudeBot, CCBot and others. Note that Google-Extended controls Gemini training only and has no effect on your Google Search rankings, and that blocking training crawlers can also reduce how often AI assistants cite your site."}
+            },
+            {
+                "@type": "Question",
+                "name": "Can I check Core Web Vitals from inside WordPress?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Yes. Smart SEO → Page Speed runs a Google PageSpeed Insights check on any URL of your site and reports Performance, SEO, Accessibility and Best Practices scores alongside Core Web Vitals (LCP, CLS and INP), rated against Google's thresholds. It uses real-user CrUX field data where Google has it and lab data otherwise. No API key is required."}
+            },
+            {
+                "@type": "Question",
+                "name": "How do I add FAQ schema to a WordPress page?",
+                "acceptedAnswer": {"@type": "Answer", "text": "Add the FAQ (Smart SEO) block in the block editor and fill in your questions and answers. It renders an accessible accordion on the front end and outputs FAQPage JSON-LD automatically, which is what Google reads for FAQ rich results. A matching How-To block outputs HowTo schema the same way."}
+            },
+            {
+                "@type": "Question",
                 "name": "Does it work with WooCommerce, custom post types and Gutenberg?",
                 "acceptedAnswer": {"@type": "Answer", "text": "Yes. It integrates with WooCommerce, supports posts, pages and custom post types, and provides native Gutenberg blocks and an editor sidebar with live previews, alongside classic-theme compatibility."}
             },
@@ -908,7 +937,7 @@
         "description": "Smart SEO Booster is a free, lightweight WordPress SEO plugin — schema markup, XML sitemaps, meta tags, breadcrumbs, Open Graph and AI/GEO SEO, with no upsells.",
         "inLanguage": "en",
         "datePublished": "2025-10-28",
-        "dateModified": "2026-03-15",
+        "dateModified": "2026-08-11",
         "primaryImageOfPage": {
             "@type": "ImageObject",
             "url": "https://anupammondal.in/wordpress-plugin/smart-seo-booster-logo-banner.png",
@@ -1012,9 +1041,9 @@
             <div class="row align-items-center">
                 <div class="col-lg-7">
                     <h1 class="display-5">Smart SEO Booster — Free, Complete WordPress SEO Plugin</h1>
-                    <p class="lead text-dark">Schema markup, XML sitemaps, meta tags, breadcrumbs, Open Graph &amp;
-                        AI/GEO SEO — everything your WordPress site needs to rank, all in one lightweight, free plugin
-                        with no upsells.</p>
+                    <p class="lead text-dark">Schema markup, XML sitemaps, meta tags, breadcrumbs, Core Web Vitals
+                        reporting and llms.txt for AI search — everything your WordPress site needs to rank, in one
+                        lightweight, genuinely free plugin with no upsells.</p>
                     <div class="p-3 mb-3"
                         style="background:rgba(100,65,165,.06);border-left:4px solid var(--primary);border-radius:8px;">
                         <strong>In short:</strong> Smart SEO Booster is a free, lightweight WordPress SEO plugin that
@@ -1026,13 +1055,13 @@
                         <span class="badge bg-light text-primary me-2">Free · GPLv2</span>
                         <span class="badge bg-light text-primary me-2">WordPress 5.9+</span>
                         <span class="badge bg-light text-primary me-2">PHP 7.4+</span>
-                        <span class="badge bg-light text-primary me-2">Version 2.1.1</span>
+                        <span class="badge bg-light text-primary me-2">Version 2.2.2</span>
                         <span class="badge bg-light text-primary me-2">Tested up to 7.0</span>
                     </p>
                     <p class="small text-dark mb-2">
                         File created: <time datetime="2025-10-28">Oct 28, 2025</time>
                         &nbsp;•&nbsp;
-                        Last modified: <time datetime="2026-03-15">Mar 15, 2026</time>
+                        Last modified: <time datetime="2026-08-11">Aug 11, 2026</time>
                     </p>
                     <div class="d-flex gap-3 flex-wrap mt-3">
                         <a class="btn-cta btn-cta-primary" href="https://wordpress.org/plugins/smart-seo-booster/"
@@ -1134,6 +1163,33 @@
                         <h3 class="h5"><i class="bi bi-graph-up-arrow me-2"></i>Analytics &amp; Audit</h3>
                         <p>Google Analytics 4 and Microsoft Clarity integration, real-time SEO scoring, and a site-wide
                             audit dashboard.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card h-100">
+                        <h3 class="h5"><i class="bi bi-speedometer2 me-2"></i>Core Web Vitals Report</h3>
+                        <p>Check any page against Google PageSpeed Insights without leaving WordPress — Performance,
+                            SEO, Accessibility and Best Practices scores plus LCP, CLS and INP. No API key needed.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card h-100">
+                        <h3 class="h5"><i class="bi bi-patch-question me-2"></i>FAQ &amp; How-To Blocks</h3>
+                        <p>Add an FAQ accordion or a step-by-step guide and get valid FAQPage and HowTo schema
+                            automatically — the markup Google reads for rich results.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card h-100">
+                        <h3 class="h5"><i class="bi bi-list-ol me-2"></i>Table of Contents</h3>
+                        <p>A block that builds a jump list from your post's own headings, adding heading anchors
+                            site-wide so the links work even on themes that never added them.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card h-100">
+                        <h3 class="h5"><i class="bi bi-translate me-2"></i>17 Languages</h3>
+                        <p>The admin interface ships translated into 17 languages, with RTL-safe styling throughout.</p>
                     </div>
                 </div>
             </div>
@@ -1410,6 +1466,76 @@
                     </div>
                 </div>
                 <div class="accordion-item">
+                    <h3 class="accordion-header" id="q9h">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#q9" aria-expanded="false" aria-controls="q9">
+                            How do I add an llms.txt file to WordPress?
+                        </button>
+                    </h3>
+                    <div id="q9" class="accordion-collapse collapse" aria-labelledby="q9h"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Enable <strong>Serve an llms.txt file</strong> under Smart SEO → Settings → AI &amp; GEO. The
+                            file is generated from your published content and served at <code>/llms.txt</code>, so it
+                            stays current as you publish instead of going stale like a hand-written one. If it does not
+                            load, visit Settings → Permalinks and click Save once to flush your rewrite rules.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="q10h">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#q10" aria-expanded="false" aria-controls="q10">
+                            How do I stop ChatGPT and other AI crawlers from training on my content?
+                        </button>
+                    </h3>
+                    <div id="q10" class="accordion-collapse collapse" aria-labelledby="q10h"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Turn on <strong>Ask AI crawlers not to train on this site</strong> under Smart SEO →
+                            Settings → AI &amp; GEO. This adds robots.txt rules for GPTBot, Google-Extended, ClaudeBot,
+                            CCBot and others. Two things worth knowing: Google-Extended controls Gemini training only and
+                            has <em>no</em> effect on your Google Search rankings, and blocking training crawlers can
+                            also reduce how often AI assistants cite your site — so it is worth deciding deliberately.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="q11h">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#q11" aria-expanded="false" aria-controls="q11">
+                            Can I check Core Web Vitals from inside WordPress?
+                        </button>
+                    </h3>
+                    <div id="q11" class="accordion-collapse collapse" aria-labelledby="q11h"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes. <strong>Smart SEO → Page Speed</strong> runs a Google PageSpeed Insights check on any
+                            URL of your site and reports Performance, SEO, Accessibility and Best Practices scores
+                            alongside Core Web Vitals (LCP, CLS and INP), rated against Google's thresholds. It uses
+                            real-user CrUX field data where Google has it and lab data otherwise. No API key is required,
+                            though you can add a free one for higher-volume checks.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="q12h">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#q12" aria-expanded="false" aria-controls="q12">
+                            How do I add FAQ schema to a WordPress page?
+                        </button>
+                    </h3>
+                    <div id="q12" class="accordion-collapse collapse" aria-labelledby="q12h"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Add the <strong>FAQ (Smart SEO)</strong> block in the block editor and fill in your questions
+                            and answers. It renders an accessible accordion on the front end and outputs FAQPage JSON-LD
+                            automatically, which is what Google reads for FAQ rich results. A matching How-To block
+                            outputs HowTo schema the same way.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
                     <h3 class="accordion-header" id="q6h">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#q6" aria-expanded="false" aria-controls="q6">
@@ -1475,7 +1601,32 @@
                         data-bs-parent="#changelogAccordion">
                         <div class="accordion-body">
                             <div class="mb-4">
-                                <h3 class="h5"><strong>2.1.1</strong> (2026-07-24) — current stable</h3>
+                                <h3 class="h5"><strong>2.2.2</strong> (2026-08-11) — current stable</h3>
+                                <ul>
+                                    <li>Fixed an oversized admin-menu icon introduced in 2.2.1</li>
+                                </ul>
+                            </div>
+                            <div class="mb-4">
+                                <h3 class="h5"><strong>2.2.1</strong> (2026-08-11)</h3>
+                                <ul>
+                                    <li>One-click PageSpeed Insights and Google Rich Results Test links on the posts/pages list and in the SEO meta box</li>
+                                    <li>An occasional, dismissible reminder to leave a WordPress.org review — shown only after two weeks of real use, and switchable off permanently in one click</li>
+                                    <li>Consistent plugin logo across the admin menu, page headings and block editor</li>
+                                </ul>
+                            </div>
+                            <div class="mb-4">
+                                <h3 class="h5"><strong>2.2.0</strong> (2026-08-01)</h3>
+                                <ul>
+                                    <li><strong>Page Speed report</strong> — Google PageSpeed Insights scores plus Core Web Vitals (LCP, CLS, INP), with no API key required</li>
+                                    <li><strong>FAQ block</strong> with automatic FAQPage schema for rich results</li>
+                                    <li><strong>How-To block</strong> with automatic HowTo schema</li>
+                                    <li><strong>Table of Contents block</strong> built from your post's own headings</li>
+                                    <li>Readability now uses the Flesch Reading Ease score instead of a simpler heuristic</li>
+                                    <li>Recognisable brand icons beside every social, analytics and webmaster-verification field</li>
+                                </ul>
+                            </div>
+                            <div class="mb-4">
+                                <h3 class="h5"><strong>2.1.1</strong> (2026-07-24)</h3>
                                 <ul>
                                     <li>Fixed a fatal error on activation caused by an incomplete 2.1.0 package</li>
                                     <li>Added a WordPress Playground preview blueprint for instant live demos</li>
@@ -1521,8 +1672,8 @@
                     Release Snapshot
                 </div>
                 <div class="changelog-meta-grid">
-                    <span class="changelog-meta-pill"><strong>Version:</strong> 2.1.1</span>
-                    <span class="changelog-meta-pill"><strong>Last updated:</strong> Jul 24, 2026</span>
+                    <span class="changelog-meta-pill"><strong>Version:</strong> 2.2.2</span>
+                    <span class="changelog-meta-pill"><strong>Last updated:</strong> Aug 11, 2026</span>
                     <span class="changelog-meta-pill"><strong>Price:</strong> Free (GPLv2)</span>
                     <span class="changelog-meta-pill"><strong>WordPress:</strong> 5.9 or higher</span>
                     <span class="changelog-meta-pill"><strong>Tested up to:</strong> 7.0</span>
@@ -1534,17 +1685,17 @@
             <div class="changelog-meta mt-4" aria-label="Upcoming release">
                 <div class="changelog-meta-title">
                     <i class="bi bi-rocket-takeoff"></i>
-                    Coming next — v2.2 (in development)
+                    Coming next — on the roadmap
                 </div>
-                <p class="mb-2 text-muted">The next release focuses on a smoother onboarding and deeper AI-search
-                    tooling:</p>
+                <p class="mb-2 text-muted">Shipped in the 2.2.x series: the Page Speed report, FAQ / How-To / Table of
+                    Contents blocks, Flesch readability scoring, the AI &amp; GEO settings panel, social-account schema
+                    and 17 languages. Next up:</p>
                 <div class="changelog-meta-grid">
-                    <span class="changelog-meta-pill">Expanded setup wizard &amp; step-by-step tutorial</span>
-                    <span class="changelog-meta-pill">Dedicated AI &amp; GEO settings panel</span>
-                    <span class="changelog-meta-pill">Social-account schema connections</span>
-                    <span class="changelog-meta-pill">More Smart SEO blocks</span>
-                    <span class="changelog-meta-pill">Expanded to 17 languages</span>
-                    <span class="changelog-meta-pill">Refined bulk editor &amp; redirection manager</span>
+                    <span class="changelog-meta-pill">Google Search Console insights in the dashboard</span>
+                    <span class="changelog-meta-pill">Import from SEOPress &amp; All in One SEO</span>
+                    <span class="changelog-meta-pill">Internal-link &amp; orphaned-content suggestions</span>
+                    <span class="changelog-meta-pill">Video &amp; News sitemaps</span>
+                    <span class="changelog-meta-pill">Multiple Local Business locations</span>
                 </div>
                 <p class="small text-muted mt-3 mb-0"><i class="bi bi-github me-1"></i>Follow progress on the
                     <a href="https://github.com/anupammo/smart-seo-booster/tree/v2.2.1" target="_blank"
