@@ -9,7 +9,7 @@
 
 <url>
   <loc>https://anupammondal.in/</loc>
-  <lastmod>2024-07-29T22:28:03+00:00</lastmod>
+  <lastmod>2026-11-10T00:00:00+05:30</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
@@ -26,6 +26,11 @@
   <loc>https://anupammondal.in/services/website-seo</loc>
   <lastmod>2024-07-29T22:28:03+00:00</lastmod>
   <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://anupammondal.in/products/resort-booking-software</loc>
+  <lastmod>2026-11-10T00:00:00+05:30</lastmod>
+  <priority>0.90</priority>
 </url>
 <url>
   <loc>https://anupammondal.in/about-us</loc>
