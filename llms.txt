@@ -1,0 +1,19 @@
+# Anupam Mondal
+
+> Web designer, web developer and SEO consultant in Sonarpur, Kolkata (West Bengal, India), working since 2016. Builds websites, web apps and SaaS products for Indian and international clients.
+
+## Products
+- [ResortDesk: resort and homestay booking software for India](https://anupammondal.in/resortdesk/resort-booking-software): online booking and quotes, UPI QR payments, GST booking vouchers and tax invoices, multi-night stays, veg or non-veg meals by night, items by day, a Today screen and a kitchen day sheet. Plans from ₹2,499/month + GST. Live at The Frozen Garden Village Resort (book.thefrozengarden.in).
+- [Cloud School Management System](https://anupammondal.in/sms/school-management-system): school ERP for attendance, fees, exams and parent communication.
+- [Smart SEO Booster](https://anupammondal.in/wordpress-plugin/smart-seo-booster): WordPress plugin for SEO audits and schema checks.
+
+## Services
+- [Web design](https://anupammondal.in/services/web-design)
+- [Web development](https://anupammondal.in/services/web-development)
+- [Website SEO](https://anupammondal.in/services/website-seo)
+- [Digital marketing](https://anupammondal.in/services/digital-marketing)
+
+## About and contact
+- [About](https://anupammondal.in/about-us)
+- [Portfolio](https://anupammondal.in/portfolio)
+- [Contact](https://anupammondal.in/contact): WhatsApp or call +91 94744 60058

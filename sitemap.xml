@@ -3,7 +3,7 @@
 <!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
 <url>
 <loc>https://anupammondal.in/</loc>
-<lastmod>2026-07-18T00:00:00+00:00</lastmod>
+<lastmod>2026-11-10T00:00:00+05:30</lastmod>
 <priority>1.00</priority>
 </url>
 <url>
@@ -80,6 +80,11 @@
 <loc>https://anupammondal.in/privacy-policy</loc>
 <lastmod>2026-03-15T00:00:00+00:00</lastmod>
 <priority>0.60</priority>
+</url>
+<url>
+<loc>https://anupammondal.in/resortdesk/resort-booking-software</loc>
+<lastmod>2026-11-10T00:00:00+05:30</lastmod>
+<priority>0.90</priority>
 </url>
 <url>
 <loc>https://anupammondal.in/sms/school-management-system</loc>
